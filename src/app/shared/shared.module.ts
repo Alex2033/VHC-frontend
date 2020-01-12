@@ -6,14 +6,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
-import { RoomCardComponent } from './components/cards/room-card/room-card.component';
 import { ServiceCardComponent } from './components/cards/service-card/service-card.component';
 import { EventCardComponent } from './components/cards/event-card/event-card.component';
+import { ApartmentCardComponent } from './components/cards/apartment-card/apartment-card.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, HeaderMenuComponent, BookingFormComponent, RoomCardComponent, ServiceCardComponent, EventCardComponent],
+  declarations: [FooterComponent, HeaderComponent, HeaderMenuComponent, BookingFormComponent, ServiceCardComponent, EventCardComponent, ApartmentCardComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -29,7 +29,7 @@ import { EventCardComponent } from './components/cards/event-card/event-card.com
     HeaderComponent,
     HeaderMenuComponent,
     BookingFormComponent,
-    RoomCardComponent,
+    ApartmentCardComponent,
     ServiceCardComponent,
     EventCardComponent
   ]
