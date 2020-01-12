@@ -1,0 +1,166 @@
+.button {
+    background-color: $primary-color;
+    border-radius: 3px;
+    border: 0;
+    text-align: center;
+    padding: 11px 25px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    line-height: 2.2;
+    color: $light-color;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: background-color .2s ease;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+    &:disabled {
+        opacity: 0.1;
+        cursor: default;
+    }
+
+    &:hover:enabled {
+        background-color: lighten($primary-color, 6.8%);
+    }
+
+    &:active:enabled {
+        background-color: darken($primary-color, 7%);
+    }
+
+    &.dark {
+        background-color: $text-color;
+
+        &:hover:enabled {
+            background-color: lighten($primary-color, 6.8%);
+        }
+    
+        &:active:enabled {
+            background-color: darken($primary-color, 7%);
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+
+        &:hover:enabled {
+            background-color: darken($secondary-color, 5%);
+        }
+    
+        &:active:enabled {
+            background-color: darken($secondary-color, 15%);
+        }
+    }
+
+    &.light, &.gray {
+        color: $text-color;
+
+        &:hover:enabled {
+            background-color: darken($light-gray, 4.6%);
+        }
+    
+        &:active:enabled {
+            background-color: darken($light-gray, 12%);
+        }
+    }
+
+    &.light {
+        background-color: $light-color;
+        border-color: $border-color;
+    }
+
+    &.gray {
+        background-color: $light-gray;
+    }
+}
+
+// start Socials
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 48px;
+        height: 48px;
+        width: 48px;
+        transition: background-color .2s ease;
+        background-color: $light-gray;
+
+        &:hover {
+            svg {
+                fill: $light-color;
+            }
+        }
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: $gray;
+    }
+
+    &.light {
+        a {
+            background-color: $light-color;
+        }
+    }
+}
+// end Socials
+
+.vk {
+    &:hover {
+        background-color: #4A76A8 !important;
+    }
+}
+
+.facebook {
+    &:hover {
+        background-color: #3A5998 !important;
+    }
+}
+
+.telegram {
+    &:hover {
+        background-color: #1F9BDB !important;
+    }
+}
+
+.twitter {
+    &:hover {
+        background-color: #42ABE1 !important;
+    }
+}
+
+.instagram {
+    &:hover {
+        background-color: #B9189E !important;
+    }
+}
+
+// start Share Socials
+.share-socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+}
+
+.share-social {
+    a {
+        display: block;
+    }
+}
+
+.share-social-icon {
+    width: 32px;
+    height: 32px;
+}
+// end Share Socials
