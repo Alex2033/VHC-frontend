@@ -13,16 +13,21 @@ html, body {
 
 body {
     font-size: 15px;
-    font-family: 'OpenSans', sans-serif;
-    line-height: 1.533333;   
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.866666;   
     color: $text-color;
-    background-color: $light-color;
+    margin: 0;
+    font-weight: 400;
+    padding-right: 80px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
     margin: 0;
+
+    &.light {
+        color: $light-color;
+    }
 }
 
 button {
@@ -31,34 +36,32 @@ button {
     }
 }
 
-h1 {
+h1, .section-title {
     font-size: 30px;
-    line-height: 1.3333;
-}
-
-h2 {
-    font-size: 26px;
-    line-height: 1.3846;
-}
-
-h3 {
-    font-size: 22px;
-    line-height: 1.4545;
-}
-
-h4 {
-    font-size: 17px;
-    line-height: 1.5882;
-}
-
-h5 {
-    font-size: 15px;
     line-height: 1.6;
 }
 
+h2 {
+    font-size: 24px;
+    line-height: 1.58333;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
 h6 {
-    font-size: 14px;
-    line-height: 1.57;
+    font-size: 11px;
+    line-height: 2.2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 p {

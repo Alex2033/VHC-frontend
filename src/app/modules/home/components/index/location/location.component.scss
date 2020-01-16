@@ -1,0 +1,38 @@
+.location-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-section-header {
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.section-name {
+    margin-bottom: 48px;
+}
+
+.section-title {
+    margin: 0 0 176px;
+}
+
+.location-buttons {
+    margin-bottom: 112px;
+}
+
+.background-words {
+    left: 0;
+}
+
+.location-map {
+    margin-left: 22px;
+    iframe {
+        height: 100%;
+        width: 632px;
+        border: 0;
+    }
+}
+
+.location-text {
+    max-width: 362px;
+}

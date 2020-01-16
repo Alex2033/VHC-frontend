@@ -1,5 +1,43 @@
-<p>events works!</p>
-<app-event-card></app-event-card>
-<app-event-card></app-event-card>
-<app-event-card></app-event-card>
-<app-event-card></app-event-card>
+<section class="page-section">
+    <div class="container">
+        <header class="page-section-header">
+            <div class="section-name">
+                <div class="section-name-line"></div>
+                <h6>События <br> и мероприятия</h6>
+            </div>
+            <h2 class="section-title">
+                <span>Идеальное место <br> для проведения <br> мероприятий</span>
+                <div class="background-words">                
+                    events <br> —show
+                </div>
+            </h2>
+            <div class="section-description">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus enim, pellentesque ac malesuada eget, gravida a tellus. 
+                </p>
+            </div>
+        </header>
+        <div class="slider">
+            <div class="swiper-container" [swiper]="config" #sliderContainer>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let card of cards">
+                        <app-event-card [card]="card"></app-event-card>
+                    </div>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button type="button" class="control-button gray" (click)="sliderContainer.swiper.slidePrev()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-button gray" (click)="sliderContainer.swiper.slideNext()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button class="button gray long-button">Все мероприятия</button>
+    </div>
+</section>

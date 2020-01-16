@@ -1,3 +1,17 @@
+@import "theme";
+
+.container {
+    padding: 0 15px;
+    max-width: 1142px;
+    margin: 0 auto;
+}
+
+// style classes
+.secondary-color {
+    color: $secondary-color;
+}
+
+// buttons
 .button {
     background-color: $primary-color;
     border-radius: 3px;
@@ -19,6 +33,12 @@
     &:disabled {
         opacity: 0.1;
         cursor: default;
+    }
+
+    &.long-button {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     &:hover:enabled {
@@ -75,20 +95,85 @@
     }
 }
 
+.arrow-control {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: $light-gray;
+    transition: background-color .2s ease;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover:enabled {
+        background-color: darken($light-gray, 4.6%);
+    }
+
+    &:active:enabled {
+        background-color: darken($light-gray, 12%);
+    }
+}
+
+// slider
+.slider {
+    display: flex;
+    align-items: flex-start;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 72px;
+        }
+    }
+}
+
+.control-button {
+    cursor: pointer;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: $light-color;
+    border: 0;
+
+    &.gray {
+        background-color: $light-gray;
+    }
+
+    &:hover:enabled {
+        background-color: darken($light-gray, 4.6%);
+    }
+
+    &:active:enabled {
+        background-color: darken($light-gray, 12%);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    svg {
+        width: 22px;
+        height: 7px;
+    }
+}
+
 // start Socials
 .socials {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     a {
         display: flex;
+        width: 80px;
+        height: 80px;
         align-items: center;
         justify-content: center;
-        flex: 0 0 48px;
-        height: 48px;
-        width: 48px;
         transition: background-color .2s ease;
-        background-color: $light-gray;
 
         &:hover {
             svg {
@@ -98,40 +183,14 @@
     }
 
     svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
         fill: $gray;
     }
-
-    &.light {
-        a {
-            background-color: $light-color;
-        }
-    }
 }
-// end Socials
 
 .vk {
     &:hover {
         background-color: #4A76A8 !important;
-    }
-}
-
-.facebook {
-    &:hover {
-        background-color: #3A5998 !important;
-    }
-}
-
-.telegram {
-    &:hover {
-        background-color: #1F9BDB !important;
-    }
-}
-
-.twitter {
-    &:hover {
-        background-color: #42ABE1 !important;
     }
 }
 
@@ -141,26 +200,116 @@
     }
 }
 
-// start Share Socials
-.share-socials {
+.youtube {
+    &:hover {
+        background-color: #FF1402 !important;
+    }
+}
+// end Socials
+
+
+// start Phone
+.phone {
+    font-size: 14px;
+    line-height: 1.86;
+    text-decoration: none;
+    color: $shark;
+    display: inline-block;
+
+    &.light {
+        color: $light-color;
+    }
+}
+// end Phone
+
+// общие стили для секций
+.page-section {
+    padding: 96px 0;
+}
+
+.section-description {
+    max-width: 344px;
+    width: 100%;
+}
+
+.section-title {
+    position: relative;
+    margin-right: 96px;
+    max-width: 384px;
+    width: 100%;
+    margin-left: auto;
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.background-words {
+    position: absolute;
+    left: -96px;
+    top: -32px;
+    font-weight: 700;
+    font-size: 104px;
+    line-height: 0.85;
+    color: $title-color;
+    letter-spacing: 10px;
+    z-index: 0;
+    user-select: none;
+
+    &.stroked {
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: #fff;
+        color: $text-color;
+        opacity: 0.15;
+    }
+}
+
+.section-name-line {
+    margin: 15px 0;
+    width: 12px;
+    height: 2px;
+    background-color: $text-color;
+}
+
+.page-section-header {
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 88px;
+}
 
-    > * {
-        &:not(:last-child) {
-            margin-right: 16px;
-        }
+// Perfect Scrollbar
+.scrollbar {
+    .ps:hover > .ps__rail-x, .ps:hover > .ps__rail-y, .ps--focus > .ps__rail-x, .ps--focus > .ps__rail-y, .ps--scrolling-x > .ps__rail-x, .ps--scrolling-y > .ps__rail-y {
+        opacity: 1;
+    }
+
+    .ps .ps__rail-x:hover, .ps .ps__rail-y:hover, .ps .ps__rail-x:focus, .ps .ps__rail-y:focus, .ps .ps__rail-x.ps--clicking, .ps .ps__rail-y.ps--clicking {
+        opacity: 1;
+    }
+
+    .ps__thumb-y {
+        width: 4px;
+        border-radius: 0;
+        opacity: 1;
+        background-color: $text-color;
+    }
+
+    > .ps.ps--scrolling-y > .ps__rail-y,  > .ps.ps--scrolling-x > .ps__rail-x {
+        opacity: 1;
+        background-color: transparent;
     }
 }
 
-.share-social {
-    a {
-        display: block;
+// styles for svg icons
+.chevron-icon {
+    width: 7px;
+    height: 12px;
+    transform-origin: 50% 50%;
+    fill: $text-color;
+
+    &.top {
+        transform: rotate(180deg);
     }
 }
-
-.share-social-icon {
-    width: 32px;
-    height: 32px;
-}
-// end Share Socials

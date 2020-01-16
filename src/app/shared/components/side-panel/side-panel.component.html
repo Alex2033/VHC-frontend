@@ -1,0 +1,34 @@
+<div class="menu">
+    <button class="open-menu" (click)="showMenu = !showMenu" [class.active]="showMenu">
+        <span class="ico-menu">
+            <span class="small-line"></span>
+            <span class="big-line"></span>
+        </span>
+    </button>
+    <ul class="socials">
+        <li>
+            <a class="vk" href="" target="_blank">
+                <svg style="height: 11.1px;">
+                    <use xlink:href="assets/sprites/icons.svg#vk"></use>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="instagram" href="" target="_blank">
+                <svg style="height: 20px;">
+                    <use xlink:href="assets/sprites/icons.svg#instagram"></use>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="youtube" href="" target="_blank">
+                <svg style="height: 14.44px;">
+                    <use xlink:href="assets/sprites/icons.svg#youtube"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+
+    <!-- main menu -->
+    <app-main-menu *ngIf="showMenu"></app-main-menu>
+</div>

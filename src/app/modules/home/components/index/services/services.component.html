@@ -1,5 +1,42 @@
-<p>services works!</p>
-<app-service-card></app-service-card>
-<app-service-card></app-service-card>
-<app-service-card></app-service-card>
-<app-service-card></app-service-card>
+<section class="page-section">
+    <div class="container">
+        <header class="page-section-header">
+            <div class="section-name">
+                <div class="section-name-line"></div>
+                <h6>Услуги <br> и сервисы</h6>
+            </div>
+            <h2 class="section-title">
+                <span>Возьмем <br> все заботы <br> об апартаментах <br> на себя</span>
+                <div class="background-words">
+                    our <br> service
+                </div>
+            </h2>
+            <div class="section-description">
+                <p>
+                    <strong>VALO Service.</strong> Жильцам больше не нужно думать о бытовых сложностях — наши специалисты сами предложат решение любых вопросов и выполнят всю работу.
+                </p>
+            </div>
+        </header>
+        <div class="slider">
+            <div class="swiper-container" [swiper]="config" #serviceSlider>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let card of cards">
+                        <app-service-card [card]="card"></app-service-card>
+                    </div>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button type="button" class="control-button" (click)="serviceSlider.swiper.slidePrev()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-button" (click)="serviceSlider.swiper.slideNext()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

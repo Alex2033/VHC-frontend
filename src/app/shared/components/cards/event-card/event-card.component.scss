@@ -1,0 +1,65 @@
+@import "theme";
+
+.event-card-image {
+    padding-bottom: 69.5%;
+    position: relative;
+    margin-bottom: 24px;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        object-fit: cover;
+    }
+
+    .button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.button {
+    color: $primary-color;
+    background-color: $light-color;
+    border-radius: 0;
+}
+
+.event-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.85;
+}
+
+.card-price {
+    font-weight: 700;
+}
+
+.card-title {
+    text-decoration: underline;
+    margin-bottom: 24px;
+    font-weight: 700;
+
+    a {
+        color: $text-color;
+        transition: color .2s ease;
+
+        &:hover {
+            color: $primary-color;
+        }
+    
+        &:active, &:focus {
+            color: $secondary-color;
+        }
+    }
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.86;
+}

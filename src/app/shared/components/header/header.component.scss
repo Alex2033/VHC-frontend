@@ -1,0 +1,82 @@
+@import "theme";
+
+.header {
+    padding: 12px 0;
+    height: 80px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin-right: 56px;
+}
+
+.logo-link {
+    display: block;
+    width: 96px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-right: 65px;
+}
+
+.language-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $raven;
+    letter-spacing: 1px;
+    line-height: 2.2;
+
+    &.active {
+        color: $text-color;
+        font-weight: 700;
+    }
+
+    &:not(:last-child) {
+        margin-right: 26px;
+    }
+}
+
+.phone {
+    margin-right: 50px;
+}
+
+.navigation {
+    margin-left: auto;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation-item {
+    &:not(:last-child) {
+        margin-right: 49px;
+    }
+}
+
+.navigation-link {
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 2.2;
+    color: $text-color;
+    text-decoration: none;
+    transition: color .2s ease;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &:active, &:focus, &.active {
+        color: $secondary-color;
+    }
+}

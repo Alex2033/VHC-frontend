@@ -1,0 +1,48 @@
+@import "theme";
+
+.page-section {
+    background-color: $text-color;
+}
+
+.description-content {
+    display: flex;
+}
+
+.description-image {
+    width: 100%;
+    max-width: 536px;
+    flex-shrink: 0;
+    margin-right: 40px;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.description-info {
+    position: relative;
+    padding-left: 48px;
+    
+
+    .button {
+        margin-top: auto;
+    }
+}
+
+.description-info-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description-title {
+    margin-bottom: 30px;
+}
+
+.background-words {
+    top: 7px;
+    left: 0;
+}

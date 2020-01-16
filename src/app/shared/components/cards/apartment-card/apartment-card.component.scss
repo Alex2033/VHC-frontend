@@ -1,0 +1,38 @@
+@import "theme";
+
+.card {
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.card-content {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(17, 18, 28, 0.850361) 100%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 34.55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-title {
+    margin-bottom: 16px;
+}
+
+.card-description {
+    color: $light-color;
+    max-width: 315px;
+}
+
+.button {
+    margin-left: auto;
+    color: $primary-color;
+    background-color: $light-color;
+    border-radius: 0;
+}
+
+.card-text {
+    padding: 0 48px;
+}

@@ -1,1 +1,49 @@
-<p>advantages works!</p>
+<section class="page-section">
+    <img src="assets/images/advantages/advantages-img.jpg" alt="advantages image" class="advantages-background">
+    <div class="container">
+        <header class="page-section-header">
+            <div class="section-name">
+                <div class="section-name-line"></div>
+                <h6>Преимущества</h6>
+            </div>
+            <h2 class="section-title">
+                <span>Лучший комплекс апартаментов комфорт-класса Санкт-Петербурга</span>
+            </h2>
+            <div class="rating section-description">
+                <div class="rating-top">
+                    <div class="rating-assessment">5.0</div>
+                    <div class="rating-booking">
+                        <img src="assets/images/advantages/booking.svg" alt="booking image">
+                    </div>
+                </div>
+                <div class="rating-info">
+                    <h6>Рейтинг Booking</h6>
+                    <div class="rating-testimonials">102 отзыва пользователей</div>
+                </div>
+            </div>
+        </header>
+        <div class="slider">
+            <div class="swiper-container" [swiper]="config" #iconsSlider>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let icon of icons">
+                        <svg class="icon-item" [attr.width]="icon.width" [attr.height]="icon.height">
+                            <use [attr.xlink:href]="icon.src"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button type="button" class="control-button gray" (click)="iconsSlider.swiper.slidePrev()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-button gray" (click)="iconsSlider.swiper.slideNext()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

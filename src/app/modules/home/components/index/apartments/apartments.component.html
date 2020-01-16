@@ -1,5 +1,26 @@
-<p>apartments works!</p>
-<app-apartment-card></app-apartment-card>
-<app-apartment-card></app-apartment-card>
-<app-apartment-card></app-apartment-card>
-<app-apartment-card></app-apartment-card>
+<section class="page-section">
+    <div class="container">
+        <header class="page-section-header">
+            <div class="section-name">
+                <div class="section-name-line"></div>
+                <h6>Номера</h6>
+            </div>
+            <h2 class="section-title">
+                <span>Каждый номер <br> создан для комфортного проживания</span>
+                <div class="background-words">
+                    apart– <br> ments
+                </div>
+            </h2>
+            <div class="section-description">
+                <p>
+                    <strong>Философия и основная цель комплекса VALO</strong>
+                    — обеспечить людей комфортом, уютом и качественным жильем.
+                </p>
+            </div>
+        </header>
+        <div class="apartment-cards">
+            <app-apartment-card *ngFor="let apartment of apartments" [apartment]="apartment"></app-apartment-card>
+        </div>
+    </div>
+</section>
+

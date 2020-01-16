@@ -1,0 +1,94 @@
+@import "theme";
+
+:host {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100vh;
+    z-index: 50;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 1px;
+        background-color: $border-color;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.open-menu {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    transition: background-color .2s ease;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+
+    &:hover:enabled {
+        background-color: darken($light-gray, 4.6%);
+    }
+
+    &.active {
+        background-color: $light-gray;
+
+        .ico-menu {
+            width: 12px;
+            height: 12px;
+
+            span {
+                position: absolute;
+                left: 50%;
+                width: 100%;
+                top: 5px;
+                height: 2px;
+            }
+        }
+
+        .big-line {
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .small-line {
+            transform: translateX(-50%) rotate(-45deg);
+        }
+    }
+
+    &:active:enabled  {
+        background-color: darken($light-gray, 12%);
+    }
+}
+
+.ico-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+        height: 3px;
+        background-color: $dark;
+        display: block;
+    }
+}
+
+.small-line {
+    width: 12px;
+    margin-bottom: 8px;
+    margin-left: auto;
+}
+
+.big-line {
+    width: 24px;
+}

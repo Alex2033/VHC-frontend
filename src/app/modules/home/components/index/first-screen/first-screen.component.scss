@@ -1,0 +1,24 @@
+@import "theme";
+
+:host {
+    position: relative;
+    display: block;
+}
+
+.screen-container {
+    height: calc(100vh - 80px);
+    background-position: top bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 78px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    letter-spacing: 8px;
+    color: $title-color;
+}

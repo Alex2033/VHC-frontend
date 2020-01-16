@@ -1,0 +1,131 @@
+@import "theme";
+
+.footer {
+    padding: 96px 0 64px;
+    background-color: $text-color;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 88px;
+}
+
+.footer-image {
+    padding-bottom: 32.555%;
+    position: relative;
+    width: 632px;
+    flex-shrink: 0;
+    z-index: 1;
+
+    img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.footer-info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.background-words {
+    left: -54px;
+    top: -21px;
+    max-width: 372px;
+}
+
+.footer-info-container {
+    position: relative;
+    z-index: 1;
+    width: 327px;
+    margin-right: 17px;
+}
+
+.footer-link {
+    color: $light-color;
+    transition: opacity .2s ease;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 800;
+    display: block;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 96px;
+    }
+}
+
+.footer-middle {
+    display: flex;
+    align-items: flex-start;
+    color: $light-color;
+    margin-bottom: 68px;
+}
+
+.footer-logo {
+    width: 62px;
+    margin-right: 226px;
+}
+
+.footer-text {
+    max-width: 237px;
+    font-size: 14px;
+    line-height: 1.86;
+}
+
+.footer-contacts {
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 1.86;
+    text-align: right;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.pay-methods {
+    display: flex;
+    align-items: center;
+
+    li {
+        opacity: 0.6;
+
+        &:not(:last-child) {
+            margin-right: 61px;
+        }
+    }
+}
+
+.footer-bottom-text {
+    font-size: 11px;
+    color: $light-color;
+    line-height: 2.2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 700;
+}
+
+.company-name {
+    margin-right: 116px;
+}
+
+.manufacturer-site-name {
+    margin-left: auto;
+}

@@ -1,0 +1,21 @@
+.banner-block {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 48px 170px 48px 244px;
+}
+
+.banner-title {
+    font-size: 104px;
+    line-height: 1.154;
+    text-align: center;
+    letter-spacing: 100px;
+
+    &::first-letter {
+        padding-left: 80px;
+    }
+
+    span {
+        padding-left: 87px;
+    }
+}

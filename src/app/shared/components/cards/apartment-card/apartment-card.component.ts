@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-apartment-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./apartment-card.component.scss']
 })
 export class ApartmentCardComponent implements OnInit {
+
+  @Input() apartment;
 
   constructor() { }
 
