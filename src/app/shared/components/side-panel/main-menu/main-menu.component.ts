@@ -1,11 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss']
+  styleUrls: ['./main-menu.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({opacity:0}),
+        animate('250ms', style({opacity:1}))
+      ]),
+      transition(':leave', [   // :leave is alias to '* => void'
+        animate('250ms', style({opacity:0}))
+      ])
+    ])
+  ]
 })
 export class MainMenuComponent implements OnInit {
+
+  @Output() close: EventEmitter<boolean> = new EventEmitter();
+
+  @Input() showMenu;
 
   links: Array<object> = [
     {
@@ -45,6 +61,10 @@ export class MainMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closeMenu() {
+    this.close.emit(false);
   }
 
 }

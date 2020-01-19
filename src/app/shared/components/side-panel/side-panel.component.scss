@@ -19,11 +19,18 @@
     }
 }
 
-.menu {
+.menu, .menu-content {
+    height: 100%;
+}
+
+.menu-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    position: relative;
+    z-index: 100;
+    background-color: $light-color;
 }
 
 .open-menu {
