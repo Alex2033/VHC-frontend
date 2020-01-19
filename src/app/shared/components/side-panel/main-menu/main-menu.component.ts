@@ -7,15 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
 
-  links: Array<string> = [
-    'Номера',
-    'Акции',
-    'Долгосрочная аренда',
-    'Услуги и сервисы',
-    'Мероприятия',
-    'Пространства для бизнеса',
-    'Доходные программы',
-    'Документы',
+  links: Array<object> = [
+    {
+      text: 'Номера',
+      url: '/apartments'
+    },
+    {
+      text: 'Акции',
+      url: ''
+    },
+    {
+      text: 'Долгосрочная аренда',
+      url: ''
+    },
+    {
+      text: 'Услуги и сервисы',
+      url: ''
+    },
+    {
+      text: 'Мероприятия',
+      url: ''
+    },
+    {
+      text: 'Пространства для бизнеса',
+      url: ''
+    },
+    {
+      text: 'Доходные программы',
+      url: ''
+    },
+    {
+      text: 'Документы',
+      url: ''
+    }
   ];
 
   constructor() { }

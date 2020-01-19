@@ -1,5 +1,9 @@
 @import "theme";
 
+:host {
+    margin-top: auto;
+}
+
 .footer {
     padding: 96px 0 64px;
     background-color: $text-color;

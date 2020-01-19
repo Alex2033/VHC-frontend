@@ -1,0 +1,45 @@
+<div class="apartment">
+    <div class="apartment-container">
+        <div class="apartment-content">
+            <div class="apartment-content-left">
+                <div class="apartmet-info">
+                    <p>{{ apartment.area }} м<sup>2</sup></p>
+                    <p>{{ apartment.rooms }}</p>
+                </div>
+                <div class="apartment-main">
+                    <h2 class="light apartment-title">Двухместный номер с 1 кроватью</h2>
+                    <div class="apartment-description">
+                        <p>{{ apartment.description }}</p>
+                    </div>
+                    <div class="apartment-buttons">
+                        <a [routerLink]="[]" class="button light">Подробнее</a>
+                        <a [routerLink]="[]" class="button secondary">Забронировать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="apartment-content-right">
+                <div class="control-buttons">
+                    <button type="button" class="control-button gray" (click)="apartmentSlider.swiper.slidePrev()">
+                        <svg>
+                            <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="control-button gray" (click)="apartmentSlider.swiper.slideNext()">
+                        <svg>
+                            <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="apartment-slider">
+        <div class="swiper-container" [swiper]="config" #apartmentSlider>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let image of apartment.images">
+                    <img [src]="image" alt="apartment image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

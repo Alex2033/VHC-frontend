@@ -58,7 +58,7 @@
         color: $primary-color;
     }
 
-    &:active, &:focus, &.active {
+    &:active, &:focus {
         color: $secondary-color;
     }
 }

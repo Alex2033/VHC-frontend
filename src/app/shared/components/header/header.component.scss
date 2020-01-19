@@ -60,6 +60,12 @@
     &:not(:last-child) {
         margin-right: 49px;
     }
+
+    &.active {
+        .navigation-link {
+            color: $secondary-color;
+        }
+    }
 }
 
 .navigation-link {

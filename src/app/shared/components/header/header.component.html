@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header-content">
             <div class="header-logo">
-                <a [routerLink]="" class="logo-link">
+                <a [routerLink]="['/']" class="logo-link">
                     <img src="assets/images/header/logo.svg" alt="logotype">
                 </a>
             </div>
@@ -17,8 +17,12 @@
             <a href="tel:881702-76-73" class="phone">8 (812) 702-76-73</a>
             <nav class="navigation">
                 <ul class="navigation-list">
-                    <li class="navigation-item" routerLinkActive="active" *ngFor="let menuLink of menuLinks">
-                        <a [routerLink]="" class="navigation-link">{{ menuLink }}</a>
+                    <li 
+                        class="navigation-item" 
+                        routerLinkActive="active"
+                        *ngFor="let menuLink of menuLinks"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        <a [routerLink]="[menuLink.url]" class="navigation-link">{{ menuLink.text }}</a>
                     </li>
                 </ul>
             </nav>

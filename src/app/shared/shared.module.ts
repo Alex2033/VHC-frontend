@@ -13,6 +13,7 @@ import { EventCardComponent } from './components/cards/event-card/event-card.com
 import { ApartmentCardComponent } from './components/cards/apartment-card/apartment-card.component';
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { MainMenuComponent } from './components/side-panel/main-menu/main-menu.component';
+import { ApartmentSliderComponent } from './components/apartment-slider/apartment-slider.component';
 
 // material modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -44,7 +45,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ServiceCardComponent, 
     EventCardComponent, 
     ApartmentCardComponent, 
-    SidePanelComponent
+    SidePanelComponent,
+    ApartmentSliderComponent
   ],
   imports: [
     CommonModule,
@@ -71,7 +73,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatDatepickerModule,
     SidePanelComponent,
     SwiperModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    ApartmentSliderComponent
   ],
   providers: [
     MatNativeDateModule,

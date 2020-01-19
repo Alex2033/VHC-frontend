@@ -1,12 +1,8 @@
-<section class="page-section">
+<section class="page-section inner-page-section">
     <div class="container">
-        <header class="page-section-header">
-            <div class="section-name">
-                <div class="section-name-line"></div>
-                <h6>Номера</h6>
-            </div>
+        <header class="page-section-header inner-page-section-header">
             <h2 class="section-title">
-                <span>Каждый номер <br> создан для комфортного проживания</span>
+                <span>Номера <br> Valo Hotel City</span>
                 <div class="background-words">
                     apart– <br> ments
                 </div>
@@ -18,8 +14,13 @@
                 </p>
             </div>
         </header>
-        <div class="apartment-cards">
-            <app-apartment-card *ngFor="let apartment of apartments" [apartment]="apartment"></app-apartment-card>
-        </div>
+        <app-booking-form></app-booking-form>
     </div>
 </section>
+
+<div class="container">
+    <div class="aparts">
+        <app-apartment-slider *ngFor="let apart of aparts" [apartment]="apart"></app-apartment-slider>
+    </div>
+</div>
+<app-footer></app-footer>

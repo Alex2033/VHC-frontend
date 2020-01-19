@@ -4,6 +4,7 @@
     padding: 0 15px;
     max-width: 1142px;
     margin: 0 auto;
+    width: 100%;
 }
 
 // style classes
@@ -24,6 +25,8 @@
     color: $light-color;
     font-family: 'Montserrat';
     font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
     font-size: 11px;
     text-transform: uppercase;
     transition: background-color .2s ease;
@@ -41,22 +44,22 @@
         padding-bottom: 15px;
     }
 
-    &:hover:enabled {
+    &:hover:enabled, &:hover {
         background-color: lighten($primary-color, 6.8%);
     }
 
-    &:active:enabled {
+    &:active:enabled, &:active {
         background-color: darken($primary-color, 7%);
     }
 
     &.dark {
         background-color: $text-color;
 
-        &:hover:enabled {
+        &:hover:enabled, &:hover {
             background-color: lighten($primary-color, 6.8%);
         }
     
-        &:active:enabled {
+        &:active:enabled, &:active {
             background-color: darken($primary-color, 7%);
         }
     }
@@ -64,11 +67,11 @@
     &.secondary {
         background-color: $secondary-color;
 
-        &:hover:enabled {
+        &:hover:enabled, &:hover {
             background-color: darken($secondary-color, 5%);
         }
     
-        &:active:enabled {
+        &:active:enabled, &:active {
             background-color: darken($secondary-color, 15%);
         }
     }
@@ -76,11 +79,11 @@
     &.light, &.gray {
         color: $text-color;
 
-        &:hover:enabled {
+        &:hover:enabled, &:hover {
             background-color: darken($light-gray, 4.6%);
         }
     
-        &:active:enabled {
+        &:active:enabled, &:active {
             background-color: darken($light-gray, 12%);
         }
     }
@@ -227,6 +230,10 @@
     padding: 96px 0;
 }
 
+.inner-page-section {
+    padding: 48px 0 64px;
+}
+
 .section-description {
     max-width: 344px;
     width: 100%;
@@ -302,7 +309,7 @@
     }
 }
 
-// styles for svg icons
+// стили для svg-иконок
 .chevron-icon {
     width: 7px;
     height: 12px;
