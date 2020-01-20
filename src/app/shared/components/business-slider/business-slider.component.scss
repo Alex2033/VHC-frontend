@@ -1,0 +1,108 @@
+@import "theme";
+
+:host {
+    display: block;
+}
+
+.business {
+    position: relative;
+    height: 536px;
+}
+
+.business-container,
+.business-content,
+.business-content-left,
+.business-content-right {
+    height: 100%;
+}
+
+.business-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.business-content-left {
+    background-color: $text-color;
+    display: flex;
+    max-width: 480px;
+    flex: 1 0 auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    padding: 48px;
+}
+
+.business-content-right {
+    min-width: 0;
+}
+
+.apartmet-info {
+    display: flex;
+    align-items: center;
+    color: $light-color;
+    font-weight: 700;
+
+    sup {
+        font-size: 10px;
+        margin-left: 2px;
+    }
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
+}
+
+.business-title, .business-description {
+    max-width: 334px;
+}
+
+.business-title {
+    margin-bottom: 24px;
+}
+
+.business-description {
+    color: $light-color;
+    margin-bottom: 48px;
+}
+
+.business-buttons {
+    display: flex;
+    align-items: center;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+}
+
+.business-slider {
+    height: 100%;
+    position: relative;
+    min-width: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-container, .swiper-wrapper {
+        height: 100%;
+    }
+}
+
+.control-buttons {
+    position: absolute;
+    right: 48px;
+    bottom: 48px;
+    z-index: 1;
+}
+
+.price {
+    color: $light-color;
+}

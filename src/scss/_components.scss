@@ -231,7 +231,18 @@
 }
 
 .inner-page-section {
-    padding: 48px 0 64px;
+    padding-top: 48px;
+}
+
+.inner-page-section-header {
+    .section-title {
+        margin: 0;
+    }
+
+    .background-words {
+        top: -24px;
+        left: 0;
+    }
 }
 
 .section-description {

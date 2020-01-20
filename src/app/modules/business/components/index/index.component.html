@@ -1,0 +1,23 @@
+<section class="page-section inner-page-section">
+    <div class="container">
+        <header class="page-section-header inner-page-section-header">
+            <h2 class="section-title">
+                <span>Пространства <br> Для бизнеса</span>
+                <div class="background-words">
+                    for <br> business
+                </div>
+            </h2>
+            <div class="section-description">
+                <p>
+                    <strong>Lorem ipsum dolor sit amet,</strong>
+                    consectetur adipiscing elit. Aenean risus enim, pellentesque ac malesuada eget, gravida a tellus. 
+                </p>
+            </div>
+        </header>
+        <div class="aparts">
+            <app-business-slider *ngFor="let apart of aparts" [business]="apart"></app-business-slider>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

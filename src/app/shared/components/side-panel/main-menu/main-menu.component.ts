@@ -46,7 +46,7 @@ export class MainMenuComponent implements OnInit {
     },
     {
       text: 'Пространства для бизнеса',
-      url: ''
+      url: '/business'
     },
     {
       text: 'Доходные программы',

@@ -1,0 +1,12 @@
+.page-section-header {
+    margin-bottom: 97px;
+}
+
+.aparts {
+
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 64px;
+        }
+    }
+}

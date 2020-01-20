@@ -2,23 +2,14 @@
     margin-bottom: 104px;
 }
 
-.section-title {
-    margin: 0;
-}
-
-.background-words {
-    top: -24px;
-    left: 0;
-}
-
 app-booking-form {
     position: static;
     transform: translate(0, 0);
     padding: 0;
+    margin-bottom: 64px;
 }
 
 .aparts {
-    margin-bottom: 96px;
 
     > * {
         &:not(:last-child) {

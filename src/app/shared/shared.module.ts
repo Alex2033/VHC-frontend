@@ -14,6 +14,7 @@ import { ApartmentCardComponent } from './components/cards/apartment-card/apartm
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { MainMenuComponent } from './components/side-panel/main-menu/main-menu.component';
 import { ApartmentSliderComponent } from './components/apartment-slider/apartment-slider.component';
+import { BusinessSliderComponent } from './components/business-slider/business-slider.component';
 
 // material modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -26,6 +27,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   wheelPropagation: true
@@ -46,7 +48,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     EventCardComponent, 
     ApartmentCardComponent, 
     SidePanelComponent,
-    ApartmentSliderComponent
+    ApartmentSliderComponent,
+    BusinessSliderComponent
   ],
   imports: [
     CommonModule,
@@ -74,7 +77,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SidePanelComponent,
     SwiperModule,
     PerfectScrollbarModule,
-    ApartmentSliderComponent
+    ApartmentSliderComponent,
+    BusinessSliderComponent
   ],
   providers: [
     MatNativeDateModule,

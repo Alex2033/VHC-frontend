@@ -3,6 +3,7 @@
 .header {
     padding: 12px 0;
     height: 80px;
+    border-bottom: 1px solid $border-color;
 }
 
 .header-content {
@@ -57,9 +58,7 @@
 }
 
 .navigation-item {
-    &:not(:last-child) {
-        margin-right: 49px;
-    }
+    margin-right: 49px;
 
     &.active {
         .navigation-link {
