@@ -1,0 +1,13 @@
+<ng-container *ngIf="current">
+    <div class="overlay" [@fadeInOut] (click)="current.id !== 'confirm' ? modal.close() : null">
+    </div>
+    <ng-container>
+        <app-feedback-form [@slideRight] *ngIf="current.id === 'feedback-form'"></app-feedback-form>
+    </ng-container>
+    <button type="button" class="close button gray" (click)="current.id !== 'confirm' ? modal.close() : null">
+        <svg>
+            <use xlink:href="assets/sprites/icons.svg#close"></use>
+        </svg>
+    </button>
+</ng-container>
+    

@@ -15,6 +15,8 @@ import { SidePanelComponent } from './components/side-panel/side-panel.component
 import { MainMenuComponent } from './components/side-panel/main-menu/main-menu.component';
 import { ApartmentSliderComponent } from './components/apartment-slider/apartment-slider.component';
 import { BusinessSliderComponent } from './components/business-slider/business-slider.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
 
 // material modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -49,7 +51,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ApartmentCardComponent, 
     SidePanelComponent,
     ApartmentSliderComponent,
-    BusinessSliderComponent
+    BusinessSliderComponent,
+    ModalComponent,
+    FeedbackFormComponent
   ],
   imports: [
     CommonModule,
@@ -78,7 +82,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     PerfectScrollbarModule,
     ApartmentSliderComponent,
-    BusinessSliderComponent
+    BusinessSliderComponent,
+    ModalComponent,
+    FeedbackFormComponent
   ],
   providers: [
     MatNativeDateModule,

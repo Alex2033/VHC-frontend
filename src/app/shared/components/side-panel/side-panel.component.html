@@ -34,7 +34,7 @@
     <!-- main menu -->
     <app-main-menu 
         *ngIf="showMenu" 
-        [@enterAnimation] 
+        [@slideRight] 
         [showMenu]="showMenu"
         (close)="showMenu = false"
     ></app-main-menu>

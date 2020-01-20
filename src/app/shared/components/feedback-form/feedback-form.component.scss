@@ -1,0 +1,17 @@
+@import "theme";
+
+:host {
+    display: block;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 548px;
+}
+
+.feedback-wrapper {
+    padding: 56px 80px;
+    height: 100%;
+    background-color: $light-color;
+}

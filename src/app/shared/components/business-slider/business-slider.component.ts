@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-business-slider',
@@ -14,7 +15,7 @@ export class BusinessSliderComponent implements OnInit {
     slidesPerView: 1
   };
 
-  constructor() { }
+  constructor(public modal: ModalService) { }
 
   ngOnInit() {
   }

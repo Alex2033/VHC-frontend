@@ -1,8 +1,19 @@
 @import "theme";
 
+:host {
+    display: block;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    background-color: $light-color;
+    right: 40px; // ширина бокового меню
+    width: 100%;
+}
+
 .header {
     padding: 12px 0;
     height: 80px;
+    width: 100%;
     border-bottom: 1px solid $border-color;
 }
 
