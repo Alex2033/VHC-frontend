@@ -15,24 +15,52 @@ export class ServicesComponent implements OnInit {
 
   cards: Array<object> = [
     {
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Ресторан с банкетным залом'
+    },
+    {
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Кафе и бары'
+    },
+    {
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Фитнес-клуб'
+    },
+    {
+      image: 'assets/images/service/service-3.jpg',
+      title: 'Бассейн и SPA'
+    },
+    {
+      image: 'assets/images/service/service-3.jpg',
+      title: 'Химчистка'
+    },
+    {
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Прачечная'
+    },
+    {
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Конференц-зал'
+    },
+    {
       image: 'assets/images/service/service-1.jpg',
       title: 'Коворкинг'
     },
     {
       image: 'assets/images/service/service-2.jpg',
-      title: 'Ресторан'
-    },
-    {
-      image: 'assets/images/service/service-3.jpg',
-      title: 'SPA Салон'
+      title: 'Консьерж-служба'
     },
     {
       image: 'assets/images/service/service-2.jpg',
-      title: 'SPA Салон'
+      title: 'Хранение багажа'
     },
     {
-      image: 'assets/images/service/service-3.jpg',
-      title: 'SPA Салон'
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Служба клининга'
+    },
+    {
+      image: 'assets/images/service/service-2.jpg',
+      title: 'Room Service'
     },
   ];
 
