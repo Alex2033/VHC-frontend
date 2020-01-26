@@ -59,7 +59,6 @@
     font-size: 11px;
     line-height: 1.45;
     letter-spacing: 1px;
-    font-weight: 700;
     width: 100%;
     text-transform: uppercase;
 }
@@ -102,6 +101,7 @@
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .data-calendar-wrapper {
@@ -114,4 +114,42 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+}
+
+.arrow-control {
+    position: relative;
+}
+
+.decrease-control {
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: $text-color;
+    }
+}
+
+.increase-control {
+    &::before, &::after {
+        content: '';
+        background-color: $text-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        width: 10px;
+        height: 2px;
+    }
+
+    &::after {
+        width: 2px;
+        height: 10px;
+    }
 }

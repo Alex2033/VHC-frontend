@@ -55,16 +55,10 @@
                 <div class="data-block-text">Гостей</div>
                 <div class="data-block-field">
                     <div class="data-block-content">
-                        <button type="button" class="arrow-control" (click)="decreaseGuestsCounter()">
-                            <svg class="chevron-icon">
-                                <use xlink:href="assets/sprites/icons.svg#chevron-down"></use>
-                            </svg>
+                        <button type="button" class="arrow-control decrease-control" (click)="decreaseGuestsCounter()">
                         </button>
                         <div class="data-block-number">{{ guestsCounter }}</div>
-                        <button type="button" class="arrow-control" (click)="increaseGuestsCounter()">
-                            <svg class="chevron-icon top">
-                                <use xlink:href="assets/sprites/icons.svg#chevron-down"></use>
-                            </svg>
+                        <button type="button" class="arrow-control increase-control" (click)="increaseGuestsCounter()">
                         </button>
                     </div>
                 </div>
@@ -77,16 +71,18 @@
                 <div class="data-block-text">Номеров</div>
                 <div class="data-block-field">
                     <div class="data-block-content">
-                        <button type="button" class="arrow-control" (click)="decreaseApartmentsCounter()">
-                            <svg class="chevron-icon">
-                                <use xlink:href="assets/sprites/icons.svg#chevron-down"></use>
-                            </svg>
+                        <button 
+                            type="button" 
+                            class="arrow-control decrease-control" 
+                            (click)="decreaseApartmentsCounter()"
+                        >
                         </button>
                         <div class="data-block-number">{{ apartmentsCounter }}</div>
-                        <button type="button" class="arrow-control" (click)="increaseApartmentsCounter()">
-                            <svg class="chevron-icon top">
-                                <use xlink:href="assets/sprites/icons.svg#chevron-down"></use>
-                            </svg>
+                        <button 
+                            type="button" 
+                            class="arrow-control increase-control" 
+                            (click)="increaseApartmentsCounter()"
+                        >
                         </button>
                     </div>
                 </div>
