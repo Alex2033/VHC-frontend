@@ -49,4 +49,10 @@ export class BookingFormComponent implements OnInit {
       this.apartmentsCounter -= 1;
     }
   }
+
+  checkDates() {
+    if (new Date(this.departureDateValue) < new Date(this.entryDateValue)) {
+      this.departureDateValue = this.entryDateValue;
+    }
+  }
 }

@@ -8,6 +8,7 @@ import { ModalService } from '../../services/modal.service';
   styleUrls: ['./business-slider.component.scss']
 })
 export class BusinessSliderComponent implements OnInit {
+  index: number = 0;
 
   @Input() business;
 

@@ -10,10 +10,9 @@ export class IndexComponent implements OnInit {
   aparts: Array<object> = [
     {
       area: 24,
-      rooms: '12 мест',
       title: 'Пространство свободного назначения',
-      description: 'Пространство свободного назначения',
-      price: 16000,
+      description: 'Подходит для выставок, размещения продуктовых автоматов',
+      price: 29000,
       images: [
         'assets/images/pages/business/business-1.jpg',
         'assets/images/pages/business/business-2.jpg',
@@ -23,10 +22,9 @@ export class IndexComponent implements OnInit {
     },
     {
       area: 24,
-      rooms: '12 мест',
       title: 'Конференц–зал',
       description: 'Подходит для выставок, размещения продуктовых автоматов',
-      price: 16000,
+      price: 29000,
       images: [
         'assets/images/pages/business/business-2.jpg',
         'assets/images/pages/business/business-1.jpg',

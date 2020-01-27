@@ -2,9 +2,8 @@
     <div class="business-container">
         <div class="business-content">
             <div class="business-content-left">
-                <div class="apartmet-info">
+                <div class="business-info">
                     <p>{{ business.area }} м<sup>2</sup></p>
-                    <p>{{ business.rooms }}</p>
                 </div>
                 <div class="business-main">
                     <h2 class="light business-title">{{ business.title }}</h2>
@@ -12,7 +11,12 @@
                         <p>{{ business.description }}</p>
                     </div>
                     <div class="business-buttons">
-                        <button type="button" (click)="modal.open('feedback-form')" class="button light">Оставить заявку</button>
+                        <button 
+                            type="button" 
+                            (click)="modal.open('feedback-form')" 
+                            class="button"
+                        >Отправить заявку
+                        </button>
                         <div class="price">
                             <p>Стоимость/сутки</p>
                             <strong>{{ business.price | currency:'':'':'4.0' }} ₽</strong>
@@ -22,20 +26,21 @@
             </div>
             <div class="business-content-right">
                 <div class="business-slider">
-                    <div class="swiper-container" [swiper]="config" #businessSlider>
+                    <div class="swiper-container" [(index)]="index" [swiper]="config" #businessSlider>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" *ngFor="let image of business.images">
                                 <img [src]="image" alt="business image">
                             </div>
                         </div>
                     </div>
-                    <div class="control-buttons">
-                        <button type="button" class="control-button gray" (click)="businessSlider.swiper.slidePrev()">
+                    <div class="slider-controls">
+                        <div class="slider-index">{{ index + 1 }}/{{ business.images.length }}</div>
+                        <button type="button" class="control-button" (click)="businessSlider.swiper.slidePrev()">
                             <svg>
                                 <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
                             </svg>
                         </button>
-                        <button type="button" class="control-button gray" (click)="businessSlider.swiper.slideNext()">
+                        <button type="button" class="control-button" (click)="businessSlider.swiper.slideNext()">
                             <svg>
                                 <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
                             </svg>

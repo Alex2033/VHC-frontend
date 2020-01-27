@@ -29,6 +29,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { AngularYandexMapsModule } from 'angular8-yandex-maps';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -63,7 +64,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatNativeDateModule,
     MatDatepickerModule,
     SwiperModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    AngularYandexMapsModule
   ],
   exports: [
     CommonModule,
@@ -84,7 +86,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ApartmentSliderComponent,
     BusinessSliderComponent,
     ModalComponent,
-    FeedbackFormComponent
+    FeedbackFormComponent,
+    AngularYandexMapsModule
   ],
   providers: [
     MatNativeDateModule,

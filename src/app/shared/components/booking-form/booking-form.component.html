@@ -7,7 +7,9 @@
                 class="data-hidden-input"
                 (dateInput)="entryDate($event)" 
                 [matDatepicker]="picker1" 
-                placeholder="Choose a date">
+                (dateChange)="checkDates()"
+                placeholder="Choose a date"
+            >
             <div class="data-calendar-wrapper">
                 <div class="data-block-text">Въезд</div>
                 <div class="data-block-field">
@@ -31,7 +33,9 @@
                 class="data-hidden-input"
                 (dateInput)="departureDate($event)" 
                 [matDatepicker]="picker2" 
-                placeholder="Choose a date">
+                placeholder="Choose a date"
+                (dateChange)="checkDates()"
+            >
             <div class="data-calendar-wrapper">
                 <div class="data-block-text">Выезд</div>
                 <div class="data-block-field">

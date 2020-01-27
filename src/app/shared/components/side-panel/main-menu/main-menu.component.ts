@@ -1,15 +1,17 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { fadeInOutAnimation } from 'src/app/shared/animations/fade-in-out.animation';
 
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.scss'],
+  animations: [
+    fadeInOutAnimation(),
+  ]
 })
 export class MainMenuComponent implements OnInit {
 
   @Output() close: EventEmitter<boolean> = new EventEmitter();
-
-  @Input() showMenu;
 
   links: Array<object> = [
     {

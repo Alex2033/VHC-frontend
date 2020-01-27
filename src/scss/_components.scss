@@ -132,6 +132,41 @@
     }
 }
 
+.slider-controls {
+    display: flex;
+    background-color: $light-color;
+    border-radius: 3px;
+
+    .control-button, .slider-index {
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .control-button {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    > * {
+        &:not(:last-child) {
+            border-right: 1px solid #eaeaea;
+        }
+    }
+    
+}
+
+.slider-index {
+    background-color: $light-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 3.75px;
+    font-weight: 700;
+    width: 78px;
+    height: 48px;
+}
+
 .control-button {
     cursor: pointer;
     display: flex;

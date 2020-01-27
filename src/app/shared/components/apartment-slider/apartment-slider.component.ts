@@ -8,6 +8,8 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 })
 export class ApartmentSliderComponent implements OnInit {
 
+  index: number = 0;
+
   @Input() apartment;
 
   config: SwiperConfigInterface = {

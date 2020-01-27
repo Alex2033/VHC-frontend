@@ -23,7 +23,18 @@
                 </div>
             </header>
             <div class="location-map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acbbe1501378e56f4030b7e0bed8451d544c6bf72fbe8fbda02884f4485cf66bf&amp;source=constructor"></iframe>
+                <angular-yandex-map [center]="[59.916771186075785, 30.348151407651475]" [zoom]="15">
+                    <angular-yandex-placemark
+                        [geometry]="[59.91310384356382, 30.344218691392978]"
+                        [properties]="placemarkProperties"
+                        [options]="placemarkOptions"
+                    ></angular-yandex-placemark>
+                    <angular-yandex-placemark 
+                        [geometry]="[59.92064640763944, 30.343797602272325]"
+                        [properties]="placemarkProperties"
+                        [options]="placemarkOptions"
+                    ></angular-yandex-placemark>
+                </angular-yandex-map>
             </div>
         </div>
     </div>

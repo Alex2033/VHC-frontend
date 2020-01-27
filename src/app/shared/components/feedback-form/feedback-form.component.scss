@@ -8,10 +8,17 @@
     right: 0;
     z-index: 1000;
     max-width: 548px;
+    width: 100%;
 }
 
 .feedback-wrapper {
     padding: 56px 80px;
     height: 100%;
     background-color: $light-color;
+}
+
+.background-words {
+    top: initial;
+    bottom: 0;
+    left: 2px;
 }
