@@ -1,0 +1,165 @@
+@import "theme";
+
+:host {
+  display: block;
+  position: relative;
+}
+
+:host-context(.ng-invalid.ng-touched) {
+  .wrapper.invalid {
+    border-color: $error-color !important;
+    background-color: transparent;
+
+    .placeholder {
+      color: $error-color;
+    }
+  }
+}
+
+.error-sign {
+  position: absolute;
+  top: 50%;
+  left: -36px;
+  transform: translateY(-50%);
+  color: $error-color;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.title {
+  margin-bottom: 8px;
+  color: $text-color;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.title + .hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hint {
+  position: absolute;
+  top: -31px;
+  right: 0;
+  transform: translate(25%, -25%);
+
+  .icon {
+    background-color: $gray;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 100ms linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $error-color;
+    }
+
+    &.focus {
+      background-color: $error-color;
+    }
+    
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 12px;
+      fill: #fff;
+    }
+  }
+  .text {
+    position: absolute;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.18);
+    top: 18px;
+    right: 18px;
+    width: 380px;
+    padding: 16px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  &.hide-placeholder {
+    height: 48px;
+    padding: 10px 16px;
+    .placeholder {
+      &.floating {
+        display: none;
+      }
+    }
+  }
+  height: 56px;
+  border-radius: 4px;
+  padding: 16px;
+  transition: background-color 100ms linear, border 100ms linear;
+  background-color: $light-gray;
+  border: 1px solid transparent;
+
+    &:not(.active) {
+      &:hover {
+        background-color: darken($light-gray, 5%);
+      }
+    }
+
+  &.active {
+    background-color: #fff;
+    border: 1px solid $border-color;
+
+    
+
+    &:focus-within {
+      border-color: $secondary-color;
+    }
+
+    input {
+      opacity: 1;
+    }
+  }
+  .placeholder {
+    color: $dark-gray;
+    transition: margin-top 50ms linear, margin-bottom 50ms linear, font-size 50ms linear, line-height 50ms linear;
+    &:not(.floating) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    &.floating {
+      margin-top: -10px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  input {
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    line-height: 1.79;
+    width: 100%;
+    outline: none;
+    opacity: 0;
+    transition: opacity 125ms ease;
+  }
+  .content {
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    //align-items: center;
+    &.visible {
+      height: auto;
+    }
+    .length {
+      margin-left: 16px;
+    }
+  }
+}
+app-error-message {
+  position: absolute;
+  top: calc(100% + 4px);
+  color: $error-color;
+  font-size: 13px;
+  line-height: 20px;
+}

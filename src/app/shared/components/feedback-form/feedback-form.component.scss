@@ -14,11 +14,46 @@
 .feedback-wrapper {
     padding: 56px 80px;
     height: 100%;
-    background-color: $light-color;
+}
+
+.feedback-header {
+    margin-bottom: 56px;
+}
+
+.feedback-title {
+    margin-bottom: 8px;
+}
+
+.feedback-header-text {
+    font-size: 14px;
+    color: $raven;
+}
+
+.feedback-content {
+    position: relative;
+}
+
+.form-controls {
+    margin-bottom: 134px;
+}
+
+.form-control {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.form-checkbox {
+    margin-bottom: 40px;
 }
 
 .background-words {
     top: initial;
     bottom: 0;
     left: 2px;
+}
+
+perfect-scrollbar {
+    height: 100%;
+    background-color: $light-color;
 }

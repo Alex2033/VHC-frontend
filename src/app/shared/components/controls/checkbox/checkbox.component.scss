@@ -1,0 +1,69 @@
+@import "theme";
+:host {
+  display: block;
+}
+:host-context(.ng-invalid.ng-touched) {
+  .label-text, .label-link {
+    color: $error-color;
+  }
+}
+label {
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: flex-start;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.mark {
+  position: relative;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  border-radius: 3px;
+  background-color: $text-color;
+  margin-right: 19px;
+}
+.label-text {
+  display: inline-block;
+  transition: color 100ms linear;
+  color: $raven;
+  font-size: 13px;
+  line-height: 1.69;
+}
+/* On mouse-over, add a gray background color */
+label:hover input ~ .mark {
+  border-color: $light-gray;
+}
+
+/* When the checkbox is checked, add a blue background */
+label input:checked ~ .mark {
+  border-color: $text-color;
+}
+.mark svg {
+  position: absolute;
+  display: none;
+  fill: $light-color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 8px;
+}
+
+/* Show the mark when checked */
+label input:checked ~ .mark svg {
+  display: block;
+}
+
+.label-link {
+  color: $primary-color;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback-form',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feedback-form.component.scss']
 })
 export class FeedbackFormComponent implements OnInit {
+  formGroup: FormGroup;
+  agree: boolean = false;
+  phonePattern = '^[0-9]+$';
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.formGroup = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern(this.phonePattern)]],
+      agree: ['false', [Validators.requiredTrue]]
+    });
+  }
+
+  submit() {
+    this.formGroup.markAllAsTouched();
+
+    if(!this.formGroup.valid) {
+      return;
+    } else {
+      this.formGroup.reset();
+    }
   }
 
 }
