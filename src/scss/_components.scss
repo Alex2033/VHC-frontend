@@ -355,6 +355,16 @@
     }
 }
 
+// стили для отображения
+.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
 // стили для svg-иконок
 .chevron-icon {
     width: 7px;
@@ -366,3 +376,4 @@
         transform: rotate(180deg);
     }
 }
+

@@ -1,1 +1,118 @@
-<p>detail works!</p>
+<div class="container" [class.flexible]="isFeaturesVisible">
+    <!-- apartment-content -->
+    <div class="apartment-content">
+        <perfect-scrollbar class="scrollbar">
+            <h1 class="apartment-title">Двухместный номер 1 кроватью</h1>
+            <div class="infoblocks">
+                <div class="infoblock">
+                    <svg class="infoblock-icon" width="16px" height="16px">
+                        <use xlink:href="assets/sprites/icons.svg#ico-snow"></use>
+                    </svg>
+                    <span>Кондиционер</span>
+                </div>
+                <div class="infoblock">
+                    <svg class="infoblock-icon" width="21px" height="16px">
+                        <use xlink:href="assets/sprites/icons.svg#ico-build"></use>
+                    </svg>
+                    <span>Вид на город</span>
+                </div>
+                <div class="infoblock">
+                    <svg class="infoblock-icon" width="20px" height="16px">
+                        <use xlink:href="assets/sprites/icons.svg#ico-wifi"></use>
+                    </svg>
+                    <span>Бесплатный Wi–Fi</span>
+                </div>
+                <div class="infoblock">
+                    <svg class="infoblock-icon" width="16px" height="16px">
+                        <use xlink:href="assets/sprites/icons.svg#ico-img"></use>
+                    </svg>
+                    <span>Вид на двор</span>
+                </div>
+            </div>
+            <div class="apartment-text">
+                <p>Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.</p>
+            </div>
+            <ul class="apartment-characteristic">
+                <li>
+                    <p>Размер номера</p>
+                    <p>24 м²</p>
+                </li>
+                <li>
+                    <p>Количество гостей</p>
+                    <p>2</p>
+                </li>
+            </ul>
+            <div class="apartment-controls">
+                <button type="button" class="button secondary">Забронировать</button>
+                <a [routerLink]="[]" class="next-room">
+                    <span>Следующий номер</span>
+                    <svg width="22px" height="7px">
+                        <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </perfect-scrollbar>
+    </div>
+
+    <!-- features -->
+    <div class="features" [ngClass]="{'photos-on': !isFeaturesVisible, 'features-on': isFeaturesVisible}">
+        <div class="features-wrapper">
+            <perfect-scrollbar class="scrollbar">
+                <header class="features-header">
+                    <h3 *ngIf="isFeaturesVisible">Особенности и удобства</h3>
+                    <button 
+                        (click)="isFeaturesVisible = !isFeaturesVisible" 
+                        type="button" 
+                        class="button light"
+                    >
+                        {{ isFeaturesVisible ? 'Фотографии' : 'Особенности' }}
+                    </button>
+                </header>
+
+                <!-- features items -->
+                <div *ngIf="isFeaturesVisible" class="features-items">
+                    <div class="features-item" *ngFor="let feature of features">
+                        <header class="features-item-header">
+                            <svg class="features-item-icon" [attr.width]="feature.iconWidth" [attr.height]="feature.iconHeight">
+                                <use [attr.xlink:href]="feature.iconSrc"></use>
+                            </svg>
+                            <h6 class="features-item-title">{{ feature.title }}</h6>
+                        </header>
+                        <div class="features-item-text">
+                            <p>{{ feature.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            </perfect-scrollbar>
+            <div class="slider-controls" [class.display-none]="isFeaturesVisible">
+                <div class="slider-index">{{ index + 1 }}/{{ images.length }}</div>
+                <button type="button" class="control-button" (click)="imagesSlider.swiper.slidePrev()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-button" (click)="imagesSlider.swiper.slideNext()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="background-block" [class.features-block]="isFeaturesVisible">
+
+    <!-- slider -->
+    <div 
+        class="swiper-container" 
+        [class.display-none]="isFeaturesVisible" 
+        [(index)]="index" 
+        [swiper]="config" #imagesSlider
+    >
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let image of images">
+                <img [src]="image" alt="business image">
+            </div>
+        </div>
+    </div>
+</div>
