@@ -1,0 +1,28 @@
+<section class="page-section">
+    <div class="container">
+        <div class="description-content">
+            <div class="description-video">
+                <div class="video-overlay" *ngIf="!videoVisible" [@fadeInOut]>
+                    <img class="overlay-image" src="assets/images/pages/rent/description/video-overlay.jpg" alt="video overlay">
+                    <img 
+                        (click)="playVideo()"
+                        class="play-button" 
+                        src="assets/images/pages/rent/description/play.png" 
+                        alt="play button"
+                    >
+                </div>
+                <iframe #video *ngIf="videoVisible" [src]="sanitizeredUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="description-info">
+                <div class="background-words stroked">Valo Hotel City</div>
+                <div class="description-info-container">
+                    <h3 class="description-title light">
+                        <p>
+                            Первые гости провели <span class="secondary-color">«тест-драйв»</span> <br> новых апартаментов. Смотрите, <br> что из этого получилось
+                        </p>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

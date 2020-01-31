@@ -1,0 +1,50 @@
+<div class="apartment">
+
+    <!-- background image -->
+    <img [src]="apartment.image" alt="apartment image" class="background-image">
+
+    <div class="apartment-container">
+        <div class="apartment-content">
+            <div class="apartment-content-left">
+                <div class="apartment-info">
+                    <p>{{ apartment.area }} м<sup>2</sup></p>
+                    <p>{{ apartment.rooms }}</p>
+                </div>
+                <div class="apartment-main">
+                    <h2 class="light apartment-title">{{ apartment.title }}</h2>
+                    <div class="aparment-choise">
+                        <div class="apartment-choise-item">
+                            <p class="choise-month">Стоимость, Мес</p>
+                            <div class="counter">
+                                <button 
+                                    type="button" 
+                                    class="arrow-control decrease-control" 
+                                    (click)="decreaseMonths()">
+                                </button>
+                                <div class="months-number">{{ months }}</div>
+                                <button 
+                                    type="button" 
+                                    class="arrow-control increase-control" 
+                                    (click)="increaseMonths()">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="apartment-choise-item">
+                            <p class="choise-month">Стоимость, Мес</p>
+                            <strong class="months-number">{{ apartment.price | currency:'':'':'4.0' }} ₽</strong>
+                        </div>
+                    </div>
+                    <div class="apartment-buttons">
+                        <button 
+                            type="button" 
+                            (click)="modal.open('feedback-form')" 
+                            class="button secondary"
+                        >
+                            Отправить заявку
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

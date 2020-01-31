@@ -1,0 +1,157 @@
+@import "theme";
+
+:host {
+    display: block;
+}
+
+.apartment {
+    position: relative;
+    height: 536px;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
+
+.apartment-container,
+.apartment-content,
+.apartment-content-left {
+    height: 100%;
+}
+
+.apartment-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.apartment-content-left {
+    position: relative;
+    background-color: $text-color;
+    display: flex;
+    max-width: 480px;
+    flex: 1 0 auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    padding: 48px;
+}
+
+.apartment-info {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.7;
+
+    sup {
+        font-size: 8px;
+        margin-left: 1px;
+    }
+
+    > * {
+        border-radius: 24px;
+        padding: 0 16px 2px;
+        background-color: $light-gray;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}
+
+.apartment-title {
+    max-width: 283px;
+}
+
+.apartment-title {
+    margin-bottom: 48px;
+}
+
+.aparment-choise {
+    display: flex;
+    margin-bottom: 48px;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 58px;
+        }
+    }
+}
+
+.apartment-choise-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.choise-month {
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: $light-color;
+    margin-bottom: 9px;
+}
+
+.months-number {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 800;
+    color: $light-color;
+    margin-top: auto;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+
+    .months-number {
+        width: 50px;
+        text-align: center;
+    }
+}
+
+.arrow-control {
+    position: relative;
+}
+
+.decrease-control {
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: $text-color;
+    }
+}
+
+.increase-control {
+    &::before, &::after {
+        content: '';
+        background-color: $text-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        width: 10px;
+        height: 2px;
+    }
+
+    &::after {
+        width: 2px;
+        height: 10px;
+    }
+}

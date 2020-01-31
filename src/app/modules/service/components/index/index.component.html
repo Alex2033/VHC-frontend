@@ -1,0 +1,133 @@
+<div class="inner-page">
+    <div class="inner-page-first-screen" *ngIf="false">
+        <section class="page-section inner-page-section">
+            <div class="container">
+                <header class="page-section-header inner-page-section-header">
+                    <h1 class="section-title">
+                        <span>Услуги</span>
+                        <div class="background-words">
+                            service
+                        </div>
+                    </h1>
+                    <div class="section-description">
+                        <p>Valo Hotel City предлагает <strong> все гостиничные сервисы,</strong> которые только могут потребоваться: круглосуточное обслуживание апартаментов, служба клининга, химчистка, прачечная, доставка еды, консьерж-служба.</p>
+                    </div>
+                </header>
+            </div>
+            <div class="inner-page-image">
+                <img src="assets/images/pages/service/background-image.jpg" alt="service image">
+                <div class="container">
+                    <button type="button" class="scroll-alert">
+                        <svg class="scroll-alert-icon" width="12px" height="18px">
+                            <use xlink:href="assets/sprites/icons.svg#ico-mouse"></use>
+                        </svg>
+                        <span>Листайте вниз</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="inner-page-content">
+        <div class="container inner-page-container">
+            <div class="inner-page-content-left">
+                <perfect-scrollbar class="scrollbar">
+                    <h2 class="section-title">
+                        <span>Услуги</span>
+                        <div class="background-words">
+                            service
+                        </div>
+                    </h2>
+
+                    <!-- inner cards -->
+                    <div class="inner-cards-wrapper">
+
+                        <!-- card 1 -->
+                        <div class="inner-cards-item" id="rest">
+                            <header class="inner-cards-header">
+                                <h3>Места для приятного отдыха</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">A</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-service-card *ngFor="let card of cards" [card]="card"></app-service-card>
+                            </div>
+                        </div>
+
+                        <!-- card 2 -->
+                        <div class="inner-cards-item" id="services">
+                            <header class="inner-cards-header">
+                                <h3>Бытовые услуги</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">B</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-service-card *ngFor="let card of cards" [card]="card"></app-service-card>
+                            </div>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div class="inner-cards-item" id="sport">
+                            <header class="inner-cards-header">
+                                <h3>Спорт</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">C</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-service-card *ngFor="let card of cards" [card]="card"></app-service-card>
+                            </div>
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+            <div class="inner-page-content-right">
+                <perfect-scrollbar class="scrollbar">
+                    <ul class="inner-menu-list">
+                        <li class="inner-menu-list-item">
+                            <button 
+                                class="inner-menu-list-button"
+                                (click)="scrollToElement('#rest')" 
+                                type="button" 
+                            >
+                                Отдых
+                            </button>
+                        </li>
+                        <li class="inner-menu-list-item">
+                            <button 
+                                class="inner-menu-list-button"
+                                (click)="scrollToElement('#services')" 
+                                type="button" 
+                            >
+                                Бытовые услуги
+                            </button>
+                        </li>
+                        <li class="inner-menu-list-item">
+                            <button 
+                                class="inner-menu-list-button"
+                                (click)="scrollToElement('#sport')" 
+                                type="button" 
+                            >
+                                Спорт
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="content-right-text">
+                        <p>
+                            Valo Hotel City предлагает <strong>все гостиничные сервисы,</strong> которые только могут потребоваться: круглосуточное обслуживание апартаментов, служба клининга, химчистка, прачечная, доставка еды, консьерж-служба.
+                        </p>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+        </div>
+
+        <!-- background block -->
+        <div class="background-block">
+            <img src="assets/images/pages/service/bitmap.jpg" alt="menu background image">
+        </div>
+    </div>
+</div>

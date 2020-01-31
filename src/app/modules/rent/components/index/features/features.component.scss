@@ -1,0 +1,48 @@
+.page-section-header {
+    margin-bottom: 64px;
+}
+
+.content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 64px;
+}
+
+.image-block {
+    width: 100%;
+    max-width: 824px;
+    padding-bottom: 32%;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.infoblocks {
+    display: flex;
+    max-width: 824px;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.infoblock {
+    flex: 1;
+    max-width: 344px;
+}
+
+.infoblock-title {
+    margin-bottom: 32px;
+}
+
+.infoblock-text {
+    font-size: 14px;
+    line-height: 1.79;
+}

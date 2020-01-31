@@ -10,15 +10,15 @@ export class HeaderComponent implements OnInit {
   menuLinks: Array<object> = [
     {
       text: 'Номера',
-      url: '/apartments'
+      url: 'apartments'
     },
     {
       text: 'Акции',
-      url: '/stocks'
+      url: 'stocks'
     },
     {
       text: 'Долгосрочная аренда',
-      url: '/rent'
+      url: 'rent'
     },
   ]
 

@@ -1,0 +1,15 @@
+.inner-cards {
+    grid-template-rows: 200px;
+}
+
+.inner-page-content-left {
+    margin: 0 -15px; // для корректной отображении тени карточек внутри скроллбара
+}
+
+.scrollbar {
+    ::ng-deep {
+        .ps-content {
+            padding: 0 15px; // для корректной отображении тени карточек внутри скроллбара
+        }
+    }
+}

@@ -1,0 +1,134 @@
+<div class="inner-page">
+    <div class="inner-page-first-screen" *ngIf="false">
+        <section class="page-section inner-page-section">
+            <div class="container">
+                <header class="page-section-header inner-page-section-header">
+                    <h1 class="section-title">
+                        <span>Мероприятия</span>
+                        <div class="background-words">
+                            events
+                        </div>
+                    </h1>
+                    <div class="section-description">
+                        <p><strong>Ресторанный комплекс VALO HOTEL CITY.</strong> Лучшее место для праздничного торжества, корпоративной вечеринки или праздничного банкета! Можно организовать любые деловые мероприятия, провести переговоры, семинары и конференции.</p>
+                    </div>
+                </header>
+            </div>
+            <div class="inner-page-image">
+                <img src="assets/images/pages/events/background-image.jpg" alt="events image">
+                <div class="container">
+                    <button type="button" class="scroll-alert">
+                        <svg class="scroll-alert-icon" width="12px" height="18px">
+                            <use xlink:href="assets/sprites/icons.svg#ico-mouse"></use>
+                        </svg>
+                        <span>Листайте вниз</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="inner-page-content">
+        <div class="container inner-page-container">
+            <div class="inner-page-content-left">
+                <perfect-scrollbar class="scrollbar">
+                    <h2 class="section-title">
+                        <span>Мероприятия</span>
+                        <div class="background-words">
+                            events
+                        </div>
+                    </h2>
+
+                    <!-- inner cards -->
+                    <div class="inner-cards-wrapper">
+
+                        <!-- card 1 -->
+                        <div class="inner-cards-item" id="january">
+                            <header class="inner-cards-header">
+                                <h3>В январе</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">01</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-event-card *ngFor="let card of cards" [card]="card"></app-event-card>
+                            </div>
+                        </div>
+
+                        <!-- card 2 -->
+                        <div class="inner-cards-item" id="february">
+                            <header class="inner-cards-header">
+                                <h3>В феврале</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">02</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-event-card *ngFor="let card of cards" [card]="card"></app-event-card>
+                            </div>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div class="inner-cards-item" id="march">
+                            <header class="inner-cards-header">
+                                <h3>В марте</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">03</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-event-card *ngFor="let card of cards" [card]="card"></app-event-card>
+                            </div>
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+            <div class="inner-page-content-right">
+                <perfect-scrollbar class="scrollbar">
+                    <ul class="inner-menu-list">
+                        <li class="inner-menu-list-item">
+                            <button 
+                                (click)="scrollToElement('#january')" 
+                                type="button" 
+                                class="inner-menu-list-button"
+                            >
+                                Январь
+                            </button>
+                        </li>
+                        <li class="inner-menu-list-item">
+                            <button 
+                                (click)="scrollToElement('#february')"  
+                                type="button" 
+                                class="inner-menu-list-button"
+                            >
+                                Февраль
+                            </button>
+                        </li>
+                        <li class="inner-menu-list-item">
+                            <button 
+                                (click)="scrollToElement('#march')" 
+                                type="button" 
+                                class="inner-menu-list-button"
+                            >
+                                Март
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="content-right-text">
+                        <p>
+                            <strong>Ресторанный комплекс VALO HOTEL CITY.</strong> Лучшее место для праздничного торжества, корпоративной вечеринки или праздничного банкета! Можно организовать любые деловые мероприятия, провести переговоры, семинары и конференции.
+                        </p>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+        </div>
+
+        <!-- background block -->
+        <div class="background-block">
+            <img src="assets/images/pages/events/bitmap.jpg" alt="menu background image">
+        </div>
+    </div>
+</div>

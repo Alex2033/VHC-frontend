@@ -17,6 +17,8 @@ import { ApartmentSliderComponent } from './components/apartment-slider/apartmen
 import { BusinessSliderComponent } from './components/business-slider/business-slider.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
+import { DocCardComponent } from './components/cards/doc-card/doc-card.component';
+import { ApartmentBlockComponent } from './components/apartment-block/apartment-block.component';
 
 // material modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -58,7 +60,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalComponent,
     FeedbackFormComponent,
     TextComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    DocCardComponent,
+    ApartmentBlockComponent
   ],
   imports: [
     CommonModule,
@@ -91,7 +95,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BusinessSliderComponent,
     ModalComponent,
     FeedbackFormComponent,
-    AngularYandexMapsModule
+    AngularYandexMapsModule,
+    DocCardComponent,
+    ApartmentBlockComponent
   ],
   providers: [
     MatNativeDateModule,

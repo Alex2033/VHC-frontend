@@ -16,7 +16,7 @@ export class MainMenuComponent implements OnInit {
   links: Array<object> = [
     {
       text: 'Номера',
-      url: '/apartments'
+      url: 'apartments'
     },
     {
       text: 'Акции',
@@ -24,19 +24,19 @@ export class MainMenuComponent implements OnInit {
     },
     {
       text: 'Долгосрочная аренда',
-      url: ''
+      url: 'rent'
     },
     {
       text: 'Услуги и сервисы',
-      url: ''
+      url: 'service'
     },
     {
       text: 'Мероприятия',
-      url: ''
+      url: 'events'
     },
     {
       text: 'Пространства для бизнеса',
-      url: '/business'
+      url: 'business'
     },
     {
       text: 'Доходные программы',
@@ -44,7 +44,7 @@ export class MainMenuComponent implements OnInit {
     },
     {
       text: 'Документы',
-      url: ''
+      url: 'docs'
     }
   ];
 

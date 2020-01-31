@@ -1,0 +1,65 @@
+@import "theme";
+
+.page-section {
+    padding-top: 86px;
+    position: relative;
+}
+
+.page-section-header {
+    justify-content: flex-start;
+}
+
+.section-title {
+    margin-left: 162px;
+}
+
+.advantages-background {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+.rating {
+    border: 1px solid $border-color;
+    padding: 32px;
+}
+
+.rating-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.rating-assessment {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #168225;
+}
+
+.rating-testimonials {
+    font-size: 14px;
+    line-height: 1.714;
+    color: $dark-gray;
+}
+
+// slider
+
+.slider {
+    align-items: center;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide {
+    width: 60px;
+}
+
+.icon-item {
+    fill: $gray;
+}
