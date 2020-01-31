@@ -6,7 +6,7 @@ import localeRu from '@angular/common/locales/ru';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeRu);
 
@@ -18,7 +18,6 @@ registerLocaleData(localeRu);
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule,
     BrowserAnimationsModule
   ],
   providers: [

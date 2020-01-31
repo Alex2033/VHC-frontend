@@ -21,6 +21,7 @@
         top: 0;
         left: 0;
         bottom: 0;
+        width: 100%;
         right: 0;
         object-fit: cover;
     }
@@ -36,6 +37,7 @@
     color: $primary-color;
     background-color: $light-color;
     border-radius: 0;
+    padding: 7px 23px;
 }
 
 .event-card-top {

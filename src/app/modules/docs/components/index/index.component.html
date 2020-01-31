@@ -1,0 +1,105 @@
+<div class="inner-page">
+    <div class="inner-page-content">
+        <div class="container inner-page-container">
+            <div class="inner-page-content-left">
+                <perfect-scrollbar class="scrollbar" (psScrollY)="onScroll()">
+                    <h2 class="section-title">
+                        <span>Документы</span>
+                        <div class="background-words">
+                            docs
+                        </div>
+                    </h2>
+
+                    <!-- inner cards -->
+                    <div class="inner-cards-wrapper">
+
+                        <!-- card 1 -->
+                        <div class="inner-cards-item" id="declaration">
+                            <header class="inner-cards-header">
+                                <h3>Проектная декларация</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">A</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-doc-card *ngFor="let card of cards" [card]="card"></app-doc-card>
+                            </div>
+                        </div>
+
+                        <!-- card 2 -->
+                        <div class="inner-cards-item" id="changes">
+                            <header class="inner-cards-header">
+                                <h3>Изменение в проектную документацию</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">B</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-doc-card *ngFor="let card of cards" [card]="card"></app-doc-card>
+                            </div>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div class="inner-cards-item" id="documents">
+                            <header class="inner-cards-header">
+                                <h3>Прочие документы</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">C</div>
+                                </div>
+                            </header>
+                            <div class="inner-cards">
+                                <app-doc-card *ngFor="let card of cards" [card]="card"></app-doc-card>
+                            </div>
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+            <div class="inner-page-content-right">
+                <perfect-scrollbar class="scrollbar">
+                    <ul class="inner-menu-list">
+                        <li class="inner-menu-list-item">
+                            <button 
+                                (click)="scrollToElement('#declaration')" 
+                                type="button" 
+                                class="inner-menu-list-button"
+                            >
+                                Проектная декларация
+                            </button>
+                        </li>
+                        <li class="inner-menu-list-item">
+                            <button 
+                                (click)="scrollToElement('#changes')" 
+                                type="button" 
+                                class="inner-menu-list-button"
+                            >
+                                Изменения в  декларацию
+                            </button>
+                        </li>
+                        <li class="inner-menu-list-item">
+                            <button 
+                                (click)="scrollToElement('#documents')" 
+                                type="button" 
+                                class="inner-menu-list-button"
+                            >
+                                Прочие документы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="content-right-text">
+                        <p>
+                            <strong>VALO – это проект европейского уровня.</strong> Генеральный подрядчик ООО «Лемминкяйнен строй» создал эффективную многоуровневую систему контроля качества строительства, которая совершенствовались в течение многих лет работы в Финляндии.
+                        </p>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+        </div>
+
+        <!-- background block -->
+        <div class="background-block">
+            <img src="assets/images/pages/service/bitmap.jpg" alt="menu background image">
+        </div>
+    </div>
+</div>

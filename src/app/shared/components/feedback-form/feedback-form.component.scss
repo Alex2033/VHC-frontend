@@ -57,3 +57,13 @@ perfect-scrollbar {
     height: 100%;
     background-color: $light-color;
 }
+
+.notification-content {
+    .feedback-title {
+        margin-bottom: 40px;
+    }
+}
+
+.notification-text {
+    margin-bottom: 48px;
+}

@@ -1,22 +1,77 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { fadeInOutAnimation } from 'src/app/shared/animations/fade-in-out.animation';
+import { Component, OnInit } from '@angular/core';
+import { SlideRight } from 'src/app/shared/animations/slide-right.animation';
+import { MenuService } from 'src/app/shared/services/menu.service';
+import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.scss'],
   animations: [
-    fadeInOutAnimation(),
+    SlideRight(450),
+
+    trigger("fadeUp", [
+      transition(":enter", [
+        style({
+          opacity: 0,
+          transform: 'translateY(50px)'
+        }),
+        animate(
+          '350ms 200ms',
+          style({
+            opacity: 1,
+            transform: 'translateY(0)'
+          })
+        )
+      ]),
+      transition(":leave", [
+        animate(
+          '350ms',
+          style({
+            opacity: 0,
+            transform: 'translateY(50px)'
+          })
+        )
+      ])
+    ]),
+
+    trigger('showImage', [
+      state('show', style({
+        opacity: 1,
+        zIndex: 1
+      })),
+      state('hide', style({
+        opacity: 0,
+        zIndex: -500
+      })),
+      transition('show => hide', [
+        animate('300ms')
+      ]),
+      transition('hide => show', [
+        animate('300ms')
+      ]),
+    ]),
   ]
 })
 export class MainMenuComponent implements OnInit {
 
-  @Output() close: EventEmitter<boolean> = new EventEmitter();
+  activeItem: number;
+
+  images: Array<string> = [
+    'assets/images/menu/bitmap.jpg',
+    'assets/images/pages/apartment/room.jpg',
+    'assets/images/pages/business/business-1.jpg',
+    'assets/images/pages/business/business-2.jpg',
+    'assets/images/pages/rent/first-screen/bitmap.jpg',
+    'assets/images/pages/business/business-1.jpg',
+    'assets/images/pages/apartment/room.jpg',
+    'assets/images/pages/business/business-1.jpg',
+  ];
 
   links: Array<object> = [
     {
       text: 'Номера',
-      url: '/apartments'
+      url: 'apartments'
     },
     {
       text: 'Акции',
@@ -24,19 +79,19 @@ export class MainMenuComponent implements OnInit {
     },
     {
       text: 'Долгосрочная аренда',
-      url: ''
+      url: 'rent'
     },
     {
       text: 'Услуги и сервисы',
-      url: ''
+      url: 'service'
     },
     {
       text: 'Мероприятия',
-      url: ''
+      url: 'events'
     },
     {
       text: 'Пространства для бизнеса',
-      url: '/business'
+      url: 'business'
     },
     {
       text: 'Доходные программы',
@@ -44,17 +99,22 @@ export class MainMenuComponent implements OnInit {
     },
     {
       text: 'Документы',
-      url: ''
+      url: 'docs'
     }
   ];
 
-  constructor() { }
+  constructor(public menu: MenuService) { }
 
   ngOnInit() {
   }
 
   closeMenu() {
-    this.close.emit(false);
+    this.menu.showMenu = false;
+  }
+
+  clickItem() {
+    this.menu.showMenu = false;
+    this.activeItem = -1;
   }
 
 }

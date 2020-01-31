@@ -1,0 +1,43 @@
+<section class="page-section">
+    <div class="container">
+        <header class="page-section-header">
+            <div class="section-name">
+                <div class="section-name-line"></div>
+                <h6>Ремонт <br> и мебель</h6>
+            </div>
+            <h2 class="section-title">
+                <span>Полная чистовая отделка<br>и мебелировка</span>
+                <div class="background-words">
+                    inte–rior
+                </div>
+            </h2>
+            <div class="section-description">
+                <p>
+                    Чистовая отделка, в которой используются <strong>материалы премиального качества.</strong> 
+                </p>
+            </div>
+        </header>
+        <div class="slider">
+            <div class="swiper-container" [swiper]="config" #serviceSlider>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let card of cards">
+                        <app-service-card [card]="card"></app-service-card>
+                    </div>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button type="button" class="control-button" (click)="serviceSlider.swiper.slidePrev()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="control-button" (click)="serviceSlider.swiper.slideNext()">
+                    <svg>
+                        <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    

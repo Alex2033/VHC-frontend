@@ -1,12 +1,30 @@
-<div class="menu">
-    <img src="assets/images/menu/bitmap.jpg" class="menu-img" alt="bitmap">
-    <perfect-scrollbar class="scrollbar" style="max-height: 100%">
+<div class="menu" *ngIf="menu.showMenu" [@fadeUp]>
+    <div class="menu-img">
+        <img 
+            [@showImage]="activeItem === i ? 'show' : 'hide'"
+            *ngFor="let image of images; let i = index" 
+            [src]="image"   
+            alt="bitmap"
+        >
+    </div>
+    
+    <perfect-scrollbar class="scrollbar">
         <nav class="menu-navigation">
             <ul class="menu-list">
-                <li class="menu-list-item" routerLinkActive="active" *ngFor="let link of links">
-                    <a (click)="closeMenu()" [routerLink]="[link.url]" class="menu-list-link">{{ link.text }}</a>
+                <li class="menu-list-item" routerLinkActive="active" *ngFor="let link of links; let i = index">
+                    <a 
+                        class="menu-list-link"
+                        (mouseenter)="activeItem = i" 
+                        (mouseleave)="activeItem = -1" 
+                        (click)="clickItem()" 
+                        [routerLink]="[link.url]" 
+                    >
+                        {{ link.text }}
+                    </a>
                 </li>
             </ul>
         </nav>
     </perfect-scrollbar>
 </div>
+
+<div class="menu-background" [@slideRight] *ngIf="menu.showMenu"></div>

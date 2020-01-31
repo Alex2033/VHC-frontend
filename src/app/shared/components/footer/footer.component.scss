@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     margin-top: auto;
@@ -14,6 +15,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 88px;
+
+    @include media-breakpoint-only($xxl) {
+        flex-direction: column;
+    }
 }
 
 .footer-image {
@@ -22,6 +27,10 @@
     width: 632px;
     flex-shrink: 0;
     z-index: 1;
+
+    @include media-breakpoint-only($xxl) {
+        width: 100%;
+    }
 
     img {
         position: absolute;
@@ -41,12 +50,24 @@
     justify-content: space-around;
     flex: 1;
     align-items: flex-end;
+
+    @include media-breakpoint-only($xxl) {
+        order: -1;
+        width: 100%;
+        margin-bottom: 48px;
+    }
 }
 
 .background-words {
     left: -54px;
     top: -21px;
     max-width: 372px;
+
+    @include media-breakpoint-only($xxl) {
+        font-size: 104px;
+        left: -16px;
+        top: -16px;
+    }
 }
 
 .footer-info-container {
@@ -54,6 +75,19 @@
     z-index: 1;
     width: 327px;
     margin-right: 17px;
+
+    @include media-breakpoint-only($xxl) {
+        width: 100%;
+        display: flex;
+        margin-right: 0;
+        align-items: center;
+
+        > * {
+            &:not(:last-child) {
+                margin-right: 76px;
+            }
+        }
+    }
 }
 
 .footer-link {
@@ -70,6 +104,12 @@
 
     &:not(:last-child) {
         margin-bottom: 96px;
+    }
+
+    @include media-breakpoint-only($xxl) {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
     }
 }
 

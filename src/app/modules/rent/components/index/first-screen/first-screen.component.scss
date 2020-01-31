@@ -1,0 +1,159 @@
+@import "theme";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.rent-first-sceen,
+.container,
+.rent-wrapper,
+.rent-content {
+    height: 100%;
+}
+
+.rent-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.rent-wrapper {
+    max-width: 460px;
+    padding-bottom: 48px;
+}
+
+.rent-title {
+    margin-bottom: 56px;
+    max-width: 366px;
+    margin-top: 48px;
+}
+
+.scrollbar {
+    ::ng-deep {
+        .ps__rail-y {
+            margin-top: 48px;
+        }
+    }
+}
+
+.rent-bottom {
+    display: flex;
+    align-items: center;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 57px;
+        }
+    }
+}
+
+.next-room {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $text-color;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    svg {
+        fill: $text-color;
+    }
+}
+
+
+.rent-infoblocks {
+    margin-bottom: 148px;
+
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+.rent-infoblock {
+    display: flex;
+    align-items: flex-start;
+    max-width: 384px;
+    width: 100%;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 28px;
+        }
+    }
+}
+
+.infoblock-icon {
+    padding-top: 8px;
+}
+
+.rent-icon {
+    width: 30px;
+    fill: $gray;
+}
+
+.background-words {
+    top: -24px;
+    left: 0;
+}
+
+.background-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55.94%;
+    height: 100%;
+    z-index: -1;
+
+    @media (min-width: 1600px) {
+        width: 55%;
+    }
+
+    @media (min-width: 2000px) {
+        width: 54%;
+    }
+
+    @media (min-width: 2600px) {
+        width: 53%;
+    }
+
+    @media (min-width: 3400px) {
+        width: 52%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.absolute-image {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    right: 0;
+    width: 344px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

@@ -3,7 +3,7 @@ import { fadeInOutAnimation } from '../../animations/fade-in-out.animation';
 import { ModalService } from '../../services/modal.service';
 import { ModalConfiguration } from '../../models/modal-configuration';
 import { Router } from '@angular/router';
-import { SlideRight } from '../../animations/slide-right';
+import { SlideRight } from '../../animations/slide-right.animation';
 
 @Component({
   selector: 'app-modal',

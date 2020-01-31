@@ -1,0 +1,27 @@
+// variables
+$xs: 375px;
+$sm: 575px;
+$lg: 768px;
+$xl: 1024px;
+$xxl: 1360px;
+
+$container-width: 1142px;
+
+// media queries mixins
+@mixin media-breakpoint-up($breakpoint) {
+    @media (min-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-only($breakpoint) {
+    @media (max-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-between($lower, $upper) {
+    @media (min-width: #{$lower}) and (max-width: #{$upper}) {
+        @content;
+    }
+}

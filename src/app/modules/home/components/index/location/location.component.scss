@@ -1,11 +1,22 @@
+@import "responsive";
+
 .location-content {
     display: flex;
     justify-content: space-between;
+
+    @include media-breakpoint-only($xxl) {
+        flex-direction: column;
+    }
 }
 
 .page-section-header {
     flex-direction: column;
     margin-bottom: 0;
+
+    @include media-breakpoint-only($xxl) {
+        flex-direction: row;
+        margin-bottom: 48px;
+    }
 }
 
 .section-name {
@@ -14,10 +25,18 @@
 
 .section-title {
     margin: 0 0 176px;
+
+    @include media-breakpoint-only($xxl) {
+        margin-bottom: 34px;
+    }
 }
 
 .location-buttons {
     margin-bottom: 112px;
+
+    @include media-breakpoint-only($xxl) {
+        margin-bottom: 0;
+    }
 }
 
 .background-words {
@@ -27,6 +46,17 @@
 .location-map {
     margin-left: 22px;
     width: 632px;
+
+    ::ng-deep .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include media-breakpoint-only($xxl) {
+        height: 560px;
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .location-text {

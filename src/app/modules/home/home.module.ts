@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HomeRoutingModule } from './home-routing.module';
 import { IndexComponent } from './components/index/index.component';
-import {SharedModule} from '../../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { FirstScreenComponent } from './components/index/first-screen/first-screen.component';
 import { AdvantagesComponent } from './components/index/advantages/advantages.component';
 import { DescriptionComponent } from './components/index/description/description.component';
@@ -13,7 +13,17 @@ import { ApartmentsComponent } from './components/index/apartments/apartments.co
 
 
 @NgModule({
-  declarations: [IndexComponent, FirstScreenComponent, AdvantagesComponent, DescriptionComponent, ServicesComponent, LocationComponent, BannerComponent, EventsComponent, ApartmentsComponent],
+  declarations: [
+    IndexComponent, 
+    FirstScreenComponent, 
+    AdvantagesComponent, 
+    DescriptionComponent, 
+    ServicesComponent, 
+    LocationComponent, 
+    BannerComponent, 
+    EventsComponent, 
+    ApartmentsComponent
+  ],
   imports: [
     SharedModule,
     HomeRoutingModule

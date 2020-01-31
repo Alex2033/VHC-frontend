@@ -1,0 +1,28 @@
+@import "responsive";
+
+.inner-cards {
+    grid-template-rows: 200px;
+}
+
+.inner-page-content-left {
+    margin: 0 -15px; // для корректной отображении тени карточек внутри скроллбара
+    
+    @include media-breakpoint-only($xxl) {
+        margin: 0;
+        padding-right: 15px;
+    }
+}
+
+.inner-cards {
+    @include media-breakpoint-between($xl, $xxl) {
+        grid-gap: 30px; 
+    }
+}
+
+.scrollbar {
+    ::ng-deep {
+        .ps-content {
+            padding: 0 15px; // для корректной отображении тени карточек внутри скроллбара
+        }
+    }
+}

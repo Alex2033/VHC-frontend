@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     position: relative;
@@ -21,4 +22,8 @@
     bottom: 0;
     letter-spacing: 8px;
     color: $title-color;
+
+    @include media-breakpoint-only($xxl) {
+        bottom: 94px;
+    }
 }

@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 .page-section {
     border-top: 1px solid $border-color;
@@ -8,4 +9,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 536px);
     grid-gap: 40px;
+
+    @include media-breakpoint-only($xxl) {
+        grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+        grid-gap: 32px;
+    }
 }

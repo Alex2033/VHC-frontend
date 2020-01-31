@@ -1,6 +1,6 @@
 <div class="menu">
     <div class="menu-content">
-        <button class="open-menu" (click)="showMenu = !showMenu" [class.active]="showMenu">
+        <button class="open-menu" (click)="menu.showMenu = !menu.showMenu" [class.active]="menu.showMenu">
             <span class="ico-menu">
                 <span class="small-line"></span>
                 <span class="big-line"></span>
@@ -32,9 +32,5 @@
     </div>
 
     <!-- main menu -->
-    <app-main-menu 
-        *ngIf="showMenu" 
-        [@slideRight] 
-        (close)="showMenu = false"
-    ></app-main-menu>
+    <app-main-menu></app-main-menu>
 </div>

@@ -1,12 +1,25 @@
+@import "theme";
+@import "responsive";
+
 .page-section-header {
     margin-bottom: 104px;
+
+    @include media-breakpoint-only($xxl) {
+        margin-bottom: 32px;
+    }
 }
 
 app-booking-form {
     position: static;
     transform: translate(0, 0);
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     margin-bottom: 64px;
+
+    @include media-breakpoint-only($xxl) {
+        margin-bottom: 40px;
+        border-top: 1px solid $border-color;
+    }
 }
 
 .aparts {

@@ -15,6 +15,22 @@ const routes: Routes = [
     path: 'business',
     loadChildren: () => import('./modules/business/business.module').then(mod => mod.BusinessModule)
   },
+  {
+    path: 'service',
+    loadChildren: () => import('./modules/service/service.module').then(mod => mod.ServiceModule)
+  },
+  {
+    path: 'events',
+    loadChildren: () => import('./modules/events/events.module').then(mod => mod.EventsModule)
+  },
+  {
+    path: 'docs',
+    loadChildren: () => import('./modules/docs/docs.module').then(mod => mod.DocsModule)
+  },
+  {
+    path: 'rent',
+    loadChildren: () => import('./modules/rent/rent.module').then(mod => mod.RentModule)
+  },
 ];
 
 @NgModule({

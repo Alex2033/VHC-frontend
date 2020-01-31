@@ -2,19 +2,22 @@
     <div class="container">
         <div class="location-content">
             <header class="page-section-header">
-                <div class="section-name">
-                    <div class="section-name-line"></div>
-                    <h6>Местонахождение</h6>
-                </div>
-                <h2 class="section-title">
-                    <span>Интересные места рядом с Valo Hotel City</span>
-                    <div class="background-words">
-                        loc- <br> ation
+                <div class="header-content">
+                    <div class="section-name">
+                        <div class="section-name-line"></div>
+                        <h6>Местонахождение</h6>
                     </div>
-                </h2>
-                <div class="location-buttons">
-                    <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367717%2C59.884082&mode=routes&origin=jsapi_2_1_75&routes%5BtimeDependent%5D%5Btime%5D=2020-01-20T15%3A55%3A00&routes%5BtimeDependent%5D%5Btype%5D=departure&rtext=~59.884322%2C30.367344&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D11514389275&z=17" target="_blank" class="button dark" type="button">Маршрут в Яндекс.Карте</a>
+                    <h2 class="section-title">
+                        <span>Интересные места рядом с Valo Hotel City</span>
+                        <div class="background-words">
+                            loc- <br> ation
+                        </div>
+                    </h2>
+                    <div class="location-buttons">
+                        <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367717%2C59.884082&mode=routes&origin=jsapi_2_1_75&routes%5BtimeDependent%5D%5Btime%5D=2020-01-20T15%3A55%3A00&routes%5BtimeDependent%5D%5Btype%5D=departure&rtext=~59.884322%2C30.367344&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D11514389275&z=17" target="_blank" class="button dark" type="button">Маршрут в Яндекс.Карте</a>
+                    </div>
                 </div>
+                
                 <div class="location-text">
                     <p>
                         Станция метро «Бухарестская» — прямо через дорогу. До главных транспортных развязок города (ЗСД, КАД и Московского проспекта) всего 10–15 минут на машине.
@@ -26,9 +29,15 @@
                 <angular-yandex-map [center]="[59.916771186075785, 30.348151407651475]" [zoom]="15">
                     <angular-yandex-placemark
                         [geometry]="[59.91310384356382, 30.344218691392978]"
+                        [properties]="placemarksProperties[0]"
+                        [options]="placemarksOptions[0]"
+                        (load)="loadPlacemarker1($event)"
                     ></angular-yandex-placemark>
                     <angular-yandex-placemark
                         [geometry]="[59.92064640763944, 30.343797602272325]"
+                        [properties]="placemarksProperties[1]"
+                        [options]="placemarksOptions[1]"
+                        (load)="loadPlacemarker2($event)"
                     ></angular-yandex-placemark>
                 </angular-yandex-map>
             </div>
