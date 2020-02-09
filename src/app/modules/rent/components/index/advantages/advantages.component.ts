@@ -21,8 +21,6 @@ export class AdvantagesComponent implements OnInit {
     { src: 'assets/sprites/icons.svg#ico-bar', width: 43, height: 56},
     { src: 'assets/sprites/icons.svg#ico-wash', width: 56, height: 40},
     { src: 'assets/sprites/icons.svg#ico-parking', width: 47.6, height: 38.43},
-    { src: 'assets/sprites/icons.svg#ico-parking', width: 47.6, height: 38.43},
-    { src: 'assets/sprites/icons.svg#ico-parking', width: 47.6, height: 38.43},
   ];
 
   constructor() { }

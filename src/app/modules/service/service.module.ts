@@ -3,6 +3,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ServiceRoutingModule } from './service-routing.module';
 import { IndexComponent } from './components/index/index.component';
+import {ServiceGroupsResolver} from './resolvers/service-groups.resolver';
 
 
 @NgModule({
@@ -10,6 +11,9 @@ import { IndexComponent } from './components/index/index.component';
   imports: [
     SharedModule,
     ServiceRoutingModule
+  ],
+  providers: [
+    ServiceGroupsResolver
   ]
 })
 export class ServiceModule { }

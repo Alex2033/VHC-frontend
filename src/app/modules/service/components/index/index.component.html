@@ -40,46 +40,16 @@
 
                     <!-- inner cards -->
                     <div class="inner-cards-wrapper">
-
-                        <!-- card 1 -->
-                        <div class="inner-cards-item" id="rest">
+                        <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
                             <header class="inner-cards-header">
-                                <h3>Места для приятного отдыха</h3>
+                                <h3>{{ group.name }}</h3>
                                 <div class="inner-category-designation">
                                     <div>—</div>
-                                    <div class="letter">A</div>
+                                    <div class="letter">{{ getChar(i) }}</div>
                                 </div>
                             </header>
                             <div class="inner-cards">
-                                <app-service-card *ngFor="let card of cards" [card]="card"></app-service-card>
-                            </div>
-                        </div>
-
-                        <!-- card 2 -->
-                        <div class="inner-cards-item" id="services">
-                            <header class="inner-cards-header">
-                                <h3>Бытовые услуги</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">B</div>
-                                </div>
-                            </header>
-                            <div class="inner-cards">
-                                <app-service-card *ngFor="let card of cards" [card]="card"></app-service-card>
-                            </div>
-                        </div>
-
-                        <!-- card 3 -->
-                        <div class="inner-cards-item" id="sport">
-                            <header class="inner-cards-header">
-                                <h3>Спорт</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">C</div>
-                                </div>
-                            </header>
-                            <div class="inner-cards">
-                                <app-service-card *ngFor="let card of cards" [card]="card"></app-service-card>
+                                <app-service-card *ngFor="let card of group.services" [card]="card"></app-service-card>
                             </div>
                         </div>
                     </div>
@@ -88,31 +58,13 @@
             <div class="inner-page-content-right">
                 <perfect-scrollbar class="scrollbar">
                     <ul class="inner-menu-list">
-                        <li class="inner-menu-list-item">
-                            <button 
+                        <li class="inner-menu-list-item" *ngFor="let group of groups">
+                            <button
                                 class="inner-menu-list-button"
-                                (click)="scrollToElement('#rest')" 
-                                type="button" 
+                                (click)="scrollToElement('#group-' + group.id)"
+                                type="button"
                             >
-                                Отдых
-                            </button>
-                        </li>
-                        <li class="inner-menu-list-item">
-                            <button 
-                                class="inner-menu-list-button"
-                                (click)="scrollToElement('#services')" 
-                                type="button" 
-                            >
-                                Бытовые услуги
-                            </button>
-                        </li>
-                        <li class="inner-menu-list-item">
-                            <button 
-                                class="inner-menu-list-button"
-                                (click)="scrollToElement('#sport')" 
-                                type="button" 
-                            >
-                                Спорт
+                                {{ group.name }}
                             </button>
                         </li>
                     </ul>

@@ -12,46 +12,16 @@
 
                     <!-- inner cards -->
                     <div class="inner-cards-wrapper">
-
-                        <!-- card 1 -->
-                        <div class="inner-cards-item" id="declaration">
+                        <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
                             <header class="inner-cards-header">
-                                <h3>Проектная декларация</h3>
+                                <h3>{{ group.name }}</h3>
                                 <div class="inner-category-designation">
                                     <div>—</div>
-                                    <div class="letter">A</div>
+                                    <div class="letter">{{ getChar(i) }}</div>
                                 </div>
                             </header>
                             <div class="inner-cards">
-                                <app-doc-card *ngFor="let card of cards" [card]="card"></app-doc-card>
-                            </div>
-                        </div>
-
-                        <!-- card 2 -->
-                        <div class="inner-cards-item" id="changes">
-                            <header class="inner-cards-header">
-                                <h3>Изменение в проектную документацию</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">B</div>
-                                </div>
-                            </header>
-                            <div class="inner-cards">
-                                <app-doc-card *ngFor="let card of cards" [card]="card"></app-doc-card>
-                            </div>
-                        </div>
-
-                        <!-- card 3 -->
-                        <div class="inner-cards-item" id="documents">
-                            <header class="inner-cards-header">
-                                <h3>Прочие документы</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">C</div>
-                                </div>
-                            </header>
-                            <div class="inner-cards">
-                                <app-doc-card *ngFor="let card of cards" [card]="card"></app-doc-card>
+                                <app-doc-card *ngFor="let card of group.documents" [card]="card"></app-doc-card>
                             </div>
                         </div>
                     </div>
@@ -60,31 +30,13 @@
             <div class="inner-page-content-right">
                 <perfect-scrollbar class="scrollbar">
                     <ul class="inner-menu-list">
-                        <li class="inner-menu-list-item">
-                            <button 
-                                (click)="scrollToElement('#declaration')" 
-                                type="button" 
+                        <li class="inner-menu-list-item" *ngFor="let group of groups">
+                            <button
+                                (click)="scrollToElement('#group' + group.id)"
+                                type="button"
                                 class="inner-menu-list-button"
                             >
-                                Проектная декларация
-                            </button>
-                        </li>
-                        <li class="inner-menu-list-item">
-                            <button 
-                                (click)="scrollToElement('#changes')" 
-                                type="button" 
-                                class="inner-menu-list-button"
-                            >
-                                Изменения в  декларацию
-                            </button>
-                        </li>
-                        <li class="inner-menu-list-item">
-                            <button 
-                                (click)="scrollToElement('#documents')" 
-                                type="button" 
-                                class="inner-menu-list-button"
-                            >
-                                Прочие документы
+                                {{ group.name }}
                             </button>
                         </li>
                     </ul>

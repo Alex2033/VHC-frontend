@@ -9,21 +9,25 @@ import { RepairsComponent } from './components/index/repairs/repairs.component';
 import { DescriptionComponent } from './components/index/description/description.component';
 import { FeaturesComponent } from './components/index/features/features.component';
 import { ApartmentsComponent } from './components/index/apartments/apartments.component';
+import {ApartmentEquipmentResolver} from './resolvers/apartment-equipment.resolver';
 
 
 @NgModule({
   declarations: [
-    IndexComponent, 
-    FirstScreenComponent, 
-    AdvantagesComponent, 
-    RepairsComponent, 
-    DescriptionComponent, 
-    FeaturesComponent, 
+    IndexComponent,
+    FirstScreenComponent,
+    AdvantagesComponent,
+    RepairsComponent,
+    DescriptionComponent,
+    FeaturesComponent,
     ApartmentsComponent
   ],
   imports: [
     SharedModule,
     RentRoutingModule
+  ],
+  providers: [
+    ApartmentEquipmentResolver
   ]
 })
 export class RentModule { }
