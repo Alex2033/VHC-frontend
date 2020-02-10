@@ -10,6 +10,7 @@ import { DescriptionComponent } from './components/index/description/description
 import { FeaturesComponent } from './components/index/features/features.component';
 import { ApartmentsComponent } from './components/index/apartments/apartments.component';
 import {ApartmentEquipmentResolver} from './resolvers/apartment-equipment.resolver';
+import {ApartmentsResolver} from './resolvers/apartments.resolver';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {ApartmentEquipmentResolver} from './resolvers/apartment-equipment.resolv
     RentRoutingModule
   ],
   providers: [
-    ApartmentEquipmentResolver
+    ApartmentEquipmentResolver,
+    ApartmentsResolver
   ]
 })
 export class RentModule { }

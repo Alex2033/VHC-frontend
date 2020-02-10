@@ -17,7 +17,6 @@
                 </p>
             </div>
         </header>
-        <app-apartment-block [apartment]="apartment"></app-apartment-block>
+        <app-apartment-block [apartment]="apartment" *ngFor="let apartment of apartments"></app-apartment-block>
     </div>
 </section>
-    

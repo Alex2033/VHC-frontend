@@ -5,6 +5,8 @@ import {ApartmentEquipmentElement} from '../contracts/apartment-equipment-elemen
 import {Service} from '../contracts/service';
 import {ServiceGroup} from '../contracts/service-group';
 import {DocumentGroup} from '../contracts/document-group';
+import {BusinessSpace} from '../contracts/business-space';
+import {LongTermRentApartment} from '../contracts/long-term-rent-apartment';
 
 @Injectable({
   providedIn: 'root'
@@ -207,4 +209,88 @@ export class ApiService {
       ]
     );
   }
+
+  getBusinessSpaces(): Observable<BusinessSpace[]> {
+    return of(
+      [
+        {
+          id: 1,
+          area: 24,
+          name: 'Пространство свободного назначения',
+          description: 'Подходит для выставок, размещения продуктовых автоматов',
+          cost: 29000,
+          images: [
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+          ]
+        },
+        {
+          id: 2,
+          area: 24,
+          name: 'Конференц–зал',
+          description: 'Подходит для выставок, размещения продуктовых автоматов',
+          cost: 29000,
+          images: [
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+          ]
+        }
+      ]
+    );
+  }
+
+  getLongTermRentApartments(): Observable<LongTermRentApartment[]> {
+    return of([
+      {
+        id: 1,
+        name: 'Двухместный номер с 1 кроватью',
+        description: 'Описание',
+        images: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        area: 24,
+        guestsCount: 2,
+        costConditions: [
+          {
+            minMonths: 1,
+            maxMonths: 2,
+            cost: 29000
+          },
+          {
+            minMonths: 3,
+            maxMonths: null,
+            cost: 25000
+          }
+          // minMonths: 1,
+        ]
+      },
+      {
+        id: 2,
+        name: 'Двухместный номер с 2 кроватями',
+        description: 'Описание',
+        images: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        area: 30,
+        guestsCount: 2,
+        costConditions: [
+          {
+            minMonths: 1,
+            maxMonths: 3,
+            cost: 31500
+          },
+          {
+            minMonths: 4,
+            maxMonths: null,
+            cost: 26000
+          }
+          // minMonths: 1,
+        ]
+      }
+    ])
+  };
 }
