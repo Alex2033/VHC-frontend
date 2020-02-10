@@ -11,6 +11,8 @@ import { BannerComponent } from './components/index/banner/banner.component';
 import { EventsComponent } from './components/index/events/events.component';
 import { ApartmentsComponent } from './components/index/apartments/apartments.component';
 import {ServicesResolver} from './resolvers/services.resolver';
+import {ApartmentsResolver} from './resolvers/apartments.resolver';
+import {EventsResolver} from './resolvers/events.resolver';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import {ServicesResolver} from './resolvers/services.resolver';
     HomeRoutingModule
   ],
   providers: [
-    ServicesResolver
+    ServicesResolver,
+    ApartmentsResolver,
+    EventsResolver
   ]
 })
 export class HomeModule { }

@@ -4,6 +4,6 @@ import {ApartmentAdvantage} from './apartment-advantage';
 
 export interface ShortTermRentApartment extends Apartment
 {
-  features: ApartmentFeature[];
-  advantages: ApartmentAdvantage[];
+  features?: ApartmentFeature[];
+  advantages?: ApartmentAdvantage[];
 }

@@ -5,15 +5,14 @@
             <div class="apartment-content-left">
                 <div class="apartmet-info">
                     <p>{{ apartment.area }} м<sup>2</sup></p>
-                    <p>{{ apartment.rooms }}</p>
+                    <p>для {{ apartment.guestsCount }}-х</p>
                 </div>
                 <div class="apartment-main">
-                    <h2 class="light apartment-title">{{ apartment.title }}</h2>
-                    <div class="apartment-description">
-                        <p>{{ apartment.description }}</p>
+                    <h2 class="light apartment-title">{{ apartment.name }}</h2>
+                    <div class="apartment-description" [innerHTML]="apartment.description | paragraphs">
                     </div>
                     <div class="apartment-buttons">
-                        <a [routerLink]="['detail']" class="button light">Подробнее</a>
+                        <a [routerLink]="['/apartments', apartment.id]" class="button light">Подробнее</a>
                         <a [routerLink]="[]" class="button secondary">Забронировать</a>
                     </div>
                 </div>

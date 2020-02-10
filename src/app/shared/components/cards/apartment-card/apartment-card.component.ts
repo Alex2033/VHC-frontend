@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {ShortTermRentApartment} from '../../../contracts/short-term-rent-apartment';
 
 @Component({
   selector: 'app-apartment-card',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ApartmentCardComponent implements OnInit {
 
-  @Input() apartment;
+  @Input() apartment: ShortTermRentApartment;
 
   constructor() { }
 

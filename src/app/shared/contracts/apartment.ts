@@ -3,6 +3,6 @@ export interface Apartment {
   name: string;
   description: string;
   images: string[];
-  area: number;
-  guestsCount: number;
+  area?: number;
+  guestsCount?: number;
 }

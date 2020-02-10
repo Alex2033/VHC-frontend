@@ -1,14 +1,15 @@
-<div class="card" [ngStyle]="{'background-image': 'url(' + apartment.imageURL + ')'}">
-    <div class="background-gradient"></div>
-    <div class="card-content">
-        <div class="card-text">
-            <h2 class="card-title light">
-                {{ apartment.title }}
-            </h2>
-            <div class="card-description">
-                {{ apartment.description }}
-            </div>
-        </div>
-        <button type="button" class="button gray">Забронировать</button>
+<div class="card" [ngStyle]="{'background-image': 'url(' + 'assets/images/apartments/apartment-1.jpg' + ')'}">
+<!--  FIXME поправить ссылку на изображение -->
+  <div class="background-gradient"></div>
+  <div class="card-content">
+    <div class="card-text">
+      <h2 class="card-title light">
+        {{ apartment.name }}
+      </h2>
+      <div class="card-description">
+        {{ apartment.description }}
+      </div>
     </div>
+    <a href="#" type="button" class="button gray">Забронировать</a>
+  </div>
 </div>

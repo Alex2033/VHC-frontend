@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
+import {Event} from '../../../../shared/contracts/event';
+import {ActivatedRoute} from '@angular/router';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'app-index',
@@ -10,51 +13,44 @@ export class IndexComponent implements OnInit {
 
   @ViewChild(PerfectScrollbarComponent, {static: true}) componentRef?: PerfectScrollbarComponent;
 
-  cards: Array<object> = [
-    {
-      image: 'assets/images/events/event-1.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 800,
-      title: 'Стендап Comedy. Открытый микрофон',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-2.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 800,
-      title: 'TED RUSSIA: Моделируя эпоху',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-3.jpg',
-      date:  '5 мая 2020 — 10 мая 2020',
-      price: 500,
-      title: 'Айвазовский. Ожившие полотна',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-2.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 800,
-      title: 'TED RUSSIA: Моделируя эпоху',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-1.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 500,
-      title: 'Айвазовский. Ожившие полотна',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-  ];
+  months = {};
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    const events = this.route.snapshot.data['events'].sort((a, b) => {
+      return a.startedAt - b.startedAt;
+    });
+
+    events.map(event => {
+      const date = new Date(event.startedAt * 1000);
+      if(!this.months[date.getMonth()]) {
+        this.months[date.getMonth()] = [];
+      }
+      this.months[date.getMonth()].push(event);
+    });
+    console.log(this.months);
   }
 
   scrollToElement(element: string) {
     this.componentRef.directiveRef.scrollToElement(element, null, 300);
   }
 
+  getMonthName(index) {
+    const months = [
+      'Январь',
+      'Февраль',
+      'Март',
+      'Апрель',
+      'Май',
+      'Июнь',
+      'Июль',
+      'Август',
+      'Сентябрь',
+      'Октябрь',
+      'Ноябрь',
+      'Декабрь'
+    ];
+    return months[index];
+  }
 }

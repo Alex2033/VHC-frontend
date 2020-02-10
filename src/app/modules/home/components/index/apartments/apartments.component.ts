@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ShortTermRentApartment} from '../../../../../shared/contracts/short-term-rent-apartment';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-apartments',
@@ -7,32 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApartmentsComponent implements OnInit {
 
-  apartments: Array<object> = [
-    { 
-      title: 'Двухместный номер с 1 кроватью', 
-      description: 'Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.',
-      imageURL: 'assets/images/apartments/apartment-1.jpg'
-    },
-    { 
-      title: 'Номер-студио c кроватью king size', 
-      description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-      imageURL: 'assets/images/apartments/apartment-2.jpg'
-    },
-    { 
-      title: 'Люкс с 2 спальнями', 
-      description: 'Апартаменты состоят из двух спален и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-      imageURL: 'assets/images/apartments/apartment-3.jpg'
-    },
-    { 
-      title: ' Люкс с 1 спальней', 
-      description: 'Двухкомнатные апартаменты со спальней и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-      imageURL: 'assets/images/apartments/apartment-4.jpg'
-    }
-  ];
+  apartments: ShortTermRentApartment[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.apartments = this.route.snapshot.data['apartments'];
   }
 
 }
