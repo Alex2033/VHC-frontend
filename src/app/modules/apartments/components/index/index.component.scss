@@ -29,4 +29,12 @@ app-booking-form {
             margin-bottom: 64px;
         }
     }
+
+    @include media-breakpoint-only($xxl) {
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }

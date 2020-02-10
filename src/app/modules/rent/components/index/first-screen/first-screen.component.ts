@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'app-first-screen',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modal: ModalService) { }
 
   ngOnInit() {
   }
