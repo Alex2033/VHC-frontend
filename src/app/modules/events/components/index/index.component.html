@@ -41,46 +41,16 @@
 
                     <!-- inner cards -->
                     <div class="inner-cards-wrapper">
-
-                        <!-- card 1 -->
-                        <div class="inner-cards-item" id="january">
+                        <div class="inner-cards-item" *ngFor="let month of months | keyvalue ; index as i" [id]="'group-' + month.key">
                             <header class="inner-cards-header">
-                                <h3>В январе</h3>
+                                <h3>{{ getMonthName(month.key) }}</h3>
                                 <div class="inner-category-designation">
                                     <div>—</div>
-                                    <div class="letter">01</div>
+                                    <div class="letter">{{ i + 1 | number: '2.0-0' }}</div>
                                 </div>
                             </header>
                             <div class="inner-cards">
-                                <app-event-card *ngFor="let card of cards" [card]="card"></app-event-card>
-                            </div>
-                        </div>
-
-                        <!-- card 2 -->
-                        <div class="inner-cards-item" id="february">
-                            <header class="inner-cards-header">
-                                <h3>В феврале</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">02</div>
-                                </div>
-                            </header>
-                            <div class="inner-cards">
-                                <app-event-card *ngFor="let card of cards" [card]="card"></app-event-card>
-                            </div>
-                        </div>
-
-                        <!-- card 3 -->
-                        <div class="inner-cards-item" id="march">
-                            <header class="inner-cards-header">
-                                <h3>В марте</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">03</div>
-                                </div>
-                            </header>
-                            <div class="inner-cards">
-                                <app-event-card *ngFor="let card of cards" [card]="card"></app-event-card>
+                                <app-event-card *ngFor="let card of month.value" [card]="card"></app-event-card>
                             </div>
                         </div>
                     </div>
@@ -89,31 +59,13 @@
             <div class="inner-page-content-right">
                 <perfect-scrollbar class="scrollbar">
                     <ul class="inner-menu-list">
-                        <li class="inner-menu-list-item">
-                            <button 
-                                (click)="scrollToElement('#january')" 
-                                type="button" 
+                        <li class="inner-menu-list-item" *ngFor="let month of months | keyvalue">
+                            <button
+                                (click)="scrollToElement('#group-' + month.key)"
+                                type="button"
                                 class="inner-menu-list-button"
                             >
-                                Январь
-                            </button>
-                        </li>
-                        <li class="inner-menu-list-item">
-                            <button 
-                                (click)="scrollToElement('#february')"  
-                                type="button" 
-                                class="inner-menu-list-button"
-                            >
-                                Февраль
-                            </button>
-                        </li>
-                        <li class="inner-menu-list-item">
-                            <button 
-                                (click)="scrollToElement('#march')" 
-                                type="button" 
-                                class="inner-menu-list-button"
-                            >
-                                Март
+                              {{ getMonthName(month.key) }}
                             </button>
                         </li>
                     </ul>

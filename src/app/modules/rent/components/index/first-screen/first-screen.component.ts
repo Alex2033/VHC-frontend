@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalService } from 'src/app/shared/services/modal.service';
 
 @Component({
   selector: 'app-first-screen',
@@ -8,15 +7,17 @@ import { ModalService } from 'src/app/shared/services/modal.service';
 })
 export class FirstScreenComponent implements OnInit {
 
-  constructor(public modal: ModalService) { }
+  constructor() { }
 
   ngOnInit() {
   }
+
 
   scrollToApartments() {
     const element = document.querySelector("#apartments-section");
 
     element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
+
 
 }

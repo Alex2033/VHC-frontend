@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
+import {ServiceGroup} from '../../../../shared/contracts/service-group';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -9,28 +11,18 @@ import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
 export class IndexComponent implements OnInit {
   @ViewChild(PerfectScrollbarComponent, {static: true}) componentRef?: PerfectScrollbarComponent;
 
-  cards: Array<object> = [
-    {
-      image: 'assets/images/service/restoran.jpg',
-      title: 'SPA Салон'
-    },
-    {
-      image: 'assets/images/service/kafe_i_bar.jpg',
-      title: 'Ресторан'
-    },
-    {
-      image: 'assets/images/service/fitness.jpg',
-      title: 'Фитнес-клуб'
-    }
-  ];
+  groups: ServiceGroup[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.groups = this.route.snapshot.data['service_groups'];
   }
 
   scrollToElement(element: string) {
     this.componentRef.directiveRef.scrollToElement(element, null, 300);
   }
-
+  getChar(index) {
+    return String.fromCharCode(65 + index);
+  }
 }

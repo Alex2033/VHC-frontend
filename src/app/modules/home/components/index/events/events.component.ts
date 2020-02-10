@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import {Event} from '../../../../../shared/contracts/event';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -13,47 +15,12 @@ export class EventsComponent implements OnInit {
     spaceBetween: 64
   };
 
-  cards: Array<object> = [
-    {
-      image: 'assets/images/events/event-1.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 800,
-      title: 'Стендап Comedy. Открытый микрофон',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-2.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 800,
-      title: 'TED RUSSIA: Моделируя эпоху',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-3.jpg',
-      date:  '5 мая 2020 — 10 мая 2020',
-      price: 500,
-      title: 'Айвазовский. Ожившие полотна',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-2.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 800,
-      title: 'TED RUSSIA: Моделируя эпоху',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-    {
-      image: 'assets/images/events/event-1.jpg',
-      date:  '25 апреля 2020, 19:00',
-      price: 500,
-      title: 'Айвазовский. Ожившие полотна',
-      description: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
-    },
-  ];
+  cards: Event[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.cards = this.route.snapshot.data['events'];
   }
 
 }

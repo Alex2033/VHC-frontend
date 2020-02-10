@@ -3,6 +3,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { DocsRoutingModule } from './docs-routing.module';
 import { IndexComponent } from './components/index/index.component';
+import { DocumentGroupsResolver } from './resolvers/document-groups.resolver';
 
 
 @NgModule({
@@ -10,6 +11,9 @@ import { IndexComponent } from './components/index/index.component';
   imports: [
     SharedModule,
     DocsRoutingModule
+  ],
+  providers: [
+    DocumentGroupsResolver
   ]
 })
 export class DocsModule { }

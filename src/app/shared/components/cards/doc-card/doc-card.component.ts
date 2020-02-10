@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Document} from '../../../contracts/document';
 
 @Component({
   selector: 'app-doc-card',
@@ -7,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DocCardComponent implements OnInit {
   
-  @Input() card;
+  @Input() card: Document;
+
 
   constructor() { }
 

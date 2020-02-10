@@ -3,6 +3,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { EventsRoutingModule } from './events-routing.module';
 import { IndexComponent } from './components/index/index.component';
+import { EventsResolver } from './resolvers/events.resolver';
 
 
 @NgModule({
@@ -10,6 +11,9 @@ import { IndexComponent } from './components/index/index.component';
   imports: [
     SharedModule,
     EventsRoutingModule
+  ],
+  providers: [
+    EventsResolver
   ]
 })
 export class EventsModule { }

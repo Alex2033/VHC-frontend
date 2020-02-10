@@ -9,6 +9,8 @@ import { RepairsComponent } from './components/index/repairs/repairs.component';
 import { DescriptionComponent } from './components/index/description/description.component';
 import { FeaturesComponent } from './components/index/features/features.component';
 import { ApartmentsComponent } from './components/index/apartments/apartments.component';
+import {ApartmentEquipmentResolver} from './resolvers/apartment-equipment.resolver';
+import {ApartmentsResolver} from './resolvers/apartments.resolver';
 
 
 @NgModule({
@@ -24,6 +26,10 @@ import { ApartmentsComponent } from './components/index/apartments/apartments.co
   imports: [
     SharedModule,
     RentRoutingModule
+  ],
+  providers: [
+    ApartmentEquipmentResolver,
+    ApartmentsResolver
   ]
 })
 export class RentModule { }

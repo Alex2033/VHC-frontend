@@ -34,6 +34,8 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { AngularYandexMapsModule } from 'angular8-yandex-maps';
 import { TextComponent } from './components/controls/text/text.component';
 import { CheckboxComponent } from './components/controls/checkbox/checkbox.component';
+import { ExtensionPipe } from './pipes/extension.pipe';
+import {ParagraphsPipe} from './pipes/paragraphs.pipe';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -47,13 +49,13 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 
 @NgModule({
   declarations: [
-    FooterComponent, 
-    HeaderComponent, 
-    MainMenuComponent, 
-    BookingFormComponent, 
-    ServiceCardComponent, 
-    EventCardComponent, 
-    ApartmentCardComponent, 
+    FooterComponent,
+    HeaderComponent,
+    MainMenuComponent,
+    BookingFormComponent,
+    ServiceCardComponent,
+    EventCardComponent,
+    ApartmentCardComponent,
     SidePanelComponent,
     ApartmentSliderComponent,
     BusinessSliderComponent,
@@ -62,7 +64,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     TextComponent,
     CheckboxComponent,
     DocCardComponent,
-    ApartmentBlockComponent
+    ApartmentBlockComponent,
+    ExtensionPipe,
+    ParagraphsPipe
   ],
   imports: [
     CommonModule,
@@ -97,7 +101,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     FeedbackFormComponent,
     AngularYandexMapsModule,
     DocCardComponent,
-    ApartmentBlockComponent
+    ApartmentBlockComponent,
+    ExtensionPipe,
+    ParagraphsPipe
   ],
   providers: [
     MatNativeDateModule,

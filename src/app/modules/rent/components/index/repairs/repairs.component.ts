@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import {ApartmentEquipmentElement} from '../../../../../shared/contracts/apartment-equipment-element';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-repairs',
@@ -13,36 +15,13 @@ export class RepairsComponent implements OnInit {
     spaceBetween: 64
   };
 
-  cards: Array<object> = [
-    {
-      image: 'assets/images/pages/rent/repairs/repairs-1.jpg',
-      title: 'Спальное место'
-    },
-    {
-      image: 'assets/images/pages/rent/repairs/repairs-2.jpg',
-      title: 'Зоны отдыха и работы'
-    },
-    {
-      image: 'assets/images/pages/rent/repairs/repairs-3.jpg',
-      title: 'Кухня'
-    },
-    {
-      image: 'assets/images/pages/rent/repairs/repairs-2.jpg',
-      title: 'Зоны отдыха и работы'
-    },
-    {
-      image: 'assets/images/pages/rent/repairs/repairs-3.jpg',
-      title: 'Кухня'
-    },
-    {
-      image: 'assets/images/pages/rent/repairs/repairs-1.jpg',
-      title: 'Спальное место'
-    },
-  ];
+  cards: ApartmentEquipmentElement[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.cards = this.route.snapshot.data['apartment_equipment'];
   }
 
 }

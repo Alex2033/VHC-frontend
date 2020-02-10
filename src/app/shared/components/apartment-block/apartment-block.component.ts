@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
+import {LongTermRentApartment} from '../../contracts/long-term-rent-apartment';
 
 @Component({
   selector: 'app-apartment-block',
@@ -8,7 +9,7 @@ import { ModalService } from '../../services/modal.service';
 })
 export class ApartmentBlockComponent implements OnInit {
 
-  @Input() apartment;
+  @Input() apartment: LongTermRentApartment;
 
   months: number = 1;
 
@@ -24,9 +25,16 @@ export class ApartmentBlockComponent implements OnInit {
   decreaseMonths() {
     if (this.months <= 1) {
       return;
-    } else {
-      this.months -= 1;
     }
+    this.months -= 1;
   }
-
+  
+  getCost() {
+    const result = this.apartment.costConditions.find((condition) => {
+      if(this.months >= condition.minMonths && (this.months <= condition.maxMonths || condition.maxMonths === null)) {
+        return true;
+      }
+    });
+    return result.cost;
+  }
 }

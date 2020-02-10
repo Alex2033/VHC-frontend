@@ -10,23 +10,31 @@ import { LocationComponent } from './components/index/location/location.componen
 import { BannerComponent } from './components/index/banner/banner.component';
 import { EventsComponent } from './components/index/events/events.component';
 import { ApartmentsComponent } from './components/index/apartments/apartments.component';
+import { ServicesResolver } from './resolvers/services.resolver';
+import { ApartmentsResolver } from './resolvers/apartments.resolver';
+import { EventsResolver } from './resolvers/events.resolver';
 
 
 @NgModule({
   declarations: [
-    IndexComponent, 
-    FirstScreenComponent, 
-    AdvantagesComponent, 
-    DescriptionComponent, 
-    ServicesComponent, 
-    LocationComponent, 
-    BannerComponent, 
-    EventsComponent, 
+    IndexComponent,
+    FirstScreenComponent,
+    AdvantagesComponent,
+    DescriptionComponent,
+    ServicesComponent,
+    LocationComponent,
+    BannerComponent,
+    EventsComponent,
     ApartmentsComponent
   ],
   imports: [
     SharedModule,
     HomeRoutingModule
+  ],
+  providers: [
+    ServicesResolver,
+    ApartmentsResolver,
+    EventsResolver
   ]
 })
 export class HomeModule { }

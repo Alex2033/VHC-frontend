@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {BusinessSpace} from '../../../../shared/contracts/business-space';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -7,36 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  aparts: Array<object> = [
-    {
-      area: 24,
-      title: 'Пространство свободного назначения',
-      description: 'Подходит для выставок, размещения продуктовых автоматов',
-      price: 29000,
-      images: [
-        'assets/images/pages/business/business-1.jpg',
-        'assets/images/pages/business/business-2.jpg',
-        'assets/images/pages/business/business-1.jpg',
-        'assets/images/pages/business/business-2.jpg',
-      ] 
-    },
-    {
-      area: 24,
-      title: 'Конференц–зал',
-      description: 'Подходит для выставок, размещения продуктовых автоматов',
-      price: 29000,
-      images: [
-        'assets/images/pages/business/business-2.jpg',
-        'assets/images/pages/business/business-1.jpg',
-        'assets/images/pages/business/business-2.jpg',
-        'assets/images/pages/business/business-1.jpg',
-      ]
-    },
-  ];
+  spaces: BusinessSpace[]
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.spaces = this.route.snapshot.data['business_spaces'];
   }
 
 }

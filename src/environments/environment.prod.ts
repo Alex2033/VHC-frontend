@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  host: 'localhost:4200',
+  scope: 'valo'
 };
