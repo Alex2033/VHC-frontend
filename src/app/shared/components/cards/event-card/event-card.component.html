@@ -4,7 +4,7 @@
         <a [href]="card.link" target="_blank" class="button gray">Купить билет</a>
     </div>
     <div class="event-card-top">
-        <time class="card-time">{{ card.startedAt * 1000 | date : 'longDate' }} в {{ card.startedAt * 1000 | date : 'shortTime' }}</time>
+        <time class="card-time">{{ card.startedAt * 1000 | date : 'd MMMM' }} в {{ card.startedAt * 1000 | date : 'shortTime' }}</time>
         <div class="card-price">{{ card.cost }}</div>
     </div>
     <h4 class="card-title">
