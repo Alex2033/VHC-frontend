@@ -1,6 +1,7 @@
 @import "theme";
 @import "fonts";
 @import "components";
+@import "responsive";
 
 * {
 	box-sizing: border-box;
@@ -19,6 +20,11 @@ body {
     margin: 0;
     font-weight: 400;
     padding-right: 80px;
+    background-color: #fff;
+
+    @include media-breakpoint-only($lg) {
+        padding-right: 0;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,7 +45,14 @@ button {
 
 h1, .section-title {
     font-size: 30px;
-    line-height: 1.6;
+    line-height: 1.6;    
+}
+
+.section-title {
+    @include media-breakpoint-only($lg) {
+        font-size: 24px;
+        line-height: 1.58;
+    }
 }
 
 h2 {

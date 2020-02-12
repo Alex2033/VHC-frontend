@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     margin-top: auto;
@@ -7,6 +8,10 @@
 .footer {
     padding: 96px 0 64px;
     background-color: $text-color;
+
+    @include media-breakpoint-only($lg) {
+        padding: 48px 0 48px;
+    }
 }
 
 .footer-content {
@@ -14,6 +19,14 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 88px;
+
+    @include media-breakpoint-only($xl) {
+        flex-direction: column;
+    }
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 41px;
+    }
 }
 
 .footer-image {
@@ -22,6 +35,14 @@
     width: 632px;
     flex-shrink: 0;
     z-index: 1;
+
+    @include media-breakpoint-only($xl) {
+        width: 100%;
+    }
+
+    @include media-breakpoint-only($lg) {
+        padding-bottom: 49%;
+    }
 
     img {
         position: absolute;
@@ -41,12 +62,24 @@
     justify-content: space-around;
     flex: 1;
     align-items: flex-end;
+
+    @include media-breakpoint-only($xl) {
+        order: -1;
+        width: 100%;
+        margin-bottom: 48px;
+    }
 }
 
 .background-words {
     left: -54px;
     top: -21px;
     max-width: 372px;
+
+    @include media-breakpoint-only($xl) {
+        font-size: 104px;
+        left: -16px;
+        top: -16px;
+    }
 }
 
 .footer-info-container {
@@ -54,6 +87,19 @@
     z-index: 1;
     width: 327px;
     margin-right: 17px;
+
+    @include media-breakpoint-only($xl) {
+        width: 100%;
+        display: flex;
+        margin-right: 0;
+        align-items: center;
+
+        > * {
+            &:not(:last-child) {
+                margin-right: 76px;
+            }
+        }
+    }
 }
 
 .footer-link {
@@ -71,6 +117,17 @@
     &:not(:last-child) {
         margin-bottom: 96px;
     }
+
+    @include media-breakpoint-only($xl) {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include media-breakpoint-only($lg) {
+        font-size: 17px;
+        line-height: 1.59;
+    }
 }
 
 .footer-middle {
@@ -78,17 +135,31 @@
     align-items: flex-start;
     color: $light-color;
     margin-bottom: 68px;
+
+    @include media-breakpoint-only($lg) {
+        align-items: center;
+        margin-bottom: 48px;
+    }
 }
 
 .footer-logo {
     width: 62px;
     margin-right: 226px;
+
+    @include media-breakpoint-only($lg) {
+        margin-right: 34px;
+    }
 }
 
 .footer-text {
     max-width: 237px;
     font-size: 14px;
     line-height: 1.86;
+
+    @include media-breakpoint-only($lg) {
+        font-size: 13px;
+        line-height: 1.69;
+    }
 }
 
 .footer-contacts {
@@ -96,6 +167,11 @@
     font-size: 14px;
     line-height: 1.86;
     text-align: right;
+
+    @include media-breakpoint-only($lg) {
+        font-size: 13px;
+        line-height: 1.69;
+    }
 }
 
 .footer-bottom {
@@ -111,7 +187,7 @@
         opacity: 0.6;
 
         &:not(:last-child) {
-            margin-right: 61px;
+            margin-right: 41px;
         }
     }
 }
@@ -128,6 +204,10 @@
 
 .company-name {
     margin-right: 116px;
+
+    @include media-breakpoint-only($lg) {
+        margin-right: 58px;
+    }
 }
 
 .manufacturer-site-name {

@@ -7,8 +7,9 @@ import {Document} from '../../../contracts/document';
   styleUrls: ['./doc-card.component.scss']
 })
 export class DocCardComponent implements OnInit {
-
+  
   @Input() card: Document;
+
 
   constructor() { }
 

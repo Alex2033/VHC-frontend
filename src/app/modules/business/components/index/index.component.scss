@@ -1,5 +1,11 @@
+@import "responsive";
+
 .page-section-header {
     margin-bottom: 97px;
+
+    @include media-breakpoint-only($xl) {
+        margin-bottom: 60px;
+    }
 }
 
 .aparts {
@@ -7,6 +13,14 @@
     > * {
         &:not(:last-child) {
             margin-bottom: 64px;
+        }
+    }
+
+    @include media-breakpoint-only($xl) {
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
         }
     }
 }

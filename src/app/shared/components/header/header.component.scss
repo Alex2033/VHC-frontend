@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     display: block;
@@ -6,15 +7,26 @@
     z-index: 30;
     top: 0;
     background-color: $light-color;
-    right: 40px; // ширина бокового меню
-    width: 100%;
+    left: 0;
+    width: calc(100% - 80px); // ширина бокового меню
+
+    @include media-breakpoint-only($lg) {
+        width: 100%;
+    }
 }
 
 .header {
     padding: 12px 0;
     height: 80px;
     width: 100%;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid $border-color;
+
+    @include media-breakpoint-only($lg) {
+        padding: 0;
+        height: 64px;
+    }
 }
 
 .header-content {
@@ -24,11 +36,19 @@
 
 .header-logo {
     margin-right: 56px;
+
+    @include media-breakpoint-only($xl) {
+        margin-right: 35.5px;
+    }
 }
 
 .logo-link {
     display: block;
     width: 96px;
+
+    @include media-breakpoint-only($xl) {
+        width: 69px;
+    }
 }
 
 .language {
@@ -44,13 +64,17 @@
     letter-spacing: 1px;
     line-height: 2.2;
 
+    @include media-breakpoint-only($xl) {
+        font-size: 11px;
+    }
+
     &.active {
         color: $text-color;
         font-weight: 700;
     }
 
     &:not(:last-child) {
-        margin-right: 26px;
+        margin-right: 25px;
     }
 }
 
@@ -70,6 +94,10 @@
 
 .navigation-item {
     margin-right: 49px;
+
+    @include media-breakpoint-only($xl) {
+        margin-right: 33px;
+    }
 
     &.active {
         .navigation-link {
@@ -94,5 +122,17 @@
 
     &:active, &:focus, &.active {
         color: $secondary-color;
+    }
+}
+
+.find-button {
+    @include media-breakpoint-only($lg) {
+        margin-right: 16px;
+    }
+}
+
+.container {
+    @include media-breakpoint-only($lg) {
+        padding-right: 0;
     }
 }

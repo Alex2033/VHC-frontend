@@ -1,0 +1,54 @@
+<div class="menu" *ngIf="menu.showMenu" [@fadeUp]>
+    <div class="menu-img" *ngIf="screen === 'lg' || screen === 'xl'">
+        <img 
+            [@showImage]="activeItem === i ? 'show' : 'hide'"
+            *ngFor="let image of images; let i = index" 
+            [src]="image"   
+            alt="bitmap"
+        >
+    </div>
+    
+    <perfect-scrollbar class="scrollbar">
+        <nav class="menu-navigation">
+            <ul class="menu-list">
+                <li class="menu-list-item" routerLinkActive="active" *ngFor="let link of links; let i = index">
+                    <a 
+                        class="menu-list-link"
+                        (mouseenter)="activeItem = i" 
+                        (mouseleave)="activeItem = -1" 
+                        (click)="clickItem()" 
+                        [routerLink]="[link.url]" 
+                    >
+                        {{ link.text }}
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="socials" *ngIf="screen !== 'lg' && screen !== 'xl'">
+                <li>
+                    <a class="vk" href="" target="_blank">
+                        <svg style="height: 11.1px;">
+                            <use xlink:href="assets/sprites/icons.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="instagram" href="" target="_blank">
+                        <svg style="height: 20px;">
+                            <use xlink:href="assets/sprites/icons.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="youtube" href="" target="_blank">
+                        <svg style="height: 14.44px;">
+                            <use xlink:href="assets/sprites/icons.svg#youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </perfect-scrollbar>
+</div>
+
+<div class="menu-background" [@slideRight] *ngIf="menu.showMenu"></div>

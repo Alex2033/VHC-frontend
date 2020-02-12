@@ -10,9 +10,9 @@ import { LocationComponent } from './components/index/location/location.componen
 import { BannerComponent } from './components/index/banner/banner.component';
 import { EventsComponent } from './components/index/events/events.component';
 import { ApartmentsComponent } from './components/index/apartments/apartments.component';
-import {ServicesResolver} from './resolvers/services.resolver';
-import {ApartmentsResolver} from './resolvers/apartments.resolver';
-import {EventsResolver} from './resolvers/events.resolver';
+import { ServicesResolver } from './resolvers/services.resolver';
+import { ApartmentsResolver } from './resolvers/apartments.resolver';
+import { EventsResolver } from './resolvers/events.resolver';
 
 
 @NgModule({

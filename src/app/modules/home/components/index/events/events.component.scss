@@ -1,10 +1,22 @@
 @import "theme";
+@import "responsive";
+
+.page-section {
+    @include media-breakpoint-only($lg) {
+        padding-bottom: 40px;
+    }
+}
 
 .slider {
     border-top: 1px solid $border-color;
     padding: 80px 0 62px;
+
+    @include media-breakpoint-only($xl) {
+        padding: 0 0 40px;
+    }
 }
 
 .swiper-slide {
     height: initial;
+    width: 288px;
 }

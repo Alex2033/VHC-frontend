@@ -15,12 +15,12 @@ import {ApartmentsResolver} from './resolvers/apartments.resolver';
 
 @NgModule({
   declarations: [
-    IndexComponent,
-    FirstScreenComponent,
-    AdvantagesComponent,
-    RepairsComponent,
-    DescriptionComponent,
-    FeaturesComponent,
+    IndexComponent, 
+    FirstScreenComponent, 
+    AdvantagesComponent, 
+    RepairsComponent, 
+    DescriptionComponent, 
+    FeaturesComponent, 
     ApartmentsComponent
   ],
   imports: [

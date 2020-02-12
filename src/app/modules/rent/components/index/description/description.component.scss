@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 .page-section {
     background-color: $text-color;
@@ -6,6 +7,11 @@
 
 .description-content {
     display: flex;
+
+    @include media-breakpoint-only($lg) {
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 .description-video {
@@ -20,6 +26,13 @@
         width: 100%;
         height: 100%;
         border: 0;
+    }
+
+    @include media-breakpoint-only($lg) {
+        max-width: 100%;
+        margin-right: 0;
+        height: 415px;
+        z-index: 1;
     }
 }
 
@@ -52,6 +65,12 @@
     .button {
         margin-top: auto;
     }
+
+    @include media-breakpoint-only($lg) {
+        order: -1;
+        padding-left: 0;
+        margin-bottom: 48px;
+    }
 }
 
 .description-info-container {
@@ -64,9 +83,24 @@
 
 .description-title {
     margin-bottom: 30px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 0;
+
+        br {
+            display: none;
+        }
+    }
 }
 
 .background-words {
     top: 30px;
     left: 0;
+
+    @include media-breakpoint-only($lg) {
+        top: -48px;
+        left: -15px;
+        font-size: 104px;
+        line-height: 0.85;
+    }
 }

@@ -30,19 +30,27 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="rent-bottom">
-                        <button type="button" class="button secondary">Записаться на просмотр</button>
-                        <a [routerLink]="[]" class="next-room">Цены на аренду</a>
+                    <div class="rent-bottom" *ngIf="screen === 'lg' || screen === 'xl'">
+                        <button 
+                            type="button" 
+                            class="button secondary" 
+                            (click)="modal.open('feedback-form')"
+                        >Записаться на просмотр</button>
+                        <a [routerLink]="[]" class="next-room" (click)="scrollToApartments()">Цены на аренду</a>
                     </div>
                 </div>
             </perfect-scrollbar>
+
+            <div class="bottom-image" *ngIf="screen !== 'lg' && screen !== 'xl'">
+                <img src="assets/images/pages/rent/first-screen/bitmap.jpg" alt="first screen image">
+            </div>
         </div>
 
-        <div class="absolute-image">
+        <div class="absolute-image" *ngIf="screen === 'lg' || screen === 'xl'">
             <img src="assets/images/pages/rent/first-screen/absolute-image.jpg" alt="absolute image">
         </div>
     </div>
-    <div class="background-block">
+    <div class="background-block" *ngIf="screen === 'lg' || screen === 'xl'">
         <img src="assets/images/pages/rent/first-screen/bitmap.jpg" alt="first screen image">
     </div>
 </div>

@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     position: absolute;
@@ -9,6 +10,11 @@
     display: block;
     padding: 0 84px;
     max-width: 1280px;
+
+    @include media-breakpoint-only($xl) {
+        padding: 0;
+        width: 100%;
+    }
 }
 
 .booking-form {
@@ -28,6 +34,18 @@
     width: 222px;
     flex: 0 0 222px;
     border-right: 1px solid $border-color;
+
+    @include media-breakpoint-only($xl) {
+        width: 180px;
+        flex: 1 0 180px;
+        padding: 24px 33px 24px;
+    }
+
+    @include media-breakpoint-only($lg) {
+        width: 150px;
+        flex: 1 0 150px;
+        padding: 24px 25px 24px;
+    }
 
     &.calendar {
         transition: background-color .2s ease;
@@ -51,6 +69,10 @@
             width: 50px;
             text-align: center;
             margin-right: 0;
+
+            @include media-breakpoint-only($lg) {
+                width: 35px;
+            }
         }
     }
 }
@@ -61,6 +83,10 @@
     letter-spacing: 1px;
     width: 100%;
     text-transform: uppercase;
+
+    @include media-breakpoint-only($xl) {
+        margin-bottom: 4px;
+    }
 }
 
 .data-block-field {
@@ -75,6 +101,13 @@
     font-weight: 700;
     width: 36px;
     text-align: center;
+
+    @include media-breakpoint-only($xl) {
+        font-size: 17px;
+        line-height: 1.59;
+        width: 21px;
+        margin-right: 8px;
+    }
 }
 
 .data-hidden-input {
@@ -91,6 +124,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include media-breakpoint-only($xl) {
+        flex-direction: row;
+    }
+    
 }
 
 .data-block-month {
@@ -102,6 +140,17 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+
+    @include media-breakpoint-only($xl) {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-only($lg) {
+        width: 32px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 9px;
+    }
 }
 
 .data-calendar-wrapper {
@@ -113,7 +162,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 1 0 auto;
+    padding: 5px;
+
+    @include media-breakpoint-only($lg) {
+        flex: 1 0 168px;
+    }
+
+    button {
+        @include media-breakpoint-only($lg) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
 }
 
 .arrow-control {

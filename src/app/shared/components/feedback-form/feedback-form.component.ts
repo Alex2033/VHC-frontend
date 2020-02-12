@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class FeedbackFormComponent implements OnInit {
   formGroup: FormGroup;
   agree: boolean = false;
+  notificationVisible: boolean = false;
   phonePattern = '^[0-9]+$';
 
   constructor(private formBuilder: FormBuilder) { }
@@ -28,6 +29,7 @@ export class FeedbackFormComponent implements OnInit {
     if(!this.formGroup.valid) {
       return;
     } else {
+      this.notificationVisible = true;
       this.formGroup.reset();
     }
   }

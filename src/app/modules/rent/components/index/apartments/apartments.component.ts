@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {LongTermRentApartment} from '../../../../../shared/contracts/long-term-rent-apartment';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { LongTermRentApartment } from '../../../../../shared/contracts/long-term-rent-apartment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-apartments',
@@ -15,7 +15,7 @@ export class ApartmentsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.apartments = this.route.snapshot.data['apartments']
+    this.apartments = this.route.snapshot.data['apartments'];
   }
 
 }

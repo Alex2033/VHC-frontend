@@ -3,7 +3,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { EventsRoutingModule } from './events-routing.module';
 import { IndexComponent } from './components/index/index.component';
-import {EventsResolver} from './resolvers/events.resolver';
+import { EventsResolver } from './resolvers/events.resolver';
 
 
 @NgModule({

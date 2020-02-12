@@ -1,8 +1,9 @@
 @import "theme";
+@import "responsive";
 
 .container {
     padding: 0 15px;
-    max-width: 1142px;
+    max-width: $container-width;
     margin: 0 auto;
     width: 100%;
 }
@@ -23,11 +24,9 @@
     letter-spacing: 1px;
     line-height: 2.2;
     color: $light-color;
-    font-family: 'Montserrat';
-    font-weight: 700;
+    font: 700 11px/2.2 'Montserrat';
     text-decoration: none;
     display: inline-block;
-    font-size: 11px;
     text-transform: uppercase;
     transition: background-color .2s ease;
     box-sizing: border-box;
@@ -125,9 +124,26 @@
     display: flex;
     align-items: flex-start;
 
+    
     > * {
         &:not(:last-child) {
             margin-right: 72px;
+        }
+    }
+    
+    @include media-breakpoint-only($lg) {
+        position: relative;
+        
+        .control-buttons {
+            position: absolute;
+            top: 41px;
+            right: 22px;
+            z-index: 5;
+        }
+        > * {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
         }
     }
 }
@@ -263,10 +279,18 @@
 // общие стили для секций
 .page-section {
     padding: 96px 0;
+
+    @include media-breakpoint-only($xl) {
+        padding: 48px 0;
+    }
 }
 
 .inner-page-section {
     padding-top: 48px;
+
+    @include media-breakpoint-only($xl) {
+        padding-top: 32px;
+    }
 }
 
 .inner-page-section-header {
@@ -283,6 +307,12 @@
 .section-description {
     max-width: 344px;
     width: 100%;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-only($lg) {
+        max-width: 352px;
+    }
 }
 
 .section-title {
@@ -291,6 +321,15 @@
     max-width: 384px;
     width: 100%;
     margin-left: auto;
+    
+    @include media-breakpoint-only($xl) {
+        margin-left: 0;
+    }
+
+    @include media-breakpoint-only($lg) {
+        margin-right: 40px;
+        max-width: 100%;
+    }
 
     span {
         position: relative;
@@ -310,11 +349,25 @@
     z-index: 0;
     user-select: none;
 
+    @include media-breakpoint-only($xl) {
+        left: 0;
+        top: -16px;
+        font-size: 72px;
+        letter-spacing: 8px;
+        line-height: 0.89;
+    }
+
     &.stroked {
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: #fff;
         color: $text-color;
         opacity: 0.15;
+    }
+}
+
+.section-name {
+    @include media-breakpoint-only($xl) {
+        display: none;
     }
 }
 
@@ -330,6 +383,242 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 88px;
+
+    @include media-breakpoint-only($xl) {
+        margin-bottom: 40px;
+    }
+}
+
+// Общие стили для страниц услуг, мероприятий, доков
+.inner-page {
+    height: calc(100vh - 80px); // минус высота шапки
+
+    .page-section-header {
+        margin-bottom: 48px;
+    }
+
+    .section-description {
+        font-size: 14px;
+        line-height: 1.79;
+    }
+
+    .inner-page-image {
+        width: 100%;
+        position: relative;
+        padding: 48px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        min-height: 0px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.inner-page,
+.inner-page-content,
+.inner-page-container {
+    min-height: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-page-first-screen {
+    min-height: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    .page-section {
+        height: 100%;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.scroll-alert {
+    padding: 9px 14px 9px 16px;
+    background-color: $light-color;
+    border-radius: 24px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border: 0;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    span {
+        line-height: 1.2;
+    }
+}
+
+.scroll-alert-icon {
+    fill: $black-color;
+}
+
+// inner cards
+.inner-page-content {
+    position: relative;
+    min-height: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+
+    .background-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        z-index: 0;
+        width: 38.438%;
+
+        @include media-breakpoint-only($xl) {
+            display: none;
+        }
+
+        @media (max-width: 1100px) {
+            width: 45%;
+        }
+
+        @media (min-width: 1600px) {
+            width: 41%;
+        }
+
+        @media (min-width: 1800px) {
+            width: 43%;
+        }
+
+        @media (min-width: 2500px) {
+            width: 44%;
+        }
+
+        @media (min-width: 2900px) {
+            width: 45%;
+        }
+
+        @media (min-width: 3300px) {
+            width: 46%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .section-title {
+        margin: 48px 0 48px 0;
+    }
+
+    .background-words {
+        left: 0;
+        top: -24px;
+    }
+}
+
+.inner-page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > * {
+        height: 100%;
+    }
+}
+
+.inner-cards-wrapper {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 64px;
+        }
+    }
+}
+
+.inner-cards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
+.inner-category-designation {
+    font-size: 11px;
+    line-height: 2.2;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    .letter {
+        margin-left: 2px;
+    }
+}
+
+.inner-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 64px 56px;
+    margin-bottom: 48px;
+}
+
+.inner-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 48px;
+
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 46px;
+        }
+    }
+}
+
+.inner-menu-list-button {
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.625;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color .2s ease;
+
+    &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+    }
 }
 
 // Общие стили для страниц услуг, мероприятий, доков
@@ -484,6 +773,14 @@
             margin-bottom: 48px;
         }
     }
+
+    @include media-breakpoint-only($lg) {
+        max-width: 100%;
+
+        .swiper-slide {
+            width: 288px;
+        }
+    }
 }
 
 .inner-cards-wrapper {
@@ -537,6 +834,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    @include media-breakpoint-only($lg) {
+        display: none;
     }
 }
 
@@ -614,3 +915,96 @@
     }
 }
 
+.marker-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.203999);
+    background-color: $light-color; 
+    padding: 0 16px;
+    height: 48px;
+    border-radius: 3px;
+
+    img {
+        margin-right: 14px;
+    }
+
+    span {
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+}
+
+// кнопка меню
+.open-menu {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    transition: background-color .2s ease;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+
+    @include media-breakpoint-only($lg) {
+        height: 63px; // минус нижний бордер у шапки
+        width: 64px;
+    }
+
+    &:hover:enabled {
+        background-color: darken($light-gray, 4.6%);
+    }
+
+    &.active {
+        background-color: $light-gray;
+
+        .ico-menu {
+            width: 12px;
+            height: 12px;
+
+            span {
+                position: absolute;
+                left: 50%;
+                width: 100%;
+                top: 5px;
+                height: 2px;
+            }
+        }
+
+        .big-line {
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .small-line {
+            transform: translateX(-50%) rotate(-45deg);
+        }
+    }
+
+    &:active:enabled  {
+        background-color: darken($light-gray, 12%);
+    }
+}
+
+.ico-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+        height: 3px;
+        background-color: $dark;
+        display: block;
+    }
+}
+
+.small-line {
+    width: 12px;
+    margin-bottom: 8px;
+    margin-left: auto;
+}
+
+.big-line {
+    width: 24px;
+}

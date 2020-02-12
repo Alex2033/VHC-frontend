@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
   display: flex;
@@ -152,15 +153,22 @@
   }
 
   &.features-on {
-    margin-right: -31px;
-    padding-bottom: 0;
+      margin-right: -31px;
 
-    .scrollbar {
-      padding-right: 31px;
-    }
+      .scrollbar {
+          padding-right: 31px;
+      }
+
+      @include media-breakpoint-only($xl) {
+          margin-right: 0;
+      }
   }
 
+  @include media-breakpoint-only($xl) {
+      padding: 56px 0 48px 26px;
+  }
 }
+
 
 .features-wrapper {
   height: 100%;
@@ -193,13 +201,33 @@
     background-color: $light-gray;
   }
 
-  @media (min-width: 1600px) {
-    width: 55%;
-  }
+    @media (max-width: 1150px) {
+        width: 54%;
+    }
 
-  .swiper-container {
-    height: 100%;
-  }
+    @media (max-width: 1050px) {
+        width: 48.9%;
+    }
+
+    @media (min-width: 1600px) {
+        width: 55%;
+    }
+
+    @media (min-width: 2000px) {
+        width: 54%;
+    }
+
+    @media (min-width: 2600px) {
+        width: 53%;
+    }
+
+    @media (min-width: 3400px) {
+        width: 52%;
+    }
+
+    .swiper-container {
+        height: 100%;
+    }
 
   img {
     width: 100%;
@@ -209,9 +237,13 @@
 }
 
 .features-items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 48px
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 48px;
+
+    @include media-breakpoint-only($xl) {
+        grid-gap: 28px;
+    }
 }
 
 .features-item-header {

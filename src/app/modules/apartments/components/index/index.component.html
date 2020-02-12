@@ -13,9 +13,12 @@
                     — обеспечить людей комфортом, уютом и качественным жильем.
                 </p>
             </div>
-        </header>
-        <app-booking-form></app-booking-form>
+        </header>        
+    </div>
 
+    <app-booking-form class="container"></app-booking-form>
+
+    <div class="container aparts-container">
         <div class="aparts">
             <app-apartment-slider *ngFor="let apartment of apartments" [apartment]="apartment"></app-apartment-slider>
         </div>

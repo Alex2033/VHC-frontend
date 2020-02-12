@@ -3,6 +3,8 @@ import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
 import {Event} from '../../../../shared/contracts/event';
 import {ActivatedRoute} from '@angular/router';
 import {DatePipe} from '@angular/common';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-index',
@@ -12,14 +14,23 @@ import {DatePipe} from '@angular/common';
 export class IndexComponent implements OnInit {
 
   @ViewChild(PerfectScrollbarComponent, {static: true}) componentRef?: PerfectScrollbarComponent;
-
+  screen: string;
   months = {};
 
-  constructor(private route: ActivatedRoute) { }
+  config: SwiperConfigInterface = {
+    slidesPerView: 'auto',
+    spaceBetween: 32
+  };
+
+  constructor(private route: ActivatedRoute, public responsive: ResponsiveService) { }
 
   ngOnInit() {
     const events = this.route.snapshot.data['events'].sort((a, b) => {
       return a.startedAt - b.startedAt;
+    });
+
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
     });
 
     events.map(event => {

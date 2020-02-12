@@ -1,4 +1,4 @@
-<section class="page-section">
+<section class="page-section" id="apartments-section">
     <div class="container">
         <header class="page-section-header">
             <div class="section-name">
@@ -13,10 +13,12 @@
             </h2>
             <div class="section-description">
                 <p>
-                    Философия и основная цель комплекса VALO — обеспечить людей комфортом, уютом и качественным жильем.
+                    <strong>Философия и основная цель комплекса VALO</strong> — обеспечить людей комфортом, уютом и качественным жильем.
                 </p>
             </div>
         </header>
-        <app-apartment-block [apartment]="apartment" *ngFor="let apartment of apartments"></app-apartment-block>
+        <div class="apartment-blocks">
+            <app-apartment-block [apartment]="apartment" *ngFor="let apartment of apartments"></app-apartment-block>
+        </div>
     </div>
 </section>

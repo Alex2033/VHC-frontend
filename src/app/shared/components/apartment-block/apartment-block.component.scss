@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     display: block;
@@ -7,6 +8,10 @@
 .apartment {
     position: relative;
     height: 536px;
+
+    @include media-breakpoint-only($lg) {
+        height: 480px;
+    }
 }
 
 .background-image {
@@ -21,7 +26,8 @@
 
 .apartment-container,
 .apartment-content,
-.apartment-content-left {
+.apartment-content-left,
+.apartment-content-right {
     height: 100%;
 }
 
@@ -42,6 +48,15 @@
     justify-content: space-between;
     min-width: 0;
     padding: 48px;
+
+    @include media-breakpoint-only($lg) {
+        max-width: 50%;
+        padding: 32px;
+    }
+}
+
+.apartment-content-right {
+    min-width: 0;
 }
 
 .apartment-info {
@@ -66,12 +81,24 @@
     }
 }
 
-.apartment-title {
-    max-width: 283px;
+.apartment-title, .apartment-description {
+    max-width: 334px;
+} 
+
+.apartment-description {
+    color: $light-color;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 32px;
+    }
 }
 
 .apartment-title {
     margin-bottom: 48px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 32px;
+    }
 }
 
 .aparment-choise {
@@ -82,6 +109,10 @@
         &:not(:last-child) {
             margin-right: 58px;
         }
+    }
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 32px;
     }
 }
 
@@ -154,4 +185,27 @@
         width: 2px;
         height: 10px;
     }
+}
+
+.apartment-slider {
+    height: 100%;
+    position: relative;
+    min-width: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-container, .swiper-wrapper {
+        height: 100%;
+    }
+}
+
+.slider-controls {
+    position: absolute;
+    right: 48px;
+    bottom: 48px;
+    z-index: 1;
 }

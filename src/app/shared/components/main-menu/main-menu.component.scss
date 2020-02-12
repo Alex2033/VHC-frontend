@@ -1,0 +1,118 @@
+@import "theme";
+@import "responsive";
+
+.menu {
+    display: flex;
+    align-items: flex-start;
+    height: calc(100% - 80px); // высота шапки
+    padding: 48px 0 48px 48px;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100vw - 80px); // ширина правой панели
+    z-index: 1000;
+
+    @include media-breakpoint-only($lg) {
+        width: 100vw;
+        height: calc(100% - 64px);
+        padding-bottom: 10px;
+    }
+}
+
+.menu-background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100vw - 80px);
+    height: calc(100% - 80px);
+    z-index: 100;
+    background-color: $light-color;
+
+    @include media-breakpoint-only($lg) {
+        width: 100vw;
+        height: calc(100% - 64px);
+    }
+}
+
+.menu-img {
+    width: 100%;
+    max-width: 56%;
+    height: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+}
+
+.scrollbar {
+    margin-right: 40px;
+
+    @include media-breakpoint-only($lg) {
+        ::ng-deep {
+            .ps-content {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.menu-navigation {
+    padding: 0 48px 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    @include media-breakpoint-only($lg) {
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 0;
+    }
+}
+
+.menu-list {
+    @include media-breakpoint-only($lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.menu-list-item {
+    &:not(:last-child) {
+        margin-bottom: 53px;
+    }
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 48px;
+    }
+}
+
+.menu-list-link {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.6;
+    color: $text-color;
+    text-decoration: none;
+    transition: color .2s ease;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &:active, &:focus {
+        color: $secondary-color;
+    }
+}
+
+.socials {
+    flex-direction: row;
+    justify-content: center;
+}

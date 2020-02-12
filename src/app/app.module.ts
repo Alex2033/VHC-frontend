@@ -6,11 +6,11 @@ import localeRu from '@angular/common/locales/ru';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HttpClientModule} from '@angular/common/http';
-import {ApiService} from './shared/services/api.service';
-import {MockApiService} from './shared/services/mock-api.service';
-import {environment} from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './shared/services/api.service';
+import { MockApiService } from './shared/services/mock-api.service';
+import { environment } from '../environments/environment';
 
 registerLocaleData(localeRu);
 
@@ -23,7 +23,6 @@ registerLocaleData(localeRu);
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule,
     BrowserAnimationsModule,
     BrowserTransferStateModule
   ],
