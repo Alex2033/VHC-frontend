@@ -1,24 +1,18 @@
-import {Injectable} from '@angular/core';
-import {ApiClientService} from './api-client.service';
+import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {ApartmentEquipmentElement} from '../contracts/apartment-equipment-element';
-import {Service} from '../contracts/service';
-import {ServiceGroup} from '../contracts/service-group';
 import {DocumentGroup} from '../contracts/document-group';
+import {ServiceGroup} from '../contracts/service-group';
+import {Service} from '../contracts/service';
+import {ApartmentEquipmentElement} from '../contracts/apartment-equipment-element';
 import {BusinessSpace} from '../contracts/business-space';
 import {LongTermRentApartment} from '../contracts/long-term-rent-apartment';
 import {ShortTermRentApartment} from '../contracts/short-term-rent-apartment';
 import {Event} from '../contracts/event';
-import {map} from 'rxjs/operators';
-import {deserialize} from '../functions/deseriale';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
-
-  constructor(private apiClient: ApiClientService) {
-  }
+export class MockApiService {
 
   getDocumentGroups(): Observable<DocumentGroup[]> {
     return of(
@@ -461,14 +455,54 @@ export class ApiService {
   }
 
   getEvents(count = 0): Observable<Event[]> {
-    return this.apiClient.get('/site/apart_hotel_site/events', {
-      params: {
-        count
-      }
-    }).pipe(map((response) => {
-      return response.map(item => {
-        return deserialize(item);
-      });
-    }));
+    return of(
+      [
+        {
+          id: 1,
+          image: 'assets/images/events/event-1.jpg',
+          startedAt: 1581342908,
+          cost: 'от 500 руб',
+          link: 'http://vk.com',
+          name: 'Стендап Comedy. Открытый микрофон',
+          address: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
+        },
+        {
+          id: 2,
+          image: 'assets/images/events/event-2.jpg',
+          startedAt: 1581342908 + (60 * 60 * 24 * 5),
+          cost: '800 руб',
+          link: 'http://vk.com',
+          name: 'TED RUSSIA: Моделируя эпоху',
+          address: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
+        },
+        {
+          id: 3,
+          image: 'assets/images/events/event-3.jpg',
+          startedAt: 1581342908  + (60 * 60 * 24 * 15),
+          cost: '500 руб',
+          link: 'http://vk.com',
+          name: 'Айвазовский. Ожившие полотна',
+          address: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
+        },
+        {
+          id: 4,
+          image: 'assets/images/events/event-2.jpg',
+          startedAt: 1581342908 + (60 * 60 * 24 * 30),
+          cost: '800 руб',
+          link: 'http://vk.com',
+          name: 'TED RUSSIA: Моделируя эпоху',
+          address: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
+        },
+        {
+          id: 5,
+          image: 'assets/images/events/event-3.jpg',
+          startedAt: 1581342908 + (60 * 60 * 24 * 90),
+          cost: '500 руб',
+          link: 'http://vk.com',
+          name: 'Айвазовский. Ожившие полотна',
+          address: 'Бухарестская, 28 к1, Кафе «Valo Coffee»'
+        },
+      ]
+    );
   }
 }

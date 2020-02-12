@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './shared/services/api.service';
+import { MockApiService } from './shared/services/mock-api.service';
+import { environment } from '../environments/environment';
 
 registerLocaleData(localeRu);
 
@@ -25,6 +28,7 @@ registerLocaleData(localeRu);
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'ru' },
+    { provide: ApiService, useClass: environment.production ? ApiService : MockApiService }
   ],
   bootstrap: [AppComponent]
 })

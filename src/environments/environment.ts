@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host: 'localhost:4200',
+  host: 'http://api.apart-system.localhost',
   scope: 'valo'
 };
 
