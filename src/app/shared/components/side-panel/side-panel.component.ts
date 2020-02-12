@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-side-panel',
@@ -7,10 +8,14 @@ import { MenuService } from '../../services/menu.service';
   styleUrls: ['./side-panel.component.scss']
 })
 export class SidePanelComponent implements OnInit {
+  screen: string;
 
-  constructor(public menu: MenuService) { }
+  constructor(public menu: MenuService, private responsive: ResponsiveService) { }
 
   ngOnInit() {
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
 }

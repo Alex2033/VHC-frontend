@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 import {LongTermRentApartment} from '../../contracts/long-term-rent-apartment';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-apartment-block',
@@ -8,6 +9,10 @@ import {LongTermRentApartment} from '../../contracts/long-term-rent-apartment';
   styleUrls: ['./apartment-block.component.scss']
 })
 export class ApartmentBlockComponent implements OnInit {
+  index: number = 0;
+  config: SwiperConfigInterface = {
+    slidesPerView: 1
+  };
 
   @Input() apartment: LongTermRentApartment;
 

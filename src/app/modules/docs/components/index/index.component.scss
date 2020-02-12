@@ -7,14 +7,14 @@
 .inner-page-content-left {
     margin: 0 -15px; // для корректной отображении тени карточек внутри скроллбара
     
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         margin: 0;
         padding-right: 15px;
     }
 }
 
 .inner-cards {
-    @include media-breakpoint-between($xl, $xxl) {
+    @include media-breakpoint-between($lg, $xl) {
         grid-gap: 30px; 
     }
 }
@@ -25,4 +25,12 @@
             padding: 0 15px; // для корректной отображении тени карточек внутри скроллбара
         }
     }
+}
+
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: 200px;
 }

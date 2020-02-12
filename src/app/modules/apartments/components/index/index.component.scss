@@ -4,7 +4,7 @@
 .page-section-header {
     margin-bottom: 104px;
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         margin-bottom: 32px;
     }
 }
@@ -16,9 +16,15 @@ app-booking-form {
     padding-bottom: 0;
     margin-bottom: 64px;
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         margin-bottom: 40px;
         border-top: 1px solid $border-color;
+    }
+}
+
+.aparts-container {
+    @include media-breakpoint-only($lg) {
+        padding: 0;
     }
 }
 
@@ -30,7 +36,7 @@ app-booking-form {
         }
     }
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         > * {
             &:not(:last-child) {
                 margin-bottom: 32px;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({
   selector: 'app-advantages',
@@ -7,6 +8,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
   styleUrls: ['./advantages.component.scss']
 })
 export class AdvantagesComponent implements OnInit {
+  screen: string;
 
   config: SwiperConfigInterface = {
     slidesPerView: 'auto',
@@ -23,9 +25,12 @@ export class AdvantagesComponent implements OnInit {
     { src: 'assets/sprites/icons.svg#ico-parking', width: 47.6, height: 38.43},
   ];
 
-  constructor() { }
+  constructor(public responsive: ResponsiveService) { }
 
   ngOnInit() {
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
 }

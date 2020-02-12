@@ -22,16 +22,20 @@ export class ResponsiveService {
 
   checkWidth() {
     const width = window.innerWidth;
-    if (width >= 1248) {
+    if (width >= 1360) {
       this.screen.next('xl');
     } else {
-      if (width >= 992) {
+      if (width >= 1024) {
         this.screen.next('lg');
       } else {
         if (width >= 768) {
           this.screen.next('md');
         } else {
-          this.screen.next('sm');
+          if (width >= 575) {
+            this.screen.next('sm');
+          } else {
+            this.screen.next('xs');
+          }
         }
       }
     }

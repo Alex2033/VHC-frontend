@@ -14,19 +14,34 @@
                     [class.active]="i === 0"
                 >{{ language }}</a>
             </div>
-            <a href="tel:881702-76-73" class="phone">8 (812) 702-76-73</a>
+            <a *ngIf="screen === 'xl'" href="tel:881702-76-73" class="phone">8 (812) 702-76-73</a>
             <nav class="navigation">
                 <ul class="navigation-list">
-                    <li 
-                        class="navigation-item" 
-                        routerLinkActive="active"
-                        *ngFor="let menuLink of menuLinks"
-                        [routerLinkActiveOptions]="{exact: true}">
-                        <a [routerLink]="[menuLink.url]" class="navigation-link">{{ menuLink.text }}</a>
-                    </li>
+                    <ng-container *ngFor="let menuLink of menuLinks; let i = index">
+                        <li 
+                            class="navigation-item" 
+                            routerLinkActive="active"
+                            [class.display-none]="(i === menuLinks.length - 1) && screen !== 'xl'"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            
+                        >
+                            <a [routerLink]="[menuLink.url]" class="navigation-link">{{ menuLink.text }}</a>
+                        </li>
+                    </ng-container>
                 </ul>
             </nav>
-            <button type="button" class="button dark">Найти номер</button>
+            <button type="button" class="button dark find-button">Найти номер</button>
+            <button 
+                *ngIf="screen !== 'xl' && screen !== 'lg'"
+                class="open-menu" 
+                (click)="menu.showMenu = !menu.showMenu" 
+                [class.active]="menu.showMenu"
+            >
+                <span class="ico-menu">
+                    <span class="small-line"></span>
+                    <span class="big-line"></span>
+                </span>
+            </button>
         </div>
     </div>
 </header>

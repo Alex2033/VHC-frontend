@@ -1,5 +1,5 @@
 <div class="menu">
-    <div class="menu-content">
+    <div class="menu-content" *ngIf="screen === 'lg' || screen === 'xl'">
         <button class="open-menu" (click)="menu.showMenu = !menu.showMenu" [class.active]="menu.showMenu">
             <span class="ico-menu">
                 <span class="small-line"></span>
@@ -30,7 +30,5 @@
             </li>
         </ul>
     </div>
-
-    <!-- main menu -->
-    <app-main-menu></app-main-menu>
+    
 </div>

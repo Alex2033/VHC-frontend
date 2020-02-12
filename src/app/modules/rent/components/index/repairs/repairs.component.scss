@@ -1,5 +1,18 @@
 @import "theme";
+@import "responsive";
 
 .background-words {
     white-space: nowrap;
+}
+
+.page-section {
+    @include media-breakpoint-only($lg) {
+        padding-bottom: 48px;
+    }
+}
+
+
+.swiper-slide {
+    height: initial;
+    width: 288px;
 }

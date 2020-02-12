@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
 import {ServiceGroup} from '../../../../shared/contracts/service-group';
 import {ActivatedRoute} from '@angular/router';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({
   selector: 'app-index',
@@ -10,13 +12,22 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class IndexComponent implements OnInit {
   @ViewChild(PerfectScrollbarComponent, {static: true}) componentRef?: PerfectScrollbarComponent;
-
+  screen: string;
   groups: ServiceGroup[];
 
-  constructor(private route: ActivatedRoute) { }
+  config: SwiperConfigInterface = {
+    slidesPerView: 'auto',
+    spaceBetween: 32
+  };
+
+  constructor(private route: ActivatedRoute, public responsive: ResponsiveService) { }
 
   ngOnInit() {
     this.groups = this.route.snapshot.data['service_groups'];
+
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
   scrollToElement(element: string) {

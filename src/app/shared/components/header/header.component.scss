@@ -9,6 +9,10 @@
     background-color: $light-color;
     left: 0;
     width: calc(100% - 80px); // ширина бокового меню
+
+    @include media-breakpoint-only($lg) {
+        width: 100%;
+    }
 }
 
 .header {
@@ -18,6 +22,11 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid $border-color;
+
+    @include media-breakpoint-only($lg) {
+        padding: 0;
+        height: 64px;
+    }
 }
 
 .header-content {
@@ -28,7 +37,7 @@
 .header-logo {
     margin-right: 56px;
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         margin-right: 35.5px;
     }
 }
@@ -37,7 +46,7 @@
     display: block;
     width: 96px;
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         width: 69px;
     }
 }
@@ -55,7 +64,7 @@
     letter-spacing: 1px;
     line-height: 2.2;
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         font-size: 11px;
     }
 
@@ -71,10 +80,6 @@
 
 .phone {
     margin-right: 50px;
-
-    @include media-breakpoint-only($xxl) {
-        display: none;
-    }
 }
 
 .navigation {
@@ -90,7 +95,7 @@
 .navigation-item {
     margin-right: 49px;
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         margin-right: 33px;
     }
 
@@ -117,5 +122,17 @@
 
     &:active, &:focus, &.active {
         color: $secondary-color;
+    }
+}
+
+.find-button {
+    @include media-breakpoint-only($lg) {
+        margin-right: 16px;
+    }
+}
+
+.container {
+    @include media-breakpoint-only($lg) {
+        padding-right: 0;
     }
 }

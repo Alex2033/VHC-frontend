@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/shared/services/modal.service';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({
   selector: 'app-first-screen',
@@ -7,10 +8,14 @@ import { ModalService } from 'src/app/shared/services/modal.service';
   styleUrls: ['./first-screen.component.scss']
 })
 export class FirstScreenComponent implements OnInit {
+  screen: string;
 
-  constructor(public modal: ModalService) { }
+  constructor(public modal: ModalService, public responsive: ResponsiveService) { }
 
   ngOnInit() {
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
 

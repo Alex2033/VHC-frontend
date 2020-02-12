@@ -12,7 +12,7 @@ import { ServiceCardComponent } from './components/cards/service-card/service-ca
 import { EventCardComponent } from './components/cards/event-card/event-card.component';
 import { ApartmentCardComponent } from './components/cards/apartment-card/apartment-card.component';
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
-import { MainMenuComponent } from './components/side-panel/main-menu/main-menu.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { ApartmentSliderComponent } from './components/apartment-slider/apartment-slider.component';
 import { BusinessSliderComponent } from './components/business-slider/business-slider.component';
 import { ModalComponent } from './components/modal/modal.component';

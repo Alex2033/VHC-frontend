@@ -41,5 +41,13 @@
             </div>
         </div>
     </div>
+    <footer class="features-footer" *ngIf="screen !== 'lg' && screen !== 'xl'">
+        <button 
+            type="button" 
+            class="button secondary" 
+            (click)="modal.open('feedback-form')"
+        >Записаться на просмотр</button>
+        <a [routerLink]="[]" class="next-room" (click)="scrollToApartments()">Цены на аренду</a>
+    </footer>
 </section>
     

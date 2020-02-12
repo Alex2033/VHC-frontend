@@ -1,5 +1,18 @@
+@import "theme";
+@import "responsive";
+
+.page-section {
+    @include media-breakpoint-only($lg) {
+        padding-bottom: 0;
+    }
+}
+
 .page-section-header {
     margin-bottom: 64px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 40px;
+    }
 }
 
 .content-block {
@@ -7,6 +20,10 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 64px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 40px;
+    }
 }
 
 .image-block {
@@ -23,6 +40,10 @@
         height: 100%;
         object-fit: cover;
     }
+
+    @include media-breakpoint-only($xl) {
+        max-width: 100%;
+    }
 }
 
 .infoblocks {
@@ -31,11 +52,20 @@
     margin-left: auto;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include media-breakpoint-only($xl) {
+        margin-left: 0;
+        max-width: 100%;
+    }
 }
 
 .infoblock {
     flex: 1;
     max-width: 344px;
+
+    @include media-breakpoint-only($xl) {
+        margin-bottom: 48px;
+    }
 }
 
 .infoblock-title {
@@ -45,4 +75,34 @@
 .infoblock-text {
     font-size: 14px;
     line-height: 1.79;
+}
+
+.features-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+}
+
+.next-room {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $text-color;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    svg {
+        fill: $text-color;
+    }
 }

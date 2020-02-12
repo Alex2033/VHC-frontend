@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponsiveService } from '../../services/responsive.service';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  screen: string;
   languages: Array<string> = ['Рус', 'Eng'];
   menuLinks: Array<object> = [
     {
@@ -22,9 +25,12 @@ export class HeaderComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(public responsive: ResponsiveService, public menu: MenuService) { }
 
   ngOnInit() {
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
 }

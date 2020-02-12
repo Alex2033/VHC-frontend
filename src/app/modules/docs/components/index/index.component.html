@@ -11,7 +11,7 @@
                     </h2>
 
                     <!-- inner cards -->
-                    <div class="inner-cards-wrapper">
+                    <div class="inner-cards-wrapper" *ngIf="screen === 'lg' || screen === 'xl'">
                         <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
                             <header class="inner-cards-header">
                                 <h3>{{ group.name }}</h3>
@@ -22,6 +22,40 @@
                             </header>
                             <div class="inner-cards">
                                 <app-doc-card *ngFor="let card of group.documents" [card]="card"></app-doc-card>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- sliders -->
+                    <div class="inner-cards-wrapper" *ngIf="screen !== 'lg' && screen !== 'xl'">
+                        <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
+                            <header class="inner-cards-header">
+                                <h3>Места для приятного отдыха</h3>
+                                <div class="inner-category-designation">
+                                    <div>—</div>
+                                    <div class="letter">A</div>
+                                </div>
+                            </header>
+                            <div class="slider">
+                                <div class="swiper-container" [swiper]="config" #sliderContainer>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" *ngFor="let card of group.documents">
+                                            <app-doc-card [card]="card"></app-doc-card>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-buttons">
+                                    <button type="button" class="control-button gray" (click)="sliderContainer.swiper.slidePrev()">
+                                        <svg>
+                                            <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="control-button gray" (click)="sliderContainer.swiper.slideNext()">
+                                        <svg>
+                                            <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

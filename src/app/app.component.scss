@@ -1,3 +1,5 @@
+@import "responsive";
+
 :host {
     display: flex;
     min-height: 100vh;
@@ -17,5 +19,9 @@
     padding-top: 80px; // высота шапки
     display: flex;
     flex-direction: column;
+
+    @include media-breakpoint-only($lg) {
+        padding-top: 64px;
+    }
 }
 

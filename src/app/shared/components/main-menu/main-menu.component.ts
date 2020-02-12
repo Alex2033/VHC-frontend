@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SlideRight } from 'src/app/shared/animations/slide-right.animation';
 import { MenuService } from 'src/app/shared/services/menu.service';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -55,6 +56,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 })
 export class MainMenuComponent implements OnInit {
 
+  screen: string;
   activeItem: number;
 
   images: Array<string> = [
@@ -103,9 +105,12 @@ export class MainMenuComponent implements OnInit {
     }
   ];
 
-  constructor(public menu: MenuService) { }
+  constructor(public menu: MenuService, public responsive: ResponsiveService) { }
 
   ngOnInit() {
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
   closeMenu() {

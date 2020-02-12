@@ -8,6 +8,10 @@
 .business {
     position: relative;
     height: 536px;
+
+    @include media-breakpoint-only($lg) {
+        height: 480px;
+    }
 }
 
 .business-container,
@@ -33,6 +37,11 @@
     justify-content: space-between;
     min-width: 0;
     padding: 48px;
+
+    @include media-breakpoint-only($lg) {
+        padding: 32px;
+        max-width: 50%;
+    }
 }
 
 .business-content-right {
@@ -67,11 +76,20 @@
 
 .business-title {
     margin-bottom: 24px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
 }
 
 .business-description {
     color: $light-color;
     margin-bottom: 48px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 24px;
+    }
 }
 
 .business-buttons {
@@ -84,7 +102,7 @@
         }
     }
 
-    @include media-breakpoint-only($xxl) {
+    @include media-breakpoint-only($xl) {
         flex-direction: column;
         align-items: flex-start;
 
@@ -92,6 +110,14 @@
             &:not(:last-child) {
                 margin-right: 0;
                 margin-bottom: 24px;
+            }
+        }
+    }
+
+    @include media-breakpoint-only($lg) {
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 0;
             }
         }
     }
@@ -132,4 +158,9 @@
     color: $light-color;
     font-size: 14px;
     line-height: 1.79;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 24px;
+        order: -1;
+    }
 }

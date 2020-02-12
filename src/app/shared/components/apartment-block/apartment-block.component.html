@@ -1,8 +1,4 @@
 <div class="apartment">
-
-    <!-- background image -->
-    <img [src]="apartment.images[0]" alt="apartment image" class="background-image">
-
     <div class="apartment-container">
         <div class="apartment-content">
             <div class="apartment-content-left">
@@ -12,6 +8,9 @@
                 </div>
                 <div class="apartment-main">
                     <h2 class="light apartment-title">{{ apartment.name }}</h2>
+                    <div class="apartment-description">
+                        <p>{{ apartment.description }}</p>
+                    </div>
                     <div class="aparment-choise" *ngIf="apartment.costConditions.length > 0">
                         <div class="apartment-choise-item">
                             <p class="choise-month">Стоимость, Мес</p>
@@ -38,9 +37,32 @@
                         <button
                             type="button"
                             (click)="modal.open('feedback-form')"
-                            class="button secondary"
-                        >
-                            Отправить заявку
+                            class="button"
+                        >Отправить заявку
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="apartment-content-right">
+                <div class="apartment-slider">
+                    <div class="swiper-container" [(index)]="index" [swiper]="config" #apartmentSlider>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" *ngFor="let image of apartment.images">
+                                <img [src]="image" alt="apartment image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-index">{{ index + 1 }}/{{ apartment.images.length }}</div>
+                        <button type="button" class="control-button" (click)="apartmentSlider.swiper.slidePrev()">
+                            <svg>
+                                <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="control-button" (click)="apartmentSlider.swiper.slideNext()">
+                            <svg>
+                                <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                            </svg>
                         </button>
                     </div>
                 </div>

@@ -2,9 +2,16 @@
 <!--  FIXME поправить ссылку на изображение -->
   <div class="background-gradient"></div>
   <div class="card-content">
+    <div class="apartment-info">
+        <p>24 м<sup>2</sup></p>
+        <p>Для двоих</p>
+    </div>
     <div class="card-text">
       <h2 class="card-title light">
         {{ apartment.name }}
+        <svg class="apartment-icon" width="6" height="10">
+          <use xlink:href="assets/sprites/icons.svg#chevron-right"></use>
+        </svg>
       </h2>
       <div class="card-description">
         {{ apartment.description }}

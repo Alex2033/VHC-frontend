@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 .card {
     padding-bottom: 100%;
@@ -7,12 +8,16 @@
 
 .background-gradient {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(17, 18, 28, 0.9) 88.47%);
+
+    @include media-breakpoint-only($lg) {
+        height: 50%;
+    }
 }
 
 .card-content {
@@ -20,20 +25,35 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 34.55%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
+    
+    @include media-breakpoint-only($lg) {
+        padding: 24px;
+        height: 100%;
+    }
 }
 
 .card-title {
     margin-bottom: 16px;
+
+    @include media-breakpoint-only($lg) {
+        font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 0;
+    }
 }
 
 .card-description {
     color: $light-color;
     max-width: 440px;
     margin-bottom: 8px;
+
+    @include media-breakpoint-only($lg) {
+        display: none;
+    }
 }
 
 .button {
@@ -41,8 +61,53 @@
     color: $primary-color;
     background-color: $light-color;
     border-radius: 0;
+
+    @include media-breakpoint-only($lg) {
+        display: none;
+    }
 }
 
 .card-text {
     padding: 0 48px;
+
+    @include media-breakpoint-only($lg) {
+        padding: 0;
+    }
+
+}
+
+.apartment-icon {
+    display: none;
+    margin-left: 5px;
+
+    @include media-breakpoint-only($lg) {
+        display: inline-block;
+    }
+}
+
+.apartment-info {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.7;
+    display: none;
+
+    @include media-breakpoint-only($lg) {
+        display: flex;
+    }
+
+    sup {
+        font-size: 8px;
+        margin-left: 1px;
+    }
+
+    > * {
+        border-radius: 24px;
+        padding: 0 16px 2px;
+        background-color: $light-gray;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
 }
