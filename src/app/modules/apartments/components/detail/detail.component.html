@@ -1,4 +1,5 @@
 <div class="container" [class.flexible]="isFeaturesVisible">
+
     <!-- apartment-content -->
     <div class="apartment-content">
         <perfect-scrollbar class="scrollbar">
@@ -21,7 +22,7 @@
                     <p>{{ apartment.guestsCount }}</p>
                 </li>
             </ul>
-            <div class="apartment-controls">
+            <div class="apartment-controls" *ngIf="screen === 'lg' || screen === 'xl'">
                 <button type="button" class="button secondary">Забронировать</button>
                 <a [routerLink]="[]" class="next-room">
                     <span>Следующий номер</span>
@@ -36,6 +37,8 @@
     <!-- features -->
     <div class="features" [ngClass]="{'photos-on': !isFeaturesVisible, 'features-on': isFeaturesVisible}">
         <div class="features-wrapper">
+
+            <!-- features scrollbar -->
             <perfect-scrollbar class="scrollbar">
                 <header class="features-header">
                     <h3 *ngIf="isFeaturesVisible">Особенности и удобства</h3>
@@ -59,6 +62,30 @@
                     </div>
                 </div>
             </perfect-scrollbar>
+            
+            <!-- tablet slider -->
+            <div
+                class="swiper-container tablet-slider"
+                [class.display-none]="isFeaturesVisible"
+                [(index)]="index"
+                [swiper]="config" 
+                #imagesSlider
+            >
+                <button
+                    (click)="isFeaturesVisible = !isFeaturesVisible"
+                    type="button"
+                    class="button light tablet-slider-button"
+                >
+                    {{ isFeaturesVisible ? 'Фотографии' : 'Особенности' }}
+                </button>
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let image of apartment.images">
+                        <img [src]="image" alt="business image">
+                    </div>
+                </div>
+            </div>
+
             <div class="slider-controls" [class.display-none]="isFeaturesVisible">
                 <div class="slider-index">{{ index + 1 }}/{{ apartment.images.length }}</div>
                 <button type="button" class="control-button" (click)="imagesSlider.swiper.slidePrev()">
@@ -73,16 +100,31 @@
                 </button>
             </div>
         </div>
-    </div>
-</div>
-<div class="background-block" [class.features-block]="isFeaturesVisible">
 
+        <div class="apartment-controls bottom-controls" [class.bordered]="isFeaturesVisible">
+            <button type="button" class="button secondary">Забронировать</button>
+            <a [routerLink]="[]" class="next-room">
+                <span>Следующий номер</span>
+                <svg width="22px" height="7px">
+                    <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+</div>
+<div 
+    *ngIf="screen === 'lg' || screen === 'xl'" 
+    class="background-block" 
+    [class.features-block]="isFeaturesVisible"
+>
     <!-- slider -->
     <div
         class="swiper-container"
         [class.display-none]="isFeaturesVisible"
         [(index)]="index"
-        [swiper]="config" #imagesSlider
+        [swiper]="config" 
+        #imagesSlider
     >
         <div class="swiper-wrapper">
             <div class="swiper-slide" *ngFor="let image of apartment.images">

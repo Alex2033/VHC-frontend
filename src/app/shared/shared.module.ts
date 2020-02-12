@@ -16,9 +16,12 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { ApartmentSliderComponent } from './components/apartment-slider/apartment-slider.component';
 import { BusinessSliderComponent } from './components/business-slider/business-slider.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { FeedbackFormComponent } from './components/feedback-form/feedback-form.component';
+import { ApartmentViewRequestComponent } from './components/apartment-view-request/apartment-view-request.component';
 import { DocCardComponent } from './components/cards/doc-card/doc-card.component';
 import { ApartmentBlockComponent } from './components/apartment-block/apartment-block.component';
+import { BusinessSpaceRequestComponent } from './components/business-space-request/business-space-request.component';
+import { TextComponent } from './components/controls/text/text.component';
+import { CheckboxComponent } from './components/controls/checkbox/checkbox.component';
 
 // material modules
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -32,14 +35,13 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { AngularYandexMapsModule } from 'angular8-yandex-maps';
-import { TextComponent } from './components/controls/text/text.component';
-import { CheckboxComponent } from './components/controls/checkbox/checkbox.component';
 import { ExtensionPipe } from './pipes/extension.pipe';
-import {ParagraphsPipe} from './pipes/paragraphs.pipe';
+import { ParagraphsPipe } from './pipes/paragraphs.pipe';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  wheelPropagation: true
+  wheelPropagation: true,
+  suppressScrollX: true
 };
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -60,13 +62,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ApartmentSliderComponent,
     BusinessSliderComponent,
     ModalComponent,
-    FeedbackFormComponent,
+    ApartmentViewRequestComponent,
     TextComponent,
     CheckboxComponent,
     DocCardComponent,
     ApartmentBlockComponent,
     ExtensionPipe,
-    ParagraphsPipe
+    ParagraphsPipe,
+    BusinessSpaceRequestComponent
   ],
   imports: [
     CommonModule,
@@ -98,12 +101,13 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ApartmentSliderComponent,
     BusinessSliderComponent,
     ModalComponent,
-    FeedbackFormComponent,
+    ApartmentViewRequestComponent,
     AngularYandexMapsModule,
     DocCardComponent,
     ApartmentBlockComponent,
     ExtensionPipe,
-    ParagraphsPipe
+    ParagraphsPipe,
+    BusinessSpaceRequestComponent
   ],
   providers: [
     MatNativeDateModule,

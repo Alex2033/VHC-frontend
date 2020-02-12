@@ -31,15 +31,22 @@
         <div class="container inner-page-container">
             <div class="inner-page-content-left">
                 <perfect-scrollbar class="scrollbar">
-                    <h2 class="section-title">
-                        <span>Услуги</span>
-                        <div class="background-words">
-                            service
+                    <header class="detail-page-header">
+                        <h2 class="section-title">
+                            <span>Услуги</span>
+                            <div class="background-words">
+                                docs
+                            </div>
+                        </h2>
+                        <div class="section-description">
+                            <p>
+                                <strong>Ресторанный комплекс VALO HOTEL CITY.</strong> Лучшее место для праздничного торжества, корпоративной вечеринки или праздничного банкета! Можно организовать любые деловые мероприятия, провести переговоры, семинары и конференции.
+                            </p>
                         </div>
-                    </h2>
+                    </header>
 
                     <!-- inner cards -->
-                    <div class="inner-cards-wrapper" *ngIf="screen === 'lg' || screen === 'xl'">
+                    <div class="inner-cards-wrapper">
                         <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
                             <header class="inner-cards-header">
                                 <h3>{{ group.name }}</h3>
@@ -48,23 +55,13 @@
                                     <div class="letter">{{ getChar(i) }}</div>
                                 </div>
                             </header>
-                            <div class="inner-cards">
+
+                            <div class="inner-cards" *ngIf="screen === 'lg' || screen === 'xl'">
                                 <app-service-card *ngFor="let card of group.services" [card]="card"></app-service-card>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- sliders -->
-                    <div class="inner-cards-wrapper" *ngIf="screen !== 'lg' && screen !== 'xl'">
-                        <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
-                            <header class="inner-cards-header">
-                                <h3>Места для приятного отдыха</h3>
-                                <div class="inner-category-designation">
-                                    <div>—</div>
-                                    <div class="letter">A</div>
-                                </div>
-                            </header>
-                            <div class="slider">
+                            <!-- slider -->
+                            <div class="slider inner-slider" *ngIf="screen !== 'lg' && screen !== 'xl'">
                                 <div class="swiper-container" [swiper]="config" #sliderContainer>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide" *ngFor="let card of group.services">
@@ -73,12 +70,12 @@
                                     </div>
                                 </div>
                                 <div class="control-buttons">
-                                    <button type="button" class="control-button gray" (click)="sliderContainer.swiper.slidePrev()">
+                                    <button type="button" class="control-button" (click)="sliderContainer.swiper.slidePrev()">
                                         <svg>
                                             <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
                                         </svg>
                                     </button>
-                                    <button type="button" class="control-button gray" (click)="sliderContainer.swiper.slideNext()">
+                                    <button type="button" class="control-button" (click)="sliderContainer.swiper.slideNext()">
                                         <svg>
                                             <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
                                         </svg>
@@ -118,3 +115,5 @@
         </div>
     </div>
 </div>
+
+<app-footer *ngIf="screen !== 'lg' && screen !== 'xl'"></app-footer>

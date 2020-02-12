@@ -2,7 +2,8 @@
     <div class="overlay" [@fadeInOut] (click)="current.id !== 'confirm' ? modal.close() : null">
     </div>
     <ng-container>
-        <app-feedback-form [@slideRight] *ngIf="current.id === 'feedback-form'"></app-feedback-form>
+        <app-apartment-view-request [@slideRight] *ngIf="current.id === 'apartment-view-request'"></app-apartment-view-request>
+        <app-business-space-request [@slideRight] *ngIf="current.id === 'business-space-request'"></app-business-space-request>
     </ng-container>
     <button type="button" class="close button gray" (click)="current.id !== 'confirm' ? modal.close() : null">
         <svg>

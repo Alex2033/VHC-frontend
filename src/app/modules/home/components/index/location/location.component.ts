@@ -7,57 +7,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
 
-  public placemarksProperties = [
+  public pins = [
     {
-      hintContent: 'Собственный значок метки',
-      balloonContent: 'Это красивая метка',
-      iconContent: 'Московский парк'
+      position: [59.91310384356382, 30.344218691392978],
+      icon: 'assets/icons/ico_tree.svg',
+      properties: {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка',
+        iconContent: 'Московский парк'
+      },
+      options: {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '',
+        iconImageSize: [186, 60],
+        iconImageOffset: [-20, -60]
+      }
     },
     {
-      hintContent: 'Собственный значок метки с контентом',
-      balloonContent: 'А эта — новогодняя',
-      iconContent: 'ТРК «РИО»'
+      position: [59.92064640763944, 30.343797602272325],
+      icon: 'assets/icons/ico_mall.svg',
+      properties: {
+        hintContent: 'Собственный значок метки с контентом',
+        balloonContent: 'А эта — новогодняя',
+        iconContent: 'ТРК «РИО»'
+      },
+      options: {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '',
+        iconImageSize: [186, 60],
+        iconImageOffset: [-20, -60]
+      }
     }
-  ]
-
-  public placemarksOptions = [
-    {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: '',
-      iconImageSize: [140, 60],
-      iconImageOffset: [-20, -60]
-    },
-    {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: '',
-      iconImageSize: [186, 60],
-      iconImageOffset: [-20, -60]
-    }
-  ]
+  ];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  public loadPlacemarker1(event): void {
+  public loadPin(event, pin): void {
     const MyIconContentLayout = event.ymaps.templateLayoutFactory.createClass(
       `
         <div class="marker-container" style="width: 186px;">
-          <img src="assets/icons/ico_tree.svg" alt="tree icon">
-          <span>$[properties.iconContent]</span>
-        </div>
-      `
-    );
-
-    event.instance.options.set({ iconContentLayout: MyIconContentLayout });
-  }
-
-  public loadPlacemarker2(event): void {
-    const MyIconContentLayout = event.ymaps.templateLayoutFactory.createClass(
-      `
-        <div class="marker-container" style="width: 140px;">
-          <img src="assets/icons/ico_mall.svg" alt="mall icon">
+          <img src="` + pin.icon + `" alt="tree icon">
           <span>$[properties.iconContent]</span>
         </div>
       `

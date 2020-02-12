@@ -1,0 +1,84 @@
+@import "theme";
+@import "responsive";
+
+:host {
+    display: block;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1100;
+    max-width: 548px;
+    width: 100%;
+
+    
+}
+
+.feedback-wrapper {
+    padding: 56px 80px;
+    height: 100%;
+
+    @include media-breakpoint-only($lg) {
+        padding: 40px 64px;
+    }
+}
+
+.feedback-header {
+    margin-bottom: 56px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 40px;
+    }
+}
+
+.feedback-title {
+    margin-bottom: 8px;
+}
+
+.feedback-header-text {
+    font-size: 14px;
+    color: $raven;
+}
+
+.feedback-content {
+    position: relative;
+}
+
+.form-controls {
+    margin-bottom: 134px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 48px;
+    }
+}
+
+.form-control {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.form-checkbox {
+    margin-bottom: 40px;
+}
+
+.background-words {
+    top: initial;
+    bottom: 0;
+    left: 2px;
+}
+
+perfect-scrollbar {
+    height: 100%;
+    background-color: $light-color;
+}
+
+.notification-content {
+    .feedback-title {
+        margin-bottom: 40px;
+    }
+}
+
+.notification-text {
+    margin-bottom: 48px;
+}

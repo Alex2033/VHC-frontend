@@ -19,7 +19,8 @@ export class IndexComponent implements OnInit {
 
   config: SwiperConfigInterface = {
     slidesPerView: 'auto',
-    spaceBetween: 32
+    spaceBetween: 32,
+    loop: false
   };
 
   constructor(private route: ActivatedRoute, public responsive: ResponsiveService) { }

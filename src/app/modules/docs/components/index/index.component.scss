@@ -6,24 +6,32 @@
 
 .inner-page-content-left {
     margin: 0 -15px; // для корректной отображении тени карточек внутри скроллбара
+
+    .scrollbar {
+        ::ng-deep {
+            .ps-content {
+                padding: 0 15px; // для корректной отображении тени карточек внутри скроллбара
+    
+                @include media-breakpoint-only($lg) {
+                    padding: 0;
+                }
+            }
+        }
+    }
     
     @include media-breakpoint-only($xl) {
         margin: 0;
         padding-right: 15px;
+    }
+
+    @include media-breakpoint-only($lg) {
+        padding: 0;
     }
 }
 
 .inner-cards {
     @include media-breakpoint-between($lg, $xl) {
         grid-gap: 30px; 
-    }
-}
-
-.scrollbar {
-    ::ng-deep {
-        .ps-content {
-            padding: 0 15px; // для корректной отображении тени карточек внутри скроллбара
-        }
     }
 }
 

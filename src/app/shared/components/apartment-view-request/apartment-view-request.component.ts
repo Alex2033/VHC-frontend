@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-feedback-form',
-  templateUrl: './feedback-form.component.html',
-  styleUrls: ['./feedback-form.component.scss']
+  selector: 'app-apartment-view-request',
+  templateUrl: './apartment-view-request.component.html',
+  styleUrls: ['./apartment-view-request.component.scss']
 })
-export class FeedbackFormComponent implements OnInit {
+export class ApartmentViewRequestComponent implements OnInit {
   formGroup: FormGroup;
   agree: boolean = false;
   notificationVisible: boolean = false;

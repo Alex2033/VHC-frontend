@@ -7,6 +7,10 @@
   overflow: hidden;
   height: calc(100vh - 80px);
   position: relative;
+
+  @include media-breakpoint-only($lg) {
+    height: calc(100vh - 64px);
+  }
 }
 
 .container {
@@ -25,6 +29,17 @@
       margin-right: 20px;
     }
   }
+
+  @include media-breakpoint-only($lg) {
+    flex-direction: column;
+    height: 100%;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .apartment-content {
@@ -32,15 +47,32 @@
   max-width: 460px;
   position: relative;
 
+  @include media-breakpoint-only($lg) {
+    max-width: 100%;
+    padding: 32px 0 0;
+    max-height: 50%;
+  }
+
   .scrollbar {
     padding-right: 20px;
     max-height: calc(100vh - 80px - 48px - 48px); // высота экрана - высота шапки - верхний и нижний паддинг. пока такой костыльный вариант для выравнивания контролов слайдера по контенту левого блока
+
+    @include media-breakpoint-only($lg) {
+      max-height: 100%;
+      padding-right: 0;
+    }
   }
 }
 
 .apartment-title {
   margin-bottom: 40px;
   max-width: 345px;
+
+  @include media-breakpoint-only($lg) {
+    font-size: 24px;
+    line-height: 1.58;
+    max-width: 100%;
+  }
 }
 
 .infoblocks {
@@ -81,6 +113,10 @@
 
 .apartment-text {
   margin-bottom: 44px;
+
+  @include media-breakpoint-only($lg) {
+    margin-bottom: 58px;
+  }
 }
 
 .apartment-characteristic {
@@ -117,6 +153,15 @@
   }
 }
 
+.bottom-controls {
+  padding: 8px 0;
+  border-top: 1px solid transparent;
+
+  &.bordered {
+    border-color: $border-color;
+  }
+}
+
 .next-room {
   display: flex;
   align-items: center;
@@ -144,28 +189,51 @@
   padding: 56px 0 48px 56px;
   position: relative;
 
+  @include media-breakpoint-only($lg) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &.photos-on {
     .slider-controls {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @include media-breakpoint-only($lg) {
+        z-index: 1;
+        bottom: 17px;
+        right: 16px;
+      }
     }
   }
 
   &.features-on {
-      margin-right: -31px;
+    margin-right: -31px;
 
-      .scrollbar {
-          padding-right: 31px;
-      }
+    .scrollbar {
+      padding-right: 31px;
+    }
 
-      @include media-breakpoint-only($xl) {
-          margin-right: 0;
-      }
+    @include media-breakpoint-only($xl) {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-only($lg) {
+      padding-top: 20px;
+      overflow: hidden;
+    }
   }
 
   @include media-breakpoint-only($xl) {
-      padding: 56px 0 48px 26px;
+    padding: 56px 0 48px 26px;
+  }
+
+  @include media-breakpoint-only($lg) {
+    padding: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
   }
 }
 
@@ -173,6 +241,14 @@
 .features-wrapper {
   height: 100%;
   position: relative;
+
+  @include media-breakpoint-only($lg) {
+    height: initial;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-height: 0;
+  }
 }
 
 .features-header {
@@ -186,6 +262,10 @@
     width: 150px;
     margin-left: auto;
     border: 0;
+  }
+
+  @include media-breakpoint-only($lg) {
+    margin-bottom: 32px;
   }
 }
 
@@ -242,7 +322,11 @@
     grid-gap: 48px;
 
     @include media-breakpoint-only($xl) {
-        grid-gap: 28px;
+      grid-gap: 28px;
+    }
+
+    @include media-breakpoint-only($lg) {
+      margin-bottom: 32px;
     }
 }
 
@@ -274,4 +358,29 @@
 .features-item-text {
   font-size: 13px;
   line-height: 1.69;
+}
+
+.tablet-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  margin: 0 -15px;
+
+  .swiper-slide {
+    width: 100vw;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.tablet-slider-button {
+  position: absolute;
+  top: 16px;
+  right: 44px;
+  z-index: 2;
 }
