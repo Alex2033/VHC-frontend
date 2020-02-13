@@ -12,7 +12,8 @@ import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 })
 export class DetailComponent implements OnInit {
   screen: string;
-  index: number = 0;
+  tabletIndex: number = 0;
+  featureIndex: number = 0;
   isFeaturesVisible: boolean = false;
   apartment: ShortTermRentApartment;
   config: SwiperConfigInterface = {
