@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 :host {
     display: block;
@@ -70,10 +71,21 @@
             color: $secondary-color;
         }
     }
+
+    @include media-breakpoint-only($md) {
+        font-size: 14px;
+        line-height: 1.79;
+        margin-bottom: 16px;
+    }
 }
 
 .card-text {
     font-size: 14px;
     line-height: 1.86;
     margin-top: auto;
+
+    @include media-breakpoint-only($md) {
+        font-size: 13px;
+        line-height: 1.69;
+    }
 }

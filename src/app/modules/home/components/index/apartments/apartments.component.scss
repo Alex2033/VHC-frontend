@@ -14,4 +14,8 @@
         grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
         grid-gap: 32px;
     }
+
+    @include media-breakpoint-only($md) {
+        display: block;
+    }
 }

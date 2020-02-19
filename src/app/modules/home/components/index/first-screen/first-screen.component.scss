@@ -11,6 +11,16 @@
     background-position: top bottom;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include media-breakpoint-only($lg) {
+        height: calc(100vh - 64px);
+    }
+
+    @include media-breakpoint-only($md) {
+        height: initial;
+        min-height: 244px;
+        position: relative;
+    }
 }
 
 .title {
@@ -28,6 +38,12 @@
         font-size: 88px;
         line-height: 0.91;
     }
+
+    @include media-breakpoint-only($md) {
+        font-size: 32px;
+        line-height: 1;
+        bottom: 0;
+    }
 }
 
 app-booking-form {
@@ -38,6 +54,11 @@ app-booking-form {
                 box-shadow: none;
             }
         }
+    }
+
+    @include media-breakpoint-only($md) {
+        position: static;
+        transform: translate(0);
     }
     
 }

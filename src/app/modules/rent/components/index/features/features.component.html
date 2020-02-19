@@ -26,7 +26,31 @@
                 <img src="assets/images/pages/rent/features/features-img.jpg" alt="features image">
             </div>
         </div>
-        <div class="infoblocks">
+
+        <!-- infoblocks slider -->
+        <div class="infoblocks-slider" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+            <div class="swiper-container" [swiper]="config">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="infoblock">
+                            <h4 class="infoblock-title">Высокая транспортная <br> доступность</h4>
+                            <div class="infoblock-text">
+                                <p>Метро «Бухарестская» – прямо через дорогу! 20 минут до исторического центра города – Дворцовой площади и Эрмитажа</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h4 class="infoblock-title">Сервис и услуги <br> Valo Hotel City</h4>
+                        <div class="infoblock-text">
+                            <p>Управляющая компания VALO Service обслуживает апартамены, ремонтирует технику, электрику и сантехнику. Помогает круглосуточно 24 на 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- infoblocks -->
+        <div class="infoblocks" *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
             <div class="infoblock">
                 <h4 class="infoblock-title">Высокая транспортная <br> доступность</h4>
                 <div class="infoblock-text">
@@ -40,8 +64,12 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <footer class="features-footer" *ngIf="screen !== 'lg' && screen !== 'xl'">
+
+    <div class="slider-info features-pagination"></div>
+
+    <footer class="features-footer" *ngIf="screen == 'md'">
         <button 
             type="button" 
             class="button secondary" 

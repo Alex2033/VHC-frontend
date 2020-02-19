@@ -12,7 +12,6 @@ import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 export class EventsComponent implements OnInit {
 
   config: SwiperConfigInterface = {
-    slidesPerView: 3,
     spaceBetween: 64
   };
 
@@ -26,7 +25,17 @@ export class EventsComponent implements OnInit {
     this.responsive.screen.subscribe((screen) => {
       if (screen === 'md') {
         this.config.spaceBetween = 32;
+      }
+
+      if (screen !== 'md' && screen !== 'lg' && screen !== 'xl') {
         this.config.slidesPerView = 'auto';
+        this.config.spaceBetween = 16;
+        this.config.pagination = {
+          el: '.events-pagination',
+          type: 'bullets'
+        }
+      } else {
+        this.config.slidesPerView = 3;
       }
     });
   }

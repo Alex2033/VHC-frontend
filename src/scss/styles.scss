@@ -53,6 +53,12 @@ h1, .section-title {
         font-size: 24px;
         line-height: 1.58;
     }
+
+    @include media-breakpoint-only($md) {
+        font-size: 17px;
+        line-height: 1.59;
+        margin-bottom: 24px;
+    }
 }
 
 h2 {

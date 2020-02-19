@@ -24,6 +24,10 @@
     @include media-breakpoint-only($lg) {
         margin-bottom: 40px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 16px;
+    }
 }
 
 .image-block {
@@ -43,6 +47,10 @@
 
     @include media-breakpoint-only($xl) {
         max-width: 100%;
+    }
+
+    @include media-breakpoint-only($md) {
+        padding-bottom: 69.4444%;
     }
 }
 
@@ -66,15 +74,31 @@
     @include media-breakpoint-only($xl) {
         margin-bottom: 48px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 0;
+        padding-left: 15px;
+    }
 }
 
 .infoblock-title {
     margin-bottom: 32px;
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.79;
+    }
 }
 
 .infoblock-text {
     font-size: 14px;
     line-height: 1.79;
+
+    @include media-breakpoint-only($md) {
+        font-size: 13px;
+        line-height: 1.69;
+    }
 }
 
 .features-footer {
@@ -104,5 +128,15 @@
 
     svg {
         fill: $text-color;
+    }
+}
+
+.infoblocks-slider {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100vw;
+    
+    .swiper-slide {
+        width: 248px;
     }
 }

@@ -13,7 +13,7 @@
                             loc- <br> ation
                         </div>
                     </h2>
-                    <div class="location-buttons">
+                    <div class="location-buttons desktop">
                         <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367717%2C59.884082&mode=routes&origin=jsapi_2_1_75&routes%5BtimeDependent%5D%5Btime%5D=2020-01-20T15%3A55%3A00&routes%5BtimeDependent%5D%5Btype%5D=departure&rtext=~59.884322%2C30.367344&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D11514389275&z=17" target="_blank" class="button dark" type="button">Маршрут в Яндекс.Карте</a>
                     </div>
                 </div>
@@ -24,9 +24,16 @@
                         Это значит, что <strong>вы быстро и легко можете попасть в любой район Санкт-Петербурга!</strong>
                     </p>
                 </div>
+
+                <div class="location-buttons mobile">
+                    <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367717%2C59.884082&mode=routes&origin=jsapi_2_1_75&routes%5BtimeDependent%5D%5Btime%5D=2020-01-20T15%3A55%3A00&routes%5BtimeDependent%5D%5Btype%5D=departure&rtext=~59.884322%2C30.367344&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D11514389275&z=17" target="_blank" class="button dark" type="button">Маршрут в Яндекс.Карте</a>
+                </div>
             </header>
             <div class="location-map">
-                <angular-yandex-map [center]="[59.916771186075785, 30.348151407651475]" [zoom]="15">
+                <angular-yandex-map 
+                    [center]="(screen === 'md' || screen === 'lg' || screen === 'xl') ? [59.916771186075785, 30.348151407651475] : [59.919771186075785, 30.347151407651475]" 
+                    [zoom]="15"
+                >
                     <angular-yandex-placemark *ngFor="let pin of pins"
                         [geometry]="pin.position"
                         [properties]="pin.properties"

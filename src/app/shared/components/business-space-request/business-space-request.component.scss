@@ -10,8 +10,21 @@
     z-index: 1100;
     max-width: 548px;
     width: 100%;
+}
 
-    
+.feedback-form {
+    @include media-breakpoint-only($md) {
+        min-height: 0px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        display: flex;
+        flex-direction: column;
+
+        .button {
+            width: 100%;
+        }
+    }
 }
 
 .feedback-wrapper {
@@ -21,6 +34,12 @@
     @include media-breakpoint-only($lg) {
         padding: 40px 64px;
     }
+
+    @include media-breakpoint-only($md) {
+        padding: 24px 16px 28px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .feedback-header {
@@ -29,19 +48,39 @@
     @include media-breakpoint-only($lg) {
         margin-bottom: 40px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 32px;
+    }
 }
 
 .feedback-title {
     margin-bottom: 8px;
+
+    @include media-breakpoint-only($md) {
+        font-size: 17px;
+        line-height: 1.79;
+    }
 }
 
 .feedback-header-text {
     font-size: 14px;
     color: $raven;
+
+    @include media-breakpoint-only($md) {
+        font-size: 13px;
+        line-height: 1.69;
+    }
 }
 
 .feedback-content {
     position: relative;
+
+    @include media-breakpoint-only($md) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .form-controls {
@@ -52,25 +91,62 @@
     }
 }
 
+.form-content {
+    @include media-breakpoint-only($md) {
+        height: 100%;
+    }   
+}
+
 .form-control {
     &:not(:last-child) {
         margin-bottom: 32px;
+
+        @include media-breakpoint-only($md) {
+            margin-bottom: 24px;
+        }
     }
 }
 
 .form-checkbox {
     margin-bottom: 40px;
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 32px;
+        margin-top: auto;
+    }
 }
 
 .background-words {
     top: initial;
     bottom: 0;
     left: 2px;
+
+    @include media-breakpoint-only($md) {
+        font-size: 88px;
+        line-height: 0.91;
+        letter-spacing: 11px;
+    }
 }
 
 perfect-scrollbar {
     height: 100%;
-    background-color: $light-color;
+    background-color: $light-color;  
+
+    @include media-breakpoint-only($md) {
+        ::ng-deep {
+            .ps {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ps-content {
+                min-height: 0px;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: auto;
+            }
+        }
+    }
 }
 
 .notification-content {

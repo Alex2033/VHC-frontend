@@ -41,7 +41,7 @@
                 </div>
             </perfect-scrollbar>
 
-            <div class="bottom-image" *ngIf="screen !== 'lg' && screen !== 'xl'">
+            <div class="bottom-image" *ngIf="screen === 'md'">
                 <img src="assets/images/pages/rent/first-screen/bitmap.jpg" alt="first screen image">
             </div>
         </div>
@@ -52,5 +52,14 @@
     </div>
     <div class="background-block" *ngIf="screen === 'lg' || screen === 'xl'">
         <img src="assets/images/pages/rent/first-screen/bitmap.jpg" alt="first screen image">
+    </div>
+
+    <!-- booking section -->
+    <div 
+        style="background-image: url(assets/images/apartments/apartment-1.jpg)"
+        class="booking-section" 
+        *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'"
+    >
+        <button class="button secondary">Записаться на просмотр</button>
     </div>
 </div>

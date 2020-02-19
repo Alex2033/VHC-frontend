@@ -3,7 +3,8 @@
         <div class="header-content">
             <div class="header-logo">
                 <a [routerLink]="['/']" class="logo-link">
-                    <img src="assets/images/header/logo.svg" alt="logotype">
+                    <img src="assets/images/header/logo.svg" class="desktop-logo" alt="logotype">
+                    <img src="assets/images/header/logo-short.svg" class="mobile-logo" alt="logotype">
                 </a>
             </div>
             <div class="language">
@@ -15,6 +16,11 @@
                 >{{ language }}</a>
             </div>
             <a *ngIf="screen === 'xl'" href="tel:78126920000" class="phone">+7 (812) 692-00-00</a>
+            <a href="tel:78126920000" class="phone-block">
+                <svg width="12px" height="14px">
+                    <use xlink:href="assets/sprites/icons.svg#ico-phone"></use>
+                </svg>
+            </a>
             <nav class="navigation">
                 <ul class="navigation-list">
                     <ng-container *ngFor="let menuLink of menuLinks; let i = index">

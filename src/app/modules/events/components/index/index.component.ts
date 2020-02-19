@@ -18,9 +18,7 @@ export class IndexComponent implements OnInit {
   months = {};
 
   config: SwiperConfigInterface = {
-    slidesPerView: 'auto',
-    spaceBetween: 32,
-    loop: false
+    slidesPerView: 'auto'
   };
 
   constructor(private route: ActivatedRoute, public responsive: ResponsiveService) { }
@@ -32,6 +30,16 @@ export class IndexComponent implements OnInit {
 
     this.responsive.screen.subscribe((screen) => {
       this.screen = screen;
+
+      if (screen === 'md' || screen === 'lg' || screen === 'xl') {
+        this.config.spaceBetween = 32;
+      } else {
+        this.config.spaceBetween = 16;
+        this.config.pagination = {
+          el: '.events-pagination',
+          type: 'bullets',
+        }
+      }
     });
 
     events.map(event => {

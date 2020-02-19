@@ -1,5 +1,11 @@
 @import "responsive";
 
+.page-section {
+    @include media-breakpoint-only($md) {
+        padding-bottom: 24px;
+    }
+}
+
 .location-content {
     display: flex;
     justify-content: space-between;
@@ -17,6 +23,10 @@
         flex-direction: row;
         margin-bottom: 48px;
     }
+
+    @include media-breakpoint-only($xl) {
+        margin-bottom: 32px;
+    }
 }
 
 .section-name {
@@ -29,6 +39,10 @@
     @include media-breakpoint-only($xl) {
         margin-bottom: 34px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 24px;
+    }
 }
 
 .location-buttons {
@@ -37,10 +51,40 @@
     @include media-breakpoint-only($xl) {
         margin-bottom: 0;
     }
+
+    @include media-breakpoint-only($md) {
+        width: 100%;
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &.mobile {
+        display: none;
+
+        @include media-breakpoint-only($md) {
+            display: block;
+        }
+    }
+
+    &.desktop {
+        display: block;
+
+        @include media-breakpoint-only($md) {
+            display: none;
+        }
+    }
 }
 
 .background-words {
     left: 0;
+
+    @include media-breakpoint-only($md) {
+        br {
+            display: none;
+        }
+    }
 }
 
 .location-map {
@@ -57,8 +101,17 @@
         width: 100%;
         margin-left: 0;
     }
+
+    @include media-breakpoint-only($md) {
+        height: 400px;
+    }
 }
 
 .location-text {
     max-width: 362px;
+
+    @include media-breakpoint-only($md) {
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
 }

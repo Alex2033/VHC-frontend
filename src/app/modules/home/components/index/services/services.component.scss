@@ -1,4 +1,5 @@
 @import "theme";
+@import "responsive";
 
 .page-section {
     background-color: $light-gray;
@@ -11,4 +12,8 @@
 
 .swiper-slide {
     width: 288px;
+    
+    @include media-breakpoint-only($md) {
+        width: 265px;
+    }
 }

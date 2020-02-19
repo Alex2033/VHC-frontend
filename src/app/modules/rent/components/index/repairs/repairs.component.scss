@@ -9,10 +9,26 @@
     @include media-breakpoint-only($lg) {
         padding-bottom: 48px;
     }
+
+    @include media-breakpoint-only($md) {
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+}
+
+.slider {
+    @include media-breakpoint-only($md) {
+        margin-left: -15px;
+        width: 100vw;
+    }
 }
 
 
 .swiper-slide {
     height: initial;
     width: 288px;
+
+    @include media-breakpoint-only($md) {
+        width: 265px;
+    }
 }

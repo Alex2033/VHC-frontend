@@ -3,6 +3,10 @@
 
 .page-section {
     background-color: $text-color;
+
+    @include media-breakpoint-only($md) {
+        padding-bottom: 32px;
+    }
 }
 
 .description-content {
@@ -28,6 +32,11 @@
         height: 280px;
     }
 
+    @include media-breakpoint-only($md) {
+        height: 200px;
+        margin-bottom: 24px;
+    }
+
     img {
         height: 100%;
         width: 100%;
@@ -45,6 +54,10 @@
 
     .button {
         margin-top: auto;
+
+        @include media-breakpoint-only($md) {
+            width: 100%;
+        }
     }
 }
 
@@ -63,6 +76,12 @@
         font-size: 17px;
         line-height: 1.59;
         margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-only($md) {
+        font-size: 14px;
+        line-height: 1.79;
+        margin-bottom: 24px;
     }
 }
 

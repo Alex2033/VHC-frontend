@@ -29,6 +29,17 @@ export class RepairsComponent implements OnInit {
         this.config.spaceBetween = 32;
         this.config.slidesPerView = 'auto';
       }
+
+      if (screen !== 'md' && screen !== 'lg' && screen !== 'xl') {
+        this.config.slidesPerView = 'auto';
+        this.config.spaceBetween = 16;
+        this.config.pagination = {
+          el: '.repairs-pagination',
+          type: 'bullets'
+        }
+      } else {
+        this.config.slidesPerView = 3;
+      }
     });
   }
 

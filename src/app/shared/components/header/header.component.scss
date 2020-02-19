@@ -27,6 +27,10 @@
         padding: 0;
         height: 64px;
     }
+
+    @include media-breakpoint-only($md) {
+        height: 48px;
+    }
 }
 
 .header-content {
@@ -40,6 +44,24 @@
     @include media-breakpoint-only($xl) {
         margin-right: 35.5px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-right: 16px;
+    }
+}
+
+.desktop-logo {
+    @include media-breakpoint-only($md) {
+        display: none;
+    }
+}
+
+.mobile-logo {
+    display: none;
+    
+    @include media-breakpoint-only($md) {
+        display: block;
+    }
 }
 
 .logo-link {
@@ -49,12 +71,20 @@
     @include media-breakpoint-only($xl) {
         width: 69px;
     }
+
+    @include media-breakpoint-only($md) {
+        width: 24px;
+    }
 }
 
 .language {
     display: flex;
     align-items: center;
     margin-right: 65px;
+
+    @include media-breakpoint-only($md) {
+        display: none;
+    }
 }
 
 .language-item {
@@ -84,6 +114,10 @@
 
 .navigation {
     margin-left: auto;
+
+    @include media-breakpoint-only($md) {
+        display: none;
+    }
 }
 
 .navigation-list {
@@ -129,10 +163,37 @@
     @include media-breakpoint-only($lg) {
         margin-right: 16px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-left: auto;
+        @include media-breakpoint-only($md) {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
 }
 
 .container {
     @include media-breakpoint-only($lg) {
         padding-right: 0;
+    }
+}
+
+.phone-block {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    margin-right: 24px;
+    display: none;
+
+    svg {
+        fill: $gray;
+    }
+
+    @include media-breakpoint-only($md) {
+        display: flex;
     }
 }

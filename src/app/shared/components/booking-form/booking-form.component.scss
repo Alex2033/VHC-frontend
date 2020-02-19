@@ -24,6 +24,10 @@
 
 .data-blocks {
     display: flex;
+
+    @include media-breakpoint-only($md) {
+        display: block;
+    }
 }
 
 .data-block {
@@ -45,6 +49,13 @@
         width: 150px;
         flex: 1 0 150px;
         padding: 24px 25px 24px;
+    }
+
+    @include media-breakpoint-only($md) {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid $border-color;
+        padding: 16px;
     }
 
     &.calendar {
@@ -87,11 +98,21 @@
     @include media-breakpoint-only($xl) {
         margin-bottom: 4px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 0;
+    }
 }
 
 .data-block-field {
     display: flex;
     align-items: center;
+
+    @include media-breakpoint-only($md) {
+        width: 155px;
+        flex-shrink: 0;
+        justify-content: space-between;
+    }
 }
 
 .data-block-number {
@@ -106,7 +127,12 @@
         font-size: 17px;
         line-height: 1.59;
         width: 21px;
-        margin-right: 8px;
+        margin-right: 9px;
+    }
+
+    @include media-breakpoint-only($md) {
+        font-size: 12px;
+        line-height: 1.333;
     }
 }
 
@@ -127,6 +153,13 @@
 
     @include media-breakpoint-only($xl) {
         flex-direction: row;
+    }
+
+    @include media-breakpoint-only($md) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     
 }
@@ -151,11 +184,24 @@
         overflow: hidden;
         margin-right: 9px;
     }
+
+    @include media-breakpoint-only($md) {
+        width: 100%;
+        text-align: left;
+        font-size: 11px;
+        line-height: 1.45;
+    }
 }
 
 .data-calendar-wrapper {
     display: flex;
     flex-direction: column;
+
+    @include media-breakpoint-only($md) {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 .find-apartments {
@@ -169,10 +215,18 @@
         flex: 1 0 168px;
     }
 
+    @include media-breakpoint-only($md) {
+        padding: 16px;
+    }
+
     button {
         @include media-breakpoint-only($lg) {
             padding-left: 15px;
             padding-right: 15px;
+        }
+
+        @include media-breakpoint-only($md) {
+            width: 100%;
         }
     }
 }
@@ -212,5 +266,13 @@
     &::after {
         width: 2px;
         height: 10px;
+    }
+}
+
+.chevron-icon {
+    @include media-breakpoint-only($md) {
+        width: 12px;
+        height: 12px;
+        margin-right: 7px;
     }
 }

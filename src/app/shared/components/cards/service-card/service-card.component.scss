@@ -1,3 +1,5 @@
+@import "responsive";
+
 .service-card-image {
     padding-bottom: 69.5%;
     margin-bottom: 24px;
@@ -12,5 +14,15 @@
         left: 0;
         right: 0;
         object-fit: cover;
+    }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 16px;
+    }
+}
+
+h6 {
+    @include media-breakpoint-only($md) {
+        padding: 0 16px;
     }
 }

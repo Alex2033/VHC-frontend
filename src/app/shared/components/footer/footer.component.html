@@ -27,29 +27,34 @@
                 2019 Valo Hotel City
             </div>
             <ul class="pay-methods">
-                <li>
-                    <svg style="width: 54.15px; height: 16.92px;">
-                        <use xlink:href="assets/sprites/icons.svg#visa"></use>
-                    </svg>
-                </li>
-                <li>
-                    <svg style="width: 32px; height: 22px;">
-                        <use xlink:href="assets/sprites/icons.svg#mastercard"></use>
-                    </svg>
-                </li>
-                <li>
-                    <svg style="width: 106.67px; height: 20.31px;">
-                        <use xlink:href="assets/sprites/icons.svg#yandex"></use>
-                    </svg>
-                </li>
-                <li>
-                    <svg style="width: 60.06px; height: 17px;">
-                        <use xlink:href="assets/sprites/icons.svg#mir"></use>
-                    </svg>
-                </li>
+
+                <ng-container *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
+                    <li *ngFor="let icon of icons">
+                        <svg [attr.width]="icon.size.desktop.width" [attr.height]="icon.size.desktop.height">
+                            <use [attr.xlink:href]="icon.src"></use>
+                        </svg>
+                    </li>
+                </ng-container>
+
+                <ng-container *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+                    <li *ngFor="let icon of icons">
+                        <svg [attr.width]="icon.size.mobile.width" [attr.height]="icon.size.mobile.height">
+                            <use [attr.xlink:href]="icon.src"></use>
+                        </svg>
+                    </li>
+                </ng-container>
+
             </ul>
-            <div class="footer-bottom-text manufacturer-site-name">
+            <div *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'" class="footer-bottom-text manufacturer-site-name">
                 Digitech
+            </div>
+            <div class="bot">
+                <div class="footer-bottom-text">
+                    2019 Valo Hotel City
+                </div>
+                <div class="footer-bottom-text manufacturer-site-name">
+                    Digitech
+                </div>
             </div>
         </div>
     </div>

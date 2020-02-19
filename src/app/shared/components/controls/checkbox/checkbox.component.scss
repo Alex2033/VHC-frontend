@@ -1,4 +1,6 @@
 @import "theme";
+@import "responsive";
+
 :host {
   display: block;
 }
@@ -38,6 +40,10 @@ input {
   color: $raven;
   font-size: 13px;
   line-height: 1.69;
+
+  @include media-breakpoint-only($md) {
+    font-size: 12px;
+  }
 }
 /* On mouse-over, add a gray background color */
 label:hover input ~ .mark {

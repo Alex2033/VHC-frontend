@@ -4,12 +4,29 @@
     <div class="apartment-content">
         <perfect-scrollbar class="scrollbar">
             <h1 class="apartment-title">{{ apartment.name }}</h1>
-            <div class="infoblocks">
+
+            <!-- infoblocks -->
+            <div class="infoblocks" *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
                 <div class="infoblock" *ngFor="let advantage of apartment.advantages">
                     <img [src]="advantage.icon" class="infoblock-icon"/>
                     <span>{{ advantage.name }}</span>
                 </div>
             </div>
+
+            <!-- infoblocks slider -->
+            <div class="infoblocks-slider" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+                <div class="swiper-container" [swiper]="infoblocks">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" *ngFor="let advantage of apartment.advantages">
+                            <div class="infoblock">
+                                <img [src]="advantage.icon" class="infoblock-icon"/>
+                                <span>{{ advantage.name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="apartment-text" [innerHtml]="apartment.description | paragraphs">
             </div>
             <ul class="apartment-characteristic">
@@ -35,7 +52,11 @@
     </div>
 
     <!-- features -->
-    <div class="features" [ngClass]="{'photos-on': !isFeaturesVisible, 'features-on': isFeaturesVisible}">
+    <div 
+        class="features" 
+        *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'" 
+        [ngClass]="{'photos-on': !isFeaturesVisible, 'features-on': isFeaturesVisible}"
+    >
         <div class="features-wrapper">
 
             <!-- features scrollbar -->
@@ -128,6 +149,48 @@
     </div>
 
 </div>
+
+<!-- booking section -->
+<div 
+    style="background-image: url(assets/images/apartments/apartment-1.jpg)"
+    class="booking-section" 
+    *ngIf="!isBooked && screen !== 'md' && screen !== 'lg' && screen !== 'xl'"
+>
+    <button class="button secondary" (click)="isBooked = true">Забронировать</button>
+</div>
+
+<!-- mobile features -->
+<div class="mobile-features" *ngIf="isBooked && screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+    <div class="mobile-features-slider">
+        <div class="swiper-container" [swiper]="mobileFeatures">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let image of apartment.images">
+                    <img [src]="image" alt="mobile features image">
+                </div>
+            </div>
+        </div>
+        <div class="slider-info card-pagination mobile-features-pagination"></div>
+    </div>
+    <div class="mobile-features-content">
+        <header class="features-header">
+            <h3>Особенности и удобства</h3>
+        </header>
+
+        <!-- features items -->
+        <div class="features-items">
+            <div class="features-item" *ngFor="let feature of apartment.features">
+                <header class="features-item-header">
+                    <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.icon + ') no-repeat center')"></div>
+                    <h6 class="features-item-title">{{ feature.name }}</h6>
+                </header>
+                <div class="features-item-text" [innerHTML]="feature.description"></div>
+            </div>
+        </div>
+
+        <button class="button secondary book-button">Забронировать</button>
+    </div>
+</div>
+
 <div 
     class="background-block" 
     [class.features-block]="isFeaturesVisible"

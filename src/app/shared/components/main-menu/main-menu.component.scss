@@ -18,6 +18,11 @@
         height: calc(100% - 64px);
         padding-bottom: 10px;
     }
+
+    @include media-breakpoint-only($md) {
+        height: calc(100% - 48px);
+        padding: 24px;
+    }
 }
 
 .menu-background {
@@ -32,6 +37,10 @@
     @include media-breakpoint-only($lg) {
         width: 100vw;
         height: calc(100% - 64px);
+    }
+
+    @include media-breakpoint-only($md) {
+        height: calc(100% - 48px);
     }
 }
 
@@ -62,6 +71,10 @@
             }
         }
     }
+
+    @include media-breakpoint-only($md) {
+        margin-right: 0;
+    }
 }
 
 .menu-navigation {
@@ -74,6 +87,11 @@
         justify-content: space-between;
         height: 100%;
         padding-bottom: 0;
+    }
+
+    @include media-breakpoint-only($md) {
+        padding: 0;
+        height: initial;
     }
 }
 
@@ -93,6 +111,13 @@
     @include media-breakpoint-only($lg) {
         margin-bottom: 48px;
     }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 30px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .menu-list-link {
@@ -109,6 +134,11 @@
 
     &:active, &:focus {
         color: $secondary-color;
+    }
+
+    @include media-breakpoint-only($md) {
+        font-size: 14px;
+        line-height: 1.79;
     }
 }
 

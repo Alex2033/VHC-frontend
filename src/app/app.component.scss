@@ -23,5 +23,9 @@
     @include media-breakpoint-only($lg) {
         padding-top: 64px;
     }
+
+    @include media-breakpoint-only($lg) {
+        padding-top: 48px;
+    }
 }
 

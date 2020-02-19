@@ -3,6 +3,10 @@
 
 .page-section {
     background-color: $text-color;
+
+    @include media-breakpoint-only($md) {
+        padding-bottom: 32px;
+    }
 }
 
 .description-content {
@@ -34,6 +38,19 @@
         height: 415px;
         z-index: 1;
     }
+
+    @include media-breakpoint-only($md) {
+        height: 0;
+        padding-bottom: 56.25%;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .video-overlay {
@@ -56,6 +73,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include media-breakpoint-only($md) {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 .description-info {
@@ -70,6 +92,10 @@
         order: -1;
         padding-left: 0;
         margin-bottom: 48px;
+    }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 0;
     }
 }
 
@@ -91,6 +117,12 @@
             display: none;
         }
     }
+
+    @include media-breakpoint-only($md) {
+        font-size: 14px;
+        line-height: 1.79;
+        margin-bottom: 32px;
+    }
 }
 
 .background-words {
@@ -102,5 +134,9 @@
         left: -15px;
         font-size: 104px;
         line-height: 0.85;
+    }
+
+    @include media-breakpoint-only($md) {
+        display: none;
     }
 }

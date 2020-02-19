@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-import {ShortTermRentApartment} from '../../../../shared/contracts/short-term-rent-apartment';
-import {DomSanitizer} from '@angular/platform-browser';
-import {ActivatedRoute} from '@angular/router';
+import { ShortTermRentApartment } from '../../../../shared/contracts/short-term-rent-apartment';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { ResponsiveService } from 'src/app/shared/services/responsive.service';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'app-detail',
@@ -14,9 +15,23 @@ export class DetailComponent implements OnInit {
   screen: string;
   tabletIndex: number = 0;
   featureIndex: number = 0;
+  isBooked: boolean = false;
   isFeaturesVisible: boolean = false;
   apartment: ShortTermRentApartment;
   config: SwiperConfigInterface = {
+    slidesPerView: 1,
+    observer: true,
+    observeParents: true
+  };
+
+  infoblocks: SwiperConfigInterface = {
+    slidesPerView: 'auto',
+    observer: true,
+    observeParents: true,
+    spaceBetween: 8
+  };
+
+  mobileFeatures: SwiperConfigInterface = {
     slidesPerView: 1,
     observer: true,
     observeParents: true
@@ -33,6 +48,13 @@ export class DetailComponent implements OnInit {
 
     this.responsive.screen.subscribe((screen) => {
       this.screen = screen;
+
+      if (screen !== 'md' && screen !== 'lg' && screen !== 'xl') {
+        this.mobileFeatures.pagination = {
+          el: '.mobile-features-pagination',
+          type: 'bullets'
+        }
+      }
     });
   }
 

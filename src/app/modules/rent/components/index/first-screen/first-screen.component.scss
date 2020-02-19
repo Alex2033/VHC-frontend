@@ -10,17 +10,39 @@
     @include media-breakpoint-only($lg) {
         height: calc(100vh - 64px);
     }
+
+    @include media-breakpoint-only($md) {
+        height: initial;
+        min-height: 100vh;
+    }
+
+    .container {
+        position: relative;
+    
+        @include media-breakpoint-only($md) {
+            min-height: initial;
+            flex-grow: 0;
+        }
+    }
 }
 
-.container {
-    position: relative;
-}
+
 
 .rent-first-sceen,
 .container,
 .rent-wrapper,
 .rent-content {
     height: 100%;
+
+    @include media-breakpoint-only($md) {
+        height: initial;
+        display: flex;
+        flex-direction: column;
+        min-height: 0px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
 }
 
 .rent-content {
@@ -30,6 +52,10 @@
 
     @include media-breakpoint-only($lg) {
         margin-bottom: 48px;
+    }
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 0;
     }
 }
 
@@ -54,6 +80,10 @@
 
     @include media-breakpoint-only($lg) {
         margin: 32px 0 48px;
+    }
+
+    @include media-breakpoint-only($md) {
+        margin: 24px 0;
     }
 }
 
@@ -124,6 +154,21 @@
                 margin-bottom: 0;
             }
         }
+        
+    }
+
+    @include media-breakpoint-only($md) {
+        display: block;
+
+        > * {
+            margin-bottom: 32px;
+        }
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
     }
 }
 
@@ -138,10 +183,25 @@
             margin-right: 28px;
         }
     }
+
+    @include media-breakpoint-only($md) {
+        font-size: 13px;
+        line-height: 1.69;
+
+        > * {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
 }
 
 .infoblock-icon {
     padding-top: 8px;
+
+    @include media-breakpoint-only($md) {
+        padding-top: 6px;
+    }
 }
 
 .rent-icon {
@@ -223,4 +283,21 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+.booking-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 168px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  padding: 24px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .button {
+    width: 100%;
+  }
 }

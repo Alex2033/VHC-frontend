@@ -4,6 +4,8 @@
 .card {
     padding-bottom: 100%;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .background-gradient {
@@ -34,6 +36,10 @@
         padding: 24px;
         height: 100%;
     }
+
+    @include media-breakpoint-only($md) {
+        padding: 16px;
+    }
 }
 
 .card-title {
@@ -43,6 +49,18 @@
         font-size: 16px;
         line-height: 1.75;
         margin-bottom: 0;
+    }
+
+    @include media-breakpoint-only($md) {
+        font-size: 14px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        span {
+            display: inline-block;
+            max-width: 162px;
+        }
     }
 }
 
@@ -74,6 +92,10 @@
         padding: 0;
     }
 
+    @include media-breakpoint-only($md) {
+        width: 100%;
+    }
+
 }
 
 .apartment-icon {
@@ -82,6 +104,11 @@
 
     @include media-breakpoint-only($lg) {
         display: inline-block;
+    }
+
+    @include media-breakpoint-only($md) {
+        margin-left: 0;
+        margin-bottom: 8px;
     }
 }
 
@@ -108,6 +135,10 @@
 
         &:not(:last-child) {
             margin-right: 24px;
+
+            @include media-breakpoint-only($lg) {
+                margin-right: 16px;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({
   selector: 'app-location',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location.component.scss']
 })
 export class LocationComponent implements OnInit {
+  screen: string;
 
   public pins = [
     {
@@ -40,9 +42,12 @@ export class LocationComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(public responsive: ResponsiveService) { }
 
   ngOnInit() {
+    this.responsive.screen.subscribe((screen) => {
+      this.screen = screen;
+    });
   }
 
   public loadPin(event, pin): void {
