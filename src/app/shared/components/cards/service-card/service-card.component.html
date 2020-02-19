@@ -1,6 +1,6 @@
 <div class="service-card">
     <div class="service-card-image">
-        <img [src]="card.image" alt="service card image">
+      <app-responsive-image [xl]="card.imageXl" [lg]="card.imageLg" [md]="card.imageMd" [sm]="card.imageSm"></app-responsive-image>
     </div>
     <h6>{{ card.name }}</h6>
 </div>

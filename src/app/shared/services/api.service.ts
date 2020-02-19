@@ -83,15 +83,24 @@ export class ApiService {
           name: 'Отдых',
           services: [
             {
-              image: 'assets/images/service/restoran.jpg',
+              imageXl: 'assets/images/service/restoran.jpg',
+              imageLg: 'assets/images/service/restoran.jpg',
+              imageMd: 'assets/images/service/restoran.jpg',
+              imageSm: 'assets/images/service/restoran.jpg',
               name: 'SPA Салон'
             },
             {
-              image: 'assets/images/service/kafe_i_bar.jpg',
+              imageXl: 'assets/images/service/kafe_i_bar.jpg',
+              imageLg: 'assets/images/service/kafe_i_bar.jpg',
+              imageMd: 'assets/images/service/kafe_i_bar.jpg',
+              imageSm: 'assets/images/service/kafe_i_bar.jpg',
               name: 'Ресторан'
             },
             {
-              image: 'assets/images/service/fitness.jpg',
+              imageXl: 'assets/images/service/fitness.jpg',
+              imageLg: 'assets/images/service/fitness.jpg',
+              imageMd: 'assets/images/service/fitness.jpg',
+              imageSm: 'assets/images/service/fitness.jpg',
               name: 'Фитнес-клуб'
             }
           ]
@@ -101,11 +110,17 @@ export class ApiService {
           name: 'Бытовые услуги',
           services: [
             {
-              image: 'assets/images/service/restoran.jpg',
+              imageXl: 'assets/images/service/restoran.jpg',
+              imageLg: 'assets/images/service/restoran.jpg',
+              imageMd: 'assets/images/service/restoran.jpg',
+              imageSm: 'assets/images/service/restoran.jpg',
               name: 'SPA Салон'
             },
             {
-              image: 'assets/images/service/fitness.jpg',
+              imageXl: 'assets/images/service/fitness.jpg',
+              imageLg: 'assets/images/service/fitness.jpg',
+              imageMd: 'assets/images/service/fitness.jpg',
+              imageSm: 'assets/images/service/fitness.jpg',
               name: 'Фитнес-клуб'
             }
           ]
@@ -115,11 +130,17 @@ export class ApiService {
           name: 'Спорт',
           services: [
             {
-              image: 'assets/images/service/restoran.jpg',
+              imageXl: 'assets/images/service/restoran.jpg',
+              imageLg: 'assets/images/service/restoran.jpg',
+              imageMd: 'assets/images/service/restoran.jpg',
+              imageSm: 'assets/images/service/restoran.jpg',
               name: 'SPA Салон'
             },
             {
-              image: 'assets/images/service/kafe_i_bar.jpg',
+              imageXl: 'assets/images/service/kafe_i_bar.jpg',
+              imageLg: 'assets/images/service/kafe_i_bar.jpg',
+              imageMd: 'assets/images/service/kafe_i_bar.jpg',
+              imageSm: 'assets/images/service/kafe_i_bar.jpg',
               name: 'Ресторан'
             }
           ]
@@ -132,51 +153,87 @@ export class ApiService {
     return of(
       [
         {
-          image: 'assets/images/service/restoran.jpg',
+          imageXl: 'assets/images/service/restoran.jpg',
+          imageLg: 'assets/images/service/restoran.jpg',
+          imageMd: 'assets/images/service/restoran.jpg',
+          imageSm: 'assets/images/service/restoran.jpg',
           name: 'Ресторан с банкетным залом'
         },
         {
-          image: 'assets/images/service/kafe_i_bar.jpg',
+          imageXl: 'assets/images/service/kafe_i_bar.jpg',
+          imageLg: 'assets/images/service/kafe_i_bar.jpg',
+          imageMd: 'assets/images/service/kafe_i_bar.jpg',
+          imageSm: 'assets/images/service/kafe_i_bar.jpg',
           name: 'Кафе и бары'
         },
         {
-          image: 'assets/images/service/fitness.jpg',
+          imageXl: 'assets/images/service/fitness.jpg',
+          imageLg: 'assets/images/service/fitness.jpg',
+          imageMd: 'assets/images/service/fitness.jpg',
+          imageSm: 'assets/images/service/fitness.jpg',
           name: 'Фитнес-клуб'
         },
         {
-          image: 'assets/images/service/service-3.jpg',
+          imageXl: 'assets/images/service/service-3.jpg',
+          imageLg: 'assets/images/service/service-3.jpg',
+          imageMd: 'assets/images/service/service-3.jpg',
+          imageSm: 'assets/images/service/service-3.jpg',
           name: 'Бассейн и SPA'
         },
         {
-          image: 'assets/images/service/himchistka.jpg',
+          imageXl: 'assets/images/service/himchistka.jpg',
+          imageLg: 'assets/images/service/himchistka.jpg',
+          imageMd: 'assets/images/service/himchistka.jpg',
+          imageSm: 'assets/images/service/himchistka.jpg',
           name: 'Химчистка'
         },
         {
-          image: 'assets/images/service/prachechnaya.jpg',
+          imageXl: 'assets/images/service/prachechnaya.jpg',
+          imageLg: 'assets/images/service/prachechnaya.jpg',
+          imageMd: 'assets/images/service/prachechnaya.jpg',
+          imageSm: 'assets/images/service/prachechnaya.jpg',
           name: 'Прачечная'
         },
         {
-          image: 'assets/images/service/konferenc_zal.jpg',
+          imageXl: 'assets/images/service/konferenc_zal.jpg',
+          imageLg: 'assets/images/service/konferenc_zal.jpg',
+          imageMd: 'assets/images/service/konferenc_zal.jpg',
+          imageSm: 'assets/images/service/konferenc_zal.jpg',
           name: 'Конференц-зал'
         },
         {
-          image: 'assets/images/service/coworking.jpg',
+          imageXl: 'assets/images/service/coworking.jpg',
+          imageLg: 'assets/images/service/coworking.jpg',
+          imageMd: 'assets/images/service/coworking.jpg',
+          imageSm: 'assets/images/service/coworking.jpg',
           name: 'Коворкинг'
         },
         {
-          image: 'assets/images/service/consierge.jpg',
+          imageXl: 'assets/images/service/consierge.jpg',
+          imageLg: 'assets/images/service/consierge.jpg',
+          imageMd: 'assets/images/service/consierge.jpg',
+          imageSm: 'assets/images/service/consierge.jpg',
           name: 'Консьерж-служба'
         },
         {
-          image: 'assets/images/service/hranenie_bagaja.jpg',
+          imageXl: 'assets/images/service/hranenie_bagaja.jpg',
+          imageLg: 'assets/images/service/hranenie_bagaja.jpg',
+          imageMd: 'assets/images/service/hranenie_bagaja.jpg',
+          imageSm: 'assets/images/service/hranenie_bagaja.jpg',
           name: 'Хранение багажа'
         },
         {
-          image: 'assets/images/service/cleaning.jpg',
+          imageXl: 'assets/images/service/cleaning.jpg',
+          imageLg: 'assets/images/service/cleaning.jpg',
+          imageMd: 'assets/images/service/cleaning.jpg',
+          imageSm: 'assets/images/service/cleaning.jpg',
           name: 'Служба клининга'
         },
         {
-          image: 'assets/images/service/room_service.jpg',
+          imageXl: 'assets/images/service/room_service.jpg',
+          imageLg: 'assets/images/service/room_service.jpg',
+          imageMd: 'assets/images/service/room_service.jpg',
+          imageSm: 'assets/images/service/room_service.jpg',
           name: 'Room Service'
         },
       ]
@@ -187,27 +244,45 @@ export class ApiService {
     return of(
       [
         {
-          image: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageXl: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageLg: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageMd: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageSm: 'assets/images/pages/rent/repairs/repairs-1.jpg',
           name: 'Спальное место'
         },
         {
-          image: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageXl: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageLg: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageMd: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageSm: 'assets/images/pages/rent/repairs/repairs-2.jpg',
           name: 'Зоны отдыха и работы'
         },
         {
-          image: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageXl: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageLg: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageMd: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageSm: 'assets/images/pages/rent/repairs/repairs-3.jpg',
           name: 'Кухня'
         },
         {
-          image: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageXl: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageLg: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageMd: 'assets/images/pages/rent/repairs/repairs-2.jpg',
+          imageSm: 'assets/images/pages/rent/repairs/repairs-2.jpg',
           name: 'Зоны отдыха и работы'
         },
         {
-          image: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageXl: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageLg: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageMd: 'assets/images/pages/rent/repairs/repairs-3.jpg',
+          imageSm: 'assets/images/pages/rent/repairs/repairs-3.jpg',
           name: 'Кухня'
         },
         {
-          image: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageXl: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageLg: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageMd: 'assets/images/pages/rent/repairs/repairs-1.jpg',
+          imageSm: 'assets/images/pages/rent/repairs/repairs-1.jpg',
           name: 'Спальное место'
         }
       ]
@@ -223,7 +298,25 @@ export class ApiService {
           name: 'Пространство свободного назначения',
           description: 'Подходит для выставок, размещения продуктовых автоматов',
           cost: 29000,
-          images: [
+          imagesXl: [
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+          ],
+          imagesLg: [
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+          ],
+          imagesMd: [
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+          ],
+          imagesSm: [
             'assets/images/pages/business/business-1.jpg',
             'assets/images/pages/business/business-2.jpg',
             'assets/images/pages/business/business-1.jpg',
@@ -236,12 +329,30 @@ export class ApiService {
           name: 'Конференц–зал',
           description: 'Подходит для выставок, размещения продуктовых автоматов',
           cost: 29000,
-          images: [
+          imagesXl: [
             'assets/images/pages/business/business-2.jpg',
             'assets/images/pages/business/business-1.jpg',
             'assets/images/pages/business/business-2.jpg',
             'assets/images/pages/business/business-1.jpg',
-          ]
+          ],
+          imagesLg: [
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+          ],
+          imagesMd: [
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+          ],
+          imagesSm: [
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+            'assets/images/pages/business/business-2.jpg',
+            'assets/images/pages/business/business-1.jpg',
+          ],
         }
       ]
     );
@@ -253,7 +364,16 @@ export class ApiService {
         id: 1,
         name: 'Двухместный номер с 1 кроватью',
         description: 'Описание',
-        images: [
+        imagesXl: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        imagesLg: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        imagesMd: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        imagesSm: [
           'assets/images/pages/apartments/apartment-slider-image-1.jpg'
         ],
         area: 24,
@@ -276,7 +396,16 @@ export class ApiService {
         id: 2,
         name: 'Двухместный номер с 2 кроватями',
         description: 'Описание',
-        images: [
+        imagesXl: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        imagesLg: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        imagesMd: [
+          'assets/images/pages/apartments/apartment-slider-image-1.jpg'
+        ],
+        imagesSm: [
           'assets/images/pages/apartments/apartment-slider-image-1.jpg'
         ],
         area: 30,
@@ -307,11 +436,29 @@ export class ApiService {
           guestsCount: 2,
           name: 'Двухместный номер с 1 кроватью',
           description: 'Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.',
-          images: [
-            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          imagesXl: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesSm: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
           ]
         },
         {
@@ -320,7 +467,25 @@ export class ApiService {
           guestsCount: 2,
           name: 'Номер-студио c кроватью king size',
           description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-          images: [
+          imagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesSm: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
@@ -333,7 +498,25 @@ export class ApiService {
           guestsCount: 2,
           name: 'Люкс с 2 спальнями',
           description: 'Апартаменты состоят из двух спален и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-          images: [
+          imagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesSm: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
@@ -346,7 +529,25 @@ export class ApiService {
           guestsCount: 2,
           name: 'Люкс с 1 спальней',
           description: 'Двухкомнатные апартаменты со спальней и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-          images: [
+          imagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          imagesSm: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
@@ -365,7 +566,25 @@ export class ApiService {
         description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
         area: 24,
         guestsCount: 2,
-        images: [
+        imagesXl: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
+        imagesLg: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
+        imagesMd: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
+        imagesSm: [
           'assets/images/pages/apartment/room.jpg',
           'assets/images/pages/apartment/room.jpg',
           'assets/images/pages/apartment/room.jpg',

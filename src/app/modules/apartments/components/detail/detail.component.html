@@ -52,9 +52,9 @@
     </div>
 
     <!-- features -->
-    <div 
-        class="features" 
-        *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'" 
+    <div
+        class="features"
+        *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'"
         [ngClass]="{'photos-on': !isFeaturesVisible, 'features-on': isFeaturesVisible}"
     >
         <div class="features-wrapper">
@@ -83,13 +83,13 @@
                     </div>
                 </div>
             </perfect-scrollbar>
-            
+
             <!-- tablet slider -->
             <div
                 class="swiper-container tablet-slider"
                 [class.display-none]="isFeaturesVisible"
                 [(index)]="tabletIndex"
-                [swiper]="config" 
+                [swiper]="config"
                 #tableSlider
             >
                 <button
@@ -101,14 +101,14 @@
                 </button>
 
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" *ngFor="let image of apartment.images">
-                        <img [src]="image" alt="business image">
+                    <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
+                      <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
                     </div>
                 </div>
             </div>
 
             <div *ngIf="screen !== 'lg' && screen !== 'xl'"  class="slider-controls" [class.display-none]="isFeaturesVisible">
-                <div class="slider-index">{{ tabletIndex + 1 }}/{{ apartment.images.length }}</div>
+                <div class="slider-index">{{ tabletIndex + 1 }}/{{ apartment.imagesXl.length }}</div>
                 <button type="button" class="control-button" (click)="tableSlider.swiper.slidePrev()">
                     <svg>
                         <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
@@ -122,7 +122,7 @@
             </div>
 
             <div *ngIf="screen === 'lg' || screen === 'xl'"  class="slider-controls" [class.display-none]="isFeaturesVisible">
-                <div class="slider-index">{{ featureIndex + 1 }}/{{ apartment.images.length }}</div>
+                <div class="slider-index">{{ featureIndex + 1 }}/{{ apartment.imagesXl.length }}</div>
                 <button type="button" class="control-button" (click)="imagesSlider.swiper.slidePrev()">
                     <svg>
                         <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
@@ -151,9 +151,9 @@
 </div>
 
 <!-- booking section -->
-<div 
+<div
     style="background-image: url(assets/images/apartments/apartment-1.jpg)"
-    class="booking-section" 
+    class="booking-section"
     *ngIf="!isBooked && screen !== 'md' && screen !== 'lg' && screen !== 'xl'"
 >
     <button class="button secondary" (click)="isBooked = true">Забронировать</button>
@@ -164,8 +164,8 @@
     <div class="mobile-features-slider">
         <div class="swiper-container" [swiper]="mobileFeatures">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" *ngFor="let image of apartment.images">
-                    <img [src]="image" alt="mobile features image">
+                <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
+                  <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
                 </div>
             </div>
         </div>
@@ -191,8 +191,8 @@
     </div>
 </div>
 
-<div 
-    class="background-block" 
+<div
+    class="background-block"
     [class.features-block]="isFeaturesVisible"
 >
     <!-- slider -->
@@ -200,12 +200,12 @@
         class="swiper-container"
         [class.display-none]="isFeaturesVisible"
         [(index)]="featureIndex"
-        [swiper]="config" 
+        [swiper]="config"
         #imagesSlider
     >
         <div class="swiper-wrapper">
-            <div class="swiper-slide" *ngFor="let image of apartment.images">
-                <img [src]="image" alt="business image">
+            <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
+              <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
             </div>
         </div>
     </div>

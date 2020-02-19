@@ -5,7 +5,7 @@
     margin-bottom: 24px;
     position: relative;
 
-    img {
+    ::ng-deep img {
         height: 100%;
         position: absolute;
         top: 0;
