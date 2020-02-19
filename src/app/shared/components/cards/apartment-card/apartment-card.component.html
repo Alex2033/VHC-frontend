@@ -1,5 +1,5 @@
-<div class="card" [ngStyle]="{'background-image': 'url(' + 'assets/images/apartments/apartment-1.jpg' + ')'}">
-<!--  FIXME поправить ссылку на изображение -->
+<div class="card">
+  <app-responsive-image [xl]="apartment.imageXl" [lg]="apartment.imageLg" [md]="apartment.imageMd" [sm]="apartment.imageSm"></app-responsive-image>
   <div class="background-gradient"></div>
   <div class="card-content">
     <div class="apartment-info">
@@ -17,6 +17,6 @@
         {{ apartment.description }}
       </div>
     </div>
-    <a href="#" type="button" class="button gray">Забронировать</a>
+    <a [routerLink]="['apartments', apartment.id]" type="button" class="button gray">Забронировать</a>
   </div>
 </div>

@@ -1,4 +1,4 @@
 export interface ApartmentAdvantage {
   name: string;
-  icon: string;
+  iconUrl: string;
 }

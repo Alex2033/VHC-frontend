@@ -8,7 +8,7 @@
             <!-- infoblocks -->
             <div class="infoblocks" *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
                 <div class="infoblock" *ngFor="let advantage of apartment.advantages">
-                    <img [src]="advantage.icon" class="infoblock-icon"/>
+                    <img [src]="advantage.iconUrl" class="infoblock-icon"/>
                     <span>{{ advantage.name }}</span>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" *ngFor="let advantage of apartment.advantages">
                             <div class="infoblock">
-                                <img [src]="advantage.icon" class="infoblock-icon"/>
+                                <img [src]="advantage.iconUrl" class="infoblock-icon"/>
                                 <span>{{ advantage.name }}</span>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                 <div *ngIf="isFeaturesVisible" class="features-items">
                     <div class="features-item" *ngFor="let feature of apartment.features">
                         <header class="features-item-header">
-                            <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.icon + ') no-repeat center')"></div>
+                            <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.iconUrl + ') no-repeat center')"></div>
                             <h6 class="features-item-title">{{ feature.name }}</h6>
                         </header>
                         <div class="features-item-text" [innerHTML]="feature.description"></div>
@@ -180,7 +180,7 @@
         <div class="features-items">
             <div class="features-item" *ngFor="let feature of apartment.features">
                 <header class="features-item-header">
-                    <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.icon + ') no-repeat center')"></div>
+                    <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.iconUrl + ') no-repeat center')"></div>
                     <h6 class="features-item-title">{{ feature.name }}</h6>
                 </header>
                 <div class="features-item-text" [innerHTML]="feature.description"></div>

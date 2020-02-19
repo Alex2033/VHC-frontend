@@ -24,12 +24,12 @@ export class MockApiService {
             {
               id: 1,
               name: 'Актуальная проектная декларация',
-              file: 'http://vk.com.doc'
+              url: 'http://vk.com.doc'
             },
             {
               id: 2,
               name: 'Проектная декларация',
-              file: 'http://vk.com.pdf'
+              url: 'http://vk.com.pdf'
             },
           ]
         },
@@ -40,12 +40,12 @@ export class MockApiService {
             {
               id: 3,
               name: 'Актуальная проектная декларация',
-              file: 'http://vk.com.png'
+              url: 'http://vk.com.png'
             },
             {
               id: 4,
               name: 'Проектная декларация',
-              file: 'http://vk.com.pdf'
+              url: 'http://vk.com.pdf'
             },
           ]
         },
@@ -56,12 +56,12 @@ export class MockApiService {
             {
               id: 5,
               name: 'Актуальная проектная декларация',
-              file: 'http://vk.com.zip'
+              url: 'http://vk.com.zip'
             },
             {
               id: 6,
               name: 'Проектная декларация',
-              file: 'http://vk.com.pdf'
+              url: 'http://vk.com.pdf'
             },
           ]
         },
@@ -295,8 +295,8 @@ export class MockApiService {
           imagesXl: [
             'assets/images/pages/business/business-1.jpg',
             'assets/images/pages/business/business-2.jpg',
-            'assets/images/pages/business/business-1.jpg',
-            'assets/images/pages/business/business-2.jpg',
+            // 'assets/images/pages/business/business-1.jpg',
+            // 'assets/images/pages/business/business-2.jpg',
           ],
           imagesLg: [
             'assets/images/pages/business/business-1.jpg',
@@ -430,6 +430,10 @@ export class MockApiService {
           guestsCount: 2,
           name: 'Двухместный номер с 1 кроватью',
           description: 'Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.',
+          imageXl: 'assets/images/pages/apartment/room.jpg',
+          imageLg: 'assets/images/pages/apartment/room.jpg',
+          imageMd: 'assets/images/pages/apartment/room.jpg',
+          imageSm: 'assets/images/pages/apartment/room.jpg',
           imagesXl: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
@@ -461,6 +465,10 @@ export class MockApiService {
           guestsCount: 2,
           name: 'Номер-студио c кроватью king size',
           description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
+          imageXl: 'assets/images/pages/apartment/room.jpg',
+          imageLg: 'assets/images/pages/apartment/room.jpg',
+          imageMd: 'assets/images/pages/apartment/room.jpg',
+          imageSm: 'assets/images/pages/apartment/room.jpg',
           imagesXl: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
@@ -492,6 +500,10 @@ export class MockApiService {
           guestsCount: 2,
           name: 'Люкс с 2 спальнями',
           description: 'Апартаменты состоят из двух спален и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
+          imageXl: 'assets/images/pages/apartment/room.jpg',
+          imageLg: 'assets/images/pages/apartment/room.jpg',
+          imageMd: 'assets/images/pages/apartment/room.jpg',
+          imageSm: 'assets/images/pages/apartment/room.jpg',
           imagesXl: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
@@ -523,6 +535,10 @@ export class MockApiService {
           guestsCount: 2,
           name: 'Люкс с 1 спальней',
           description: 'Двухкомнатные апартаменты со спальней и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
+          imageXl: 'assets/images/pages/apartment/room.jpg',
+          imageLg: 'assets/images/pages/apartment/room.jpg',
+          imageMd: 'assets/images/pages/apartment/room.jpg',
+          imageSm: 'assets/images/pages/apartment/room.jpg',
           imagesXl: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
@@ -560,6 +576,10 @@ export class MockApiService {
         description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
         area: 24,
         guestsCount: 2,
+        imageXl: 'assets/images/pages/apartment/room.jpg',
+        imageLg: 'assets/images/pages/apartment/room.jpg',
+        imageMd: 'assets/images/pages/apartment/room.jpg',
+        imageSm: 'assets/images/pages/apartment/room.jpg',
         imagesXl: [
           'assets/images/pages/apartment/room.jpg',
           'assets/images/pages/apartment/room.jpg',
@@ -586,67 +606,67 @@ export class MockApiService {
         ],
         features: [
           {
-            icon: '/assets/icons/ico-video.svg',
+            iconUrl: '/assets/icons/ico-video.svg',
             name: 'видео/аудио',
             description: 'Спутниковое телевидение, телевизор, цифровое тв, телевизор с плоским экраном'
           },
           {
-            icon: '/assets/icons/ico-img.svg',
+            iconUrl: '/assets/icons/ico-img.svg',
             name: 'окружение',
             description: 'Вид на город,  двор, достопримечательности города'
           },
           {
-            icon: '/assets/icons/ico-lamp.svg',
+            iconUrl: '/assets/icons/ico-lamp.svg',
             name: 'электроника',
             description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
           },
           {
-            icon: '/assets/icons/ico-furniture.svg',
+            iconUrl: '/assets/icons/ico-furniture.svg',
             name: 'Мебель',
             description: 'Багажная тумба, вешалки, гардеробная, журнальный столик, зеркало, обеденный стол,  стулья, туалетный столик, кровать, шкаф-купе'
           },
           {
-            icon: '/assets/icons/ico-internet.svg',
+            iconUrl: '/assets/icons/ico-internet.svg',
             name: 'Интернет и телефония',
             description: 'Wi-Fi, интернет, телефон, внутренний телефон'
           },
           {
-            icon: '/assets/icons/ico-bathroom.svg',
+            iconUrl: '/assets/icons/ico-bathroom.svg',
             name: 'Ванная комната',
             description: 'Банные полотенца, банные принадлежности, раковина, санузел, туалет, туалетные средства, унитаз'
           },
           {
-            icon: '/assets/icons/ico-video.svg',
+            iconUrl: '/assets/icons/ico-video.svg',
             name: 'видео/аудио',
             description: 'Спутниковое телевидение, телевизор, цифровое тв, телевизор с плоским экраном'
           },
           {
-            icon: '/assets/icons/ico-img.svg',
+            iconUrl: '/assets/icons/ico-img.svg',
             name: 'окружение',
             description: 'Вид на город,  двор, достопримечательности города'
           },
           {
-            icon: '/assets/icons/ico-lamp.svg',
+            iconUrl: '/assets/icons/ico-lamp.svg',
             name: 'электроника',
             description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
           },
           {
-            icon: '/assets/icons/ico-furniture.svg',
+            iconUrl: '/assets/icons/ico-furniture.svg',
             name: 'Мебель',
             description: 'Багажная тумба, вешалки, гардеробная, журнальный столик, зеркало, обеденный стол,  стулья, туалетный столик, кровать, шкаф-купе'
           },
           {
-            icon: '/assets/icons/ico-internet.svg',
+            iconUrl: '/assets/icons/ico-internet.svg',
             name: 'Интернет и телефония',
             description: 'Wi-Fi, интернет, телефон, внутренний телефон'
           },
           {
-            icon: '/assets/icons/ico-lamp.svg',
+            iconUrl: '/assets/icons/ico-lamp.svg',
             name: 'электроника',
             description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
           },
           {
-            icon: '/assets/icons/ico-bathroom.svg',
+            iconUrl: '/assets/icons/ico-bathroom.svg',
             name: 'Ванная комната',
             description: 'Банные полотенца, банные принадлежности, раковина, санузел, туалет, туалетные средства, унитаз'
           }
@@ -654,19 +674,19 @@ export class MockApiService {
         advantages: [
           {
             name: 'Кондиционер',
-            icon: '/assets/icons/ico-snow.svg'
+            iconUrl: '/assets/icons/ico-snow.svg'
           },
           {
             name: 'Вид на город',
-            icon: '/assets/icons/ico-build.svg'
+            iconUrl: '/assets/icons/ico-build.svg'
           },
           {
             name: 'Бесплатный Wi–Fi',
-            icon: '/assets/icons/ico-wifi.svg'
+            iconUrl: '/assets/icons/ico-wifi.svg'
           },
           {
             name: 'Вид на двор',
-            icon: '/assets/icons/ico-img.svg'
+            iconUrl: '/assets/icons/ico-img.svg'
           }
         ]
       }

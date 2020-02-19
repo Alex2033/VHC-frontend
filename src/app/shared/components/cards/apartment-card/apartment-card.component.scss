@@ -2,143 +2,151 @@
 @import "responsive";
 
 .card {
-    padding-bottom: 100%;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+  padding-bottom: 100%;
+  position: relative;
+  ::ng-deep img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    object-fit: cover;
+  }
 }
 
 .background-gradient {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(17, 18, 28, 0.9) 88.47%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(17, 18, 28, 0.9) 88.47%);
 
-    @include media-breakpoint-only($lg) {
-        height: 50%;
-    }
+  @include media-breakpoint-only($lg) {
+    height: 50%;
+  }
 }
 
 .card-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    
-    @include media-breakpoint-only($lg) {
-        padding: 24px;
-        height: 100%;
-    }
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 
-    @include media-breakpoint-only($md) {
-        padding: 16px;
-    }
+  @include media-breakpoint-only($lg) {
+    padding: 24px;
+    height: 100%;
+  }
+
+  @include media-breakpoint-only($md) {
+    padding: 16px;
+  }
 }
 
 .card-title {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    @include media-breakpoint-only($lg) {
-        font-size: 16px;
-        line-height: 1.75;
-        margin-bottom: 0;
+  @include media-breakpoint-only($lg) {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-only($md) {
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    span {
+      display: inline-block;
+      max-width: 162px;
     }
-
-    @include media-breakpoint-only($md) {
-        font-size: 14px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-
-        span {
-            display: inline-block;
-            max-width: 162px;
-        }
-    }
+  }
 }
 
 .card-description {
-    color: $light-color;
-    max-width: 440px;
-    margin-bottom: 8px;
+  color: $light-color;
+  max-width: 440px;
+  margin-bottom: 8px;
 
-    @include media-breakpoint-only($lg) {
-        display: none;
-    }
+  @include media-breakpoint-only($lg) {
+    display: none;
+  }
 }
 
 .button {
-    margin-left: auto;
-    color: $primary-color;
-    background-color: $light-color;
-    border-radius: 0;
+  margin-left: auto;
+  color: $primary-color;
+  background-color: $light-color;
+  border-radius: 0;
 
-    @include media-breakpoint-only($lg) {
-        display: none;
-    }
+  @include media-breakpoint-only($lg) {
+    display: none;
+  }
 }
 
 .card-text {
-    padding: 0 48px;
+  padding: 0 48px;
 
-    @include media-breakpoint-only($lg) {
-        padding: 0;
-    }
+  @include media-breakpoint-only($lg) {
+    padding: 0;
+  }
 
-    @include media-breakpoint-only($md) {
-        width: 100%;
-    }
+  @include media-breakpoint-only($md) {
+    width: 100%;
+  }
 
 }
 
 .apartment-icon {
-    display: none;
-    margin-left: 5px;
+  display: none;
+  margin-left: 5px;
 
-    @include media-breakpoint-only($lg) {
-        display: inline-block;
-    }
+  @include media-breakpoint-only($lg) {
+    display: inline-block;
+  }
 
-    @include media-breakpoint-only($md) {
-        margin-left: 0;
-        margin-bottom: 8px;
-    }
+  @include media-breakpoint-only($md) {
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
 }
 
 .apartment-info {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.7;
+  display: none;
+
+  @include media-breakpoint-only($lg) {
     display: flex;
-    align-items: center;
-    font-size: 13px;
-    line-height: 1.7;
-    display: none;
+  }
 
-    @include media-breakpoint-only($lg) {
-        display: flex;
+  sup {
+    font-size: 8px;
+    margin-left: 1px;
+  }
+
+  > * {
+    border-radius: 24px;
+    padding: 0 16px 2px;
+    background-color: $light-gray;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+
+      @include media-breakpoint-only($lg) {
+        margin-right: 16px;
+      }
     }
-
-    sup {
-        font-size: 8px;
-        margin-left: 1px;
-    }
-
-    > * {
-        border-radius: 24px;
-        padding: 0 16px 2px;
-        background-color: $light-gray;
-
-        &:not(:last-child) {
-            margin-right: 24px;
-
-            @include media-breakpoint-only($lg) {
-                margin-right: 16px;
-            }
-        }
-    }
+  }
 }
