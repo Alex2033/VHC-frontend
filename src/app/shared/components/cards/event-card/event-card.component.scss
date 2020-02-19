@@ -17,7 +17,7 @@
     position: relative;
     margin-bottom: 24px;
 
-    img {
+    app-responsive-image {
         position: absolute;
         top: 0;
         left: 0;
@@ -66,7 +66,7 @@
         &:hover {
             color: $primary-color;
         }
-    
+
         &:active, &:focus {
             color: $secondary-color;
         }

@@ -1,6 +1,9 @@
 export interface Event {
   id: number;
-  image: string;
+  imageSm: string;
+  imageMd: string;
+  imageLg: string;
+  imageXl: string;
   startedAt: number;
   cost: string;
   link: string;

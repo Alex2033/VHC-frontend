@@ -37,6 +37,8 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { AngularYandexMapsModule } from 'angular8-yandex-maps';
 import { ExtensionPipe } from './pipes/extension.pipe';
 import { ParagraphsPipe } from './pipes/paragraphs.pipe';
+import {ResponsiveImageComponent} from './components/responsive-image/responsive-image.component';
+import {LazyLoadImageModule} from 'ng-lazyload-image';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -74,7 +76,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ApartmentBlockComponent,
     ExtensionPipe,
     ParagraphsPipe,
-    BusinessSpaceRequestComponent
+    BusinessSpaceRequestComponent,
+    ResponsiveImageComponent
   ],
   imports: [
     CommonModule,
@@ -85,7 +88,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatDatepickerModule,
     SwiperModule,
     PerfectScrollbarModule,
-    AngularYandexMapsModule
+    AngularYandexMapsModule,
+    LazyLoadImageModule
   ],
   exports: [
     CommonModule,
@@ -112,7 +116,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ApartmentBlockComponent,
     ExtensionPipe,
     ParagraphsPipe,
-    BusinessSpaceRequestComponent
+    BusinessSpaceRequestComponent,
+    ResponsiveImageComponent,
+    LazyLoadImageModule
   ],
   providers: [
     MatNativeDateModule,

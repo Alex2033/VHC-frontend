@@ -28,7 +28,7 @@ registerLocaleData(localeRu);
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'ru' },
-    { provide: ApiService, useClass: environment.production ? ApiService : MockApiService }
+    { provide: ApiService, useClass: environment.useApi ? ApiService : MockApiService }
   ],
   bootstrap: [AppComponent]
 })

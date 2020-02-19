@@ -13,7 +13,7 @@ export class ApiClientService extends BaseApiClientService {
     protected http: HttpClient,
     protected state: TransferState,
     @Inject(PLATFORM_ID) protected platformId) {
-    super(http, state, platformId, environment.host + '/api');
+    super(http, state, platformId, environment.apiHost + '/api');
     this.scope = environment.scope;
   }
 
