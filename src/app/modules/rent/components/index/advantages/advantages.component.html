@@ -1,5 +1,5 @@
 <section class="page-section">
-    <img src="assets/images/advantages/advantages-img.jpg" alt="advantages image" class="advantages-background">
+    <img [lazyLoad]="'assets/images/advantages/advantages-img.jpg'" [offset]="200" alt="advantages image" class="advantages-background">
     <div class="container">
         <header class="page-section-header">
             <div class="section-name">
@@ -31,7 +31,7 @@
                             </svg>
                         </div>
                     </ng-container>
-                    
+
                 </div>
             </div>
             <div class="control-buttons">

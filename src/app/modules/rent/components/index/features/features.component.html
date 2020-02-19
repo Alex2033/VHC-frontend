@@ -23,7 +23,7 @@
                 <h6>Valo hotel city</h6>
             </div>
             <div class="image-block">
-                <img src="assets/images/pages/rent/features/features-img.jpg" alt="features image">
+                <img [lazyLoad]="'assets/images/pages/rent/features/features-img.jpg'" [offset]="200" alt="features image">
             </div>
         </div>
 
@@ -70,12 +70,11 @@
     <div class="slider-info features-pagination"></div>
 
     <footer class="features-footer" *ngIf="screen == 'md'">
-        <button 
-            type="button" 
-            class="button secondary" 
+        <button
+            type="button"
+            class="button secondary"
             (click)="modal.open('apartment-view-request')"
         >Записаться на просмотр</button>
         <a [routerLink]="[]" class="next-room" (click)="scrollToApartments()">Цены на аренду</a>
     </footer>
 </section>
-    

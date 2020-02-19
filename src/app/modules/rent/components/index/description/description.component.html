@@ -3,11 +3,12 @@
         <div class="description-content">
             <div class="description-video">
                 <div class="video-overlay" *ngIf="!videoVisible" [@fadeInOut]>
-                    <img class="overlay-image" src="assets/images/pages/rent/description/video-overlay.jpg" alt="video overlay">
-                    <img 
+                    <img class="overlay-image" [lazyLoad]="'assets/images/pages/rent/description/video-overlay.jpg'" [offset]="200" alt="video overlay">
+                    <img
                         (click)="playVideo()"
-                        class="play-button" 
-                        src="assets/images/pages/rent/description/play.png" 
+                        class="play-button"
+                        [lazyLoad]="'assets/images/pages/rent/description/play.png'"
+                        [offset]="200"
                         alt="play button"
                     >
                 </div>
