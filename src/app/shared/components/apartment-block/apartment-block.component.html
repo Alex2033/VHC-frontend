@@ -36,7 +36,7 @@
                     <div class="apartment-buttons">
                         <button
                             type="button"
-                            (click)="modal.open('apartment-view-request')"
+                            (click)="modal.open('apartment-view-request', {id: apartment.id})"
                             class="button"
                         >Отправить заявку
                         </button>
@@ -47,13 +47,13 @@
                 <div class="apartment-slider">
                     <div class="swiper-container" [(index)]="index" [swiper]="config" #apartmentSlider>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" *ngFor="let image of apartment.images">
-                                <img [src]="image" alt="apartment image">
+                            <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
+                              <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
                             </div>
                         </div>
                     </div>
                     <div class="slider-controls">
-                        <div class="slider-index">{{ index + 1 }}/{{ apartment.images.length }}</div>
+                        <div class="slider-index">{{ index + 1 }}/{{ apartment.imagesXl.length }}</div>
                         <button type="button" class="control-button" (click)="apartmentSlider.swiper.slidePrev()">
                             <svg>
                                 <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>

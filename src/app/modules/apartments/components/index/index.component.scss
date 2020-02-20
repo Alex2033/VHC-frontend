@@ -57,7 +57,7 @@ app-booking-form {
 
 .mobile-card {
     .swiper-slide {
-        img {
+        ::ng-deep img {
             width: 100%;
             height: 100%;
             object-fit: cover;

@@ -14,7 +14,7 @@ export class ApartmentSliderComponent implements OnInit {
   @Input() apartment: ShortTermRentApartment;
 
   config: SwiperConfigInterface = {
-    slidesPerView: 1
+    slidesPerView: 1,
   };
 
   constructor() { }

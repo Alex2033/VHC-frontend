@@ -1,0 +1,83 @@
+<ng-container *ngIf="errors">
+  <ng-container *ngFor="let error of errors | keyvalue | slice: 0:1; last as isLast;">
+    <ng-container *ngIf="errorMessages && errorMessages[error.key]; else defaultMessages">
+      {{ errorMessages[error.key] }}
+    </ng-container>
+    <ng-template #defaultMessages>
+      <ng-container [ngSwitch]="error.key">
+        <ng-container *ngSwitchCase="'required'">
+          {{ errorMessages && errorMessages['required'] ? errorMessages['required'] : 'Является обязательным для заполнения' }}
+        </ng-container>
+        <ng-container *ngSwitchCase="'email'">
+          Не является e-mail адресом
+        </ng-container>
+        <ng-container *ngSwitchCase="'exists'">
+          Значение не найдено
+        </ng-container>
+        <ng-container *ngSwitchCase="'incorrect_password'">
+          Неверный пароль
+        </ng-container>
+        <ng-container *ngSwitchCase="'numeric'">
+          Должно быть числом
+        </ng-container>
+        <ng-container *ngSwitchCase="'string'">
+          Должно быть строкой
+        </ng-container>
+        <ng-container *ngSwitchCase="'min'">
+          Минимальная длина: {{ error.value['min'] }}
+        </ng-container>
+        <ng-container *ngSwitchCase="'max'">
+          Максимальная длина: {{ error.value['max'] }}
+        </ng-container>
+        <ng-container *ngSwitchCase="'confirm_password'">
+          Пароли не совпадают
+        </ng-container>
+        <ng-container *ngSwitchCase="'code_not_found'">
+          Код не найден
+        </ng-container>
+        <ng-container *ngSwitchCase="'code_verification'">
+          Не удалось выполнить проверку кода
+        </ng-container>
+        <ng-container *ngSwitchCase="'not_in'">
+          Запрещенное значение
+        </ng-container>
+        <ng-container *ngSwitchCase="'regex'">
+          Некорректное значение
+        </ng-container>
+        <ng-container *ngSwitchCase="'unique'">
+          Уже существует
+        </ng-container>
+        <ng-container *ngSwitchCase="'maxlength'">
+          Максимальная длина: {{ error.value['requiredLength'] }}
+        </ng-container>
+        <ng-container *ngSwitchCase="'minlength'">
+          Минимальная длина: {{ error.value['requiredLength'] }}
+        </ng-container>
+        <ng-container *ngSwitchCase="'array'">
+          Должно быть массивом
+        </ng-container>
+        <ng-container *ngSwitchCase="'in'">
+          Запрещенное значение
+        </ng-container>
+        <ng-container *ngSwitchCase="'not_found'">
+          Не найдено
+        </ng-container>
+        <ng-container *ngSwitchCase="'image'">
+          Должно быть изображением
+        </ng-container>
+        <ng-container *ngSwitchCase="'url'">
+          Должно быть ссылкой
+        </ng-container>
+        <ng-container *ngSwitchCase="'domain'">
+          Некорректный домен ссылки
+        </ng-container>
+        <ng-container *ngSwitchCase="'no_active_apartments'">
+          Нет связанных с вами апартаментов
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+          {{ error.key }}
+        </ng-container>
+      </ng-container>
+    </ng-template>
+  </ng-container>
+</ng-container>

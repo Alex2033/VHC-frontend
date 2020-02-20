@@ -4,6 +4,9 @@ export interface BusinessSpace {
   description: string;
   cost: number;
   area: number;
-  images: string[];
+  imagesXl: string[];
+  imagesLg: string[];
+  imagesMd: string[];
+  imagesSm: string[];
 
 }

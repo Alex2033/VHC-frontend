@@ -13,13 +13,13 @@
                     <div class="business-buttons">
                         <button
                             type="button"
-                            (click)="modal.open('business-space-request')"
+                            (click)="modal.open('business-space-request', {id: space.id})"
                             class="button"
                         >Отправить заявку
                         </button>
                         <div class="price">
                             <p class="price-per-month">Стоимость, Мес</p>
-                            <strong>{{ space.cost | currency:'':'':'4.0' }} ₽</strong>
+                            <strong>{{ space.cost | currency:'':'':'3.0' }} ₽</strong>
                         </div>
                     </div>
                 </div>
@@ -28,13 +28,13 @@
                 <div class="business-slider">
                     <div class="swiper-container" [(index)]="index" [swiper]="config" #businessSlider>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" *ngFor="let image of space.images">
-                                <img [src]="image" alt="business image">
+                            <div class="swiper-slide" *ngFor="let image of space.imagesXl; index as i">
+                              <app-responsive-image [xl]="space.imagesXl[i]" [lg]="space.imagesLg[i]" [md]="space.imagesMd[i]" [sm]="space.imagesSm[i]"></app-responsive-image>
                             </div>
                         </div>
                     </div>
                     <div class="slider-controls">
-                        <div class="slider-index">{{ index + 1 }}/{{ space.images.length }}</div>
+                        <div class="slider-index">{{ index + 1 }}/{{ space.imagesXl.length }}</div>
                         <button type="button" class="control-button" (click)="businessSlider.swiper.slidePrev()">
                             <svg>
                                 <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>

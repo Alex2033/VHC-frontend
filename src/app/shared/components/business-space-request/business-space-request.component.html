@@ -8,25 +8,22 @@
                 <header class="feedback-header">
                     <h3 class="feedback-title">Отправить заявку</h3>
                     <div class="feedback-header-text">
-                        <p>
-                            Двухместный номер с 1 кроватью
-                        </p>
+
                     </div>
                 </header>
-                <form [formGroup]="formGroup" class="feedback-form">
+                <form [formGroup]="formGroup" class="feedback-form" (submit)="submit()" [appServerSideValidation]="formErrors">
                     <div class="form-controls">
-                        <app-text [placeholder]="'Имя'" [formControlName]="'name'" class="form-control"></app-text>
-                        <app-text [placeholder]="'E–mail'" [formControlName]="'email'" class="form-control"></app-text>
-                        <app-text [placeholder]="'Телефон'" [formControlName]="'phone'" class="form-control"></app-text>
+                        <app-text [placeholder]="'Имя'" [formControlName]="'name'" class="form-control" [errorMessages]="{required: 'Введите имя'}"></app-text>
+                        <app-text [placeholder]="'E–mail'" [formControlName]="'email'" class="form-control" [errorMessages]="{required: 'Введите e-mail'}"></app-text>
+                        <app-text [placeholder]="'Телефон'" [formControlName]="'phone'" class="form-control" [errorMessages]="{required: 'Введите телефон'}"></app-text>
                     </div>
-                    <app-checkbox 
+                    <app-checkbox
                         class="form-checkbox"
-                        [formControlName]="'agree'" 
-                        [label]="'Согласен с'" 
-                        [dataProcessingText]="'правилами обработки данных'" 
-                        [ngModel]="agree"
+                        [formControlName]="'agree'"
+                        [label]="'Согласен с'"
+                        [dataProcessingText]="'правилами обработки данных'"
                     ></app-checkbox>
-                    <button type="submit" class="button secondary book-btn" (click)="submit()">Отправить заявку</button>
+                    <button type="submit" class="button secondary book-btn" [disabled]="!formGroup.controls.agree.value">Отправить заявку</button>
                 </form>
             </div>
         </div>
@@ -35,7 +32,7 @@
         <div class="notification-content" *ngIf="notificationVisible">
             <h3 class="feedback-title">Заявка отправлена</h3>
             <div class="notification-text">
-                <p><strong>Наш менеджер свяжется с вами в течении часа в рабочее время,</strong> consectetur adipiscing elit. Aenean risus enim, pellentesque ac malesuada eget, gravida a tellus.</p>
+                <p>Наш менеджер свяжется с вами в течении часа в рабочее время</p>
             </div>
             <button type="button" class="button secondary" (click)="notificationVisible = false">Понятно</button>
         </div>

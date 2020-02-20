@@ -33,7 +33,7 @@ export class ApartmentBlockComponent implements OnInit {
     }
     this.months -= 1;
   }
-  
+
   getCost() {
     const result = this.apartment.costConditions.find((condition) => {
       if(this.months >= condition.minMonths && (this.months <= condition.maxMonths || condition.maxMonths === null)) {

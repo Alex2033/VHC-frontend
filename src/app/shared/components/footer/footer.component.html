@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-image">
-                <img src="assets/images/footer/footer-image.jpg" alt="footer image">
+                <img [lazyLoad]="'assets/images/footer/footer-image.jpg'" [offset]="200" alt="footer image">
             </div>
             <div class="footer-info">
                 <div class="background-words stroked">Valo Hotel City</div>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="footer-middle">
-            <img src="assets/images/footer/logo.svg" alt="logo" class="footer-logo">
+            <img [lazyLoad]="'assets/images/footer/logo.svg'" [offset]="200" alt="logo" class="footer-logo">
             <div class="footer-text">
                 <p>Лучший комплекс апарт–отелей в Санкт–Петербурге</p>
             </div>

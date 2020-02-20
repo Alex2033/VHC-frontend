@@ -1,9 +1,9 @@
 <ng-container *ngIf="current">
-    <div class="overlay" [@fadeInOut] (click)="current.id !== 'confirm' ? modal.close() : null">
+    <div class="overlay" [@fadeInOut] (click)="modal.close()">
     </div>
     <ng-container>
-        <app-apartment-view-request [@slideRight] *ngIf="current.id === 'apartment-view-request'"></app-apartment-view-request>
-        <app-business-space-request [@slideRight] *ngIf="current.id === 'business-space-request'"></app-business-space-request>
+        <app-apartment-view-request [@slideRight] *ngIf="current && current.id === 'apartment-view-request'" [id]="current.parameters ? current.parameters['id'] : null"></app-apartment-view-request>
+        <app-business-space-request [@slideRight] *ngIf="current && current.id === 'business-space-request'" [id]="current.parameters['id']"></app-business-space-request>
     </ng-container>
     <button type="button" class="close button gray" (click)="current.id !== 'confirm' ? modal.close() : null">
         <svg>
@@ -11,4 +11,3 @@
         </svg>
     </button>
 </ng-container>
-    

@@ -1,4 +1,7 @@
 export interface ApartmentEquipmentElement {
   name: string;
-  image: string;
+  imageXl: string;
+  imageLg: string;
+  imageMd: string;
+  imageSm: string;
 }

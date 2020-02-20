@@ -2,20 +2,23 @@
 
 <div class="wrapper" [ngClass]="{'active': shouldLabelFloat, 'invalid': errorState, 'hide-placeholder': !placeholder || hidePlaceholder}" (click)="focus()">
   <div class="placeholder" [ngClass]="{'floating': shouldLabelFloat}">
-    {{ this.ngControl.invalid && this.ngControl.touched ? 'Укажите ' + placeholder : placeholder }}
+    <ng-container *ngIf="!errorState">
+      {{ placeholder }}
+    </ng-container>
+    <app-error-message *ngIf="errorState" [errors]="this.ngControl.errors" [errorMessages]="errorMessages"></app-error-message>
   </div>
   <div class="content" [ngClass]="{'visible': shouldLabelFloat}">
-    <input 
-      class="modal-control" 
+    <input
+      class="modal-control"
       #input
-      type="text" 
-      (blur)="focused = false;" 
-      [ngModel]="value" 
-      (ngModelChange)="writeValue($event)" 
-      (focus)="focused = true;" 
+      type="text"
+      (blur)="focused = false;"
+      [ngModel]="value"
+      (ngModelChange)="writeValue($event)"
+      (focus)="focused = true;"
       [attr.aria-label]="title ? title : placeholder"
     >
   </div>
 
-  <div *ngIf="this.ngControl.invalid && this.ngControl.touched" class="error-sign">!</div>
+  <div *ngIf="errorState" class="error-sign">!</div>
 </div>

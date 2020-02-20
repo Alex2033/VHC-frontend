@@ -1,4 +1,8 @@
 export interface Service {
   name: string;
-  image: string;
+  imageXl: string;
+  imageLg: string;
+  imageMd: string;
+  imageSm: string;
+
 }

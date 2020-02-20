@@ -381,7 +381,7 @@
         height: 100%;
     }
 
-  img {
+  ::ng-deep img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -421,9 +421,11 @@
 }
 
 .features-item-icon {
-  background-color: $gray;
-  width: 24px;
-  height: 24px;
+  ::ng-deep svg {
+    fill: $gray;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .features-item-title {
@@ -450,7 +452,7 @@
   .swiper-slide {
     width: 100vw;
 
-    img {
+    ::ng-deep img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -495,7 +497,7 @@
     padding-bottom: 62.5%;
     position: relative;
 
-    img {
+    ::ng-deep img {
       position: absolute;
       top: 0;
       left: 0;

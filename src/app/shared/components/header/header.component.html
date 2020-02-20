@@ -36,7 +36,7 @@
                     </ng-container>
                 </ul>
             </nav>
-            <button type="button" class="button dark find-button">Найти номер</button>
+            <a [routerLink]="['/apartments']" class="button dark find-button">Найти номер</a>
             <button
                 *ngIf="screen !== 'xl' && screen !== 'lg'"
                 class="open-menu"

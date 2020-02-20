@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup, FormBuilder, Validators, ValidationErrors} from '@angular/forms';
+import {ApiService} from '../../services/api.service';
 
 @Component({
   selector: 'app-apartment-view-request',
@@ -8,18 +9,18 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class ApartmentViewRequestComponent implements OnInit {
   formGroup: FormGroup;
-  agree: boolean = false;
+  formErrors: ValidationErrors | null;
   notificationVisible: boolean = false;
-  phonePattern = '^[0-9]+$';
+  @Input() id: string;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private api: ApiService) { }
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern(this.phonePattern)]],
-      agree: ['false', [Validators.requiredTrue]]
+      name: [null],
+      email: [null],
+      phone: [null],
+      agree: [true, [Validators.requiredTrue]]
     });
   }
 
@@ -29,8 +30,17 @@ export class ApartmentViewRequestComponent implements OnInit {
     if(!this.formGroup.valid) {
       return;
     } else {
-      this.notificationVisible = true;
-      this.formGroup.reset();
+      this.api.sendApartmentViewRequest({
+        apartment_id: this.id,
+        name: this.formGroup.value.name,
+        email: this.formGroup.value.email,
+        phone: this.formGroup.value.phone
+      }).subscribe(() => {
+        this.notificationVisible = true;
+        this.formGroup.reset();
+      }, (err) => {
+        this.formErrors = err.error;
+      });
     }
   }
 
