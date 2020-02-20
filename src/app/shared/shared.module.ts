@@ -23,10 +23,6 @@ import {BusinessSpaceRequestComponent} from './components/business-space-request
 import {TextComponent} from './components/controls/text/text.component';
 import {CheckboxComponent} from './components/controls/checkbox/checkbox.component';
 
-// material modules
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-
 // plugins
 import {SwiperModule} from 'ngx-swiper-wrapper';
 import {SWIPER_CONFIG} from 'ngx-swiper-wrapper';
@@ -41,6 +37,10 @@ import {ResponsiveImageComponent} from './components/responsive-image/responsive
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {FormErrorsDirective} from './directives/form-errors.directive';
 import {ErrorMessageComponent} from './components/controls/shared/error-message/error-message.component';
+
+
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {

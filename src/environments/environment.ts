@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   apiHost: 'http://api.apart-system.localhost',
   scope: 'valo',
-  useApi: true
+  useApi: false
 };
 
 /*
