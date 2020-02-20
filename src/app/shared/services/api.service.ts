@@ -80,128 +80,6 @@ export class ApiService {
     return this.apiClient.get(`/site/apart_hotel_site/short_term_rent_apartments/${apartmentId}`).pipe(map((response) => {
       return deserialize(response) as ShortTermRentApartment;
     }));
-    return of(
-      {
-        id: 1,
-        name: 'Двухместный номер 1 кроватью',
-        description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
-        area: 24,
-        guestsCount: 2,
-        imageXl: 'assets/images/pages/apartment/room.jpg',
-        imageLg: 'assets/images/pages/apartment/room.jpg',
-        imageMd: 'assets/images/pages/apartment/room.jpg',
-        imageSm: 'assets/images/pages/apartment/room.jpg',
-        imagesXl: [
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-        ],
-        imagesLg: [
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-        ],
-        imagesMd: [
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-        ],
-        imagesSm: [
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-          'assets/images/pages/apartment/room.jpg',
-        ],
-        features: [
-          {
-            iconUrl: '/assets/icons/ico-video.svg',
-            name: 'видео/аудио',
-            description: 'Спутниковое телевидение, телевизор, цифровое тв, телевизор с плоским экраном'
-          },
-          {
-            iconUrl: '/assets/icons/ico-img.svg',
-            name: 'окружение',
-            description: 'Вид на город,  двор, достопримечательности города'
-          },
-          {
-            iconUrl: '/assets/icons/ico-lamp.svg',
-            name: 'электроника',
-            description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
-          },
-          {
-            iconUrl: '/assets/icons/ico-furniture.svg',
-            name: 'Мебель',
-            description: 'Багажная тумба, вешалки, гардеробная, журнальный столик, зеркало, обеденный стол,  стулья, туалетный столик, кровать, шкаф-купе'
-          },
-          {
-            iconUrl: '/assets/icons/ico-internet.svg',
-            name: 'Интернет и телефония',
-            description: 'Wi-Fi, интернет, телефон, внутренний телефон'
-          },
-          {
-            iconUrl: '/assets/icons/ico-bathroom.svg',
-            name: 'Ванная комната',
-            description: 'Банные полотенца, банные принадлежности, раковина, санузел, туалет, туалетные средства, унитаз'
-          },
-          {
-            iconUrl: '/assets/icons/ico-video.svg',
-            name: 'видео/аудио',
-            description: 'Спутниковое телевидение, телевизор, цифровое тв, телевизор с плоским экраном'
-          },
-          {
-            iconUrl: '/assets/icons/ico-img.svg',
-            name: 'окружение',
-            description: 'Вид на город,  двор, достопримечательности города'
-          },
-          {
-            iconUrl: '/assets/icons/ico-lamp.svg',
-            name: 'электроника',
-            description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
-          },
-          {
-            iconUrl: '/assets/icons/ico-furniture.svg',
-            name: 'Мебель',
-            description: 'Багажная тумба, вешалки, гардеробная, журнальный столик, зеркало, обеденный стол,  стулья, туалетный столик, кровать, шкаф-купе'
-          },
-          {
-            iconUrl: '/assets/icons/ico-internet.svg',
-            name: 'Интернет и телефония',
-            description: 'Wi-Fi, интернет, телефон, внутренний телефон'
-          },
-          {
-            iconUrl: '/assets/icons/ico-lamp.svg',
-            name: 'электроника',
-            description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
-          },
-          {
-            iconUrl: '/assets/icons/ico-bathroom.svg',
-            name: 'Ванная комната',
-            description: 'Банные полотенца, банные принадлежности, раковина, санузел, туалет, туалетные средства, унитаз'
-          }
-        ],
-        advantages: [
-          {
-            name: 'Кондиционер',
-            iconUrl: '/assets/icons/ico-snow.svg'
-          },
-          {
-            name: 'Вид на город',
-            iconUrl: '/assets/icons/ico-build.svg'
-          },
-          {
-            name: 'Бесплатный Wi–Fi',
-            iconUrl: '/assets/icons/ico-wifi.svg'
-          },
-          {
-            name: 'Вид на двор',
-            iconUrl: '/assets/icons/ico-img.svg'
-          }
-        ]
-      }
-    );
   }
 
   getEvents(count = 0): Observable<Event[]> {
@@ -214,5 +92,13 @@ export class ApiService {
         return deserialize(item);
       });
     }));
+  }
+
+  sendBusinessSpaceRequest(data) {
+    return this.apiClient.post('/site/apart_hotel_site/business_space_requests', data);
+  }
+
+  sendApartmentViewRequest(data) {
+    return this.apiClient.post('/site/apart_hotel_site/apartment_view_requests', data);
   }
 }

@@ -8,6 +8,10 @@ export interface ShortTermRentApartment extends Apartment
   imageLg: string;
   imageMd: string;
   imageSm: string;
+  detailImagesXl: string[];
+  detailImagesLg: string[];
+  detailImagesMd: string[];
+  detailImagesSm: string[];
   features?: ApartmentFeature[];
   advantages?: ApartmentAdvantage[];
 }

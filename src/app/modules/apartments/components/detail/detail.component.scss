@@ -421,9 +421,11 @@
 }
 
 .features-item-icon {
-  background-color: $gray;
-  width: 24px;
-  height: 24px;
+  ::ng-deep svg {
+    fill: $gray;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .features-item-title {

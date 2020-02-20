@@ -76,7 +76,7 @@
                 <div *ngIf="isFeaturesVisible" class="features-items">
                     <div class="features-item" *ngFor="let feature of apartment.features">
                         <header class="features-item-header">
-                            <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.iconUrl + ') no-repeat center')"></div>
+                          <div class="features-item-icon" [innerHtml]="sanitizer.bypassSecurityTrustHtml(feature.iconData)"></div>
                             <h6 class="features-item-title">{{ feature.name }}</h6>
                         </header>
                         <div class="features-item-text" [innerHTML]="feature.description"></div>
@@ -164,8 +164,8 @@
     <div class="mobile-features-slider">
         <div class="swiper-container" [swiper]="mobileFeatures">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
-                  <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
+                <div class="swiper-slide" *ngFor="let image of apartment.detailImagesXl; index as i">
+                  <app-responsive-image [xl]="apartment.detailImagesXl[i]" [lg]="apartment.detailImagesLg[i]" [md]="apartment.detailImagesMd[i]" [sm]="apartment.detailImagesSm[i]"></app-responsive-image>
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@
         <div class="features-items">
             <div class="features-item" *ngFor="let feature of apartment.features">
                 <header class="features-item-header">
-                    <div class="features-item-icon" [style.-webkit-mask]="sanitizer.bypassSecurityTrustStyle('url(' + feature.iconUrl + ') no-repeat center')"></div>
+                    <div class="features-item-icon" [innerHtml]="sanitizer.bypassSecurityTrustHtml(feature.iconData)"></div>
                     <h6 class="features-item-title">{{ feature.name }}</h6>
                 </header>
                 <div class="features-item-text" [innerHTML]="feature.description"></div>
@@ -204,8 +204,8 @@
         #imagesSlider
     >
         <div class="swiper-wrapper">
-            <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
-              <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
+            <div class="swiper-slide" *ngFor="let image of apartment.detailImagesXl; index as i">
+              <app-responsive-image [xl]="apartment.detailImagesXl[i]" [lg]="apartment.detailImagesLg[i]" [md]="apartment.detailImagesMd[i]" [sm]="apartment.detailImagesSm[i]"></app-responsive-image>
             </div>
         </div>
     </div>

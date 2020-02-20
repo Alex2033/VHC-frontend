@@ -40,6 +40,6 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
     this.onTouched = fn;
   }
   get errorState() {
-    return this.ngControl.invalid;
+    return this.value !== true;
   }
 }

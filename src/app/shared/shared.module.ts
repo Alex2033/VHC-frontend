@@ -39,6 +39,8 @@ import { ExtensionPipe } from './pipes/extension.pipe';
 import { ParagraphsPipe } from './pipes/paragraphs.pipe';
 import {ResponsiveImageComponent} from './components/responsive-image/responsive-image.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
+import {FormErrorsDirective} from './directives/form-errors.directive';
+import {ErrorMessageComponent} from './components/controls/shared/error-message/error-message.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -77,7 +79,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ExtensionPipe,
     ParagraphsPipe,
     BusinessSpaceRequestComponent,
-    ResponsiveImageComponent
+    ResponsiveImageComponent,
+    FormErrorsDirective,
+    ErrorMessageComponent,
   ],
   imports: [
     CommonModule,
@@ -118,7 +122,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ParagraphsPipe,
     BusinessSpaceRequestComponent,
     ResponsiveImageComponent,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    FormErrorsDirective,
+    ErrorMessageComponent
   ],
   providers: [
     MatNativeDateModule,

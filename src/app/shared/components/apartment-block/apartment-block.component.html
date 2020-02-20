@@ -36,7 +36,7 @@
                     <div class="apartment-buttons">
                         <button
                             type="button"
-                            (click)="modal.open('apartment-view-request')"
+                            (click)="modal.open('apartment-view-request', {id: apartment.id})"
                             class="button"
                         >Отправить заявку
                         </button>

@@ -457,6 +457,30 @@ export class MockApiService {
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesSm: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
           ]
         },
         {
@@ -488,6 +512,30 @@ export class MockApiService {
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
           ],
           imagesSm: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesSm: [
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
@@ -527,6 +575,30 @@ export class MockApiService {
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesSm: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
           ]
         },
         {
@@ -562,6 +634,30 @@ export class MockApiService {
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
             'assets/images/pages/apartments/apartment-slider-image-2.jpg',
             'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesXl: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesLg: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesMd: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+          ],
+          detailImagesSm: [
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-2.jpg',
+            'assets/images/pages/apartments/apartment-slider-image-1.jpg',
           ]
         }
       ]
@@ -580,6 +676,30 @@ export class MockApiService {
         imageLg: 'assets/images/pages/apartment/room.jpg',
         imageMd: 'assets/images/pages/apartment/room.jpg',
         imageSm: 'assets/images/pages/apartment/room.jpg',
+        detailImagesXl: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
+        detailImagesLg: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
+        detailImagesMd: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
+        detailImagesSm: [
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+          'assets/images/pages/apartment/room.jpg',
+        ],
         imagesXl: [
           'assets/images/pages/apartment/room.jpg',
           'assets/images/pages/apartment/room.jpg',
@@ -606,67 +726,93 @@ export class MockApiService {
         ],
         features: [
           {
-            iconUrl: '/assets/icons/ico-video.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'видео/аудио',
             description: 'Спутниковое телевидение, телевизор, цифровое тв, телевизор с плоским экраном'
           },
           {
-            iconUrl: '/assets/icons/ico-img.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'окружение',
             description: 'Вид на город,  двор, достопримечательности города'
           },
           {
-            iconUrl: '/assets/icons/ico-lamp.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'электроника',
             description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
           },
           {
-            iconUrl: '/assets/icons/ico-furniture.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'Мебель',
             description: 'Багажная тумба, вешалки, гардеробная, журнальный столик, зеркало, обеденный стол,  стулья, туалетный столик, кровать, шкаф-купе'
           },
           {
-            iconUrl: '/assets/icons/ico-internet.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'Интернет и телефония',
             description: 'Wi-Fi, интернет, телефон, внутренний телефон'
           },
           {
-            iconUrl: '/assets/icons/ico-bathroom.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'Ванная комната',
             description: 'Банные полотенца, банные принадлежности, раковина, санузел, туалет, туалетные средства, унитаз'
           },
           {
-            iconUrl: '/assets/icons/ico-video.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'видео/аудио',
             description: 'Спутниковое телевидение, телевизор, цифровое тв, телевизор с плоским экраном'
           },
           {
-            iconUrl: '/assets/icons/ico-img.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'окружение',
             description: 'Вид на город,  двор, достопримечательности города'
           },
           {
-            iconUrl: '/assets/icons/ico-lamp.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'электроника',
             description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
           },
           {
-            iconUrl: '/assets/icons/ico-furniture.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'Мебель',
             description: 'Багажная тумба, вешалки, гардеробная, журнальный столик, зеркало, обеденный стол,  стулья, туалетный столик, кровать, шкаф-купе'
           },
           {
-            iconUrl: '/assets/icons/ico-internet.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'Интернет и телефония',
             description: 'Wi-Fi, интернет, телефон, внутренний телефон'
           },
           {
-            iconUrl: '/assets/icons/ico-lamp.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'электроника',
             description: 'Микроволновая печь, настольные лампы, плита для приготовления пищи, светильник, система безопасности, сплит- система, утюг, фен, холодильник'
           },
           {
-            iconUrl: '/assets/icons/ico-bathroom.svg',
+            iconData: '<svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg">\n' +
+              '↵<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93662 0.000452357C8.66819 0.00869814 8.41335 0.126727 8.22604 0.329552C6.59048 2.05725 5.09721 3.75134 3.52656 5.44194L1.68014 3.88156C1.39166 3.63826 1.00195 3.57566 0.657817 3.71737C0.313684 3.85907 0.067421 4.18354 0.011804 4.56854C-0.043813 4.95353 0.0996661 5.34055 0.388188 5.5838L2.9721 7.76267C3.38475 8.10914 3.97874 8.07245 4.35018 7.67755C6.20888 5.71417 7.87406 3.78576 9.69026 1.86723C9.99381 1.55328 10.084 1.0754 9.91743 0.662928C9.75091 0.250456 9.36172 -0.0124209 8.93662 0.000452357Z"/>\n' +
+              '↵</svg>',
             name: 'Ванная комната',
             description: 'Банные полотенца, банные принадлежности, раковина, санузел, туалет, туалетные средства, унитаз'
           }
@@ -758,5 +904,13 @@ export class MockApiService {
         },
       ]
     );
+  }
+
+  sendBusinessSpaceRequest(data) {
+    return of();
+  }
+
+  sendApartmentViewRequest(data) {
+    return of();
   }
 }
