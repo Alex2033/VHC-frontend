@@ -138,5 +138,10 @@
     
     .swiper-slide {
         width: 248px;
+
+        &:last-child {
+            width: 100%;
+            padding-left: 15px;
+        }
     }
 }
