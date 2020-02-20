@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from './shared/services/menu.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'vhc';
+
+  constructor(public menu: MenuService) {
+    setInterval(() => {
+      console.log(this.menu.showMenu);
+    }, 1000);
+  }
 }

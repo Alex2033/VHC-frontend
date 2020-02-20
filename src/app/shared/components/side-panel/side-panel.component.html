@@ -1,6 +1,7 @@
 <div class="menu">
     <div class="menu-content" *ngIf="screen === 'lg' || screen === 'xl'">
-        <button class="open-menu" (click)="menu.showMenu = !menu.showMenu" [class.active]="menu.showMenu">
+        <button class="open-menu" (click)="menu.showMenu = !menu.showMenu; $event.stopPropagation();
+        " [class.active]="menu.showMenu">
             <span class="ico-menu">
                 <span class="small-line"></span>
                 <span class="big-line"></span>
