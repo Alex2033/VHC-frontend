@@ -9,9 +9,5 @@ import { MenuService } from './shared/services/menu.service';
 export class AppComponent {
   title = 'vhc';
 
-  constructor(public menu: MenuService) {
-    setInterval(() => {
-      console.log(this.menu.showMenu);
-    }, 1000);
-  }
+  constructor(public menu: MenuService) {}
 }

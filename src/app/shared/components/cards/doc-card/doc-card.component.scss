@@ -1,5 +1,6 @@
 @import "theme";
 @import "responsive";
+@import "mixins/mouse";
 
 .card-container {
     background-color: $light-gray;
@@ -9,12 +10,14 @@
     flex-direction: column;
     height: 100%;
 
-    &:hover {
-        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.203999);
-        background-color: $light-color;
+    @include mouse {
+        &:hover {
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.203999);
+            background-color: $light-color;
 
-        .card-link {
-            color: $primary-color;
+            .card-link {
+                color: $primary-color;
+            }
         }
     }
 
