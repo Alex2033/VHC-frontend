@@ -886,11 +886,6 @@
 
     @include media-breakpoint-only($lg) {
         margin-bottom: 24px;
-        > * {
-            &:not(:last-child) {
-                margin-bottom: 48px;
-            }
-        }
     }
 
     @include media-breakpoint-only($md) {
@@ -899,11 +894,6 @@
         h3 {
             font-size: 17px;
             line-height: 1.59;
-        }
-        > * {
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
         }
     }
 }
@@ -994,6 +984,7 @@
     text-decoration: underline;
     cursor: pointer;
     transition: color .2s ease;
+    text-align: right;
 
     &:hover {
         color: $secondary-color;
@@ -1004,6 +995,21 @@
 .inner-slider {
     @include media-breakpoint-only($lg) {
         margin-right: -15px;
+
+        .swiper-slide {
+            &:last-child {
+                margin-right: 75px;
+            }
+        }
+    }
+
+    @include media-breakpoint-only($md) {
+
+        .swiper-slide {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }
 
