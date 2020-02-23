@@ -33,28 +33,8 @@
                             </div>
 
                             <!-- slider -->
-                            <div class="slider inner-slider" *ngIf="screen !== 'lg' && screen !== 'xl'">
-                                <div class="swiper-container" [swiper]="config" #sliderContainer>
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" *ngFor="let card of group.documents">
-                                            <app-doc-card [card]="card"></app-doc-card>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-info docs-pagination"></div>
-                                <div class="control-buttons">
-                                    <button type="button" class="control-button" (click)="sliderContainer.swiper.slidePrev()">
-                                        <svg>
-                                            <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" class="control-button" (click)="sliderContainer.swiper.slideNext()">
-                                        <svg>
-                                            <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                            <app-mobile-inner-slider [content]="group.documents" *ngIf="screen !== 'lg' && screen !== 'xl'"></app-mobile-inner-slider>
+
                         </div>
                     </div>
 

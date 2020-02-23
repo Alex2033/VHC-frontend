@@ -62,28 +62,7 @@
                             </div>
 
                             <!-- slider -->
-                            <div class="slider inner-slider" *ngIf="screen !== 'lg' && screen !== 'xl'">
-                                <div class="swiper-container" [swiper]="config" #sliderContainer>
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" *ngFor="let card of month.value">
-                                            <app-event-card [card]="card"></app-event-card>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-info events-pagination"></div>
-                                <div class="control-buttons">
-                                    <button type="button" class="control-button" (click)="sliderContainer.swiper.slidePrev()">
-                                        <svg>
-                                            <use xlink:href="assets/sprites/icons.svg#arrow-left"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" class="control-button" (click)="sliderContainer.swiper.slideNext()">
-                                        <svg>
-                                            <use xlink:href="assets/sprites/icons.svg#arrow-right"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                            <app-mobile-inner-slider [content]="month.value" *ngIf="screen !== 'lg' && screen !== 'xl'"></app-mobile-inner-slider>
                         </div>
                     </div>
                     

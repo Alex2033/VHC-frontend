@@ -35,6 +35,7 @@ import { ErrorMessageComponent } from './components/controls/shared/error-messag
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { MobileInnerSliderComponent } from './components/mobile-inner-slider/mobile-inner-slider.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -76,6 +77,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ResponsiveImageComponent,
     FormErrorsDirective,
     ErrorMessageComponent,
+    MobileInnerSliderComponent,
   ],
   imports: [
     CommonModule,
@@ -120,7 +122,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     LazyLoadImageModule,
     FormErrorsDirective,
     ErrorMessageComponent,
-    ClickOutsideModule
+    ClickOutsideModule,
+    MobileInnerSliderComponent
   ],
   providers: [
     MatNativeDateModule,
