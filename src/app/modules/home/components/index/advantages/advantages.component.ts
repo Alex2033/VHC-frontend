@@ -20,6 +20,7 @@ export class AdvantagesComponent implements OnInit {
   icons: Array<object> = [
     { 
       src: 'assets/sprites/icons.svg#ico-subway', 
+      title: 'Метро',
       size: {
         desktop: {
           width: 41, 
@@ -33,6 +34,7 @@ export class AdvantagesComponent implements OnInit {
     },
     { 
       src: 'assets/sprites/icons.svg#ico-location', 
+      title: 'Удобное местоположение',
       size: {
         desktop: {
           width: 59, 
@@ -46,6 +48,7 @@ export class AdvantagesComponent implements OnInit {
     },
     { 
       src: 'assets/sprites/icons.svg#24',
+      title: 'Лобби 24/7',
       size: {
         desktop: {
           width: 80, 
@@ -59,6 +62,7 @@ export class AdvantagesComponent implements OnInit {
     },
     { 
       src: 'assets/sprites/icons.svg#ico-restraurant',
+      title: 'Ресторан',
       size: {
         desktop: {
           width: 46, 
@@ -72,6 +76,7 @@ export class AdvantagesComponent implements OnInit {
     },
     { 
       src: 'assets/sprites/icons.svg#ico-bar', 
+      title: 'Бар',
       size: {
         desktop: {
           width: 43, 
@@ -85,6 +90,7 @@ export class AdvantagesComponent implements OnInit {
     },
     { 
       src: 'assets/sprites/icons.svg#ico-wash', 
+      title: 'Ванна',
       size: {
         desktop: {
           width: 56, 
@@ -98,6 +104,7 @@ export class AdvantagesComponent implements OnInit {
     },
     { 
       src: 'assets/sprites/icons.svg#ico-parking', 
+      title: 'Паркинг',
       size: {
         desktop: {
           width: 47.6, 
@@ -119,7 +126,7 @@ export class AdvantagesComponent implements OnInit {
       this.screen = screen;
 
       if (screen === 'md' || screen === 'lg' || screen === 'xl') {
-        this.config.spaceBetween = 140;
+        this.config.spaceBetween = 120;
       } else {
         this.config.spaceBetween = 52;
         this.config.pagination = {

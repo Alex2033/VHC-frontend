@@ -120,11 +120,49 @@
 }
 
 .swiper-slide {
-    width: 60px;
+    width: initial !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-up($lg) {
+        &:hover {
+            .icon-title {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
 }
 
 .icon-item {
-    fill: $gray;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+
+    @include media-breakpoint-only($md) {
+        margin-bottom: 7px;
+        height: 31px;
+    }
+
+    svg {
+        fill: $gray;
+    }
+}
+
+.icon-title {
+    font-size: 13px;
+    line-height: 1.69;
+    color: $dark-gray;
+    font-weight: 400;
+    transition: opacity .25s ease, visibility .25s ease;
+
+    @include media-breakpoint-up($lg) {
+        opacity: 0;
+        visibility: 0;
+    }
 }
 
 .section-title {

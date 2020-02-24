@@ -1,0 +1,27 @@
+
+<div class="mobile-card">
+    <div class="mobile-card-images">
+        <div class="mobile-card-info">
+            <p>{{ content.area }} м<sup>2</sup></p>
+            <p>для {{ content.guestsCount }}-х</p>
+        </div>
+        <div class="swiper-container" [swiper]="config">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let image of content.imagesXl">
+                    <img [src]="image" alt="business image">
+                </div>
+            </div>
+        </div>
+        <div class="slider-info card-pagination mobile-card-pagination"></div>
+    </div>
+    <div class="mobile-card-content">
+        <h5 class="mobile-card-title">
+            {{ content.name }}
+        </h5>
+        <div class="mobile-card-text" [innerHTML]="content.description | paragraphs"></div>
+        <div class="mobile-card-buttons">
+            <button [routerLink]="['/apartments', 'detail']" class="button light" type="button">Подробнее</button>
+            <button class="button secondary" type="button">Забронировать</button>
+        </div>
+    </div>
+</div>

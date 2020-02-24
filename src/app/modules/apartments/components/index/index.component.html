@@ -24,39 +24,10 @@
         </div>
 
         <!-- mobile cards -->
-        <div *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'" class="mobile-cards">
-            
-            <!-- mobile card -->
-            <div class="mobile-card">
-                <div class="mobile-card-images">
-                    <div class="mobile-card-info">
-                        <p>24 м<sup>2</sup></p>
-                        <p>Для двоих</p>
-                    </div>
-                    <div class="swiper-container" [swiper]="config">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" *ngFor="let image of images">
-                                <img [src]="image" alt="business image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-info card-pagination mobile-card-pagination"></div>
-                </div>
-                <div class="mobile-card-content">
-                    <h5 class="mobile-card-title">
-                        Двухместный номер с 1 кроватью
-                    </h5>
-                    <div class="mobile-card-text">
-                        <p>Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.</p>
-                    </div>
-                    <div class="mobile-card-buttons">
-                        <button [routerLink]="['/apartments', 'detail']" class="button light" type="button">Подробнее</button>
-                        <button class="button secondary" type="button">Забронировать</button>
-                    </div>
-                </div>
-            </div>
-
+        <div class="mobile-cards" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+            <app-mobile-apartment-card *ngFor="let apartment of apartments" [content]="apartment"></app-mobile-apartment-card>
         </div>
+
     </div>
 
 </section>

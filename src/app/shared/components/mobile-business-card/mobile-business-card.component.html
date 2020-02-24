@@ -1,0 +1,32 @@
+<div class="mobile-card">
+    <div class="mobile-card-images">
+        <div class="mobile-card-info">
+            <p>{{ content.area }} м<sup>2</sup></p>
+        </div>
+        <div class="swiper-container" [swiper]="config">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let image of content.imagesXl">
+                    <img [src]="image" alt="business image">
+                </div>
+            </div>
+        </div>
+        <div class="slider-info card-pagination mobile-card-pagination"></div>
+    </div>
+    <div class="mobile-card-content">
+        <h5 class="mobile-card-title">
+            {{ content.name }}
+        </h5>
+        <div class="mobile-card-text" [innerHTML]="content.description | paragraphs"></div>
+        <div class="price">
+            <p class="price-per-month">Стоимость, Мес</p>
+            <strong>{{ content.cost | currency:'':'':'3.0' }} ₽</strong>
+        </div>
+        <div class="mobile-card-buttons">
+            <button 
+                class="button light" 
+                type="button" 
+                (click)="modal.open('business-space-request', {id: content.id})"
+            >Отправить заявку</button>
+        </div>
+    </div>
+</div>

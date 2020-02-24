@@ -12,15 +12,6 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 export class IndexComponent implements OnInit {
 
   apartments: ShortTermRentApartment[];
-  config: SwiperConfigInterface = {
-    slidesPerView: 1,
-    observer: true,
-    observeParents: true,
-    pagination: {
-      el: '.mobile-card-pagination',
-      type: 'bullets',
-    }
-  };
 
   screen: string;
   images: Array<string> = [

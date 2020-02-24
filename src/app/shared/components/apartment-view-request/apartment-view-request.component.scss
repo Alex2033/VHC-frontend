@@ -10,6 +10,10 @@
     z-index: 1100;
     max-width: 548px;
     width: 100%;
+
+    @include media-breakpoint-only($md) {
+        max-width: 100%;
+    }
 }
 
 .feedback-wrapper {

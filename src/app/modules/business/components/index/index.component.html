@@ -19,41 +19,8 @@
         </div>
 
         <!-- mobile cards -->
-        <div *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'" class="mobile-cards">
-            
-            <!-- mobile card -->
-            <div class="mobile-card">
-                <div class="mobile-card-images">
-                    <div class="mobile-card-info">
-                        <p>24 м<sup>2</sup></p>
-                        <p>Для двоих</p>
-                    </div>
-                    <div class="swiper-container" [swiper]="config">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" *ngFor="let image of images">
-                                <img [src]="image" alt="business image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-info card-pagination mobile-card-pagination"></div>
-                </div>
-                <div class="mobile-card-content">
-                    <h5 class="mobile-card-title">
-                        Двухместный номер с 1 кроватью
-                    </h5>
-                    <div class="mobile-card-text">
-                        <p>Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.</p>
-                    </div>
-                    <div class="price">
-                        <p class="price-per-month">Стоимость, Мес</p>
-                        <strong>16 000 ₽</strong>
-                    </div>
-                    <div class="mobile-card-buttons">
-                        <button class="button light" type="button" (click)="modal.open('business-space-request')">Отправить заявку</button>
-                    </div>
-                </div>
-            </div>
-
+        <div class="mobile-cards" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+            <app-mobile-business-card *ngFor="let space of spaces" [content]="space"></app-mobile-business-card>
         </div>
     </div>
 </section>

@@ -17,15 +17,7 @@ export class ApartmentsComponent implements OnInit {
   months: number = 1;
 
   apartments: LongTermRentApartment[];
-  config: SwiperConfigInterface = {
-    slidesPerView: 1,
-    observer: true,
-    observeParents: true,
-    pagination: {
-      el: '.mobile-card-pagination',
-      type: 'bullets',
-    }
-  };
+
 
   images: Array<string> = [
     'assets/images/apartments/apartment-1.jpg',

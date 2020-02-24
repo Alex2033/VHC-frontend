@@ -36,6 +36,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { MobileInnerSliderComponent } from './components/mobile-inner-slider/mobile-inner-slider.component';
+import { MobileApartmentCardComponent } from './components/mobile-apartment-card/mobile-apartment-card.component';
+import { MobileBusinessCardComponent } from './components/mobile-business-card/mobile-business-card.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -78,6 +80,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     FormErrorsDirective,
     ErrorMessageComponent,
     MobileInnerSliderComponent,
+    MobileApartmentCardComponent,
+    MobileBusinessCardComponent,
   ],
   imports: [
     CommonModule,
@@ -123,7 +127,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     FormErrorsDirective,
     ErrorMessageComponent,
     ClickOutsideModule,
-    MobileInnerSliderComponent
+    MobileInnerSliderComponent,
+    MobileApartmentCardComponent,
+    MobileBusinessCardComponent
   ],
   providers: [
     MatNativeDateModule,

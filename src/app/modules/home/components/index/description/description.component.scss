@@ -17,6 +17,10 @@
         grid-gap: 32px;
         flex-direction: column;
     }
+
+    @include media-breakpoint-only($md) {
+        grid-gap: 0;
+    }
 }
 
 .description-image {
