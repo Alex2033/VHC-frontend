@@ -9,20 +9,22 @@ import { ModalService } from '../../services/modal.service';
 })
 export class MobileBusinessCardComponent implements OnInit {
   @Input() content;
+  @Input() pagination;
 
   config: SwiperConfigInterface = {
     slidesPerView: 1,
     observer: true,
-    observeParents: true,
-    pagination: {
-      el: '.mobile-card-pagination',
-      type: 'bullets',
-    }
+    observeParents: true
   };
 
   constructor(public modal: ModalService) { }
 
   ngOnInit(): void {
+    this.config.pagination = {
+      el: '.' + this.pagination,
+      type: 'bullets',
+      clickable: true
+    };
   }
 
 }

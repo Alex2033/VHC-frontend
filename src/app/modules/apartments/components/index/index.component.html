@@ -25,7 +25,11 @@
 
         <!-- mobile cards -->
         <div class="mobile-cards" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
-            <app-mobile-apartment-card *ngFor="let apartment of apartments" [content]="apartment"></app-mobile-apartment-card>
+            <app-mobile-apartment-card 
+                *ngFor="let apartment of apartments; index as i" 
+                [content]="apartment"
+                [pagination]="'pagination-' + i"
+            ></app-mobile-apartment-card>
         </div>
 
     </div>
