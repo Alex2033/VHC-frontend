@@ -38,6 +38,7 @@ import { ClickOutsideModule } from 'ng-click-outside';
 import { MobileInnerSliderComponent } from './components/mobile-inner-slider/mobile-inner-slider.component';
 import { MobileApartmentCardComponent } from './components/mobile-apartment-card/mobile-apartment-card.component';
 import { MobileBusinessCardComponent } from './components/mobile-business-card/mobile-business-card.component';
+import { MobileApartmentBlockComponent } from './components/mobile-apartment-block/mobile-apartment-block.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -82,6 +83,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MobileInnerSliderComponent,
     MobileApartmentCardComponent,
     MobileBusinessCardComponent,
+    MobileApartmentBlockComponent
   ],
   imports: [
     CommonModule,
@@ -129,7 +131,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ClickOutsideModule,
     MobileInnerSliderComponent,
     MobileApartmentCardComponent,
-    MobileBusinessCardComponent
+    MobileBusinessCardComponent,
+    MobileApartmentBlockComponent
   ],
   providers: [
     MatNativeDateModule,

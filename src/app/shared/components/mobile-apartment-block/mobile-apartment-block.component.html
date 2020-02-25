@@ -1,0 +1,56 @@
+<div class="mobile-card">
+    <div class="mobile-card-images">
+        <div class="mobile-card-info">
+            <p>{{ content.area }} м<sup>2</sup></p>
+            <p>для {{ content.guestsCount }}-х</p>
+        </div>
+        <div class="swiper-container" [swiper]="config">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let image of content.imagesXl; index as i">
+                    <app-responsive-image 
+                        [xl]="content.imagesXl[i]" 
+                        [lg]="content.imagesLg[i]" 
+                        [md]="content.imagesMd[i]" 
+                        [sm]="content.imagesSm[i]"
+                    ></app-responsive-image>
+                </div>
+            </div>
+        </div>
+        <div class="slider-info card-pagination mobile-card-pagination {{ pagination }}"></div>
+    </div>
+    <div class="mobile-card-content">
+        <h5 class="mobile-card-title">
+            {{ content.name }}
+        </h5>
+        <div class="mobile-card-text" [innerHTML]="content.description | paragraphs"></div>
+        <div class="aparment-choise" *ngIf="content.costConditions.length > 0">
+            <div class="apartment-choise-item">
+                <p class="choise-month">Срок аренды, мес</p>
+                <div class="counter">
+                    <button
+                        type="button"
+                        class="arrow-control decrease-control"
+                        (click)="decreaseMonths()">
+                    </button>
+                    <div class="months-number">{{ months }}</div>
+                    <button
+                        type="button"
+                        class="arrow-control increase-control"
+                        (click)="increaseMonths()">
+                    </button>
+                </div>
+            </div>
+            <div class="apartment-choise-item">
+                <p class="choise-month">Стоимость, Мес</p>
+                <strong class="months-number">{{ getCost() | currency:'':'':'4.0' }} ₽</strong>
+            </div>
+        </div>
+        <div class="mobile-card-buttons">
+            <button 
+                class="button secondary" 
+                type="button" 
+                (click)="modal.open('apartment-view-request', {id: content.id})"
+            >Отправить заявку</button>
+        </div>
+    </div>
+</div>
