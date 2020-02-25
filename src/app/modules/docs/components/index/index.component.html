@@ -33,8 +33,11 @@
                             </div>
 
                             <!-- slider -->
-                            <app-mobile-inner-slider [content]="group.documents" *ngIf="screen !== 'lg' && screen !== 'xl'"></app-mobile-inner-slider>
-
+                            <app-mobile-inner-slider 
+                                *ngIf="screen !== 'lg' && screen !== 'xl'" 
+                                [content]="group.documents"
+                                [pagination]="'pagination-' + i"
+                            ></app-mobile-inner-slider>
                         </div>
                     </div>
 

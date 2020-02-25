@@ -9,6 +9,7 @@ import { ResponsiveService } from '../../services/responsive.service';
 })
 export class MobileInnerSliderComponent implements OnInit {
   @Input() content;
+  @Input() pagination;
 
   screen: string;
   config: SwiperConfigInterface = {
@@ -26,8 +27,9 @@ export class MobileInnerSliderComponent implements OnInit {
       } else {
         this.config.spaceBetween = 16;
         this.config.pagination = {
-          el: '.slider-info',
+          el: '.' + this.pagination,
           type: 'bullets',
+          clickable: true
         }
       }
     });
