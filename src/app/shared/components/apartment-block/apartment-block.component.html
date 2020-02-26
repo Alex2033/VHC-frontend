@@ -8,8 +8,7 @@
                 </div>
                 <div class="apartment-main">
                     <h2 class="light apartment-title">{{ apartment.name }}</h2>
-                    <div class="apartment-description">
-                        <p>{{ apartment.description }}</p>
+                    <div class="apartment-description" [innerHTML]="apartment.description | paragraphs">
                     </div>
                     <div class="aparment-choise" *ngIf="apartment.costConditions.length > 0">
                         <div class="apartment-choise-item">

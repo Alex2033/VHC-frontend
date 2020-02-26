@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiHost: 'https://api.smartapart.app',
-  scope: 'valo_test',
+  apiHost: 'https://api.valoservice.ru/',
+  scope: 'valo',
   useApi: true
 };

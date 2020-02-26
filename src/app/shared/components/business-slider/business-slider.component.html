@@ -7,8 +7,7 @@
                 </div>
                 <div class="business-main">
                     <h2 class="light business-title">{{ space.name }}</h2>
-                    <div class="business-description">
-                        <p>{{ space.description }}</p>
+                    <div class="business-description" [innerHTML]="space.description | paragraphs">
                     </div>
                     <div class="business-buttons">
                         <button
