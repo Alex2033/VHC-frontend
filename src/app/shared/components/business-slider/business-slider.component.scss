@@ -54,6 +54,7 @@
     align-items: center;
     font-size: 13px;
     line-height: 1.7;
+    margin-bottom: 25px;
 
     sup {
         font-size: 8px;
@@ -86,11 +87,6 @@
 
 .business-description {
     color: $light-color;
-    margin-bottom: 48px;
-
-    @include media-breakpoint-only($lg) {
-        margin-bottom: 24px;
-    }
 }
 
 .business-buttons {
@@ -164,4 +160,23 @@
         margin-bottom: 24px;
         order: -1;
     }
+}
+
+.scrollbar {
+    height: initial;
+    margin-bottom: 48px;
+
+    @include media-breakpoint-only($lg) {
+        margin-bottom: 24px;
+    }
+}
+
+.business-main {
+    display: flex;
+    min-height: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-direction: column;
+    justify-content: flex-end;
 }
