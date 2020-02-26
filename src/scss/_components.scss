@@ -1075,6 +1075,12 @@
         opacity: 1;
         background-color: transparent;
     }
+
+    &.light-scrollbar {
+        .ps__thumb-y {
+            background-color: $light-color;
+        }
+    }
 }
 
 // стили для отображения

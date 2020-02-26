@@ -50,17 +50,33 @@
     padding-right: 0;
 }
 
+.scrollbar {
+    height: initial;
+    margin-bottom: 48px;
+}
+
 .apartment-content-right {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.apartmet-info {
+.apartment-main {
+    display: flex;
+    min-height: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.apartment-info {
     display: flex;
     align-items: center;
     font-size: 13px;
     line-height: 1.7;
+    margin-bottom: 25px;
 
     sup {
         font-size: 8px;
@@ -80,16 +96,12 @@
 
 .apartment-description {
     max-width: 487px;
+    color: $light-color;
 }
 
 .apartment-title {
     margin-bottom: 24px;
     max-width: 355px;
-}
-
-.apartment-description {
-    color: $light-color;
-    margin-bottom: 48px;
 }
 
 .apartment-buttons {

@@ -3,14 +3,15 @@
     <div class="apartment-container">
         <div class="apartment-content">
             <div class="apartment-content-left">
-                <div class="apartmet-info">
+                <div class="apartment-info">
                     <p>{{ apartment.area }} м<sup>2</sup></p>
                     <p>для {{ apartment.guestsCount }}-х</p>
                 </div>
                 <div class="apartment-main">
                     <h2 class="light apartment-title">{{ apartment.name }}</h2>
-                    <div class="apartment-description" [innerHTML]="apartment.description | paragraphs">
-                    </div>
+                    <perfect-scrollbar class="scrollbar light-scrollbar">
+                        <div class="apartment-description" [innerHTML]="apartment.description | paragraphs"></div>
+                    </perfect-scrollbar>
                     <div class="apartment-buttons">
                         <a [routerLink]="['/apartments', apartment.id]" class="button light">Подробнее</a>
                         <a [routerLink]="[]" class="button secondary">Забронировать</a>
