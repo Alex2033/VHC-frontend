@@ -14,7 +14,8 @@ export class BusinessSliderComponent implements OnInit {
   @Input() space: BusinessSpace;
 
   config: SwiperConfigInterface = {
-    slidesPerView: 1
+    slidesPerView: 1,
+    loop: false
   };
 
   constructor(public modal: ModalService) { }
