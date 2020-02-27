@@ -107,7 +107,7 @@
                 </div>
             </div>
 
-            <div *ngIf="screen !== 'lg' && screen !== 'xl'"  class="slider-controls" [class.display-none]="isFeaturesVisible">
+            <div *ngIf="screen !== 'lg' && screen !== 'xl' && apartment.imagesXl.length > 1"  class="slider-controls" [class.display-none]="isFeaturesVisible">
                 <div class="slider-index">{{ tabletIndex + 1 }}/{{ apartment.imagesXl.length }}</div>
                 <button type="button" class="control-button" (click)="tableSlider.swiper.slidePrev()">
                     <svg>
@@ -121,7 +121,7 @@
                 </button>
             </div>
 
-            <div *ngIf="screen === 'lg' || screen === 'xl'"  class="slider-controls" [class.display-none]="isFeaturesVisible">
+            <div *ngIf="screen === 'lg' || screen === 'xl' && apartment.imagesXl.length > 1"  class="slider-controls" [class.display-none]="isFeaturesVisible">
                 <div class="slider-index">{{ featureIndex + 1 }}/{{ apartment.imagesXl.length }}</div>
                 <button type="button" class="control-button" (click)="imagesSlider.swiper.slidePrev()">
                     <svg>

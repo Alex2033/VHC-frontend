@@ -18,8 +18,8 @@
                         >Отправить заявку
                         </button>
                         <div class="price">
-                            <p class="price-per-month">Стоимость, Мес</p>
-                            <strong>{{ space.cost | currency:'':'':'3.0' }} ₽</strong>
+                            <p class="price-per-month">Стоимость</p>
+                            <strong>{{ space.cost }}</strong>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider-controls">
+                    <div class="slider-controls" *ngIf="space.imagesXl.length > 1">
                         <div class="slider-index">{{ index + 1 }}/{{ space.imagesXl.length }}</div>
                         <button type="button" class="control-button" (click)="businessSlider.swiper.slidePrev()">
                             <svg>

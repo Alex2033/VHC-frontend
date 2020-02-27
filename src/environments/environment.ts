@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiHost: 'http://api.apart-system.localhost',
+  apiHost: 'https://api.valoservice.ru/',
   scope: 'valo',
-  useApi: false
+  useApi: true
 };
 
 /*

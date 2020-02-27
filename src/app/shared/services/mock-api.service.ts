@@ -291,7 +291,7 @@ export class MockApiService {
           area: 24,
           name: 'Пространство свободного назначения',
           description: 'Подходит для выставок, размещения продуктовых автоматов',
-          cost: 29000,
+          cost: '29000 руб/мес',
           imagesXl: [
             'assets/images/pages/business/business-1.jpg',
             'assets/images/pages/business/business-2.jpg',
@@ -322,7 +322,7 @@ export class MockApiService {
           area: 24,
           name: 'Конференц–зал',
           description: 'Подходит для выставок, размещения продуктовых автоматов',
-          cost: 29000,
+          cost: '29000 руб/мес',
           imagesXl: [
             'assets/images/pages/business/business-2.jpg',
             'assets/images/pages/business/business-1.jpg',

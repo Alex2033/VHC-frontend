@@ -2,7 +2,7 @@ export interface BusinessSpace {
   id: number;
   name: string;
   description: string;
-  cost: number;
+  cost: string;
   area: number;
   imagesXl: string[];
   imagesLg: string[];
