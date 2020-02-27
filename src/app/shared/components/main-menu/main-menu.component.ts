@@ -75,10 +75,10 @@ export class MainMenuComponent implements OnInit {
       text: 'Номера',
       url: 'apartments'
     },
-    {
-      text: 'Акции',
-      url: ''
-    },
+    // {
+    //   text: 'Акции',
+    //   url: ''
+    // },
     {
       text: 'Долгосрочная аренда',
       url: 'rent'

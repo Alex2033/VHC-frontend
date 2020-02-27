@@ -12,7 +12,7 @@ export abstract class BaseApiClientService {
     protected state: TransferState,
     protected platformId,
     protected apiUrl) {
-    this.apiUrl = environment.apiHost + '/api';
+    this.apiUrl = environment.apiHost;
     }
 
   addRequestHeaders() {

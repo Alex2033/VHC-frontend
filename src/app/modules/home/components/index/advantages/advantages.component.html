@@ -22,16 +22,18 @@
             <h2 class="section-title">
                 <span>Лучший комплекс апартаментов комфорт-класса Санкт-Петербурга</span>
             </h2>
-            <div class="rating section-description">
+            <div class="rating section-description" *ngIf="bookingComData">
                 <div class="rating-top">
-                    <div class="rating-assessment">5.0</div>
+                    <div class="rating-assessment">{{ bookingComData.rating }}</div>
                     <div class="rating-booking">
                         <img [lazyLoad]="'assets/images/advantages/booking.svg'" [offset]="200" alt="booking image">
                     </div>
                 </div>
                 <div class="rating-info">
                     <h6>Рейтинг Booking</h6>
-                    <div class="rating-testimonials">102 отзыва пользователей</div>
+                    <div class="rating-testimonials">
+                      {{ bookingComData.reviewsCount }} {{ getNoun(bookingComData.reviewsCount, 'отзыв', 'отзыва', 'отзывов') }}
+                       пользователей</div>
                 </div>
             </div>
         </header>

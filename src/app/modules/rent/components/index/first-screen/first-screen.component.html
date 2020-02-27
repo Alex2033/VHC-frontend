@@ -31,12 +31,12 @@
                         </ul>
                     </div>
                     <div class="rent-bottom" *ngIf="screen === 'lg' || screen === 'xl'">
-                        <button 
-                            type="button" 
-                            class="button secondary" 
+                        <button
+                            type="button"
+                            class="button secondary"
                             (click)="modal.open('apartment-view-request')"
                         >Записаться на просмотр</button>
-                        <a [routerLink]="[]" class="next-room" (click)="scrollToApartments()">Цены на аренду</a>
+                        <span class="next-room" (click)="scrollToApartments()">Цены на аренду</span>
                     </div>
                 </div>
             </perfect-scrollbar>
@@ -55,9 +55,9 @@
     </div>
 
     <!-- booking section -->
-    <div 
+    <div
         style="background-image: url(assets/images/apartments/apartment-1.jpg)"
-        class="booking-section" 
+        class="booking-section"
         *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'"
     >
         <button class="button secondary">Записаться на просмотр</button>

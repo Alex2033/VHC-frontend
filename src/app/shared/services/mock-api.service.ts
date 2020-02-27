@@ -8,6 +8,7 @@ import {BusinessSpace} from '../contracts/business-space';
 import {LongTermRentApartment} from '../contracts/long-term-rent-apartment';
 import {ShortTermRentApartment} from '../contracts/short-term-rent-apartment';
 import {Event} from '../contracts/event';
+import {BookingComData} from '../contracts/booking-com-data';
 
 @Injectable({
   providedIn: 'root'
@@ -429,6 +430,7 @@ export class MockApiService {
           area: 24,
           guestsCount: 2,
           name: 'Двухместный номер с 1 кроватью',
+          shortDescription: 'Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.',
           description: 'Комфортабельный номер с телевизором, посудомоечной и стиральной машиной, чайной станцией и кондиционером. Все удобства в номере, завтрак включен.',
           imageXl: 'assets/images/pages/apartment/room.jpg',
           imageLg: 'assets/images/pages/apartment/room.jpg',
@@ -488,6 +490,7 @@ export class MockApiService {
           area: 24,
           guestsCount: 2,
           name: 'Номер-студио c кроватью king size',
+          shortDescription: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
           description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
           imageXl: 'assets/images/pages/apartment/room.jpg',
           imageLg: 'assets/images/pages/apartment/room.jpg',
@@ -547,6 +550,7 @@ export class MockApiService {
           area: 24,
           guestsCount: 2,
           name: 'Люкс с 2 спальнями',
+          shortDescription: 'Апартаменты состоят из двух спален и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
           description: 'Апартаменты состоят из двух спален и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
           imageXl: 'assets/images/pages/apartment/room.jpg',
           imageLg: 'assets/images/pages/apartment/room.jpg',
@@ -606,6 +610,7 @@ export class MockApiService {
           area: 24,
           guestsCount: 2,
           name: 'Люкс с 1 спальней',
+          shortDescription: 'Двухкомнатные апартаменты со спальней и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
           description: 'Двухкомнатные апартаменты со спальней и гостиной. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
           imageXl: 'assets/images/pages/apartment/room.jpg',
           imageLg: 'assets/images/pages/apartment/room.jpg',
@@ -669,6 +674,7 @@ export class MockApiService {
       {
         id: 1,
         name: 'Двухместный номер 1 кроватью',
+        shortDescription: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
         description: 'Номер повышенной комфортности с большой двуспальной кроватью. Есть телевизор, посудомоечная и стиральная машины, чайная станция, кондиционер. Все удобства в номере, завтрак включен.',
         area: 24,
         guestsCount: 2,
@@ -849,6 +855,9 @@ export class MockApiService {
           imageLg: 'assets/images/events/event-1.jpg',
           imageXl: 'assets/images/events/event-1.jpg',
           startedAt: 1581342908,
+          finishedAt: 1581342908 + (60 * 60 * 24 * 5),
+          timeStart: '10:00',
+          timeFinish: '20:00',
           cost: 'от 500 руб',
           link: 'http://vk.com',
           name: 'Стендап Comedy. Открытый микрофон',
@@ -861,6 +870,9 @@ export class MockApiService {
           imageLg: 'assets/images/events/event-2.jpg',
           imageXl: 'assets/images/events/event-2.jpg',
           startedAt: 1581342908 + (60 * 60 * 24 * 5),
+          finishedAt: 1581342908 + (60 * 60 * 24 * 5),
+          timeStart: '10:00',
+          timeFinish: '20:00',
           cost: '800 руб',
           link: 'http://vk.com',
           name: 'TED RUSSIA: Моделируя эпоху',
@@ -873,6 +885,9 @@ export class MockApiService {
           imageLg: 'assets/images/events/event-3.jpg',
           imageXl: 'assets/images/events/event-3.jpg',
           startedAt: 1581342908  + (60 * 60 * 24 * 15),
+          finishedAt: 1581342908 + (60 * 60 * 24 * 15),
+          timeStart: '10:00',
+          timeFinish: '20:00',
           cost: '500 руб',
           link: 'http://vk.com',
           name: 'Айвазовский. Ожившие полотна',
@@ -885,6 +900,9 @@ export class MockApiService {
           imageLg: 'assets/images/events/event-2.jpg',
           imageXl: 'assets/images/events/event-2.jpg',
           startedAt: 1581342908 + (60 * 60 * 24 * 30),
+          finishedAt: 1581342908 + (60 * 60 * 24 * 35),
+          timeStart: '10:00',
+          timeFinish: '20:00',
           cost: '800 руб',
           link: 'http://vk.com',
           name: 'TED RUSSIA: Моделируя эпоху',
@@ -897,6 +915,9 @@ export class MockApiService {
           imageLg: 'assets/images/events/event-3.jpg',
           imageXl: 'assets/images/events/event-3.jpg',
           startedAt: 1581342908 + (60 * 60 * 24 * 90),
+          finishedAt: 1581342908 + (60 * 60 * 24 * 90),
+          timeStart: '10:00',
+          timeFinish: '20:00',
           cost: '500 руб',
           link: 'http://vk.com',
           name: 'Айвазовский. Ожившие полотна',
@@ -912,5 +933,12 @@ export class MockApiService {
 
   sendApartmentViewRequest(data) {
     return of();
+  }
+
+  getBookingComData(): Observable<BookingComData> {
+    return of({
+      rating: 9.3,
+      reviewsCount: 6
+    });
   }
 }

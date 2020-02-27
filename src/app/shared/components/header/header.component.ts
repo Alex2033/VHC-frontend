@@ -15,10 +15,10 @@ export class HeaderComponent implements OnInit {
       text: 'Номера',
       url: 'apartments'
     },
-    {
-      text: 'Акции',
-      url: 'stocks'
-    },
+    // {
+    //   text: 'Акции',
+    //   url: 'stocks'
+    // },
     {
       text: 'Долгосрочная аренда',
       url: 'rent'

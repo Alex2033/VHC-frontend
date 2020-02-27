@@ -4,6 +4,7 @@ import {ApartmentAdvantage} from './apartment-advantage';
 
 export interface ShortTermRentApartment extends Apartment
 {
+  shortDescription: string;
   imageXl: string;
   imageLg: string;
   imageMd: string;

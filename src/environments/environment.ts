@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  apiHost: 'https://api.valoservice.ru/',
+  apiHost: 'http://api.apart-system.localhost',
   scope: 'valo',
-  useApi: true
+  useApi: false,
+  simpleBookingHotelId: 6450
 };
 
 /*

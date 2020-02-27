@@ -3,10 +3,10 @@
 
         <!-- data calendar -->
         <div class="data-block calendar" (click)="picker1.open()">
-            <input 
+            <input
                 class="data-hidden-input"
-                (dateInput)="entryDate($event)" 
-                [matDatepicker]="picker1" 
+                (dateInput)="entryDate($event)"
+                [matDatepicker]="picker1"
                 (dateChange)="checkDates()"
                 placeholder="Choose a date"
             >
@@ -14,10 +14,10 @@
                 <div class="data-block-text">Въезд</div>
                 <div class="data-block-field">
                     <div class="data-block-number">{{ entryDateValue | date: 'd' }}</div>
-                    
+
                     <div class="data-block-content">
                         <mat-datepicker #picker1></mat-datepicker>
-                        
+
                         <div class="data-block-month">{{ entryDateValue | date: 'MMMM' }}</div>
                         <svg class="chevron-icon">
                             <use xlink:href="assets/sprites/icons.svg#chevron-down"></use>
@@ -29,10 +29,10 @@
 
         <!-- data calendar -->
         <div class="data-block calendar" (click)="picker2.open()">
-            <input 
+            <input
                 class="data-hidden-input"
-                (dateInput)="departureDate($event)" 
-                [matDatepicker]="picker2" 
+                (dateInput)="departureDate($event)"
+                [matDatepicker]="picker2"
                 placeholder="Choose a date"
                 (dateChange)="checkDates()"
             >
@@ -40,10 +40,10 @@
                 <div class="data-block-text">Выезд</div>
                 <div class="data-block-field">
                     <div class="data-block-number">{{ departureDateValue | date: 'd' }}</div>
-                    
+
                     <div class="data-block-content">
                         <mat-datepicker #picker2></mat-datepicker>
-                        
+
                         <div class="data-block-month">{{ departureDateValue | date: 'MMMM' }}</div>
                         <svg class="chevron-icon">
                             <use xlink:href="assets/sprites/icons.svg#chevron-down"></use>
@@ -75,16 +75,16 @@
                 <div class="data-block-text">Номеров</div>
                 <div class="data-block-field">
                     <div class="data-block-content">
-                        <button 
-                            type="button" 
-                            class="arrow-control decrease-control" 
+                        <button
+                            type="button"
+                            class="arrow-control decrease-control"
                             (click)="decreaseApartmentsCounter()"
                         >
                         </button>
                         <div class="data-block-number">{{ apartmentsCounter }}</div>
-                        <button 
-                            type="button" 
-                            class="arrow-control increase-control" 
+                        <button
+                            type="button"
+                            class="arrow-control increase-control"
                             (click)="increaseApartmentsCounter()"
                         >
                         </button>
@@ -94,7 +94,7 @@
         </div>
 
         <div class="find-apartments">
-            <button type="button" class="button">Найти номер</button>
+            <a [href]="bookingUrl" target="_blank" class="button">Найти номер</a>
         </div>
     </div>
 </form>

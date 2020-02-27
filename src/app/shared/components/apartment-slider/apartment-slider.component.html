@@ -10,11 +10,11 @@
                 <div class="apartment-main">
                     <h2 class="light apartment-title">{{ apartment.name }}</h2>
                     <perfect-scrollbar class="scrollbar light-scrollbar">
-                        <div class="apartment-description" [innerHTML]="apartment.description | paragraphs"></div>
+                        <div class="apartment-description" [innerHTML]="apartment.shortDescription | paragraphs"></div>
                     </perfect-scrollbar>
                     <div class="apartment-buttons">
                         <a [routerLink]="['/apartments', apartment.id]" class="button light">Подробнее</a>
-                        <a [routerLink]="[]" class="button secondary">Забронировать</a>
+                        <a href="https://www.simplebooking.it/ibe/search?hid=6450&lang=RU&cur=RUB" target="_blank" class="button secondary">Забронировать</a>
                     </div>
                 </div>
             </div>

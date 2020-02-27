@@ -1,10 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
-import {Event} from '../../../../shared/contracts/event';
 import {ActivatedRoute} from '@angular/router';
-import {DatePipe} from '@angular/common';
 import { ResponsiveService } from 'src/app/shared/services/responsive.service';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-index',
@@ -28,12 +25,20 @@ export class IndexComponent implements OnInit {
       this.screen = screen;
     });
 
+    const currentDate = new Date();
+    const currentUnixTime = currentDate.getTime() / 1000;
     events.map(event => {
-      const date = new Date(event.startedAt * 1000);
-      if(!this.months[date.getMonth()]) {
-        this.months[date.getMonth()] = [];
+      let month;
+      if(event.startedAt < currentUnixTime) {
+        month = currentDate.getMonth();
+      } else {
+        const date = new Date(event.startedAt * 1000);
+        month = date.getMonth();
       }
-      this.months[date.getMonth()].push(event);
+      if(!this.months[month]) {
+        this.months[month] = [];
+      }
+      this.months[month].push(event);
     });
     console.log(this.months);
   }
