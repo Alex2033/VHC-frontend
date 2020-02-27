@@ -27,10 +27,10 @@ import { ResponsiveService } from '../../services/responsive.service';
       ]),
       transition(":leave", [
         animate(
-          '350ms',
+          '150ms',
           style({
             opacity: 0,
-            transform: 'translateY(50px)'
+            transform: 'translateY(0)'
           })
         )
       ])
