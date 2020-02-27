@@ -7,10 +7,10 @@
         <div class="swiper-container" [swiper]="config">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" *ngFor="let image of content.imagesXl; index as i">
-                    <app-responsive-image 
-                        [xl]="content.imagesXl[i]" 
-                        [lg]="content.imagesLg[i]" 
-                        [md]="content.imagesMd[i]" 
+                    <app-responsive-image [lazyLoad]="false"
+                        [xl]="content.imagesXl[i]"
+                        [lg]="content.imagesLg[i]"
+                        [md]="content.imagesMd[i]"
                         [sm]="content.imagesSm[i]"
                     ></app-responsive-image>
                 </div>
@@ -46,9 +46,9 @@
             </div>
         </div>
         <div class="mobile-card-buttons">
-            <button 
-                class="button secondary" 
-                type="button" 
+            <button
+                class="button secondary"
+                type="button"
                 (click)="modal.open('apartment-view-request', {id: content.id})"
             >Отправить заявку</button>
         </div>

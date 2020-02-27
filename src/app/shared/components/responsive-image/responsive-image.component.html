@@ -3,7 +3,8 @@
     <picture>
       <source type="image/webp" [attr.lazyLoad]="url(screen, true)" *ngIf="webpSupported">
       <source type="image/jpeg" [attr.lazyLoad]="url(screen)" *ngIf="!webpSupported">
-      <img [offset]="200" [customObservable]="scrollObservable ? scrollObservable : null" [lazyLoad]="url(screen, webpSupported)" [attr.aria-label]="alt ? alt : ''">
+      <img *ngIf="lazyLoad" [offset]="300" [customObservable]="scrollObservable ? scrollObservable : null" [lazyLoad]="url(screen, webpSupported)" [attr.aria-label]="alt ? alt : ''">
+      <img *ngIf="!lazyLoad" [src]="url(screen, webpSupported)" [attr.aria-label]="alt ? alt : ''">
     </picture>
     <meta *ngIf="itemprop" [attr.itemprop]="itemprop" [content]="url(screen, webpSupported)" />
   </ng-container>

@@ -102,7 +102,7 @@
 
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">
-                      <app-responsive-image [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
+                      <app-responsive-image [lazyLoad]="false" [xl]="apartment.imagesXl[i]" [lg]="apartment.imagesLg[i]" [md]="apartment.imagesMd[i]" [sm]="apartment.imagesSm[i]"></app-responsive-image>
                     </div>
                 </div>
             </div>
@@ -165,7 +165,7 @@
         <div class="swiper-container" [swiper]="mobileFeatures">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" *ngFor="let image of apartment.detailImagesXl; index as i">
-                  <app-responsive-image [xl]="apartment.detailImagesXl[i]" [lg]="apartment.detailImagesLg[i]" [md]="apartment.detailImagesMd[i]" [sm]="apartment.detailImagesSm[i]"></app-responsive-image>
+                  <app-responsive-image [lazyLoad]="false" [xl]="apartment.detailImagesXl[i]" [lg]="apartment.detailImagesLg[i]" [md]="apartment.detailImagesMd[i]" [sm]="apartment.detailImagesSm[i]"></app-responsive-image>
                 </div>
             </div>
         </div>
@@ -205,7 +205,7 @@
     >
         <div class="swiper-wrapper">
             <div class="swiper-slide" *ngFor="let image of apartment.detailImagesXl; index as i">
-              <app-responsive-image [xl]="apartment.detailImagesXl[i]" [lg]="apartment.detailImagesLg[i]" [md]="apartment.detailImagesMd[i]" [sm]="apartment.detailImagesSm[i]"></app-responsive-image>
+              <app-responsive-image [lazyLoad]="false" [xl]="apartment.detailImagesXl[i]" [lg]="apartment.detailImagesLg[i]" [md]="apartment.detailImagesMd[i]" [sm]="apartment.detailImagesSm[i]"></app-responsive-image>
             </div>
         </div>
     </div>
