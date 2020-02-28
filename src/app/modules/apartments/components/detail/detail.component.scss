@@ -1,5 +1,6 @@
 @import "theme";
 @import "responsive";
+@import "animations";
 
 :host {
   display: flex;
@@ -52,6 +53,7 @@
   padding: 48px 0;
   max-width: 460px;
   position: relative;
+  animation: fadeUp 750ms ease forwards;
 
   @include media-breakpoint-only($lg) {
     max-width: 100%;
@@ -270,6 +272,12 @@
   &.features-on {
     margin-right: -31px;
 
+    .features-header h3,
+    .features-items,
+    .scrollbar::ng-deep .ps__rail-y {
+      animation: fadeUp 650ms ease 800ms backwards;
+    }
+
     .scrollbar {
       padding-right: 31px;
 
@@ -300,6 +308,7 @@
 .features-wrapper {
   height: 100%;
   position: relative;
+  animation: fadeUp 650ms ease forwards;
 
   @include media-breakpoint-only($lg) {
     height: initial;
@@ -337,8 +346,36 @@
   }
 }
 
+.animation-background-block {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  animation: slideLeft 800ms ease forwards;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    background-color: $primary-color;
+    top: 0;
+    height: 100%;
+    animation: expandCollapseWidth 800ms ease 800ms forwards;
+  }
+
+  &::before {
+    right: 0;
+  }
+
+  &::after {
+    right: 50%;
+  }
+}
+
 .background-block {
   position: absolute;
+  overflow: hidden;
   top: 0;
   right: 0;
   width: 55.94%;
@@ -350,7 +387,16 @@
   }
 
   &.features-block {
-    background-color: $light-gray;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $light-gray;
+      animation: slideRight 800ms ease backwards;
+    }
   }
 
     @media (max-width: 1150px) {

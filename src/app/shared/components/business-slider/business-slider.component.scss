@@ -1,8 +1,23 @@
 @import "theme";
 @import "responsive";
+@import "animations";
 
 :host {
     display: block;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: $text-color;
+        animation: fromLeftToRight 2s ease forwards;
+    }
 }
 
 .business {
@@ -28,7 +43,7 @@
 }
 
 .business-content-left {
-    background-color: $text-color;
+    position: relative;
     display: flex;
     max-width: 480px;
     flex: 1 0 auto;
@@ -37,6 +52,24 @@
     justify-content: space-between;
     min-width: 0;
     padding: 48px;
+    z-index: 5;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: $text-color;
+        animation: show 500ms forwards;
+        visibility: hidden;
+    }
+
+    > * {
+        animation: fadeUp 350ms ease forwards;
+    }
 
     @include media-breakpoint-only($lg) {
         padding: 32px;
@@ -99,7 +132,7 @@
         }
     }
 
-    @include media-breakpoint-only($xl) {
+    @include media-breakpoint-only($lg) {
         flex-direction: column;
         align-items: flex-start;
 
@@ -124,6 +157,7 @@
     height: 100%;
     position: relative;
     min-width: 0;
+    position: relative;
 
     ::ng-deep img {
         width: 100%;
@@ -136,11 +170,45 @@
     }
 }
 
+.swiper-container {
+    animation: show 1.65s forwards;
+    visibility: hidden; 
+}
+
+.business-background-block {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: slideLeftFade 800ms ease forwards;
+    visibility: hidden;
+  
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      background-color: $primary-color;
+      top: 0;
+      height: 100%;
+      animation: expandCollapseWidth 800ms ease 2s forwards;
+    }
+  
+    &::before {
+      right: 0;
+    }
+  
+    &::after {
+      right: 50%;
+    }
+}
+
 .slider-controls {
     position: absolute;
     right: 48px;
     bottom: 48px;
-    z-index: 1;
+    z-index: 5;
+    animation: fadeUp 350ms ease 2.7s backwards;
 }
 
 .price-per-month {

@@ -1,8 +1,10 @@
 @import "theme";
 @import "responsive";
+@import "animations";
 
 .page-section-header {
     margin-bottom: 97px;
+    animation: fadeUp 650ms ease forwards;
 
     @include media-breakpoint-only($xl) {
         margin-bottom: 60px;
