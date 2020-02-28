@@ -13,7 +13,7 @@
           <use xlink:href="assets/sprites/icons.svg#chevron-right"></use>
         </svg>
       </h2>
-      <div class="card-description" [innerHTML]="apartment.description | paragraphs">
+      <div class="card-description" [innerHTML]="apartment.shortDescription | paragraphs">
       </div>
     </div>
     <a [routerLink]="['apartments', apartment.id]" type="button" class="button gray">Забронировать</a>
