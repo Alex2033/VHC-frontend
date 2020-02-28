@@ -8,8 +8,9 @@
                 </div>
                 <div class="apartment-main">
                     <h2 class="light apartment-title">{{ apartment.name }}</h2>
-                    <div class="apartment-description" [innerHTML]="apartment.description | paragraphs">
-                    </div>
+                    <perfect-scrollbar class="scrollbar light-scrollbar">
+                        <div class="apartment-description" [innerHTML]="apartment.description | paragraphs"></div>
+                    </perfect-scrollbar>
                     <div class="aparment-choise" *ngIf="apartment.costConditions.length > 0">
                         <div class="apartment-choise-item">
                             <p class="choise-month">Срок аренды, мес</p>
@@ -34,7 +35,7 @@
                     </div>
                     <div class="apartment-buttons">
                         <button
-                            type="button"
+                            type="button secondary"
                             (click)="modal.open('apartment-view-request', {id: apartment.id})"
                             class="button"
                         >Отправить заявку
