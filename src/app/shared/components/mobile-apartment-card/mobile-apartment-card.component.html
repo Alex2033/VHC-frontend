@@ -20,8 +20,8 @@
         </h5>
         <div class="mobile-card-text" [innerHTML]="content.description | paragraphs"></div>
         <div class="mobile-card-buttons">
-            <button [routerLink]="['/apartments', 'detail']" class="button light" type="button">Подробнее</button>
-            <button class="button secondary" type="button">Забронировать</button>
+            <button [routerLink]="['/apartments', content.id]" class="button light" type="button">Подробнее</button>
+            <a class="button secondary" href="https://www.simplebooking.it/ibe/search?hid=6450&lang=RU&cur=RUB" target="_blank">Забронировать</a>
         </div>
     </div>
 </div>
