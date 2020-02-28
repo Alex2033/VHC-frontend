@@ -2,6 +2,6 @@
 <app-side-panel></app-side-panel>
 <app-main-menu [exclude]="'.open-menu'" (clickOutside)="menu.showMenu = false"></app-main-menu>
 <div class="content">
-  <router-outlet></router-outlet>
+  <router-outlet *ngIf="routingEnabled"></router-outlet>
 </div>
 <app-modal></app-modal>
