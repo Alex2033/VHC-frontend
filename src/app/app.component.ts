@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from './shared/services/menu.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -17,5 +18,8 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.routingEnabled = true;
     }, 650);
+
+    AOS.init();
   }
+
 }
