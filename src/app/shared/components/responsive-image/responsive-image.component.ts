@@ -15,6 +15,7 @@ export class ResponsiveImageComponent implements OnInit {
   @Input() xl: string;
   @Input() lg: string;
   @Input() md: string;
+  @Input() xs: string;
   @Input() sm: string;
   @Input() scrollObservable: Observable<any>;
   @Input() itemprop: string; //Schema property
