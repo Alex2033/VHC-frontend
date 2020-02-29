@@ -8,7 +8,7 @@
                 <div class="background-words stroked">Valo Hotel City</div>
                 <div class="footer-info-container">
                     <a [routerLink]="['/business']" class="footer-link">Готовые пространства <br> для бизнеса</a>
-<!--                    <a [routerLink]="[]" class="footer-link">Доходные программы <br> для инвесторов</a>-->
+                    <a [routerLink]="[]" class="footer-link">Доходные программы <br> для инвесторов</a>
                 </div>
             </div>
         </div>
@@ -45,16 +45,16 @@
                 </ng-container>
 
             </ul>
-            <div *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'" class="footer-bottom-text manufacturer-site-name">
-                Digitech
-            </div>
+            <a *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'" href="https://zomg.studio/" class="studio-logo" target="_blank">
+                <img src="assets/images/footer/zomg_studio_white.svg" alt="zoom studio">
+            </a>
             <div class="bot">
                 <div class="footer-bottom-text">
                     2020 Valo Hotel City
                 </div>
-                <div class="footer-bottom-text manufacturer-site-name">
-                    Digitech
-                </div>
+                <a href="https://zomg.studio/" class="studio-logo" target="_blank">
+                    <img src="assets/images/footer/zomg_studio_white.svg" alt="zoom studio">
+                </a>
             </div>
         </div>
     </div>

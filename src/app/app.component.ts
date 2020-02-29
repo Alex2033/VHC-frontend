@@ -19,7 +19,9 @@ export class AppComponent implements OnInit {
       this.routingEnabled = true;
     }, 650);
 
-    AOS.init();
+    AOS.init({
+      once: true
+    });
   }
 
 }

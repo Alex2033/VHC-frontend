@@ -2,6 +2,10 @@
 @import "responsive";
 @import "animations";
 
+:host {
+    overflow: hidden;
+}
+
 .page-section-header {
     margin-bottom: 97px;
     animation: fadeUp 650ms ease forwards;
@@ -26,10 +30,6 @@
             }
         }
     }
-}
-
-.container {
-    overflow: hidden;
 }
 
 // mobile cards

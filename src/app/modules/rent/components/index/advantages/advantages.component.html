@@ -17,18 +17,24 @@
                     <!-- desktop sizes -->
                     <ng-container *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
                         <div class="swiper-slide" *ngFor="let icon of icons">
-                            <svg class="icon-item" [attr.width]="icon.size.desktop.width" [attr.height]="icon.size.desktop.height">
-                                <use [attr.xlink:href]="icon.src"></use>
-                            </svg>
+                            <div class="icon-item">
+                                <svg [attr.width]="icon.size.desktop.width" [attr.height]="icon.size.desktop.height">
+                                    <use [attr.xlink:href]="icon.src"></use>
+                                </svg>
+                            </div>
+                            <h5 class="icon-title">{{ icon.title }}</h5>
                         </div>
                     </ng-container>
 
                     <!-- mobile sizes -->
                     <ng-container *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
                         <div class="swiper-slide" *ngFor="let icon of icons">
-                            <svg class="icon-item" [attr.width]="icon.size.mobile.width" [attr.height]="icon.size.mobile.height">
-                                <use [attr.xlink:href]="icon.src"></use>
-                            </svg>
+                            <div class="icon-item">
+                                <svg [attr.width]="icon.size.mobile.width" [attr.height]="icon.size.mobile.height">
+                                    <use [attr.xlink:href]="icon.src"></use>
+                                </svg>
+                            </div>
+                            <h5 class="icon-title">{{ icon.title }}</h5>
                         </div>
                     </ng-container>
 
