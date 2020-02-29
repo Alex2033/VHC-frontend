@@ -30,7 +30,7 @@
                     <div class="swiper-container" [(index)]="index" [swiper]="config" #businessSlider>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" *ngFor="let image of space.imagesXl; index as i">
-                              <app-responsive-image [lazyLoad]="false" [xl]="space.imagesXl[i]" [lg]="space.imagesLg[i]" [md]="space.imagesMd[i]" [sm]="space.imagesSm[i]"></app-responsive-image>
+                              <app-responsive-image [lazyLoad]="false" [xl]="space.imagesXl[i]" [lg]="space.imagesLg[i]" [md]="space.imagesMd[i]" [xs]="space.imagesSm[i]" [sm]="space.imagesSm[i]"></app-responsive-image>
                             </div>
                         </div>
                     </div>
