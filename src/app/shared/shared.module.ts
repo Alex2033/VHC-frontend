@@ -48,12 +48,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
-  loop: true,
-  breakpoints: {
-    '767': {
-      loop: false
-    }
-  }
+  loop: false
 };
 
 @NgModule({
