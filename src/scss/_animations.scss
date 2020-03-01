@@ -1,3 +1,7 @@
+.fadeUp {
+    animation-name: fadeUp;
+}
+
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -14,6 +18,10 @@
     }
 }
 
+.slideLeft {
+    animation-name: slideLeft;
+}
+
 @keyframes slideLeft {
     0% {
         transform: translateX(-100%);
@@ -24,6 +32,10 @@
     }
 }
 
+.slideRight {
+    animation-name: slideRight;
+}
+
 @keyframes slideRight {
     0% {
         transform: translateX(100%);
@@ -32,6 +44,10 @@
     100% {
         transform: translateX(0);
     }
+}
+
+.slideLeftFade {
+    animation-name: slideLeftFade;
 }
 
 @keyframes slideLeftFade {
@@ -50,6 +66,10 @@
     }
 }
 
+.fromLeftToRight {
+    animation-name: fromLeftToRight;
+}
+
 @keyframes fromLeftToRight {
     0% {
         transform: translateX(-100%);
@@ -58,6 +78,10 @@
     100% {
         transform: translateX(100%);
     }
+}
+
+.expandCollapseWidth {
+    animation-name: expandCollapseWidth;
 }
 
 @keyframes expandCollapseWidth {
@@ -70,17 +94,15 @@
     }
 }
 
+.show {
+    animation-name: show;
+}
+
 @keyframes show {
     99% {
       visibility: hidden;
     }
     100% {
       visibility: visible;
-    }
-}
-
-@keyframes hideAfterTime {
-    to {
-        visibility: hidden;
     }
 }

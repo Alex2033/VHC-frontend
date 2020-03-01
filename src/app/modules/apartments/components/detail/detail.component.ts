@@ -4,7 +4,6 @@ import { ShortTermRentApartment } from '../../../../shared/contracts/short-term-
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { ResponsiveService } from 'src/app/shared/services/responsive.service';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'app-detail',

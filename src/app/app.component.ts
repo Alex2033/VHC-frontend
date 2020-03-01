@@ -29,10 +29,6 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.showTitle = false;
     }, 2000);
-    
-    setTimeout(() => {
-      this.routingEnabled = true;
-    }, 2350);
 
     AOS.init({
       once: true

@@ -2,7 +2,7 @@
 <app-side-panel></app-side-panel>
 <app-main-menu [exclude]="'.open-menu'" (clickOutside)="menu.showMenu = false"></app-main-menu>
 <div class="content">
-  <router-outlet></router-outlet> <!-- Условие отображения пока убрано -->
+  <router-outlet></router-outlet>
 </div>
 <app-modal></app-modal>
 <div class="animation-white-background" *ngIf="showWhiteBlock"></div>
