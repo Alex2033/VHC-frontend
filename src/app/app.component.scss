@@ -1,4 +1,6 @@
+@import "theme";
 @import "responsive";
+@import "animations";
 
 :host {
     display: flex;
@@ -29,3 +31,64 @@
     }
 }
 
+.animation-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    height: 100%;
+}
+
+.animation-white-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: $light-color;
+}
+
+.loading-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: slideLeft 750ms ease 1s backwards;
+}
+
+.loading-animation-block {
+    position: absolute;
+    width: 25%;
+    background-color: $primary-color;
+    top: 0;
+    height: 100%;
+    z-index: 5;
+    animation: expandCollapseWidth 600ms ease 1.55s forwards;
+
+    &.block-1 {
+        right: 0;
+    }
+    
+    &.block-2 {
+        right: 25%;
+    }
+
+    &.block-3 {
+        right: 50%;
+    }
+
+    &.block-4 {
+        right: 75%;
+    }
+}
+
+.main-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}

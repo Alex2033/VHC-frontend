@@ -78,3 +78,9 @@
       visibility: visible;
     }
 }
+
+@keyframes hideAfterTime {
+    to {
+        visibility: hidden;
+    }
+}

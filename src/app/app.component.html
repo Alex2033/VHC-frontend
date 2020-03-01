@@ -2,6 +2,22 @@
 <app-side-panel></app-side-panel>
 <app-main-menu [exclude]="'.open-menu'" (clickOutside)="menu.showMenu = false"></app-main-menu>
 <div class="content">
-  <router-outlet *ngIf="routingEnabled"></router-outlet>
+  <router-outlet></router-outlet> <!-- Условие отображения пока убрано -->
 </div>
 <app-modal></app-modal>
+<div class="animation-white-background" *ngIf="showWhiteBlock"></div>
+<div class="animation-block" *ngIf="animationLoading.animationLoading">
+  <div class="loading-animation">
+    <div class="loading-animation-block block-1"></div>
+    <div class="loading-animation-block block-2"></div>
+    <div class="loading-animation-block block-3"></div>
+    <div class="loading-animation-block block-4"></div>
+  </div>
+  <h1 class="main-title" *ngIf="showTitle">
+    Valo 
+    <br>
+    Hotel 
+    <br>
+    City
+  </h1>
+</div>
