@@ -38,14 +38,17 @@ export class DetailComponent implements OnInit {
   };
 
   constructor(
-    public sanitizer: DomSanitizer, 
+    public sanitizer: DomSanitizer,
     private route: ActivatedRoute,
     public responsive: ResponsiveService
   ) { }
 
   ngOnInit() {
     this.apartment = this.route.snapshot.data['apartment'];
-
+    this.apartment.features = this.apartment.features.map(feature => {
+      feature.iconData = this.sanitizer.bypassSecurityTrustHtml(feature.iconData);
+      return feature;
+    });
     this.responsive.screen.subscribe((screen) => {
       this.screen = screen;
 

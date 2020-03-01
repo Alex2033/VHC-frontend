@@ -76,7 +76,7 @@
                 <div *ngIf="isFeaturesVisible" class="features-items">
                     <div class="features-item" *ngFor="let feature of apartment.features">
                         <header class="features-item-header">
-                          <div class="features-item-icon" [innerHtml]="sanitizer.bypassSecurityTrustHtml(feature.iconData)"></div>
+                          <div class="features-item-icon" [innerHtml]="feature.iconData"></div>
                             <h6 class="features-item-title">{{ feature.name }}</h6>
                         </header>
                         <div class="features-item-text" [innerHTML]="feature.description | paragraphs"></div>
@@ -180,7 +180,7 @@
         <div class="features-items">
             <div class="features-item" *ngFor="let feature of apartment.features">
                 <header class="features-item-header">
-                    <div class="features-item-icon" [innerHtml]="sanitizer.bypassSecurityTrustHtml(feature.iconData)"></div>
+                    <div class="features-item-icon" [innerHtml]="feature.iconData"></div>
                     <h6 class="features-item-title">{{ feature.name }}</h6>
                 </header>
                 <div class="features-item-text" [innerHTML]="feature.description | paragraphs"></div>
