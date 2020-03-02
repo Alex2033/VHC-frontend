@@ -20,11 +20,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.animationLoading.animationLoading = false;
-    }, 2350);
+    }, 2550);
 
     setTimeout(() => {
       this.showWhiteBlock = false;
-    }, 1750);
+    }, 1850);
 
     setTimeout(() => {
       this.showTitle = false;

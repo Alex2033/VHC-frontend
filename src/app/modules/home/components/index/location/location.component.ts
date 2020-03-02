@@ -14,11 +14,11 @@ export class LocationComponent implements OnInit {
       position: [59.91310384356382, 30.344218691392978],
       icon: 'assets/icons/ico_tree.svg',
       properties: {
-        hintContent: 'Собственный значок метки',
         balloonContent: 'Это красивая метка',
         iconContent: 'Московский парк'
       },
       options: {
+        balloonOffset: [40, 0],
         iconLayout: 'default#imageWithContent',
         iconImageHref: '',
         iconImageSize: [186, 60],
@@ -29,11 +29,11 @@ export class LocationComponent implements OnInit {
       position: [59.92064640763944, 30.343797602272325],
       icon: 'assets/icons/ico_mall.svg',
       properties: {
-        hintContent: 'Собственный значок метки с контентом',
         balloonContent: 'А эта — новогодняя',
         iconContent: 'ТРК «РИО»'
       },
       options: {
+        balloonOffset: [40, 0],
         iconLayout: 'default#imageWithContent',
         iconImageHref: '',
         iconImageSize: [186, 60],
@@ -53,7 +53,7 @@ export class LocationComponent implements OnInit {
   public loadPin(event, pin): void {
     const MyIconContentLayout = event.ymaps.templateLayoutFactory.createClass(
       `
-        <div class="marker-container" style="width: 186px;">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-out-back" class="marker-container" style="width: 186px;">
           <img src="` + pin.icon + `" alt="tree icon">
           <span>$[properties.iconContent]</span>
         </div>

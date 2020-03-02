@@ -1,5 +1,11 @@
 <div class="screen-container">
-    <img src="assets/images/first-screen/main.jpg" alt="screen background" class="screen-background">
+    <img 
+        data-aos="custom scale-increase" 
+        [attr.data-aos-delay]="animationLoading.animationLoading ? 1500 : 0"
+        data-aos-duration="2000"
+        src="assets/images/first-screen/main.jpg" 
+        alt="screen background"
+        class="screen-background">
     <h1 class="title main-title">
         Valo 
         <br>
@@ -8,4 +14,9 @@
         City
     </h1>
 </div>
-<app-booking-form></app-booking-form>
+<app-booking-form 
+    data-aos-anchor=".screen-container"
+    data-aos="custom booking-show" 
+    [attr.data-aos-delay]="animationLoading.animationLoading ? 2200 : 0"
+    data-aos-duration="300"
+></app-booking-form>

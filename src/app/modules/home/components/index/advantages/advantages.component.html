@@ -1,5 +1,7 @@
 <section class="page-section">
     <img
+        data-aos="custom fade-right" 
+        data-aos-duration="500"
         *ngIf="screen === 'lg' || screen === 'xl'"
         [lazyLoad]="'assets/images/advantages/advantages-img.jpg'"
         [offset]="200"
@@ -7,6 +9,8 @@
         class="advantages-background"
     >
     <img
+        data-aos="custom fade-right" 
+        data-aos-duration="500"
         *ngIf="screen !== 'lg' && screen !== 'xl'"
         [lazyLoad]="'assets/images/advantages/mobile-advantages.png'"
         [offset]="200"
@@ -43,7 +47,13 @@
 
                     <!-- desktop sizes -->
                     <ng-container *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
-                        <div class="swiper-slide" *ngFor="let icon of icons">
+                        <div 
+                            data-aos="custom fade-up"
+                            data-aos-duration="250" 
+                            [attr.data-aos-delay]="(i + 1) * 250"
+                            class="swiper-slide" 
+                            *ngFor="let icon of icons; index as i"
+                        >
                             <div class="icon-item">
                                 <svg [attr.width]="icon.size.desktop.width" [attr.height]="icon.size.desktop.height">
                                     <use [attr.xlink:href]="icon.src"></use>

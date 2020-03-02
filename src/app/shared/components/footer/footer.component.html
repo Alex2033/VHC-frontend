@@ -5,7 +5,13 @@
                 <img [lazyLoad]="'assets/images/footer/footer-image.jpg'" [offset]="200" alt="footer image">
             </div>
             <div class="footer-info">
-                <div class="background-words stroked">Valo Hotel City</div>
+                <div 
+                    class="background-words stroked"
+                    data-aos="custom slide-right-long"
+                    data-aos-easing="ease-out"
+                    data-aos-duration="1000"
+                    data-aos-once="false"
+                >Valo Hotel City</div>
                 <div class="footer-info-container">
                     <a [routerLink]="['/business']" class="footer-link">Готовые пространства <br> для бизнеса</a>
                     <a [routerLink]="[]" class="footer-link">Доходные программы <br> для инвесторов</a>

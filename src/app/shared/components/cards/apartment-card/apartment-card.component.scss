@@ -4,6 +4,8 @@
 .card {
   padding-bottom: 100%;
   position: relative;
+  overflow: hidden;
+
   ::ng-deep img {
     position: absolute;
     top: 0;
@@ -14,6 +16,16 @@
     right: 0;
     object-fit: cover;
   }
+}
+
+.animation-card-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background-color: $primary-color;
+  z-index: 10;
 }
 
 .background-gradient {

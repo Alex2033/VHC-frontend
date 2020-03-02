@@ -1,21 +1,35 @@
 <div class="card">
-  <app-responsive-image [lazyLoad]="false" [xl]="apartment.imageXl" [lg]="apartment.imageLg" [md]="apartment.imageMd" [xs]="apartment.imageSm" [sm]="apartment.imageSm"></app-responsive-image>
-  <div class="background-gradient"></div>
-  <div class="card-content">
-    <div class="apartment-info">
-        <p>24 м<sup>2</sup></p>
-        <p>Для двоих</p>
-    </div>
-    <div class="card-text">
-      <h2 class="card-title light">
-        <span>{{ apartment.name }}</span>
-        <svg class="apartment-icon" width="6" height="10">
-          <use xlink:href="assets/sprites/icons.svg#chevron-right"></use>
-        </svg>
-      </h2>
-      <div class="card-description" [innerHTML]="apartment.shortDescription | paragraphs">
+  <div 
+    class="animation-card-block"
+    data-aos="custom from-left-to-right"
+    data-aos-anchor=".apartment-cards" 
+    data-aos-duration="2500"
+  ></div>
+  <div 
+    class="card-inner"
+    data-aos="custom show" 
+    data-aos-anchor=".apartment-cards"
+    data-aos-delay="600"
+    data-aos-duration="0"
+  >
+    <app-responsive-image [lazyLoad]="false" [xl]="apartment.imageXl" [lg]="apartment.imageLg" [md]="apartment.imageMd" [xs]="apartment.imageSm" [sm]="apartment.imageSm"></app-responsive-image>
+    <div class="background-gradient"></div>
+    <div class="card-content">
+      <div class="apartment-info">
+          <p>24 м<sup>2</sup></p>
+          <p>Для двоих</p>
       </div>
+      <div class="card-text">
+        <h2 class="card-title light">
+          <span>{{ apartment.name }}</span>
+          <svg class="apartment-icon" width="6" height="10">
+            <use xlink:href="assets/sprites/icons.svg#chevron-right"></use>
+          </svg>
+        </h2>
+        <div class="card-description" [innerHTML]="apartment.shortDescription | paragraphs">
+        </div>
+      </div>
+      <a [routerLink]="['apartments', apartment.id]" class="button gray">Забронировать</a>
     </div>
-    <a [routerLink]="['apartments', apartment.id]" class="button gray">Забронировать</a>
   </div>
 </div>

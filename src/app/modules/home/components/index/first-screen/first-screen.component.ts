@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingAnimationService } from 'src/app/shared/services/loading-animation.service';
 
 @Component({
   selector: 'app-first-screen',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(public animationLoading: LoadingAnimationService) { }
 
   ngOnInit() {
   }

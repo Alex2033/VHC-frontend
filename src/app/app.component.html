@@ -1,5 +1,13 @@
-<app-header></app-header>
-<app-side-panel></app-side-panel>
+<app-header
+  data-aos="custom fade-bottom" 
+  data-aos-delay="2200"
+  data-aos-duration="300"
+></app-header>
+<app-side-panel 
+  data-aos="custom fade-left" 
+  data-aos-delay="2200"
+  data-aos-duration="300"
+></app-side-panel>
 <app-main-menu [exclude]="'.open-menu'" (clickOutside)="menu.showMenu = false"></app-main-menu>
 <div class="content">
   <router-outlet></router-outlet>
@@ -21,3 +29,5 @@
     City
   </h1>
 </div>
+
+<img src="assets/images/first-screen/main.jpg" alt="cache image" class="cache-image">

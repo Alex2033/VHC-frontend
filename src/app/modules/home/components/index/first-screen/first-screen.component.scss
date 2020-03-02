@@ -9,6 +9,7 @@
 .screen-container {
     height: calc(100vh - 80px);
     position: relative;
+    overflow: hidden;
 
     @include media-breakpoint-only($lg) {
         height: calc(100vh - 64px);
