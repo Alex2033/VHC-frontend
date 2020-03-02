@@ -1,5 +1,10 @@
 <div class="inner-page">
-    <div class="inner-page-first-screen" *ngIf="false">
+    <div 
+        class="inner-page-first-screen" 
+        *ngIf="showFirstScreen && (screen === 'lg' || screen === 'xl')"
+        [@fadeOut]
+        (wheel)="scrollHandler($event)"
+    >
         <section class="page-section inner-page-section">
             <div class="container">
                 <header class="page-section-header inner-page-section-header">
@@ -28,7 +33,7 @@
         </section>
     </div>
 
-    <div class="inner-page-content">
+    <div class="inner-page-content" [@fadeIn]="showFirstScreen ? 'hide' : 'show'">
         <div class="container inner-page-container">
             <div class="inner-page-content-left">
                 <perfect-scrollbar class="scrollbar">

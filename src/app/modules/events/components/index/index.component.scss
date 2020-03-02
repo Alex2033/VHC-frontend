@@ -1,8 +1,31 @@
-.letter {
-    margin-left: 0;
+@import "theme";
+@import "responsive";
+
+.inner-page-first-screen {
+    position: absolute;
+    background-color: $light-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.inner-page-content {
+    @include media-breakpoint-only($lg) {
+        opacity: 1 !important;
+    }
+}
+
+.inner-page-content-right {
+    padding-bottom: 74px;
 }
 
 .slider-info {
     margin-left: -15px;
     width: 100vw;
+}
+
+.letter {
+    margin-left: 0;
 }

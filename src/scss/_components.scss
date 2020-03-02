@@ -632,6 +632,7 @@
 
 // Общие стили для страниц услуг, мероприятий, доков
 .inner-page {
+    position: relative;
     height: calc(100vh - 80px); // минус высота шапки
 
     @include media-breakpoint-only($lg) {
