@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => {
       this.showTitle = false;
-    }, 2000);
+    }, 2200);
 
     AOS.init({
       once: true

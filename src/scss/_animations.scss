@@ -211,10 +211,7 @@
 
 [data-aos="custom narrow-down-text"] {
     &.aos-animate {
+        padding-left: 0 !important; 
         letter-spacing: 30px !important;
-
-        &::first-letter, span {
-            padding-left: 0 !important;
-        }
     }
 }

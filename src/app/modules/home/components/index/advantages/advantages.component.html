@@ -48,8 +48,8 @@
                     <!-- desktop sizes -->
                     <ng-container *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
                         <div 
-                            data-aos="custom fade-up"
-                            data-aos-duration="250" 
+                            data-aos="fade-up"
+                            data-aos-duration="350" 
                             [attr.data-aos-delay]="(i + 1) * 250"
                             class="swiper-slide" 
                             *ngFor="let icon of icons; index as i"
