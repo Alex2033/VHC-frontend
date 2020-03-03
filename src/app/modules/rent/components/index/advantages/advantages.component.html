@@ -41,7 +41,13 @@
 
                     <!-- mobile sizes -->
                     <ng-container *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
-                        <div class="swiper-slide" *ngFor="let icon of icons">
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-duration="350" 
+                            [attr.data-aos-delay]="(i + 1) * 250"
+                            class="swiper-slide" 
+                            *ngFor="let icon of icons; index as i"
+                        >
                             <div class="icon-item">
                                 <svg [attr.width]="icon.size.mobile.width" [attr.height]="icon.size.mobile.height">
                                     <use [attr.xlink:href]="icon.src"></use>

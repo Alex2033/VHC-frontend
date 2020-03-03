@@ -48,6 +48,20 @@
 
             <div class="bottom-image" *ngIf="screen === 'md'">
                 <img src="assets/images/pages/rent/first-screen/bitmap.jpg" alt="first screen image">
+                <div 
+                    class="bottom-button" 
+                    data-aos="zoom-in"
+                    data-aos-delay="350" 
+                    data-aos-duration="500"
+                    data-aos-anchor-placement="bottom-bottom"
+                >
+                    <button
+                        type="button"
+                        class="button secondary"
+                        (click)="modal.open('apartment-view-request')"
+                    >Записаться на просмотр</button>
+                </div>
+                
             </div>
         </div>
 
@@ -85,6 +99,18 @@
         class="booking-section"
         *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'"
     >
-        <button class="button secondary">Записаться на просмотр</button>
+        <div 
+            class="bottom-button" 
+            data-aos="zoom-in"
+            data-aos-delay="350" 
+            data-aos-duration="500"
+            data-aos-anchor-placement="bottom-bottom"
+        >
+            <button
+                type="button"
+                class="button secondary"
+                (click)="modal.open('apartment-view-request')"
+            >Записаться на просмотр</button>
+        </div>
     </div>
 </div>

@@ -29,10 +29,6 @@ export class IndexComponent implements OnInit {
   scrollToElement(element: string) {
     this.componentRef.directiveRef.scrollToElement(element, null, 300);
   }
-  
-  onScroll() {
-    console.log(this.componentRef.directiveRef.position());
-  }
 
   getChar(index) {
     return String.fromCharCode(65 + index);

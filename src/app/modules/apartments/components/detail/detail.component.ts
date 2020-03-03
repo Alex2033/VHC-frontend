@@ -14,7 +14,6 @@ export class DetailComponent implements OnInit {
   screen: string;
   tabletIndex: number = 0;
   featureIndex: number = 0;
-  isBooked: boolean = false;
   isFeaturesVisible: boolean = false;
   apartment: ShortTermRentApartment;
   config: SwiperConfigInterface = {

@@ -141,3 +141,12 @@
         display: none;
     }
 }
+
+[data-aos="custom expand-description-image"] {
+    &.aos-animate {
+
+        @include media-breakpoint-only($lg) {
+            transform: translateX(0) scale(1.05);
+        }
+    }   
+}

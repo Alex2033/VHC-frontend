@@ -150,17 +150,8 @@
 
 </div>
 
-<!-- booking section -->
-<div
-    style="background-image: url(assets/images/apartments/apartment-1.jpg)"
-    class="booking-section"
-    *ngIf="!isBooked && screen !== 'md' && screen !== 'lg' && screen !== 'xl'"
->
-    <a class="button secondary" href="https://www.simplebooking.it/ibe/search?hid=6450&lang=RU&cur=RUB" target="_blank">Забронировать</a>
-</div>
-
 <!-- mobile features -->
-<div class="mobile-features" *ngIf="isBooked && screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+<div class="mobile-features" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
     <div class="mobile-features-slider">
         <div class="swiper-container" [swiper]="mobileFeatures">
             <div class="swiper-wrapper">
@@ -170,6 +161,9 @@
             </div>
         </div>
         <div class="slider-info card-pagination mobile-features-pagination"></div>
+        <div class="mobile-features-button">
+            <a class="button secondary" href="https://www.simplebooking.it/ibe/search?hid=6450&lang=RU&cur=RUB" target="_blank">Забронировать</a>
+        </div>
     </div>
     <div class="mobile-features-content">
         <header class="features-header">
