@@ -23,19 +23,21 @@
                 </p>
             </div>
         </header>
-        <div class="apartment-cards" *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
-            <app-apartment-card *ngFor="let apartment of apartments" [apartment]="apartment"></app-apartment-card>
-        </div>
+        <div class="apartment-wrapper">
+            <div class="apartment-cards" *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
+                <app-apartment-card *ngFor="let apartment of apartments" [apartment]="apartment"></app-apartment-card>
+            </div>
 
-        <div class="apartment-slider" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
-            <div class="swiper-container" [swiper]="config">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" *ngFor="let apartment of apartments">
-                        <app-apartment-card [apartment]="apartment"></app-apartment-card>
+            <div class="apartment-slider" *ngIf="screen !== 'md' && screen !== 'lg' && screen !== 'xl'">
+                <div class="swiper-container" [swiper]="config">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" *ngFor="let apartment of apartments">
+                            <app-apartment-card [apartment]="apartment"></app-apartment-card>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </div>
     <div class="slider-info apartments-pagination"></div>
 </section>
