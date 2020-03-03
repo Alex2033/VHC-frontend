@@ -34,6 +34,8 @@
                 *ngFor="let apartment of apartments; index as i" 
                 [content]="apartment"
                 [pagination]="'pagination-' + i"
+                data-aos="fade-up"
+                data-aos-duration="650"
             ></app-mobile-apartment-card>
         </div>
 
