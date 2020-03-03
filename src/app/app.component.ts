@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => {
       this.showWhiteBlock = false;
-    }, 1850);
+    }, 1800);
 
     setTimeout(() => {
       this.showTitle = false;
