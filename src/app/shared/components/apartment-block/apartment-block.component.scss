@@ -3,6 +3,70 @@
 
 :host {
     display: block;
+    position: relative;
+    overflow: hidden;
+
+    &[data-aos="animation"] {
+        opacity: 0;
+
+        .apartment-content-left {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background-color: $text-color;
+                visibility: hidden;
+            } 
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            background-color: $text-color;
+        }
+        
+        &.aos-animate {
+            opacity: 1;
+            &::before {
+                animation: fromLeftToRight 2s ease forwards;
+            }
+
+            .apartment-content-left {
+                &::before {
+                    animation: show 500ms forwards;
+                }
+
+                > * {
+                    animation: fadeUp 350ms ease forwards;
+                }
+            }
+
+            .swiper-container {
+                animation: show 1.65s forwards;
+            }
+
+            .apartment-background-block {
+                animation: slideLeftFade 800ms ease forwards;
+
+                &::before, &::after {
+                    animation: expandCollapseWidth 800ms ease 2s forwards;
+                }
+            }
+
+            .slider-controls {
+                animation: fadeUp 350ms ease 2.7s backwards;
+            }
+        }
+    }
 }
 
 .apartment {
@@ -39,11 +103,11 @@
 
 .apartment-content-left {
     position: relative;
-    background-color: $text-color;
     display: flex;
     max-width: 480px;
     flex: 1 0 auto;
     width: 100%;
+    z-index: 5;
     flex-direction: column;
     justify-content: space-between;
     min-width: 0;
@@ -198,6 +262,36 @@
 
     .swiper-container, .swiper-wrapper {
         height: 100%;
+    }
+}
+
+.swiper-container {
+    visibility: hidden; 
+}
+
+.apartment-background-block {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    visibility: hidden;
+  
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      background-color: $primary-color;
+      top: 0;
+      height: 100%;
+    }
+  
+    &::before {
+      right: 0;
+    }
+  
+    &::after {
+      right: 50%;
     }
 }
 

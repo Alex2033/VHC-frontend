@@ -3,6 +3,7 @@
 
 .page-section {
     background-color: $text-color;
+    overflow: hidden;
 
     @include media-breakpoint-only($md) {
         padding-bottom: 32px;

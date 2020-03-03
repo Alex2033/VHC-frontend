@@ -97,15 +97,24 @@
     }
 }
 
+[data-aos="custom scale-increase-big"] {
+    transform: scale(1);
+
+    &.aos-animate {
+        transform: scale(1.4);
+    }
+}
+
 [data-aos="custom fade-up"] {
     opacity: 0;
-    transform: translateY(75px);
+    transform: translateY(75px) !important;
 
     &.aos-animate {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) !important;
     }
 }
+
 
 [data-aos="custom fade-bottom"] {
     opacity: 0;
@@ -173,6 +182,14 @@
     }
 }
 
+[data-aos="custom rent-absolute-image-up"] {
+    transform: translateY(100%) !important;
+
+    &.aos-animate {
+        transform: translateY(50%) !important;
+    }
+}
+
 [data-aos="custom slide-left-long"] {
     transform: translateX(125px);
 
@@ -209,9 +226,34 @@
     }
 }
 
+[data-aos="custom move-bottom-rent"] {
+    &.aos-animate {
+        transform: translateY(200%);
+    }
+}
+
 [data-aos="custom narrow-down-text"] {
     &.aos-animate {
-        padding-left: 0 !important; 
         letter-spacing: 30px !important;
+    }
+}
+
+[data-aos="custom expand-container"] {
+    &.aos-animate {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+[data-aos="custom delete-paddings"] {
+    &.aos-animate {
+        padding: 0;
+    }
+}
+
+[data-aos="custom add-paddings"] {
+    &.aos-animate {
+        padding-top: 96px !important;
+        padding-bottom: 96px !important;
     }
 }

@@ -1,6 +1,21 @@
 <div class="apartment">
-    <div class="apartment-gradient"></div>
-    <div class="apartment-container">
+    <div class="animation-card-block" data-aos="animation">
+        <div class="animation-card-block-half first-block" data-aos="rofl"></div>
+        <div class="animation-card-block-half second-block" data-aos="rofl"></div>
+    </div>
+    
+    <div 
+        class="apartment-gradient"
+        data-aos="custom show" 
+        data-aos-delay="750"
+        data-aos-duration="0"
+    ></div>
+    <div 
+        class="apartment-container"
+        data-aos="custom show" 
+        data-aos-delay="750"
+        data-aos-duration="0"
+    >
         <div class="apartment-content">
             <div class="apartment-content-left">
                 <div class="apartment-info">
@@ -35,7 +50,12 @@
             </div>
         </div>
     </div>
-    <div class="apartment-slider">
+    <div 
+        class="apartment-slider"
+        data-aos="custom show" 
+        data-aos-delay="750"
+        data-aos-duration="0"
+    >
         <div class="swiper-container" [(index)]="index" [swiper]="config" #apartmentSlider>
             <div class="swiper-wrapper">
                 <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">

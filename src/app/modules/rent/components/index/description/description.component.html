@@ -1,7 +1,12 @@
 <section class="page-section">
     <div class="container">
         <div class="description-content">
-            <div class="description-video">
+            <div 
+                class="description-video"
+                data-aos="custom expand-description-image"
+                data-aos-anchor="app-features" 
+                data-aos-duration="650"
+            >
                 <div class="video-overlay" *ngIf="!videoVisible" [@fadeInOut]>
                     <img class="overlay-image" [lazyLoad]="'assets/images/pages/rent/description/video-overlay.jpg'" [offset]="200" alt="video overlay">
                     <img
@@ -15,9 +20,21 @@
                 <iframe #video *ngIf="videoVisible" [src]="sanitizeredUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="description-info">
-                <div class="background-words stroked">Valo <br> Hotel <br> City</div>
+                <div 
+                    class="background-words stroked"
+                    data-aos="custom slide-right-long"
+                    data-aos-easing="ease-out"
+                    data-aos-duration="600"
+                >
+                    Valo <br> Hotel <br> City
+                </div>
                 <div class="description-info-container">
-                    <h3 class="description-title light">
+                    <h3 
+                        class="description-title light"
+                        data-aos-anchor="app-features" 
+                        data-aos="custom move-bottom-rent" 
+                        data-aos-duration="550"
+                    >
                         <p>
                             Первые гости провели <span class="secondary-color">«тест-драйв»</span> <br> новых апартаментов. Смотрите, <br> что из этого получилось
                         </p>

@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
 import {DocumentGroup} from '../../../../shared/contracts/document-group';
 import {ActivatedRoute} from '@angular/router';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({

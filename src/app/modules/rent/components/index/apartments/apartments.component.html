@@ -7,7 +7,12 @@
             </div>
             <h2 class="section-title">
                 <span>Апартаменты <br> для долгосрочной аренды</span>
-                <div class="background-words">
+                <div 
+                    class="background-words" 
+                    data-aos="custom fade-right-long" 
+                    data-aos-easing="ease-out"
+                    data-aos-duration="1000"
+                >
                     apart–<br>ments
                 </div>
             </h2>
@@ -18,7 +23,12 @@
             </div>
         </header>
         <div class="apartment-blocks" *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'">
-            <app-apartment-block [apartment]="apartment" *ngFor="let apartment of apartments"></app-apartment-block>
+            <app-apartment-block 
+                [apartment]="apartment" 
+                *ngFor="let apartment of apartments"
+                data-aos="animation"
+                data-aos-once="false"
+            ></app-apartment-block>
         </div>
 
         <!-- mobile cards -->

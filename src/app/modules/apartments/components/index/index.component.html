@@ -2,12 +2,17 @@
     <div class="container">
         <header class="page-section-header inner-page-section-header">
             <h2 class="section-title">
-                <span>Номера <br> Valo Hotel City</span>
-                <div class="background-words">
+                <span data-aos="fade-up" data-aos-duration="600">Номера <br> Valo Hotel City</span>
+                <div 
+                    class="background-words" 
+                    data-aos="custom fade-right-long" 
+                    data-aos-easing="ease-out"
+                    data-aos-duration="1000"
+                >
                     apart– <br> ments
                 </div>
             </h2>
-            <div class="section-description">
+            <div class="section-description" data-aos="fade-up" data-aos-duration="600">
                 <p>
                     <strong>Философия и основная цель комплекса VALO</strong>
                     — обеспечить людей комфортом, уютом и качественным жильем.
@@ -16,7 +21,7 @@
         </header>        
     </div>
 
-    <app-booking-form class="container"></app-booking-form>
+    <app-booking-form class="container" data-aos="custom fade-up" data-aos-duration="600"></app-booking-form>
 
     <div class="container">
         <div *ngIf="screen === 'md' || screen === 'lg' || screen === 'xl'" class="aparts">

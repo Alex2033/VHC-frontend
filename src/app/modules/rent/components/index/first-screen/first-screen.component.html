@@ -1,4 +1,4 @@
-<div class="rent-first-sceen">
+<div class="rent-first-screen">
     <div class="container">
 
         <div class="rent-wrapper">
@@ -7,7 +7,12 @@
                     <div class="rent-top">
                         <h1 class="section-title rent-title">
                             <span>Долгосрочная аренда апартамента</span>
-                            <div class="background-words">
+                            <div 
+                                class="background-words" 
+                                data-aos="custom fade-right-long" 
+                                data-aos-easing="ease-out"
+                                data-aos-duration="1000"
+                            >
                                 rental
                             </div>
                         </h1>
@@ -46,12 +51,32 @@
             </div>
         </div>
 
-        <div class="absolute-image" *ngIf="screen === 'lg' || screen === 'xl'">
+        <div 
+            class="absolute-image" 
+            *ngIf="screen === 'lg' || screen === 'xl'"
+            data-aos="custom rent-absolute-image-up"
+            data-aos-anchor-placement="bottom-bottom" 
+            data-aos-duration="1000"
+        >
             <img src="assets/images/pages/rent/first-screen/absolute-image.jpg" alt="absolute image">
         </div>
     </div>
     <div class="background-block" *ngIf="screen === 'lg' || screen === 'xl'">
-        <img src="assets/images/pages/rent/first-screen/bitmap.jpg" alt="first screen image">
+        <div 
+            class="background-image-wrapper"
+            data-aos="custom show" 
+            data-aos-delay="400"
+            data-aos-duration="0"
+        >
+            <img 
+                src="assets/images/pages/rent/first-screen/bitmap.jpg" 
+                alt="first screen image"
+                data-aos="custom scale-increase-big" 
+                data-aos-delay="400"
+                data-aos-duration="1500"
+            >
+        </div>
+        <div class="animation-background-block"></div>
     </div>
 
     <!-- booking section -->

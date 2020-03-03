@@ -7,6 +7,61 @@
 .apartment {
     position: relative;
     height: 536px;
+    overflow: hidden;
+}
+
+.animation-card-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    
+
+    &[data-aos="animation"] {
+        visibility: hidden;
+        
+        &.aos-animate {
+            visibility: visible;
+            animation: slideLeft 750ms ease backwards, animate 0s 1350ms forwards;
+
+            .animation-card-block-half {
+                animation: expandCollapseWidth 600ms ease 750ms forwards;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    z-index: 0;
+  }
+  99% {
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+.animation-card-block-half {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    background-color: $primary-color;
+    height: 100%;
+    width: 50%;
+
+    &.first-block {
+        right: 0;
+    }
+
+    &.second-block {
+        right: 50%;
+    }
 }
 
 .apartment-gradient {

@@ -28,7 +28,7 @@
 
 
 
-.rent-first-sceen,
+.rent-first-screen,
 .container,
 .rent-wrapper,
 .rent-content {
@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation: fadeUp 750ms ease forwards;
 
     @include media-breakpoint-only($lg) {
         margin-bottom: 48px;
@@ -218,9 +219,37 @@
     }
 }
 
+.animation-background-block {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation: slideLeft 800ms ease forwards;
+  
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      background-color: $primary-color;
+      top: 0;
+      height: 100%;
+      animation: expandCollapseWidth 800ms ease 800ms forwards;
+    }
+  
+    &::before {
+      right: 0;
+    }
+  
+    &::after {
+      right: 50%;
+    }
+  }
+
 .background-block {
     position: absolute;
     top: 0;
+    overflow: hidden;
     right: 0;
     width: 55.94%;
     height: 100%;
@@ -255,6 +284,11 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+.background-image-wrapper {
+    width: 100%;
+    height: 100%;
 }
 
 .absolute-image {

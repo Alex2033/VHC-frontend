@@ -5,8 +5,13 @@
                 <perfect-scrollbar class="scrollbar" (psScrollY)="onScroll()">
                     <header class="detail-page-header">
                         <h1 class="section-title">
-                            <span>Документы</span>
-                            <div class="background-words">
+                            <span data-aos="fade-up" data-aos-duration="450">Документы</span>
+                            <div 
+                                class="background-words" 
+                                data-aos="custom fade-right-long" 
+                                data-aos-easing="ease-out"
+                                data-aos-duration="1000"
+                            >
                                 docs
                             </div>
                         </h1>
@@ -19,7 +24,15 @@
 
                     <!-- inner cards -->
                     <div class="inner-cards-wrapper">
-                        <div class="inner-cards-item" *ngFor="let group of groups; index as i" [id]="'group-' + group.id">
+                        <div 
+                            class="inner-cards-item" 
+                            *ngFor="let group of groups; index as i" 
+                            [id]="'group-' + group.id"
+                            data-aos="fade-up" 
+                            data-aos-anchor=".inner-cards-wrapper" 
+                            [attr.data-aos-delay]="(i + 1) * 350"
+                            data-aos-duration="450"
+                        >
                             <header class="inner-cards-header">
                                 <h3>{{ group.name }}</h3>
                                 <div class="inner-category-designation">
@@ -46,7 +59,13 @@
             <div class="inner-page-content-right">
                 <perfect-scrollbar class="scrollbar">
                     <ul class="inner-menu-list">
-                        <li class="inner-menu-list-item" *ngFor="let group of groups">
+                        <li 
+                            class="inner-menu-list-item" 
+                            *ngFor="let group of groups; index as i"
+                            data-aos="fade-up" 
+                            [attr.data-aos-delay]="i * 350"
+                            data-aos-duration="450"
+                        >
                             <button
                                 (click)="scrollToElement('#group' + group.id)"
                                 type="button"
@@ -56,7 +75,12 @@
                             </button>
                         </li>
                     </ul>
-                    <div class="content-right-text">
+                    <div 
+                        class="content-right-text"
+                        data-aos="zoom-in" 
+                        data-aos-delay="350"
+                        data-aos-duration="450"
+                    >
                         <p>
                             <strong>VALO – это проект европейского уровня.</strong> Генеральный подрядчик ООО «Лемминкяйнен строй» создал эффективную многоуровневую систему контроля качества строительства, которая совершенствовались в течение многих лет работы в Финляндии.
                         </p>

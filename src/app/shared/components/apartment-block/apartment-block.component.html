@@ -45,6 +45,7 @@
             </div>
             <div class="apartment-content-right">
                 <div class="apartment-slider">
+                    <div class="apartment-background-block"></div>
                     <div class="swiper-container" [(index)]="index" [swiper]="config" #apartmentSlider>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" *ngFor="let image of apartment.imagesXl; index as i">

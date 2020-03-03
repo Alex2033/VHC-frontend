@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 48px 170px 48px 244px;
+    padding: 48px 150px;
 
     @include media-breakpoint-only($xl) {
         padding: 47px 0 48px 150px;
@@ -49,19 +49,7 @@
         letter-spacing: 40px;
     }
 
-    .first-word {
-        padding-left: 80px;
 
-        @include media-breakpoint-only($md) {
-            padding-left: 35px;
-        }
-    }
 
-    .last-word {
-        padding-left: 87px;
 
-        @include media-breakpoint-only($md) {
-            padding-left: 35px;
-        }
-    }
 }
