@@ -149,9 +149,3 @@
     color: $dark-gray;
     font-weight: 400;
 }
-
-.section-title {
-    @include media-breakpoint-only($md) {
-        margin-bottom: 0;
-    }
-}
