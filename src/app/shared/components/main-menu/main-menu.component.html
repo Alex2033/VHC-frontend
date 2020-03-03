@@ -22,6 +22,16 @@
                         {{ link.text }}
                     </a>
                 </li>
+                <li class="menu-list-item">
+                    <a 
+                        class="menu-list-link"
+                        (click)="clickItem()" 
+                        href="https://valoapart.ru/"
+                        target="_blank"
+                    >
+                        Доходные программы
+                    </a>
+                </li>
             </ul>
 
             <ul class="socials" *ngIf="screen !== 'lg' && screen !== 'xl'">
