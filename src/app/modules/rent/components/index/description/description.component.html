@@ -1,14 +1,17 @@
 <section class="page-section">
     <div class="container">
         <div class="description-content">
-            <div 
-                class="description-video"
-                data-aos="custom expand-description-image"
-                data-aos-anchor-placement="top-center" 
-                data-aos-duration="650"
-            >
+            <div class="description-video">
                 <div class="video-overlay" *ngIf="!videoVisible" [@fadeInOut]>
-                    <img class="overlay-image" [lazyLoad]="'assets/images/pages/rent/description/video-overlay.jpg'" [offset]="200" alt="video overlay">
+                    <img 
+                        class="overlay-image" 
+                        [lazyLoad]="'assets/images/pages/rent/description/video-overlay.jpg'" 
+                        [offset]="200" 
+                        alt="video overlay"
+                        data-aos="custom expand-description-image"
+                        data-aos-anchor-placement="top-center" 
+                        data-aos-duration="650"
+                    >
                     <img
                         (click)="playVideo()"
                         class="play-button"
