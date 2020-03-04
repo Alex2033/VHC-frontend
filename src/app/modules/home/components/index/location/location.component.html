@@ -35,10 +35,7 @@
                 </div>
             </header>
             <div class="location-map">
-                <angular-yandex-map 
-                    [center]="(screen === 'md' || screen === 'lg' || screen === 'xl') ? [59.916771186075785, 30.348151407651475] : [59.919771186075785, 30.347151407651475]" 
-                    [zoom]="15"
-                >
+                <angular-yandex-map [center]="[59.884792, 30.367620]" [zoom]="15">
                     <angular-yandex-placemark *ngFor="let pin of pins"
                         [geometry]="pin.position"
                         [properties]="pin.properties"

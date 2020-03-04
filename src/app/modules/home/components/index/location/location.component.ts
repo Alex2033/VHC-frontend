@@ -14,7 +14,7 @@ export class LocationComponent implements OnInit {
       position: [59.91310384356382, 30.344218691392978],
       icon: 'assets/icons/ico_tree.svg',
       properties: {
-        iconContent: 'Московский парк'
+        iconContent: 'Московский Парк Победы и парк аттракционов «Гагарин Парк»'
       },
       options: {
         balloonOffset: [40, 0],
@@ -28,7 +28,8 @@ export class LocationComponent implements OnInit {
       position: [59.92064640763944, 30.343797602272325],
       icon: 'assets/icons/ico_mall.svg',
       properties: {
-        iconContent: 'ТРК «РИО»'
+        iconContent: 'ТРК «РИО»',
+        balloonContent: 'магазины, кафе и рестораны, кинотеатр, боулинг, семейный парк JOKI JOYA, фитнес-клуб с бассейном, ледовый каток, картинг и экзотический зоопарк'
       },
       options: {
         balloonOffset: [40, 0],
@@ -39,10 +40,11 @@ export class LocationComponent implements OnInit {
       }
     },
     {
-      position: [59.883118, 30.370153],
+      position: [59.882000, 30.370153],
       icon: 'assets/icons/ico_mall.svg',
       properties: {
-        iconContent: 'ТРК «Континент»'
+        iconContent: 'ТРК «Континент»',
+        balloonContent: 'магазины, кафе и рестораны, торговое пространство «Китай Город ЮГ», кинотеатр, ледовый каток'
       },
       options: {
         balloonOffset: [40, 0],
@@ -56,7 +58,8 @@ export class LocationComponent implements OnInit {
       position: [59.868311, 30.349288],
       icon: 'assets/icons/ico_mall.svg',
       properties: {
-        iconContent: 'ТРК «Радуга»'
+        iconContent: 'ТРК «Радуга»',
+        balloonContent: 'магазины, кафе и рестораны, город профессий «КидБург», интерактивный музей «ЛабиринтУм», веревочный парк FunГрад и семейный парк JOKI JOYA'
       },
       options: {
         balloonOffset: [40, 0],
@@ -70,7 +73,8 @@ export class LocationComponent implements OnInit {
       position: [59.870081, 30.379458],
       icon: 'assets/icons/ico_mall.svg',
       properties: {
-        iconContent: 'ТРК «Международный»'
+        iconContent: 'ТРК «Международный»',
+        balloonContent: 'магазины, кафе и рестораны, кинотеатр, фитнес-клуб'
       },
       options: {
         balloonOffset: [40, 0],
@@ -179,7 +183,7 @@ export class LocationComponent implements OnInit {
       }
     },
     {
-      position: [59.883415, 30.370153],
+      position: [59.883215, 30.370153],
       icon: 'assets/icons/ico_ballons.svg',
       properties: {
         iconContent: 'Парк развлечений MAZA PARK'
@@ -193,10 +197,10 @@ export class LocationComponent implements OnInit {
       }
     },
     {
-      position: [59.876435, 30.369086],
+      position: [59.876094, 30.368955],
       icon: 'assets/icons/ico_mall.svg',
       properties: {
-        iconContent: 'Парк развлечений MAZA PARK'
+        iconContent: 'Центр интерьера и товаров для дома «Кубатура»'
       },
       options: {
         balloonOffset: [40, 0],
@@ -207,7 +211,7 @@ export class LocationComponent implements OnInit {
       }
     },
     {
-      position: [59.917946, 30.355571],
+      position: [59.884792, 30.367620],
       icon: 'assets/images/header/logo.svg',
       logo: 'marker-logo',
       options: {
@@ -231,7 +235,7 @@ export class LocationComponent implements OnInit {
   public loadPin(event, pin): void {
     const MyIconContentLayout = event.ymaps.templateLayoutFactory.createClass(
       `
-        <div class="marker-container `+ pin.logo + `" style="width: 186px;">
+        <div class="marker-container `+ pin.logo + `" style="min-width: 206px;">
           <img src="` + pin.icon + `" alt="tree icon">
           <span>$[properties.iconContent]</span>
         </div>
