@@ -31,6 +31,18 @@ const routes: Routes = [
     path: 'rent',
     loadChildren: () => import('./modules/rent/rent.module').then(mod => mod.RentModule)
   },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./modules/contacts/contacts.module').then(mod => mod.ContactsModule)
+  },
+  {
+    path: '404',
+    loadChildren: () => import('./modules/not-found/not-found.module').then(mod => mod.NotFoundModule)
+  },
+  {
+    path: '**', 
+    redirectTo: '/404'
+  }
 ];
 
 @NgModule({

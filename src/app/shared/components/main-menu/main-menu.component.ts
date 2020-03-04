@@ -97,6 +97,10 @@ export class MainMenuComponent implements OnInit {
     {
       text: 'Документы',
       url: 'docs'
+    },
+    {
+      text: 'Контакты',
+      url: 'contacts'
     }
   ];
 

@@ -1,5 +1,6 @@
 @import "theme";
 @import "responsive";
+@import "mixins/mouse";
 
 :host {
     position: absolute;
@@ -62,10 +63,12 @@
         transition: background-color .2s ease;
         cursor: pointer;
 
-        &:hover {
-            background-color: darken($light-gray, 4.6%);
+        @include mouse {
+            &:hover {
+                background-color: darken($light-gray, 4.6%);
+            }
         }
-    
+        
         &:active {
             background-color: darken($light-gray, 12%);
         }
