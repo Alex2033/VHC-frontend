@@ -1,0 +1,30 @@
+<div class="page-section inner-page-section">
+    <div class="container">
+        <header class="page-section-header inner-page-section-header">
+            <h1 class="section-title">
+                <span>Не удалось найти страницу</span>
+                <div class="background-words">404</div>
+            </h1>
+        </header>
+        <div class="not-found-description">
+            <p>Страница либо не существует, либо ошибка в адресе. Ознакомьтесь с разделами сайта ниже</p>
+        </div>
+
+        <!-- links -->
+        <ul class="not-found-links">
+            <li *ngFor="let link of links">
+                <a class="not-found-link" [routerLink]="[link.url]" >{{ link.text }}</a>
+            </li>
+            <li>
+                <a class="not-found-link"href="https://valoapart.ru/"target="_blank">
+                    Доходные программы
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <img src="assets/images/pages/404/image.jpg" alt="evening valo" class="bottom-image">
+    </div>
+    
+</div>

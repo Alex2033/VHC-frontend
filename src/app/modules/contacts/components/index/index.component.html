@@ -1,0 +1,196 @@
+<div class="page-section inner-page-section">
+    <div class="container">
+        <header class="page-section-header inner-page-section-header">
+            <h1 class="section-title">
+                <span data-aos="fade-up" data-aos-duration="600">Мероприятия</span>
+                <div 
+                    class="background-words" 
+                    data-aos="custom fade-right-long" 
+                    data-aos-easing="ease-out"
+                    data-aos-delay="200"
+                    data-aos-duration="500"
+                >
+                    contacts
+                </div>
+            </h1>
+        </header>
+
+        <!-- contact cards -->
+        <div class="contact-cards">
+
+            <!-- 1 -->
+            <div class="contact-card primary">
+                <h3 class="contact-card-title" data-aos="fade-up" data-aos-duration="600">Апарт–отель Valo Hotel City</h3>
+                <div class="contact-card-content">
+                    <div class="contact-card-background" data-aos="custom slide-right" data-aos-duration="600"></div>
+                    <div 
+                        class="contact-card-wrapper" 
+                        data-aos="fade-up" 
+                        data-aos-delay="200"
+                        data-aos-duration="600"
+                    >
+                        <div class="contact-card-info">
+                            <div class="info-item">
+                                <div class="info-label">Адрес</div>
+                                <div class="info-text">Санкт-Петербург, ул. Салова д. 61 лит. А</div>
+                            </div>
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-label">Телефон</div>
+                                    <a href="tel:+78123808266" class="info-text">+7 (812) 380–82–66</a>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">E–mail</div>
+                                    <a href="mailto:valo@valoapart.ru" class="info-text">valo@valoapart.ru</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Соцсети</div>
+                                <ul class="card-socials">
+                                    <li *ngFor="let social of socials">
+                                        <a [href]="social.url" class="info-text" target="_blank">{{ social.text }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact-card-buttons">
+                            <button type="button" class="button light">Написать нам</button>
+                            <button type="button" class="button dark">Маршрут в Яндекс.Карте</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="contact-card dark">
+                <h3 class="contact-card-title" data-aos="fade-up" data-aos-duration="600">Управляющая компания Valo Service</h3>
+                <div class="contact-card-content">
+                    <div class="contact-card-background" data-aos="custom slide-right" data-aos-duration="600"></div>
+                    <div 
+                        class="contact-card-wrapper" 
+                        data-aos="fade-up" 
+                        data-aos-delay="200"
+                        data-aos-duration="600"
+                    >
+                        <div class="contact-card-info">
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-label">Телефон</div>
+                                    <a href="tel:+78123808266" class="info-text">+7 (812) 380–82–66</a>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">E–mail</div>
+                                    <a href="mailto:valo@valoapart.ru" class="info-text">valo@valoapart.ru</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Сайт</div>
+                                <a href="valoservice.ru" class="info-text">valoservice.ru</a>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Режим работы управляющей компании</div>
+                                <div class="info-text">Пн – Пт 10.00 – 19.00, Сб – Вс 11.00 – 17.00</div>
+                            </div>
+                        </div>
+                        <div class="contact-card-buttons">
+                            <button type="button" class="button light">Написать нам</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- contacts -->
+        <div class="contacts">
+            <h3 class="contacts-title">Телефоны отделов Valo</h3>
+            <div class="contacts-content">
+
+                <!-- 1 -->
+                <ul class="contacts-list">
+                    <li>
+                        Отдел продаж:
+                        <br>
+                        <a href="tel:+78124110000" class="contacts-phone">+7 (812) 411–00–00</a>
+                    </li>
+                    <li>
+                        Отдел по работе с агентствами
+                        <br>
+                        по недвижимости:
+                        <br>
+                        <a href="+78126158894" class="contacts-phone">+7 (812) 615–88–94</a>
+                    </li>
+                    <li>
+                        ГАЛС:
+                        <br>
+                        <a href="+78123177621" class="contacts-phone">+7 (812) 317–76–21</a>
+                    </li>
+                </ul>
+
+                <!-- 2 -->
+                <ul class="contacts-list">
+                    <li>
+                        Передача апартаментов:
+                        <br>
+                        <a href="tel:+78126003561" class="contacts-phone">+7 (812) 600-35-61</a>
+                    </li>
+                    <li>
+                        Гостиница
+                        <br>
+                        VALO Hotel City
+                        <br>
+                        <a href="+79117035381" class="contacts-phone">+7 (911) 703–53–81</a>
+                    </li>
+                </ul>
+
+                <!-- 3 -->
+                <ul class="contacts-list">
+                    <li>
+                        Диспетчерская по эксплуатации:
+                        <br>
+                        <a href="tel:+79211843116" class="contacts-phone">+7 (921) 184–31–16</a>
+                    </li>
+                    <li>
+                        Администрация по эксплуатации
+                        <br> 
+                        и службы безопасности:
+                        <br>
+                        <a href="+78126158894" class="contacts-phone">+7 (921) 905–79–68</a>
+                    </li>
+                </ul>
+
+                <!-- 4 -->
+                <ul class="contacts-list">
+                    <li>
+                        Отдел клиентского сервиса:
+                        <br>
+                        <a href="tel:+78124110000" class="contacts-phone">+7 (812) 648–13–37</a>
+                    </li>
+                    <li>
+                        Долгосрочная аренда 
+                        <br>
+                        апартаментов
+                        <br>
+                        <a href="+78126034751" class="contacts-phone">+7 (812) 603–47–514</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- map -->
+        <div class="contact-map">
+            <angular-yandex-map 
+                [center]="[59.884368, 30.368321]" 
+                [zoom]="15"
+            >
+                <angular-yandex-placemark *ngFor="let pin of pins"
+                    [geometry]="pin.position"
+                    [properties]="pin.properties"
+                    [options]="pin.options"
+                    (load)="loadPin($event, pin)"
+                ></angular-yandex-placemark>
+            </angular-yandex-map>
+        </div>
+    </div>
+</div>
