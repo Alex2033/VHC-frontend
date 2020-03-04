@@ -2,10 +2,10 @@
     <div class="container">
         <header class="page-section-header inner-page-section-header">
             <h1 class="section-title">
-                <span data-aos="fade-up" data-aos-duration="600">Мероприятия</span>
-                <div 
-                    class="background-words" 
-                    data-aos="custom fade-right-long" 
+                <span data-aos="fade-up" data-aos-duration="600">Контакты</span>
+                <div
+                    class="background-words"
+                    data-aos="custom fade-right-long"
                     data-aos-easing="ease-out"
                     data-aos-delay="200"
                     data-aos-duration="500"
@@ -23,9 +23,9 @@
                 <h3 class="contact-card-title" data-aos="fade-up" data-aos-duration="600">Апарт–отель Valo Hotel City</h3>
                 <div class="contact-card-content">
                     <div class="contact-card-background" data-aos="custom slide-right" data-aos-duration="600"></div>
-                    <div 
-                        class="contact-card-wrapper" 
-                        data-aos="fade-up" 
+                    <div
+                        class="contact-card-wrapper"
+                        data-aos="fade-up"
                         data-aos-delay="200"
                         data-aos-duration="600"
                     >
@@ -54,8 +54,8 @@
                             </div>
                         </div>
                         <div class="contact-card-buttons">
-                            <button type="button" class="button light">Написать нам</button>
-                            <button type="button" class="button dark">Маршрут в Яндекс.Карте</button>
+<!--                            <button type="button" class="button light">Написать нам</button>-->
+                            <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367717%2C59.884082&mode=routes&origin=jsapi_2_1_75&routes%5BtimeDependent%5D%5Btime%5D=2020-01-20T15%3A55%3A00&routes%5BtimeDependent%5D%5Btype%5D=departure&rtext=~59.884322%2C30.367344&rtt=comparison&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D11514389275&z=17" target="_blank" class="button dark">Маршрут в Яндекс.Карте</a>
                         </div>
                     </div>
                 </div>
@@ -66,9 +66,9 @@
                 <h3 class="contact-card-title" data-aos="fade-up" data-aos-duration="600">Управляющая компания Valo Service</h3>
                 <div class="contact-card-content">
                     <div class="contact-card-background" data-aos="custom slide-right" data-aos-duration="600"></div>
-                    <div 
-                        class="contact-card-wrapper" 
-                        data-aos="fade-up" 
+                    <div
+                        class="contact-card-wrapper"
+                        data-aos="fade-up"
                         data-aos-delay="200"
                         data-aos-duration="600"
                     >
@@ -85,7 +85,7 @@
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Сайт</div>
-                                <a href="valoservice.ru" class="info-text">valoservice.ru</a>
+                                <a href="http://valoservice.ru" target="_blank" class="info-text">valoservice.ru</a>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Режим работы управляющей компании</div>
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         <div class="contact-card-buttons">
-                            <button type="button" class="button light">Написать нам</button>
+<!--                            <button type="button" class="button light">Написать нам</button>-->
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                     </li>
                     <li>
                         Администрация по эксплуатации
-                        <br> 
+                        <br>
                         и службы безопасности:
                         <br>
                         <a href="+78126158894" class="contacts-phone">+7 (921) 905–79–68</a>
@@ -167,7 +167,7 @@
                         <a href="tel:+78124110000" class="contacts-phone">+7 (812) 648–13–37</a>
                     </li>
                     <li>
-                        Долгосрочная аренда 
+                        Долгосрочная аренда
                         <br>
                         апартаментов
                         <br>
@@ -180,8 +180,8 @@
 
         <!-- map -->
         <div class="contact-map">
-            <angular-yandex-map 
-                [center]="[59.884368, 30.368321]" 
+            <angular-yandex-map
+                [center]="[59.884368, 30.368321]"
                 [zoom]="15"
             >
                 <angular-yandex-placemark *ngFor="let pin of pins"

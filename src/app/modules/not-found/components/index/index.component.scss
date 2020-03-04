@@ -9,7 +9,7 @@
     flex-basis: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
     @include media-breakpoint-only($md) {
         padding-bottom: 0;
@@ -86,7 +86,7 @@
     color: $primary-color;
     display: inline-block;
     text-decoration: none;
-    
+
 }
 
 .bottom-image {
