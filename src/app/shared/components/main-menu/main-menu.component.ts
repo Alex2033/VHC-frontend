@@ -64,7 +64,7 @@ export class MainMenuComponent implements OnInit {
     'assets/images/pages/apartment/room.jpg',
     'assets/images/pages/business/business-1.jpg',
     'assets/images/pages/business/business-2.jpg',
-    'assets/images/pages/rent/first-screen/bitmap.jpg',
+    'assets/images/pages/rent/first-screen/main.jpg',
     'assets/images/pages/business/business-1.jpg',
     'assets/images/pages/apartment/room.jpg'
   ];

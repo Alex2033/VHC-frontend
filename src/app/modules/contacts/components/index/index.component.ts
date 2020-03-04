@@ -24,11 +24,8 @@ export class IndexComponent implements OnInit {
 
   public pins = [
     {
-      position: [59.884368, 30.368321],
+      position: [59.884790, 30.367616],
       icon: 'assets/images/header/logo.svg',
-      properties: {
-        balloonContent: 'А эта — новогодняя',
-      },
       options: {
         balloonOffset: [40, -20],
         iconLayout: 'default#imageWithContent',
