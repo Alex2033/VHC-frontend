@@ -10,7 +10,7 @@ export class IndexComponent implements OnInit {
   links: Array<object> = [
     {
       text: 'Номера',
-      url: 'apartments'
+      url: '/apartments'
     },
     // {
     //   text: 'Акции',
@@ -18,27 +18,27 @@ export class IndexComponent implements OnInit {
     // },
     {
       text: 'Долгосрочная аренда',
-      url: 'rent'
+      url: '/rent'
     },
     {
       text: 'Услуги и сервисы',
-      url: 'service'
+      url: '/service'
     },
     {
       text: 'Мероприятия',
-      url: 'events'
+      url: '/events'
     },
     {
       text: 'Пространства для бизнеса',
-      url: 'business'
+      url: '/business'
     },
     {
       text: 'Документы',
-      url: 'docs'
+      url: '/docs'
     },
     {
       text: 'Контакты',
-      url: 'contacts'
+      url: '/contacts'
     }
   ];
 
