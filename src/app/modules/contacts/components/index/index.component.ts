@@ -26,7 +26,6 @@ export class IndexComponent implements OnInit {
     {
       position: [59.884368, 30.368321],
       icon: 'assets/images/header/logo.svg',
-      rofl: true,
       properties: {
         balloonContent: 'А эта — новогодняя',
       },

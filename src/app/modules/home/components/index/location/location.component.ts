@@ -39,6 +39,20 @@ export class LocationComponent implements OnInit {
         iconImageSize: [186, 60],
         iconImageOffset: [-20, -60]
       }
+    },
+    {
+      position: [59.884368, 30.368321],
+      icon: 'assets/images/header/logo.svg',
+      properties: {
+        balloonContent: 'А эта — новогодняя',
+      },
+      options: {
+        balloonOffset: [40, -20],
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '',
+        iconImageSize: [140, 81],
+        iconImageOffset: [-20, -81]
+      }
     }
   ];
 
