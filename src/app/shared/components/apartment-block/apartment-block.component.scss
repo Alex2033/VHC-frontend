@@ -156,11 +156,11 @@
 }
 
 .apartment-title {
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 
-    @include media-breakpoint-only($lg) {
-        margin-bottom: 32px;
-    }
+    // @include media-breakpoint-only($lg) {
+    //     margin-bottom: 32px;
+    // }
 }
 
 .aparment-choise {
@@ -314,5 +314,5 @@
 
 .scrollbar {
     height: initial;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 }
