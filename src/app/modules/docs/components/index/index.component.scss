@@ -5,12 +5,12 @@
 }
 
 .inner-page-content-left {
-    margin: 0 -15px; // для корректной отображении тени карточек внутри скроллбара
+    margin-left: -15px; // для корректной отображении тени карточек внутри скроллбара
 
-    .scrollbar {
+    .custom-scrollbar {
         ::ng-deep {
-            .ps-content {
-                padding: 0 15px; // для корректной отображении тени карточек внутри скроллбара
+            .ng-scroll-content {
+                padding: 0 44px 0 15px;
     
                 @include media-breakpoint-only($lg) {
                     padding: 0;

@@ -61,16 +61,8 @@
     }
 }
 
-.scrollbar {
+.custom-scrollbar {
     margin-right: 40px;
-
-    @include media-breakpoint-only($lg) {
-        ::ng-deep {
-            .ps-content {
-                height: 100%;
-            }
-        }
-    }
 
     @include media-breakpoint-only($md) {
         margin-right: 0;
@@ -78,7 +70,7 @@
 }
 
 .menu-navigation {
-    padding: 0 48px 20px 0;
+    padding: 0 65px 20px 0;
     display: flex;
     flex-direction: column;
     text-align: right;
