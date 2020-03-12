@@ -39,6 +39,8 @@ import { MobileInnerSliderComponent } from './components/mobile-inner-slider/mob
 import { MobileApartmentCardComponent } from './components/mobile-apartment-card/mobile-apartment-card.component';
 import { MobileBusinessCardComponent } from './components/mobile-business-card/mobile-business-card.component';
 import { MobileApartmentBlockComponent } from './components/mobile-apartment-block/mobile-apartment-block.component';
+import { NgScrollbarModule } from 'ngx-scrollbar';
+import { HammerModule } from '@angular/platform-browser';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -91,7 +93,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     PerfectScrollbarModule,
     AngularYandexMapsModule,
     LazyLoadImageModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    NgScrollbarModule,
+    HammerModule
   ],
   exports: [
     CommonModule,
@@ -127,7 +131,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MobileInnerSliderComponent,
     MobileApartmentCardComponent,
     MobileBusinessCardComponent,
-    MobileApartmentBlockComponent
+    MobileApartmentBlockComponent,
+    NgScrollbarModule,
+    HammerModule
   ],
   providers: [
     MatNativeDateModule,

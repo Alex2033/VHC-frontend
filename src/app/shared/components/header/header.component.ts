@@ -33,4 +33,8 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  rofl() {
+    console.log('object');
+  }
+
 }

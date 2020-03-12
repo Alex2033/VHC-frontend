@@ -2,7 +2,11 @@
     <div class="inner-page-content">
         <div class="container inner-page-container">
             <div class="inner-page-content-left">
-                <perfect-scrollbar class="scrollbar">
+                <ng-scrollbar 
+                    class="custom-scrollbar" 
+                    #scrollable 
+                    [disabled]="screen !== 'lg' && screen !== 'xl'"
+                >
                     <header class="detail-page-header">
                         <h1 class="section-title">
                             <span data-aos="fade-up" data-aos-duration="450">Документы</span>
@@ -54,10 +58,10 @@
                         </div>
                     </div>
 
-                </perfect-scrollbar>
+                </ng-scrollbar>
             </div>
             <div class="inner-page-content-right">
-                <perfect-scrollbar class="scrollbar">
+                <ng-scrollbar class="custom-scrollbar">
                     <ul class="inner-menu-list">
                         <li 
                             class="inner-menu-list-item" 
@@ -67,7 +71,7 @@
                             data-aos-duration="450"
                         >
                             <button
-                                (click)="scrollToElement('#group' + group.id)"
+                                (click)="scrollable.scrollToElement('#group-' + group.id, {duration: 400})"
                                 type="button"
                                 class="inner-menu-list-button"
                             >
@@ -75,17 +79,12 @@
                             </button>
                         </li>
                     </ul>
-                    <div 
-                        class="content-right-text"
-                        data-aos="zoom-in" 
-                        data-aos-delay="350"
-                        data-aos-duration="450"
-                    >
+                    <div class="content-right-text">
                         <p>
                             <strong>Ресторанный комплекс VALO HOTEL CITY.</strong> Лучшее место для праздничного торжества, корпоративной вечеринки или праздничного банкета! Можно организовать любые деловые мероприятия, провести переговоры, семинары и конференции.
                         </p>
                     </div>
-                </perfect-scrollbar>
+                </ng-scrollbar>
             </div>
         </div>
 

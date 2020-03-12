@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { PerfectScrollbarComponent } from 'ngx-perfect-scrollbar';
-import {DocumentGroup} from '../../../../shared/contracts/document-group';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { DocumentGroup } from '../../../../shared/contracts/document-group';
+import { ActivatedRoute } from '@angular/router';
 import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({
@@ -10,7 +9,6 @@ import { ResponsiveService } from 'src/app/shared/services/responsive.service';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-  @ViewChild(PerfectScrollbarComponent, {static: true}) componentRef?: PerfectScrollbarComponent;
 
   screen: string;
 
@@ -24,10 +22,6 @@ export class IndexComponent implements OnInit {
     this.responsive.screen.subscribe((screen) => {
       this.screen = screen;
     });
-  }
-
-  scrollToElement(element: string) {
-    this.componentRef.directiveRef.scrollToElement(element, null, 300);
   }
 
   getChar(index) {
