@@ -3,6 +3,7 @@
         class="inner-page-first-screen" 
         *ngIf="showFirstScreen && (screen === 'lg' || screen === 'xl')"
         [@fadeOut]
+        (panup)="showFirstScreen = false"
         (wheel)="scrollHandler($event)"
     >
         <section class="page-section inner-page-section">

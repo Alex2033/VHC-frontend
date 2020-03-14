@@ -1,4 +1,4 @@
-import {BrowserModule, BrowserTransferStateModule} from '@angular/platform-browser';
+import {BrowserModule, BrowserTransferStateModule, HammerModule} from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
@@ -24,7 +24,8 @@ registerLocaleData(localeRu);
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    HammerModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'ru' },
