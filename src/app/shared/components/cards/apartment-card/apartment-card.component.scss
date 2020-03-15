@@ -139,6 +139,7 @@
   font-size: 13px;
   line-height: 1.7;
   display: none;
+  color: $text-color;
 
   @include media-breakpoint-only($lg) {
     display: flex;
