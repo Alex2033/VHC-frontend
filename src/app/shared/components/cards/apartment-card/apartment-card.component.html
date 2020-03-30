@@ -1,13 +1,13 @@
 <a [routerLink]="['/apartments', apartment.id]" class="card">
-  <div 
+  <div
     class="animation-card-block"
     data-aos="custom from-left-to-right"
-    data-aos-anchor=".apartment-wrapper" 
+    data-aos-anchor=".apartment-wrapper"
     data-aos-duration="2500"
   ></div>
-  <div 
+  <div
     class="card-inner"
-    data-aos="custom show" 
+    data-aos="custom show"
     data-aos-anchor=".apartment-wrapper"
     data-aos-delay="600"
     data-aos-duration="0"
@@ -29,7 +29,7 @@
         <div class="card-description" [innerHTML]="apartment.shortDescription | paragraphs">
         </div>
       </div>
-      <a [routerLink]="['apartments', apartment.id]" class="button gray">Забронировать</a>
+      <span class="button gray">Забронировать</span>
     </div>
   </div>
 </a>

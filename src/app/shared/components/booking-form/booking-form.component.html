@@ -1,4 +1,4 @@
-<form class="booking-form">
+<div class="booking-form">
     <div class="data-blocks">
 
         <!-- data calendar -->
@@ -7,6 +7,7 @@
                 class="data-hidden-input"
                 (dateInput)="entryDate($event)"
                 [matDatepicker]="picker1"
+                [ngModel]="entryDateValue"
                 (dateChange)="checkDates()"
                 placeholder="Choose a date"
             >
@@ -32,6 +33,7 @@
             <input
                 class="data-hidden-input"
                 (dateInput)="departureDate($event)"
+                [ngModel]="departureDateValue"
                 [matDatepicker]="picker2"
                 placeholder="Choose a date"
                 (dateChange)="checkDates()"
@@ -97,4 +99,4 @@
             <a [href]="bookingUrl" target="_blank" class="button">Найти номер</a>
         </div>
     </div>
-</form>
+</div>

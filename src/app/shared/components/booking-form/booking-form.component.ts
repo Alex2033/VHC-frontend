@@ -15,6 +15,8 @@ export class BookingFormComponent implements OnInit {
   apartmentsCounter: number = 1;
   bookingUrl;
   constructor() {
+    this.entryDateValue.setDate(this.entryDateValue.getDate());
+    this.departureDateValue.setDate(this.departureDateValue.getDate() + 1);
   }
 
   ngOnInit() {
@@ -58,8 +60,11 @@ export class BookingFormComponent implements OnInit {
   }
 
   checkDates() {
-    if (new Date(this.departureDateValue) < new Date(this.entryDateValue)) {
-      this.departureDateValue = this.entryDateValue;
+    this.entryDateValue.setHours(0,0,0,0);
+    this.departureDateValue.setHours(0,0,0,0);
+    if (this.departureDateValue <= this.entryDateValue) {
+      this.departureDateValue = new Date();
+      this.departureDateValue.setDate(this.entryDateValue.getDate() + 1);
     }
     this.updateBookingUrl();
   }

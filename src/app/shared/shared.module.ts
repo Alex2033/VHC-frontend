@@ -79,7 +79,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MobileInnerSliderComponent,
     MobileApartmentCardComponent,
     MobileBusinessCardComponent,
-    MobileApartmentBlockComponent
+    MobileApartmentBlockComponent,
+    ResponsiveImageComponent
   ],
   imports: [
     CommonModule,
@@ -130,7 +131,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MobileApartmentCardComponent,
     MobileBusinessCardComponent,
     MobileApartmentBlockComponent,
-    NgScrollbarModule
+    NgScrollbarModule,
+    ResponsiveImageComponent
   ],
   providers: [
     MatNativeDateModule,
